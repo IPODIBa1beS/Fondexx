@@ -224,3 +224,4 @@ modules/*
 themes/bootstrap/
 node_modules/
 .ftpauth
+*.css

@@ -7,7 +7,6 @@
 /*@border-radius-base:        0px;
 @border-radius-large:       0px;
 @border-radius-small:       0px;*/
-/*@grid-float-breakpoint:     @screen-lg-min; */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /* line 9, ..\bootstrap\less\normalize.less */
 html {
@@ -768,7 +767,7 @@ dt {
 dd {
   margin-left: 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 9999px) {
   /* line 215, ..\bootstrap\less\type.less */
   .dl-horizontal dt {
     float: left;
@@ -4441,7 +4440,7 @@ tbody.collapse.in {
   bottom: 100%;
   margin-bottom: 2px;
 }
-@media (min-width: 768px) {
+@media (min-width: 9999px) {
   /* line 207, ..\bootstrap\less\dropdowns.less */
   .navbar-right .dropdown-menu {
     left: auto;
@@ -5087,13 +5086,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-bottom: 20px;
   border: 1px solid transparent;
 }
-@media (min-width: 768px) {
+@media (min-width: 9999px) {
   /* line 20, ..\bootstrap\less\navbar.less */
   .navbar {
     border-radius: 4px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 9999px) {
   /* line 34, ..\bootstrap\less\navbar.less */
   .navbar-header {
     float: left;
@@ -5112,7 +5111,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-collapse.in {
   overflow-y: auto;
 }
-@media (min-width: 768px) {
+@media (min-width: 9999px) {
   /* line 63, ..\bootstrap\less\navbar.less */
   .navbar-collapse {
     width: auto;
@@ -5158,7 +5157,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-right: -15px;
   margin-left: -15px;
 }
-@media (min-width: 768px) {
+@media (min-width: 9999px) {
   /* line 113, ..\bootstrap\less\navbar.less */
   .container > .navbar-header,
   .container-fluid > .navbar-header,
@@ -5173,7 +5172,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   z-index: 1000;
   border-width: 0 0 1px;
 }
-@media (min-width: 768px) {
+@media (min-width: 9999px) {
   /* line 132, ..\bootstrap\less\navbar.less */
   .navbar-static-top {
     border-radius: 0;
@@ -5187,7 +5186,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   left: 0;
   z-index: 1030;
 }
-@media (min-width: 768px) {
+@media (min-width: 9999px) {
   /* line 146, ..\bootstrap\less\navbar.less */
   .navbar-fixed-top,
   .navbar-fixed-bottom {
@@ -5222,7 +5221,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-brand > img {
   display: block;
 }
-@media (min-width: 768px) {
+@media (min-width: 9999px) {
   /* line 180, ..\bootstrap\less\navbar.less */
   .navbar > .container .navbar-brand,
   .navbar > .container-fluid .navbar-brand {
@@ -5257,7 +5256,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-toggle .icon-bar + .icon-bar {
   margin-top: 4px;
 }
-@media (min-width: 768px) {
+@media (min-width: 9999px) {
   /* line 221, ..\bootstrap\less\navbar.less */
   .navbar-toggle {
     display: none;
@@ -5273,7 +5272,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   padding-bottom: 10px;
   line-height: 20px;
 }
-@media (max-width: 767px) {
+@media (max-width: 9998px) {
   /* line 243, ..\bootstrap\less\navbar.less */
   .navbar-nav .open .dropdown-menu {
     position: static;
@@ -5299,7 +5298,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     background-image: none;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 9999px) {
   /* line 266, ..\bootstrap\less\navbar.less */
   .navbar-nav {
     float: left;
@@ -5387,7 +5386,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     top: 0;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 9998px) {
   /* line 299, ..\bootstrap\less\navbar.less */
   .navbar-form .form-group {
     margin-bottom: 5px;
@@ -5397,7 +5396,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     margin-bottom: 0;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 9999px) {
   /* line 312, ..\bootstrap\less\navbar.less */
   .navbar-form {
     width: auto;
@@ -5443,7 +5442,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-top: 15px;
   margin-bottom: 15px;
 }
-@media (min-width: 768px) {
+@media (min-width: 9999px) {
   /* line 362, ..\bootstrap\less\navbar.less */
   .navbar-text {
     float: left;
@@ -5451,7 +5450,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     margin-right: 15px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 9999px) {
   /* line 379, ..\bootstrap\less\navbar.less */
   .navbar-left {
     float: left !important;
@@ -5534,7 +5533,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-color: #e7e7e7;
   color: #555;
 }
-@media (max-width: 767px) {
+@media (max-width: 9998px) {
   /* line 471, ..\bootstrap\less\navbar.less */
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     color: #777;
@@ -5652,7 +5651,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   background-color: #080808;
   color: #fff;
 }
-@media (max-width: 767px) {
+@media (max-width: 9998px) {
   /* line 605, ..\bootstrap\less\navbar.less */
   .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
     border-color: #080808;
@@ -8958,3 +8957,50 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 .dropdown-submenu > a:after {
     border-left-color: white;
 }*/
+/* line 4, less\navs.less */
+.navbar-header .navbar-nav li,
+.second-level-menu .navbar-nav li {
+  float: left;
+}
+/* line 8, less\navs.less */
+.navbar-header .navbar-nav .caret,
+.second-level-menu .navbar-nav .caret {
+  display: none;
+}
+/* line 14, less\navs.less */
+.navbar-default {
+  border: none;
+  background: none;
+}
+/* line 19, less\navs.less */
+.navbar-toggle {
+  float: none;
+}
+/* line 25, less\navs.less */
+.second-level-menu .navbar-nav {
+  float: none;
+}
+/* line 29, less\navs.less */
+.second-level-menu li {
+  display: none;
+}
+/* line 32, less\navs.less */
+.second-level-menu li.active {
+  display: block;
+}
+/* line 35, less\navs.less */
+.second-level-menu li.active > a {
+  display: none;
+}
+/* line 38, less\navs.less */
+.second-level-menu li.active .dropdown-menu {
+  position: static;
+  display: block;
+  border: none;
+  box-shadow: none;
+}
+/* line 44, less\navs.less */
+.second-level-menu li.active .dropdown-menu li,
+.second-level-menu li.active .dropdown-menu li > a {
+  display: block;
+}
