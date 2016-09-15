@@ -148,6 +148,7 @@ settings[jquery_update_jquery_version] = 2.1
 ; JavaScript
 ; --------------
 ; exclude[js][] = 'modules/contextual/contextual.js'
+scripts[] = 'js/fondexx.js'
 
 ; CSS
 ; --------------

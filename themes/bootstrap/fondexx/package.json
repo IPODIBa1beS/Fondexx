@@ -1,0 +1,19 @@
+{
+  "name": "fondexx",
+  "version": "1.0.0",
+  "authors": [
+    "Andrey Turik <andreyturik@gmail.com>"
+  ],
+  "description": "cfc project",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "*",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-ftp-push": "^0.4.4",
+    "jit-grunt": "^0.9.1"
+  },
+  "scripts": {
+    "grunt": "grunt",
+    "jenkins": "grunt jenkins"
+  }
+}

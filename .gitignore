@@ -226,3 +226,5 @@ themes/*
 !themes/bootstrap/
 themes/bootstrap/*
 !/themes/bootstrap/fondexx/
+!/themes/bootstrap/fondexx/*
+themes/bootstrap/fondexx/.ftpauth
