@@ -221,10 +221,6 @@ pip-log.txt
 modules/*
 !modules/custom/
 
-!themes/
-themes/*
-!themes/bootstrap/
-themes/bootstrap/*
-!/themes/bootstrap/fondexx/
-!/themes/bootstrap/fondexx/*
-themes/bootstrap/fondexx/.ftpauth
+themes/bootstrap/
+node_modules/
+.ftpauth
