@@ -97,6 +97,14 @@ module.exports = function(grunt) {
                         "fondexx.info"
                         ],
                         dest: '/fondexx.com/www/sites/all/themes/fondexx'
+                    },
+                    {
+                        expand: true,
+                        //cwd: 'cfc',
+                        src: [
+                        "../../modules/custom/**"
+                        ],
+                        dest: '/fondexx.com/www/sites/all/modules/custom'
                     }
                 ]
             }
@@ -137,7 +145,8 @@ module.exports = function(grunt) {
                     "images/**",
                     "templates/**",
                     "template.php",
-                    "fondexx.info"
+                    "fondexx.info",
+                    "../../modules/custom/**"
                 ],
                 tasks: ['ftp_push']
             },

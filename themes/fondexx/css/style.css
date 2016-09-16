@@ -8957,54 +8957,20 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 .dropdown-submenu > a:after {
     border-left-color: white;
 }*/
-/* line 4, less\navs.less */
-.navbar-header .navbar-nav li,
-.second-level-menu .navbar-nav li {
-  float: left;
-}
-/* line 8, less\navs.less */
-.navbar-header .navbar-nav .caret,
-.second-level-menu .navbar-nav .caret {
-  display: none;
-}
-/* line 14, less\navs.less */
+/* line 1, less\navs.less */
 .navbar-default {
   border: none;
   background: none;
 }
-/* line 19, less\navs.less */
+/* line 5, less\navs.less */
+.navbar-default li {
+  float: left;
+}
+/* line 10, less\navs.less */
 .navbar-toggle {
   float: none;
 }
-/* line 25, less\navs.less */
-.second-level-menu .navbar-nav {
-  float: none;
-}
-/* line 29, less\navs.less */
-.second-level-menu li {
-  display: none;
-}
-/* line 32, less\navs.less */
-.second-level-menu li.active {
-  display: block;
-}
-/* line 35, less\navs.less */
-.second-level-menu li.active > a {
-  display: none;
-}
-/* line 38, less\navs.less */
-.second-level-menu li.active .dropdown-menu {
-  position: static;
-  display: block;
-  border: none;
-  box-shadow: none;
-}
-/* line 44, less\navs.less */
-.second-level-menu li.active .dropdown-menu li,
-.second-level-menu li.active .dropdown-menu li > a {
-  display: block;
-}
-/* line 53, less\navs.less */
+/* line 14, less\navs.less */
 .navbar-collapse {
   position: fixed;
   top: 100px;
@@ -9015,21 +8981,21 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   background: gray;
   z-index: 9999;
 }
-/* line 63, less\navs.less */
+/* line 24, less\navs.less */
 .navbar-collapse .navbar-nav > .active > a,
 .navbar-collapse .navbar-nav > .active > a:hover,
 .navbar-collapse .navbar-nav > .active > a:focus {
   background: none;
 }
-/* line 70, less\navs.less */
+/* line 31, less\navs.less */
 .navbar-collapse li {
   float: left;
 }
-/* line 73, less\navs.less */
+/* line 34, less\navs.less */
 .navbar-collapse li a {
   color: white !important;
 }
-/* line 77, less\navs.less */
+/* line 38, less\navs.less */
 .navbar-collapse li .dropdown-menu {
   position: static;
   display: block;
@@ -9037,12 +9003,12 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   box-shadow: none;
   background: none;
 }
-/* line 84, less\navs.less */
+/* line 45, less\navs.less */
 .navbar-collapse li .dropdown-menu li,
 .navbar-collapse li .dropdown-menu li > a {
   display: block;
 }
-/* line 89, less\navs.less */
+/* line 50, less\navs.less */
 .navbar-collapse li .dropdown-menu li {
   float: none;
 }

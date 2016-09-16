@@ -98,13 +98,6 @@
     </div>
     
     <hr>
-    
-    <!-- second level menu clone -->
-    <div class="second-level-menu">
-        <?php if (!empty($primary_nav)): ?>
-                <?php print render($primary_nav); ?>
-         <?php endif; ?>
-     </div>
 
     <!-- Overlay menu -->
     <div class="navbar-collapse collapse">

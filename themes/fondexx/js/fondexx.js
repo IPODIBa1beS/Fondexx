@@ -1,13 +1,16 @@
 (function ($) {
     $(function() {
         
-        function disableBootstrapMenuDropdown() {
+        /*function disableBootstrapMenuDropdown() {
             $('#navbar .navbar-nav .dropdown-toggle').data('toggle', '').removeAttr('data-toggle');;
-            console.log('run1');
-        }
+        }*/
         
-        $( document ).ready(function() {
-            disableBootstrapMenuDropdown();
+        /////////////////////////////////////
+        /////////////////////////////////////
+        /////////////////////////////////////
+        $( document ).ready(function() {  
+            // let's disable Bootstrap dropdown beh. for primary nav. We don't need it at all
+            //disableBootstrapMenuDropdown(); 
         });
 
 

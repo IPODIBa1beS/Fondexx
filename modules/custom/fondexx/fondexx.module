@@ -1,0 +1,41 @@
+<?php 
+
+/**
+* Implements hook_block_info().
+*/
+function fondexx_block_info() {
+  $blocks = array();
+  $blocks['Fondexx registration form'] = array(
+    'info' => t('Fondexx registration form'),
+  );
+
+  return $blocks;
+}
+
+/**
+* Implements hook_block_view().
+*/
+function fondexx_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    case 'Fondexx registration form':
+      $block['subject'] = '';
+      $block['content'] = _fondexx_registration_form_block();
+      break;
+  }
+
+  return $block;
+}
+
+function _fondexx_registration_form_block() {
+            $output = '<form action="/user/register" method="post" enctype="text/plain" id="fondexx-login-form">';
+ $output =  $output . '<input type="text" placeholder="' .t('Name') .'" size="100" id="name" title="name" class="form-control"/>';
+ $output =  $output . '<input type="text" placeholder="' .t('Sirname') .'" size="100" id="sirname" title="sirname" class="form-control"/>';
+ $output =  $output . '<input type="email" placeholder="' .t('Email') .'" size="100" id="email" title="email"  class="form-control"/>';
+ $output =  $output . '<input type="tel" placeholder="' .t('Phone') .'" size="100" id="phone" title="phone"  class="form-control"/>';
+ $output =  $output . '<input type="submit" value="'. t('Get access') .'"id="submit" class="btn btn-success" />';
+ $output =  $output . '</form>';
+ 
+  return $output;
+}
