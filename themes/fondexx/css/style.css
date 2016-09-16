@@ -9004,3 +9004,45 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 .second-level-menu li.active .dropdown-menu li > a {
   display: block;
 }
+/* line 53, less\navs.less */
+.navbar-collapse {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  padding: 100px;
+  margin: 0 !important;
+  background: gray;
+  z-index: 9999;
+}
+/* line 63, less\navs.less */
+.navbar-collapse .navbar-nav > .active > a,
+.navbar-collapse .navbar-nav > .active > a:hover,
+.navbar-collapse .navbar-nav > .active > a:focus {
+  background: none;
+}
+/* line 70, less\navs.less */
+.navbar-collapse li {
+  float: left;
+}
+/* line 73, less\navs.less */
+.navbar-collapse li a {
+  color: white !important;
+}
+/* line 77, less\navs.less */
+.navbar-collapse li .dropdown-menu {
+  position: static;
+  display: block;
+  border: none;
+  box-shadow: none;
+  background: none;
+}
+/* line 84, less\navs.less */
+.navbar-collapse li .dropdown-menu li,
+.navbar-collapse li .dropdown-menu li > a {
+  display: block;
+}
+/* line 89, less\navs.less */
+.navbar-collapse li .dropdown-menu li {
+  float: none;
+}
