@@ -29,13 +29,19 @@ function fondexx_block_view($delta = '') {
 }
 
 function _fondexx_registration_form_block() {
+    if (request_path() == 'study/start') {
+        $bntText = 'Undergo free';
+    } else {
+        $bntText = 'Get access';
+    }
+            
             $output = '<form action="/user/register" method="post" enctype="text/plain" id="fondexx-login-form">';
  $output =  $output . '<input type="text" placeholder="' .t('Name') .'" size="100" id="name" title="name" class="form-control"/>';
  $output =  $output . '<input type="text" placeholder="' .t('Sirname') .'" size="100" id="sirname" title="sirname" class="form-control"/>';
  $output =  $output . '<input type="email" placeholder="' .t('Email') .'" size="100" id="email" title="email"  class="form-control"/>';
  $output =  $output . '<input type="tel" placeholder="' .t('Phone') .'" size="100" id="phone" title="phone"  class="form-control"/>';
- $output =  $output . '<input type="submit" value="'. t('Get access') .'"id="submit" class="btn btn-success" />';
+ $output =  $output . '<input type="submit" value="'. t($bntText) .'"id="submit" class="btn btn-success" />';
  $output =  $output . '</form>';
  
-  return $output;
+    return $output;
 }

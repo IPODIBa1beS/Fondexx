@@ -1,0 +1,21 @@
+{
+  "name": "Fondexx",
+  "description": "Fondexx",
+  "main": "",
+  "authors": [
+    "ArialBlack <andreyturik@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/ArialBlack/Fondexx",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Ionicons": "ionicons#~2.0.1"
+  }
+}

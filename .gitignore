@@ -223,5 +223,6 @@ modules/*
 
 themes/bootstrap/
 node_modules/
+bower_components/
 .ftpauth
 *.css

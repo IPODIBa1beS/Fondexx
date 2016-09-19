@@ -105,7 +105,52 @@ module.exports = function(grunt) {
                         "../../modules/custom/**"
                         ],
                         dest: '/fondexx.com/www/sites/all/modules/custom'
+                    },
+                    {
+                        expand: true,
+                        //cwd: 'cfc',
+                        src: [
+                        "bower_components/**"
+                        ],
+                        dest: '/fondexx.com/www/sites/all/themes/fondexx'
                     }
+                    
+                ]
+            }
+        },
+        
+        ftp_push_less: {
+            your_target: {
+                options: {
+		            authKey: "serverA",
+    	            host: "fondexx.ftp.ukraine.com.ua",
+    	            dest: "/",
+    	            port: 21
+                },
+                files: [
+                    {
+                  expand: true,
+                        //cwd: 'cfc',
+                        src: [
+                        "js/**",
+                        "css/**",
+                        "fonts/**",
+                        "images/**",
+                        "templates/**",
+                        "template.php",
+                        "fondexx.info"
+                        ],
+                        dest: '/fondexx.com/www/sites/all/themes/fondexx'
+                    },
+                    {
+                        expand: true,
+                        //cwd: 'cfc',
+                        src: [
+                        "../../modules/custom/**"
+                        ],
+                        dest: '/fondexx.com/www/sites/all/modules/custom'
+                    }
+                    
                 ]
             }
         },
@@ -148,7 +193,7 @@ module.exports = function(grunt) {
                     "fondexx.info",
                     "../../modules/custom/**"
                 ],
-                tasks: ['ftp_push']
+                tasks: ['ftp_push_less']
             },
         },
         

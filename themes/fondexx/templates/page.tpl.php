@@ -96,8 +96,6 @@
         <?php endif; ?>
 
     </div>
-    
-    <hr>
 
     <!-- Overlay menu -->
     <div class="navbar-collapse collapse">
