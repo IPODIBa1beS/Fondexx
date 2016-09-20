@@ -97,9 +97,61 @@ module.exports = function(grunt) {
                         "fondexx.info"
                         ],
                         dest: '/fondexx.com/www/sites/all/themes/fondexx'
+                    },
+                    {
+                        expand: true,
+                        //cwd: 'cfc',
+                        src: [
+                        "../../modules/custom/**"
+                        ],
+                        dest: '/fondexx.com/www/sites/all/modules/custom'
+                    },
+                    {
+                        expand: true,
+                        //cwd: 'cfc',
+                        src: [
+                        "bower_components/**"
+                        ],
+                        dest: '/fondexx.com/www/sites/all/themes/fondexx'
                     }
+                    
+                ]
+            },
+            your_watch: {
+                options: {
+		            authKey: "serverA",
+    	            host: "fondexx.ftp.ukraine.com.ua",
+    	            dest: "/",
+    	            port: 21
+                },
+                files: [
+                    {
+                  expand: true,
+                        //cwd: 'cfc',
+                        src: [
+                        "js/**",
+                        "css/**",
+                        "fonts/**",
+                        "images/**",
+                        "templates/**",
+                        "template.php",
+                        "fondexx.info"
+                        ],
+                        dest: '/fondexx.com/www/sites/all/themes/fondexx'
+                    },
+                    {
+                        expand: true,
+                        //cwd: 'cfc',
+                        src: [
+                        "../../modules/custom/**"
+                        ],
+                        dest: '/fondexx.com/www/sites/all/modules/custom'
+                    },
+                    
+                    
                 ]
             }
+            
         },
 
         watch: {
@@ -137,9 +189,10 @@ module.exports = function(grunt) {
                     "images/**",
                     "templates/**",
                     "template.php",
-                    "fondexx.info"
+                    "fondexx.info",
+                    "../../modules/custom/**"
                 ],
-                tasks: ['ftp_push']
+                tasks: ['ftp_push:your_watch']
             },
         },
         
@@ -167,6 +220,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-ftp-push');
 
     // register tasks
-    grunt.registerTask('default', ['bake', 'clean', 'svgmin_icons', 'svgstore', 'clean:sprite', 'less', 'postcss', 'ftp_push', 'watch']);
-    grunt.registerTask('jenkins', ['bake', 'clean', 'svgmin_icons', 'svgstore', 'clean:sprite',  'less', 'postcss', 'ftp_push']);
+    grunt.registerTask('default', ['bake', 'clean', 'svgmin_icons', 'svgstore', 'clean:sprite', 'less', 'postcss', 'ftp_push:your_target', 'watch']);
+    grunt.registerTask('jenkins', ['bake', 'clean', 'svgmin_icons', 'svgstore', 'clean:sprite',  'less', 'postcss', 'ftp_push:your_target']);
 };
