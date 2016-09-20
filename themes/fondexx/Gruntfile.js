@@ -116,11 +116,8 @@ module.exports = function(grunt) {
                     }
                     
                 ]
-            }
-        },
-        
-        ftp_push_less: {
-            your_target: {
+            },
+            your_watch: {
                 options: {
 		            authKey: "serverA",
     	            host: "fondexx.ftp.ukraine.com.ua",
@@ -149,10 +146,12 @@ module.exports = function(grunt) {
                         "../../modules/custom/**"
                         ],
                         dest: '/fondexx.com/www/sites/all/modules/custom'
-                    }
+                    },
+                    
                     
                 ]
             }
+            
         },
 
         watch: {
@@ -193,7 +192,7 @@ module.exports = function(grunt) {
                     "fondexx.info",
                     "../../modules/custom/**"
                 ],
-                tasks: ['ftp_push_less']
+                tasks: ['ftp_push:your_watch']
             },
         },
         
@@ -221,6 +220,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-ftp-push');
 
     // register tasks
-    grunt.registerTask('default', ['bake', 'clean', 'svgmin_icons', 'svgstore', 'clean:sprite', 'less', 'postcss', 'ftp_push', 'watch']);
-    grunt.registerTask('jenkins', ['bake', 'clean', 'svgmin_icons', 'svgstore', 'clean:sprite',  'less', 'postcss', 'ftp_push']);
+    grunt.registerTask('default', ['bake', 'clean', 'svgmin_icons', 'svgstore', 'clean:sprite', 'less', 'postcss', 'ftp_push:your_target', 'watch']);
+    grunt.registerTask('jenkins', ['bake', 'clean', 'svgmin_icons', 'svgstore', 'clean:sprite',  'less', 'postcss', 'ftp_push:your_target']);
 };

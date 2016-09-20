@@ -19,8 +19,13 @@
         }
         
         function replaceTablePlusMinus2icons() {
-            $("table td:contains('+')").html("<i class='ion-ios-checkmark-empty'></i>");
-            $("table td:contains('-')").html("<i class='ion-ios-close-empty'></i>");
+            $("table td").filter(function() {
+                return $(this).text() === "+";
+            }).html("<i class='ion-ios-checkmark-empty'></i>");
+            
+            $("table td").filter(function() {
+                return $(this).text() === "-";
+            }).html("<i class='ion-ios-close-empty'></i>");
         }
         
         

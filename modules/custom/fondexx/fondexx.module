@@ -8,6 +8,9 @@ function fondexx_block_info() {
   $blocks['Fondexx registration form'] = array(
     'info' => t('Fondexx registration form'),
   );
+  $blocks['Fondexx market leaders'] = array(
+    'info' => t('Fondexx market leaders'),
+  );
 
   return $blocks;
 }
@@ -23,6 +26,10 @@ function fondexx_block_view($delta = '') {
       $block['subject'] = '';
       $block['content'] = _fondexx_registration_form_block();
       break;
+    case 'Fondexx market leaders':
+      $block['subject'] = '';
+      $block['content'] = _fondexx_market_leaders_form_block();
+      break;
   }
 
   return $block;
@@ -31,7 +38,10 @@ function fondexx_block_view($delta = '') {
 function _fondexx_registration_form_block() {
     if (request_path() == 'study/start') {
         $bntText = 'Undergo free';
-    } else {
+    } else if (request_path() == 'trade/demo') {
+        $bntText = 'Create demo account';
+    } else
+    {
         $bntText = 'Get access';
     }
             
@@ -43,5 +53,10 @@ function _fondexx_registration_form_block() {
  $output =  $output . '<input type="submit" value="'. t($bntText) .'"id="submit" class="btn btn-success" />';
  $output =  $output . '</form>';
  
+    return $output;
+}
+
+function _fondexx_market_leaders_form_block() {
+    $output = "<h2>Market leaders goes here! (soon)</h2>- TODO -";
     return $output;
 }
