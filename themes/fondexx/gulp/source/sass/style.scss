@@ -1,0 +1,27 @@
+@import "vendors/media";
+@import "reset";
+@import "variables";
+@import "fonts";
+@import "sprite";
+@import "typography";
+
+@import "common";
+
+@import "layouts";
+
+@import "../blocks/**/*";
+//
+//@import "../components/logo/logo";
+//@import "../components/buttons/buttons";
+//@import "../components/header/header";
+//@import "../components/footer/footer";
+//@import "../components/socials/socials";
+//@import "../components/main_contacts/contacts";
+//@import "../components/intro_slider/intro_slider";
+//@import "../components/news/news";
+//@import "../components/promo/promo";
+//@import "../components/promo_lectures/promo_lectures";
+//@import "../components/activities/activities";
+//@import "../components/lectures_contacts/lectures_contacts";
+//@import "../components/lecture/lecture";
+//@import "../components/lectures_all/lectures_all";

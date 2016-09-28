@@ -1,0 +1,122 @@
+// default layout
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+a,
+a:before,
+button,
+button:before,
+input[type="button"],
+input[type="submit"] {
+  transition: border-color 0.1s ease-in, color 0.1s ease-in, background-color 0.1s ease-in;
+}
+
+%row {
+  overflow: hidden;
+  max-width: $tablet + px;
+  margin: 0 auto;
+}
+
+@mixin grid($columns-amount: 12, $columns-padding: 5, $column-name: "col-") {
+  @for $i from 1 through $columns-amount {
+    %#{$column-name}-#{$i} {
+      width: 100% / $columns-amount * $i;
+      float: left;
+      box-sizing: border-box;
+      display: block;
+      padding-left: $columns-padding;
+      padding-right: $columns-padding;
+      min-height: 1px;
+
+    }
+
+    %#{$column-name}-reverse-#{$i} {
+      float: right;
+    }
+
+    %#{$column-name}-offset-#{$i} {
+      margin-left: 100% / $columns-amount * $i;
+    }
+  }
+}
+
+@include grid($column-name: "col", $columns-padding: $col-padding);
+
+@include max-screen($tablet) {
+  %block {
+    width: auto;
+    float: none;
+  }
+
+  %offset {
+    margin-left: 0;
+  }
+
+  @for $i from 1 through 12 {
+    %col-#{$i} {
+      @extend %block;
+    }
+
+    %col-offset-#{$i} {
+      @extend %offset;
+    }
+  }
+}
+
+
+@include max-screen($tablet) {
+  @include grid($column-name: "col-md", $columns-padding: 15px);
+}
+
+
+@include max-screen($mobile) {
+  %block {
+    width: auto;
+    float: none;
+
+    // padding-left: 0
+    // padding-right: 0
+
+  }
+
+  %offset {
+    margin-left: 0;
+  }
+
+  @for $i from 1 through 12 {
+    %col-md-#{$i} {
+      @extend %block;
+    }
+
+    %col-md-offset-#{$i} {
+      @extend %offset;
+    }
+  }
+}
+
+
+@include max-screen($mobile) {
+  @include grid($column-name: "col-sm", $columns-padding: 10px);
+}
+
+
+.is-hidden {
+  display: none !important;
+}
+
+main {
+  min-height: 100%;
+}
