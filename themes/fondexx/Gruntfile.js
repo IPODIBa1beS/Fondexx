@@ -61,8 +61,8 @@ module.exports = function(grunt) {
                 }
             }
         },
-        
-         bake: {
+
+        bake: {
             your_target: {
                 options: {
                     // Task-specific options go here.
@@ -70,9 +70,9 @@ module.exports = function(grunt) {
 
                 files: {
                     // files go here, like so:
-                    "templates/page.tpl.php": "dev-templates/page.tpl.php"
+                    'templates/page.tpl.php' : "/dev-templates/page.php"
                 }
-            },
+            }
         },
 
         ftp_push: {

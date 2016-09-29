@@ -35,10 +35,9 @@ var gulp = require('gulp'),
         },
         'build': {
             'css': '../css/',
-            'js': './build/assets/js/',
-            'fonts': './build/assets/fonts/',
-            'build': './build',
-            'img': './/build/assets/images/'
+            'js': '../js/',
+            'fonts': '../fonts/',
+            'img': '../images/'
         }
     };
 

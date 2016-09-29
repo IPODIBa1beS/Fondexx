@@ -1,0 +1,32 @@
+.navbar{
+  background-color: $primary-bg;
+
+  &-header{
+
+    &-toggle{
+
+    }
+
+  }
+
+  &-nav{
+
+  }
+
+  &-collapse{
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    border-color: transparent;
+    background-color: $overlay-menu;
+  }
+}
+
+.logo{
+  background: $primary-bg url('../images/logo.svg') no-repeat scroll cover;
+
+  //stub!!!
+  img{
+    display: none;
+  }
+}

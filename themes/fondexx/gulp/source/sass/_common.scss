@@ -7,3 +7,17 @@ body {
   background-color: #fff;
   color: #000;
 }
+
+*{
+  transition: all 0.3s;
+}
+
+.page-home{
+  &-header{
+    display: none;
+  }
+
+  .alert{
+    display: none;
+  }
+}
