@@ -51,6 +51,7 @@ scripts[] = 'js/tooltip.js'
 scripts[] = 'js/popover.js'
 
 scripts[] = 'js/fondexx.js'
+scripts[] = 'js/index.js'
 
 
 

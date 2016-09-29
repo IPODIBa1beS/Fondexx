@@ -1,0 +1,23 @@
+body {
+  font-family: opensans, Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.25;
+  min-width: 320px;
+  min-height: 320px;
+  background-color: #fff;
+  color: #000;
+}
+
+*{
+  transition: all 0.3s;
+}
+
+.page-home{
+  &-header{
+    display: none;
+  }
+
+  .alert{
+    display: none;
+  }
+}
