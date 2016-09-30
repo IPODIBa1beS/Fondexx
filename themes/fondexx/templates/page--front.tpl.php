@@ -82,7 +82,7 @@
             <span class="sr-only"><?php print t('Toggle navigation'); ?></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
         </button>
           
         <?php if ($logo): ?>
