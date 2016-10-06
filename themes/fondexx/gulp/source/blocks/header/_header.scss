@@ -1,32 +1,109 @@
-.navbar{
-  background-color: $primary-bg;
 
-  &-header{
+  .navbar {
+    background-color: $primary-bg;
+    width: 100%;
+    max-width: none !important;
+    margin-top: 0 !important;
 
-    &-toggle{
+    .logo {
+      @extend %col-2;
+      display: inline-block;
+      background: $primary-bg url('../images/logo.png') no-repeat scroll center;
 
+      //stub!!!
+      img {
+        display: none;
+      }
     }
 
+    &-toggle{
+      @extend %col-1;
+      position: relative;
+      border: 0 none;
+      vertical-align: bottom;
+      margin-right: 20px;
+    }
+
+    &-header {
+      display: block;
+
+      .button-login{
+        @extend %col-2;
+        float: right;
+        margin-right: 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        line-height: 50px;
+        border-radius: 32px;
+
+      }
+    }
+
+    &-nav {
+      display: inline-block;
+      .expanded {
+
+        .dropdown-toggle {
+          color: $default-text;
+          text-decoration: none;
+          text-transform: uppercase;
+          transition: all .3s ease;
+
+          &:hover, &:focus{
+            color: darken($default-text, 30%);
+          }
+        }
+      }
+    }
+
+    &-collapse.in {
+      position: fixed;
+      z-index: 250;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      border-color: transparent;
+      background-color: $overlay-menu;
+
+      .first {
+        display: none;
+      }
+
+      .nav {
+        max-width: 960px;
+        margin: 10vh auto 0;
+
+        .expanded {
+          display: inline-block;
+          vertical-align: top;
+
+          .dropdown-toggle {
+            display: inline-block;
+            color: $primary-color;
+            font-size: $fs-md;
+            line-height: 48px;
+            text-decoration: none;
+
+            &:before {
+              content: " ";
+              @extend .icon, .icon-contacts;
+              display: inline-block;
+              width: 48px;
+              height: 48px;
+              margin-right: $col-padding;
+              color: $icon-color;
+              font-size: 48px;
+
+            }
+          }
+
+        }
+
+        .close-overlay {
+          font-size: 24px;
+          color: $primary-bg;
+        }
+      }
+    }
   }
-
-  &-nav{
-
-  }
-
-  &-collapse{
-    position: absolute;
-    top: 0;
-    height: 100vh;
-    border-color: transparent;
-    background-color: $overlay-menu;
-  }
-}
-
-.logo{
-  background: $primary-bg url('../images/logo.svg') no-repeat scroll cover;
-
-  //stub!!!
-  img{
-    display: none;
-  }
-}

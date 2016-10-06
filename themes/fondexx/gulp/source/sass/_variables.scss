@@ -7,17 +7,21 @@ $tablet: 768;
 $mobile: 320;
 
 // Sizes
-$col-padding: 15px;
+$col-padding: 15;
 
-//Colors
-$white: #fff;
+//colors
 $primary-bg: #222328;
 $overlay-menu: #f8f8f8;
 $primary-light: #343e5c;
 $accent-color: #39b54a;
-$btn-color: #0099ad;
+$primary-color: #0099ad;
+$icon-color: #bdc2d4;
+
+$default-text: #fff;
+$dark-text: #000;
+
 //font-sizes:
 $fs-sm: 14px;
 $fs-md: 20px;
 $fs-lg: 35px;
-$title-text: 22px;
+$fs-title: 22px;

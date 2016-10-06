@@ -18,13 +18,13 @@
         <?php if (!empty($primary_nav)): ?>
             <?php print render($primary_nav); ?>
         <?php endif; ?>
-
+        <a href="#" class="button button-dark-blue button-login"> Create Account / Login</a>
     </div>
 
     <!-- Overlay menu -->
     <div class="navbar-collapse collapse">
         <nav role="navigation">
-          
+            <i class="ion-close-round close-overlay"></i>
             <?php if (!empty($primary_nav)): ?>
                 <?php print render($primary_nav); ?>
             <?php endif; ?>

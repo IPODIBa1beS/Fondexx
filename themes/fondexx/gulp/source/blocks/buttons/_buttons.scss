@@ -1,0 +1,29 @@
+.button{
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+  transition: all .4s ease;
+  color: $default-text;
+  font-size: $fs-sm;
+  text-align: center;
+  background-color: $primary-color;
+  font-weight: 700;
+  border-radius: 42px;
+  line-height: 38px;
+  text-transform: uppercase;
+
+  &:hover, &:focus{
+    background-color: lighten($primary-color, 20%);
+    color: $default-text;
+  }
+
+  &-dark-blue{
+    background-color: $primary-light;
+
+    &:hover, &:focus{
+      background-color: lighten($primary-light, 20%);
+      color: $default-text;
+    }
+  }
+}

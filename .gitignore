@@ -226,7 +226,7 @@ node_modules/
 bower_components/
 .ftpauth
 *.css
-themes/fondexx/css/style.css
+/themes/fondexx/css/style.css
 
 /.idea
 /themes/fondexx/gulp/node_modules/

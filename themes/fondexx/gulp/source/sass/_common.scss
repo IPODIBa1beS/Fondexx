@@ -4,8 +4,8 @@ body {
   line-height: 1.25;
   min-width: 320px;
   min-height: 320px;
-  background-color: #fff;
-  color: #000;
+  background-color: $primary-bg;
+  color: $default-text;
 }
 
 *{

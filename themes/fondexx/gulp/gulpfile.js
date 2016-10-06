@@ -17,21 +17,24 @@ var gulp = require('gulp'),
     mainBowerFiles = require('main-bower-files'),
     babel = require('gulp-babel'),
     fs = require('fs'),
+    iconfont = require("gulp-iconfont"),
+    iconfontCss = require('gulp-iconfont-css'),
     dirs = {
         'source': {
             'vendorJs': './source/js/vendor/',
             'vendorCss': './source/css/vendor/',
             'js': [
-                './source/js/tab.js',
-                './source/js/slider.js',
-                './source/js/caroucel.js',
-                './source/js/index.js'
+                '../blocks/**/*.js',
+                '../js/*.js'
             ],
-            'fonts': './source/fonts/',
+            'fonts': './source/fonts/*.*',
+            'fontsFolder': './source/fonts/',
              'html': './source/views/*.html',
             'sass': ['./source/sass/**/*.scss'],
-            'sassFolder': './source/sass/',
-            'img': './source/images/*.*'
+            'sassFolder': ['./source/sass/', './source/blocks/*/*.scss'],
+            'img': ['./source/images/*.*'],
+            'sassRoot': 'source/sass/',
+            'svgIcons': './source/images/icons/*.svg'
         },
         'build': {
             'css': '../css/',
@@ -45,6 +48,32 @@ var gulp = require('gulp'),
 gulp.task('fonts', function() {
     gulp.src(dirs.source.fonts)
         .pipe(gulp.dest(dirs.build.fonts));
+});
+
+// icon font
+var fontname = 'svgfont';
+
+gulp.task('iconfont', function () {
+    return gulp.src([dirs.source.svgIcons])
+        .pipe(plumber())
+        .pipe(iconfontCss({
+            fontName: fontname
+            , path: './source/helpers/_svgfont.sass'
+            , targetPath: '../../' + dirs.source.sassRoot + '_svgfont.sass'
+            , fontPath: './fonts/'
+            , cssClass: 'icon'
+        }))
+        .pipe(plumber())
+        .pipe(iconfont({
+            fontName: fontname
+            , prependUnicode: true
+            , formats: ['ttf', 'eot', 'woff']
+            , normalize: true
+            , fontHeight: 1001
+            , fontStyle: 'normal'
+            , fontWeight: 'normal'
+        }))
+        .pipe(gulp.dest(dirs.source.fontsFolder));
 });
 
 //sass
@@ -64,6 +93,7 @@ gulp.task('compileSass', function() {
     return gulp.src(dirs.source.sass)
         .pipe(plumber())
         .pipe(sourcemaps.init())
+        .pipe(sassGlob())
         .pipe(sass({
             outputStyle: 'compact'
         }).on('error', sass.logError))
@@ -77,10 +107,7 @@ gulp.task('assembleJs', function() {
     return gulp.src(dirs.source.js)
         .pipe(plumber())
         .pipe(sourcemaps.init())
-        .pipe(babel({
-            presets: ['es2015']
-        }))
-        .pipe(concat("index.js"))
+        .pipe(concat("custom.js"))
         .pipe(gulp.dest(dirs.build.js));
 });
 
@@ -98,23 +125,23 @@ gulp.task('images', function() {
         .pipe(gulp.dest(dirs.build.img));
 });
 
-gulp.task('assembleVendorJs', function() {
-    return gulp.src(mainBowerFiles('**/*.js'))
-        .pipe(plumber())
-        .pipe(uglify())
-        .pipe(gulp.dest(dirs.build.js));
-});
-
-gulp.task('assembleVendorCss', function() {
-    return gulp.src(mainBowerFiles('**/*.css'))
-        .pipe(plumber())
-        .pipe(gulp.dest(dirs.build.css));
-});
+//gulp.task('assembleVendorJs', function() {
+//    return gulp.src(mainBowerFiles('**/*.js'))
+//        .pipe(plumber())
+//        .pipe(uglify())
+//        .pipe(gulp.dest(dirs.build.js));
+//});
+//
+//gulp.task('assembleVendorCss', function() {
+//    return gulp.src(mainBowerFiles('**/*.css'))
+//        .pipe(plumber())
+//        .pipe(gulp.dest(dirs.build.css));
+//});
 
 gulp.task('watch', function() {
-    gulp.watch(dirs.source.sass, ['compileSass']);
+    gulp.watch(dirs.source.sassFolder, ['compileSass']);
     gulp.watch(dirs.source.js, ['assembleJs']);
     gulp.watch(dirs.source.img, ['images']);
 });
 
-gulp.task('default', ['fonts', 'assembleJs', 'images','compileSass', 'watch']);
+gulp.task('default', ['iconfont', 'fonts', 'assembleJs', 'images','compileSass', 'watch']);
