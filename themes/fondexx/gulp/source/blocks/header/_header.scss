@@ -4,11 +4,14 @@
     width: 100%;
     max-width: none !important;
     margin-top: 0 !important;
+    padding: 20px;
 
     .logo {
       @extend %col-2;
       display: inline-block;
       background: $primary-bg url('../images/logo.png') no-repeat scroll center;
+      height: 40px;
+      width: 25%;
 
       //stub!!!
       img {
@@ -19,9 +22,9 @@
     &-toggle{
       @extend %col-1;
       position: relative;
+      z-index: 255;
       border: 0 none;
       vertical-align: bottom;
-      margin-right: 20px;
     }
 
     &-header {
@@ -30,13 +33,12 @@
       .button-login{
         @extend %col-2;
         float: right;
-        margin-right: 10px;
+        margin-right: 20px;
         text-decoration: none;
         text-transform: uppercase;
         font-weight: 700;
         line-height: 50px;
         border-radius: 32px;
-
       }
     }
 
@@ -54,6 +56,11 @@
             color: darken($default-text, 30%);
           }
         }
+
+        .dropdown-menu{
+          position: absolute;
+          background-color: $primary-bg;
+        }
       }
     }
 
@@ -64,13 +71,13 @@
       width: 100%;
       height: 100vh;
       border-color: transparent;
-      background-color: $overlay-menu;
+    //  background-color: $overlay-menu;
 
       .first {
         display: none;
       }
 
-      .nav {
+      .collapse.in .nav {
         max-width: 960px;
         margin: 10vh auto 0;
 
@@ -78,9 +85,9 @@
           display: inline-block;
           vertical-align: top;
 
-          .dropdown-toggle {
+          &>.dropdown-toggle {
             display: inline-block;
-            color: $primary-color;
+            color: $primary-color !important;
             font-size: $fs-md;
             line-height: 48px;
             text-decoration: none;
@@ -98,11 +105,16 @@
             }
           }
 
+          .dropdown-menu{
+            position: absolute;
+            background-color: $primary-bg;
+          }
         }
 
         .close-overlay {
           font-size: 24px;
           color: $primary-bg;
+          width: 48px;
         }
       }
     }
