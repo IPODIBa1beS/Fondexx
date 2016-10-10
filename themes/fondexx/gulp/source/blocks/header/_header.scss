@@ -1,49 +1,62 @@
 
-  .navbar {
-    background-color: $primary-bg;
-    width: 100%;
-    max-width: none !important;
-    margin-top: 0 !important;
-    padding: 20px;
+.navbar {
+  background-color: $primary-bg;
+  width: 100%;
+  max-width: none !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 
-    .logo {
-      @extend %col-2;
+  .logo {
+    @extend %col-2;
+    display: inline-block;
+    height: 43px;
+    margin: 0 !important;
+
+    //stub!!!
+    img {
+      display: none;
+    }
+  }
+
+  &-header {
+    display: block;
+    border-bottom: 2px solid $divider;
+
+    .toggle-btn-wrapper {
+      @extend %col-1;
+      text-align: center;
+      height: 100%;
       display: inline-block;
-      background: $primary-bg url('../images/logo.png') no-repeat scroll center;
-      height: 40px;
-      width: 25%;
-
-      //stub!!!
-      img {
-        display: none;
-      }
+      padding: 10px;
+      border-right: 2px solid $divider;
     }
 
-    &-toggle{
-      @extend %col-1;
+
+    .navbar-toggle {
       position: relative;
       z-index: 255;
       border: 0 none;
       vertical-align: bottom;
     }
 
-    &-header {
-      display: block;
-
-      .button-login{
-        @extend %col-2;
-        float: right;
-        margin-right: 20px;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-weight: 700;
-        line-height: 50px;
-        border-radius: 32px;
-      }
+    .button-login {
+      @extend %col-2;
+      float: right;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 700;
+      line-height: 50px;
+      border-radius: 32px;
+      margin: 10px;
     }
 
-    &-nav {
+    .nav {
+      @extend %col-6;
       display: inline-block;
+      margin: 0 !important;
+      padding: 10px;
+      vertical-align: baseline;
+
       .expanded {
 
         .dropdown-toggle {
@@ -52,70 +65,162 @@
           text-transform: uppercase;
           transition: all .3s ease;
 
-          &:hover, &:focus{
+          &:hover, &:focus {
             color: darken($default-text, 30%);
           }
         }
 
-        .dropdown-menu{
+        .dropdown-menu {
           position: absolute;
           background-color: $primary-bg;
         }
       }
     }
 
-    &-collapse.in {
-      position: fixed;
-      z-index: 250;
-      top: 0;
-      width: 100%;
-      height: 100vh;
-      border-color: transparent;
+  }
+
+  &-collapse.in {
+    position: fixed;
+    z-index: 250;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    border-color: transparent;
     //  background-color: $overlay-menu;
 
-      .first {
-        display: none;
+    .first {
+      display: none;
+    }
+
+    .collapse.in .nav {
+      max-width: 960px;
+      margin: 10vh auto 0;
+
+      .expanded {
+        display: inline-block;
+        vertical-align: top;
+
+        & > .dropdown-toggle {
+          display: inline-block;
+          color: $primary-color !important;
+          font-size: $fs-md;
+          line-height: 48px;
+          text-decoration: none;
+
+          &:before {
+            content: " ";
+            @extend .icon, .icon-contacts;
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            margin-right: $col-padding;
+            color: $border-color;
+            font-size: 48px;
+
+          }
+        }
+
+        .dropdown-menu {
+          position: absolute;
+          background-color: $primary-bg;
+        }
       }
 
-      .collapse.in .nav {
-        max-width: 960px;
-        margin: 10vh auto 0;
-
-        .expanded {
-          display: inline-block;
-          vertical-align: top;
-
-          &>.dropdown-toggle {
-            display: inline-block;
-            color: $primary-color !important;
-            font-size: $fs-md;
-            line-height: 48px;
-            text-decoration: none;
-
-            &:before {
-              content: " ";
-              @extend .icon, .icon-contacts;
-              display: inline-block;
-              width: 48px;
-              height: 48px;
-              margin-right: $col-padding;
-              color: $icon-color;
-              font-size: 48px;
-
-            }
-          }
-
-          .dropdown-menu{
-            position: absolute;
-            background-color: $primary-bg;
-          }
-        }
-
-        .close-overlay {
-          font-size: 24px;
-          color: $primary-bg;
-          width: 48px;
-        }
+      .close-overlay {
+        font-size: 24px;
+        color: $primary-bg;
+        width: 48px;
       }
     }
   }
+}
+
+ .header{
+
+   &-content{
+     min-height: 60px;
+   }
+
+   &_links{
+     @extend %col-8;
+     display: inline-block;
+     padding: 10px;
+
+     &-list{
+       display: block;
+       list-style-type: none;
+
+       li{
+          display: inline-block;
+         a{
+           display: inline-block;
+           text-decoration: none;
+         }
+       }
+     }
+   }
+
+   &_contacts{
+    @extend %col-4;
+     border-left: 2px solid $divider;
+     padding: 10px;
+
+     &-wrapper{
+       @extend %col-5;
+       text-align: center;
+     }
+
+     .button{
+       background-color: transparent;
+       border: 2px solid $border-color;
+       color: $border-color;
+       width: 80px;
+       height: 40px;
+       line-height: 25px;
+       font-size: $fs-md;
+       padding: 5px;
+
+       &:hover{
+         background-color: $border-color;
+         color: $primary-bg;
+       }
+     }
+
+     &-list{
+       @extend %col-5;
+
+       li{
+         display: block;
+         width: 100%;
+       }
+     }
+
+     &-link{
+       display: inline-block;
+       font-size: $fs-sm;
+       color: $default-text;
+       text-decoration: none;
+
+       &.skype:before{
+         @extend .icon, .icon-skype;
+         display: inline-block;
+         color: $contacts-icon;
+         font-size: $fs-md;
+         width: $fs-md;
+         height: $fs-md;
+       }
+
+       &.phone:before{
+         @extend .icon, .icon-tel;
+         color: $contacts-icon;
+         font-size: $fs-md;
+         width: $fs-md;
+         height: $fs-md;
+       }
+
+       &:hover{
+         color: darken( $default-text, 20%);
+       }
+     }
+   }
+ }

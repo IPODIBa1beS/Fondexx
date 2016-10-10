@@ -24,8 +24,7 @@ var gulp = require('gulp'),
             'vendorJs': './source/js/vendor/',
             'vendorCss': './source/css/vendor/',
             'js': [
-                '../blocks/**/*.js',
-                '../js/*.js'
+                './source/blocks/*/*.js'
             ],
             'fonts': './source/fonts/*.*',
             'fontsFolder': './source/fonts/',
@@ -60,7 +59,7 @@ gulp.task('iconfont', function () {
             fontName: fontname
             , path: './source/helpers/_svgfont.sass'
             , targetPath: '../../' + dirs.source.sassRoot + '_svgfont.sass'
-            , fontPath: './fonts/'
+            , fontPath: '../fonts/'
             , cssClass: 'icon'
         }))
         .pipe(plumber())
