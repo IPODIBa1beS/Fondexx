@@ -1,11 +1,8 @@
-// 84 - about company, 95 - advantages, 107 - vacancies, articles, 97 - all sales,
-//study arcticles,
-.page-node-84, .page-node-95 ,.page-node-107, .node-type-article, .page-node-97, .page-node-100,
-.page-node-101, .page-node-102, .page-node-98, .page-study-articles, .page-analytics {
+.page-company-news, .page-study-articles, .page-analytics {
   color: $dark-text;
 
   .main-container{
-    background: rgba(255, 255, 255, 0.5) url('../images/innerBackground.png');
+    background: rgba(0, 0, 0, 0.5) url('../images/innerBackground.png');
     background-repeat: no-repeat;
     background-position: 100% 0;
     background-attachment: scroll;
