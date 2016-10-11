@@ -1,0 +1,78 @@
+.innerPageWhiteWithImage {
+  color: $dark-text;
+
+  #myId{
+    height: 150px;
+  }
+
+  .main-container{
+    background: rgba(255, 255, 255, 0.5) url('../images/bg_main.jpeg');
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-attachment: scroll;
+    background-size: 100% 125%;
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    &:before{
+      content: '';
+      display: inline-block;
+      position: absolute;
+      width: 20px;
+      border-bottom: 2px solid $border-color;
+      margin-top: 50px;
+    }
+
+    &>.row{
+      padding: 40px;
+    }
+  }
+
+  .page-header{
+    border-bottom: 0 none;
+    color: $page-header;
+    font-size: $fs-md;
+    text-transform: uppercase;
+
+
+  }
+  .region-sidebar-second{
+    margin-top: 50px;
+    .block-block{
+      a{
+        @extend .button-rectangle;
+        //background-color: transparent !important;
+        //border: 2px solid $primary-bg;
+        //color: $primary-bg !important;
+        //
+        //&:hover, &:focus{
+        //  background-color: $primary-bg;
+        //  color: $default-text;
+        //}
+      }
+    }
+  }
+
+  .breadcrumb{
+    display: none;
+  }
+
+  article{
+
+    .field-name-body{
+      p{
+        font-size: $fs-md;
+        font-family: "RobotoRegular", 'Helvetica', sans-serif;
+        letter-spacing: 1.5px;
+        word-spacing: 2px;
+        margin-bottom: 25px;
+
+        &:first-child{
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}

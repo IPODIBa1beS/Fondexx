@@ -30,7 +30,7 @@ var gulp = require('gulp'),
             'fontsFolder': './source/fonts/',
              'html': './source/views/*.html',
             'sass': ['./source/sass/**/*.scss'],
-            'sassFolder': ['./source/sass/', './source/blocks/*/*.scss'],
+            'sassFolder': ['./source/sass/', './source/blocks/**/*.scss'],
             'img': ['./source/images/*.*'],
             'sassRoot': 'source/sass/',
             'svgIcons': './source/images/icons/*.svg'
