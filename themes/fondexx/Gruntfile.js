@@ -71,7 +71,9 @@ module.exports = function(grunt) {
                 files: {
                     // files go here, like so:
                     "templates/page.tpl.php": "dev-templates/page.php",
-                    "templates/page--front.tpl.php": "dev-templates/page--front.php"
+                    "templates/page--front.tpl.php": "dev-templates/page--front.php",
+                    "templates/page--type-page.tpl.php": "dev-templates/page--type-page.php",
+                    "templates/page--type-webform.tpl.php": "dev-templates/page--type-webform.php"
                 }
             }
         },
