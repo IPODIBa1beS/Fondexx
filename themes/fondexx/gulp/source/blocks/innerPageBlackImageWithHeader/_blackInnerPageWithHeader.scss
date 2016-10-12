@@ -1,16 +1,16 @@
-.whiteInnerPageWithHeader {
-  color: $dark-text;
+.blackInnerPageWithHeader{
+  color: $default-text;
 
-  #myId{
-    height: 150px;
+  #myid{
+    height: 250px !important;
   }
 
   .main-container{
-    background: rgba(255, 255, 255, 0.5) url('../images/bg_main.jpg');
+    background: rgba(0, 0, 0, 0.5) url('../images/bg_main.jpg');
     background-repeat: no-repeat;
     background-position: 100% 0;
     background-attachment: scroll;
-    background-size: 100% 125%;
+    background-size: 100% 175%;
     max-width: none;
     width: 100%;
     margin: 0;
@@ -42,15 +42,7 @@
     margin-top: 50px;
     .block-block{
       a{
-        @extend .button-rectangle;
-        //background-color: transparent !important;
-        //border: 2px solid $primary-bg;
-        //color: $primary-bg !important;
-        //
-        //&:hover, &:focus{
-        //  background-color: $primary-bg;
-        //  color: $default-text;
-        //}
+        @extend .button-rectangle, .btn-white;
       }
     }
   }
@@ -60,6 +52,19 @@
   }
 
   article{
+    header{
+      margin: 10px 0;
+
+      h2{
+        a{
+          display: inline-block;
+          font-size: $fs-lg;
+          font-family: "RobotoRegular", 'Helvetica', sans-serif;
+          color: $default-text;
+          text-transform: uppercase;
+        }
+      }
+    }
 
     .field-name-body{
       p{
@@ -67,12 +72,24 @@
         font-family: "RobotoRegular", 'Helvetica', sans-serif;
         letter-spacing: 1.5px;
         word-spacing: 2px;
-        margin-bottom: 25px;
+        margin-bottom: 15px;
 
         &:first-child{
-          margin-top: 15px;
+          margin-top: 10px;
         }
       }
+
+      h2 {
+        text-transform: uppercase;
+        font-family: "RobotoRegular", 'Helvetica', sans-serif;
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+    }
+
+    .submitted-by{
+      display: inline-block;
+      color: $border-color;
     }
   }
 }

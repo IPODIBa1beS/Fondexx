@@ -1,0 +1,25 @@
+.table-striped-custom{
+   tr{
+
+      &:nth-child(odd){
+        background: transparent;
+      }
+
+      &:nth-child(even){
+        background: $table-white-stripe;
+      }
+
+      th{
+        border: 0 none;
+      }
+
+      td{
+        vertical-align: middle;
+        border: 0 none;
+
+        a{
+          @extend .button-rectangle, .btn-white, .btn-transparent-rounded;
+        }
+      }
+    }
+}

@@ -1,3 +1,71 @@
 .page-trade-accounts{
-  
+  @extend .blackInnerPageWithHeader;
+
+  .pane-1{
+    border: 1px dotted $error;
+    padding: 50px;
+    text-align: center;
+    margin-bottom: 25px;
+
+    .pane-title{
+      text-transform: uppercase;
+      color: $page-header;
+      font-size: $fs-title;
+      margin-bottom: 15px;
+    }
+
+    .pane-content{
+      ul{
+        overflow: hidden;
+
+        li{
+          @extend %col-6;
+          display: inline-block;
+          font-size: $fs-md;
+          font-family: "RobotoRegular", 'Helvetica', sans-serif;
+          letter-spacing: 1.5px;
+          word-spacing: 2px;
+        }
+      }
+
+      p:last-child{
+        margin-top: 25px;
+        text-align: left;
+        display: block;
+        color: $border-color;
+        font-size: $fs-sm;
+
+
+        &:before{
+          content: '*';
+          display: inline-block;
+          word-spacing: 2px;
+        }
+
+        a{
+          display: inline-block;
+          font-weight: 700;
+          text-decoration: underline;
+          color: $border-color;
+        }
+      }
+    }
+  }
+
+  .pane-2{
+
+    .pane-title{
+      text-transform: uppercase;
+      color: $page-header;
+      font-size: $fs-title;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .pane-content{
+        table{
+          @extend .table-striped-custom;
+        }
+    }
+  }
 }

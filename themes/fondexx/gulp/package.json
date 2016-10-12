@@ -28,12 +28,6 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.3",
     "imagemin-pngquant": "^4.2.0",
-    "main-bower-files": "^2.11.1",
-    "gulp-iconfont": "^8.0.1",
-    "gulp-iconfont-css": "^2.1.0"
-  },
-  "dependencies": {
-    "gulp-iconfont": "^8.0.1",
-    "gulp-iconfont-css": "^2.1.0"
+    "main-bower-files": "^2.11.1"
   }
 }

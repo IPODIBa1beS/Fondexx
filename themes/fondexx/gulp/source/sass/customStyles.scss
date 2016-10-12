@@ -4,7 +4,7 @@
 @import "variables";
 @import "fonts";
 @import "sprite";
-@import "svgfont";
+//@import "svgfont";
 @import "typography";
 
 @import "common";
@@ -13,3 +13,6 @@
 
 @import "../blocks/**/*.scss";
 
+.alert{
+  display: none !important;
+}

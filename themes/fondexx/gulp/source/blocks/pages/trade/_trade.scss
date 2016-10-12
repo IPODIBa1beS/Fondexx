@@ -1,3 +1,22 @@
 .page-node-97{
+    @extend .whiteInnerPageWithHeader;
 
+    article{
+      .field-name-body{
+
+        ul{
+
+          li{
+            display: block;
+            padding-left: 10px;
+
+            p>a{
+              display: inline-block;
+              color: $dark-text;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
 }

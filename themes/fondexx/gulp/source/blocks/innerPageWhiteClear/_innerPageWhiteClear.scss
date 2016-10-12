@@ -1,0 +1,105 @@
+.whiteInnerPage {
+  color: $dark-text;
+
+  .main-container {
+    background: rgba(255, 255, 255, 1) url('../images/bg_white_stub.jpg');
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-attachment: scroll;
+    background-size: 100% 175%;
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      width: 20px;
+      border-bottom: 2px solid $border-color;
+      margin-top: 50px;
+    }
+
+    & > .row {
+      padding: 40px;
+    }
+  }
+
+  .page-header {
+    border-bottom: 0 none;
+    color: $page-header;
+    font-size: $fs-md;
+    text-transform: uppercase;
+
+  }
+  .region-sidebar-second {
+    margin-top: 50px;
+    .block-block {
+      a {
+        @extend .button-rectangle;
+      }
+    }
+  }
+
+  .breadcrumb {
+    display: none;
+  }
+
+  article {
+    header{
+      margin-bottom: 10px;
+
+      h2{
+        a{
+          display: inline-block;
+          font-size: $fs-lg;
+          font-family: "RobotoRegular", 'Helvetica', sans-serif;
+          color: $default-text;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .field-name-body {
+      p {
+        font-size: $fs-md;
+        font-family: "RobotoRegular", 'Helvetica', sans-serif;
+        letter-spacing: 1.5px;
+        word-spacing: 2px;
+        margin-bottom: 15px;
+
+        &:first-child {
+          margin-top: 10px;
+        }
+      }
+
+      h2 {
+        text-transform: uppercase;
+        font-family: "RobotoRegular", 'Helvetica', sans-serif;
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+    }
+
+    .submitted-by {
+      display: inline-block;
+      color: $primary-bg;
+      font-family: "RobotoLight";
+      margin: 10px 0;
+    }
+
+    .flippy {
+      .prev, .next {
+        a {
+          display: inline-block;
+          color: $primary-bg;
+
+          &:hover, &:focus {
+            color: lighten($primary-bg, 20%);
+          }
+        }
+      }
+    }
+  }
+}

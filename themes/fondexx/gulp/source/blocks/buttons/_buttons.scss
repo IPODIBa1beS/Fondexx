@@ -10,7 +10,7 @@
   background-color: $primary-color;
   font-weight: 700;
   border-radius: 42px;
-  line-height: 38px;
+  line-height: 45px;
   text-transform: uppercase;
   text-decoration: none;
 
@@ -38,6 +38,17 @@
       color: $primary-bg;
     }
   }
+
+  &-transparent-blue{
+    background-color: transparent;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+
+    &:hover, &:focus{
+      background-color: $primary-color;
+      color: $default-text;
+    }
+  }
 }
 
 .button-rectangle{
@@ -52,7 +63,7 @@
   background-color: transparent;
   font-weight: 700;
   border-radius: 10px;
-  line-height: 38px;
+  line-height: 50px;
   text-transform: uppercase;
   text-decoration: none;
   border: 2px solid $primary-bg;
@@ -61,4 +72,23 @@
     background-color: $primary-bg;
     color: $default-text;
   }
+}
+
+.btn-white{
+  color: white;
+  border: 2px solid white;
+
+  &:hover, &:focus{
+    background-color: white;
+    color: $primary-bg;
+  }
+}
+
+.btn-rounded-transparent{
+  background-color: $primary-bg;
+  width: 120px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 15px;
+
 }

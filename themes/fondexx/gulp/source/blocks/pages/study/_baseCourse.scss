@@ -1,3 +1,32 @@
-.page-study-start{
-  
+.page-study-start {
+  @extend .blackInnerPage;
+  .main-container {
+    background: rgba(0, 0, 0, 0.5) url('../images/bg_inner_empire_state.jpg');
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-attachment: scroll;
+    background-size: 100% 100%;
+
+
+    .pane-fondexx-fondexx-registration-form{
+      @extend %col-12;
+
+      input[type=text], input[type=email]{
+        width: 20%;
+        margin-right: 30px;
+        background: transparent;
+        border: 1px solid $border-color;
+        padding: 20px;
+        font-size: $fs-md;
+        color: $border-color;
+        border-radius: 2px;
+        font-family: "RobotoRegular";
+      }
+
+      input[type='submit']{
+        @extend .button-rectangle, .btn-white, .btn-transparent-rounded;
+      }
+    }
+  }
+
 }
