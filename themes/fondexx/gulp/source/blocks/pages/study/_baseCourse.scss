@@ -25,6 +25,7 @@
 
       input[type='submit']{
         @extend .button-rectangle, .btn-white, .btn-transparent-rounded;
+        width: auto !important;
       }
     }
   }

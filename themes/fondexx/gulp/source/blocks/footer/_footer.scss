@@ -1,0 +1,40 @@
+footer.footer{
+  margin-top: 0;
+
+  .logo{
+    @extend %col-3;
+  }
+
+  .nav {
+    @extend %col-6;
+    display: inline-block;
+    margin: 0 !important;
+    padding: 10px;
+    vertical-align: baseline;
+
+    .expanded {
+      display: inline-block;
+      vertical-align: top;
+
+      .dropdown-toggle {
+        color: $default-text;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all .3s ease;
+
+        &:hover, &:focus {
+          color: darken($default-text, 30%);
+        }
+      }
+
+      .dropdown-menu {
+        position: absolute;
+        background-color: $primary-bg;
+      }
+    }
+  }
+
+  .social{
+    @extend %col-3;
+  }
+}

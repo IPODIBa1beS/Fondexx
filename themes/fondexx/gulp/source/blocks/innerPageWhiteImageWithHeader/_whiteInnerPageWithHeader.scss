@@ -6,8 +6,7 @@
   }
 
   .main-container{
-    //should be white item!!
-    background: rgba(255, 255, 255, 1)  url('../images/bg_white_stub.jpg');
+    background: rgba(255, 255, 255, 1) url('../images/bg_white_main.jpg');
     background-repeat: no-repeat;
     background-position: 100% 0;
     background-attachment: scroll;
@@ -21,13 +20,13 @@
       content: '';
       display: inline-block;
       position: absolute;
-      width: 20px;
+      width: 40px;
       border-bottom: 2px solid $border-color;
-      margin-top: 50px;
+      margin-top: 90px;
     }
 
     &>.row{
-      padding: 40px;
+      padding: 80px;
     }
   }
 
