@@ -1,3 +1,88 @@
-.page-trade-sterling{
+.page-trade-sterling {
+  @extend .blackInnerPage;
 
+  .main-container {
+    background: $primary-bg;
+
+
+    .bottom-header-text {
+      font-size: $fs-title;
+      font-family: "RobotoRegular";
+      font-weight: 700;
+      margin: 10px 0;
+    }
+
+    #panels-ipe-paneid-46{
+      p{
+        margin: 0;
+      }
+    }
+
+    #panels-ipe-paneid-47, #panels-ipe-paneid-49{
+      h2{
+        color: $contacts-icon;
+        font-size: $fs-title;
+        text-transform: uppercase;
+        margin: 40px 0;
+      }
+    }
+
+    .advantages-list{
+
+      &-item{
+        display: block;
+        margin-bottom: 15px;
+      }
+    }
+    .pane-custom {
+
+
+      .pane-content {
+        display: block;
+
+        p {
+          display: block;
+          font-size: $fs-md - 2;
+          font-weight: 200;
+          font-family: "RobotoLight";
+          letter-spacing: 1px;
+          word-spacing: 1.5px;
+
+          a{
+            color: $contacts-icon;
+          }
+        }
+
+        .text {
+          font-size: $fs-md - 2;
+          font-family: "RobotoLight";
+          letter-spacing: 1px;
+          word-spacing: 1.5px;
+          margin-bottom: 15px;
+
+          &-bold {
+            font-weight: 700;
+          }
+
+          &-lg{
+            font-size: $fs-lg;
+          }
+        }
+      }
+    }
+  }
+
+
+
+  .page-header {
+    border-bottom: 0 none;
+    color: $page-header;
+    font-size: $fs-title;
+    text-transform: none;
+  }
+
+  table {
+    @extend .table-striped-custom;
+
+  }
 }

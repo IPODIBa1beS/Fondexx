@@ -1,3 +1,164 @@
 .page-trade-demo{
+  color: $dark-text;
 
+  .breadcrumb {
+    display: none;
+  }
+
+    #myid{
+      height: 250px;
+    }
+
+    .main-container {
+      background: white;
+      max-width: none;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+
+      & > .row {
+        padding: 80px;
+      }
+
+
+      #panels-ipe-paneid-31{
+        .carousel-inner{
+
+          .item{
+            .views-field-title{
+              @extend %col-4;
+              display: inline-block;
+              position: absolute;
+              right: 10%;
+              top: 15%;
+
+              .field-content{
+                display: inline-block;
+                font-size: $fs-lg;
+                font-family: "RobotoMedium";
+                color: $error;
+                text-transform: uppercase;
+              }
+            }
+
+            .views-field-body{
+              @extend %col-4;
+              display: inline-block;
+              position: absolute;
+              right: 10%;
+              top: 60%;
+
+              .field-content{
+                display: inline-block;
+                font-size: $fs-sm;
+                color: $dark-text;
+
+                .btn{
+                  @extend .button;
+                  border: 0 none;
+                  margin-top: 25px;
+                }
+              }
+            }
+
+            .views-field-field-slider-image{
+              .img-responsive{
+                width: 100%;
+              }
+            }
+          }
+        }
+
+        .carousel-control{
+          .icon-prev, .icon-next{
+            &:before{
+              border: 2px solid $default-text;
+              border-radius: 50%;
+              display: inline-block;
+              width: 30px;
+
+            }
+          }
+        }
+      }
+
+      .demo-stocks_list {
+        display: block;
+        background-color: #61c2ff;
+        background-image: linear-gradient(120deg, #00c6ff 0%, #0072ff 100%);
+        min-height: 400px;
+        text-align: center;
+        padding: 40px;
+
+        &-item {
+          @extend %col-4;
+          text-transform: uppercase;
+          color: $default-text;
+          font-size: $fs-title;
+          border-right: 1px solid darken(white, 20%);
+          min-height: 80px;
+
+          &:last-child {
+            border: 0 none;
+          }
+        }
+      }
+      .demo {
+
+        &_text {
+          color: $demo-landing-text;
+          font-size: $fs-md - 2;
+        }
+
+        &_header-text {
+          color: $demo-landing-text;
+          font-size: $fs-md;
+          font-family: "RobotoRegular";
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+      }
+
+      //text
+      #panels-ipe-paneid-33 {
+        @extend %col-6;
+        h2 {
+          color: $demo-landing-text;
+          font-size: $fs-md;
+          font-family: "RobotoRegular";
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+
+        p {
+          color: $demo-landing-text;
+          font-size: $fs-md - 2;
+        }
+      }
+
+      //form
+      #panels-ipe-paneid-34 {
+        @extend %col-6;
+
+        .form-control{
+          @extend %col-12;
+          background: $demo-input-bg;
+          border: 1px solid $border-color;
+          height: 75px;
+          padding: 20px;
+          font-size: $fs-title;
+          color: $border-color;
+          border-radius: 0;
+          font-family: "RobotoLight";
+          font-style: italic;
+          margin: 15px 0;
+        }
+
+        input[type='submit']{
+          @extend .button, .button-transparent-blue;
+          width: auto !important;
+        }
+      }
+
+    }
 }

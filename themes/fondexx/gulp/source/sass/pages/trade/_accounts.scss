@@ -15,7 +15,7 @@
     }
 
     .pane-content{
-      ul{
+      .proposal{
         overflow: hidden;
 
         li{
@@ -25,10 +25,26 @@
           font-family: "RobotoRegular", 'Helvetica', sans-serif;
           letter-spacing: 1.5px;
           word-spacing: 2px;
+          vertical-align: baseline;
+        }
+
+        &_rich{
+          content: '';
+          display: inline-block;
+          font-size: $fs-md;
+
+        }
+
+        &_experienced{
+          &:before{
+            content: '';
+            font-size: $fs-md;
+            display: inline-block;
+          }
         }
       }
 
-      p:last-child{
+      .conditions{
         margin-top: 25px;
         text-align: left;
         display: block;

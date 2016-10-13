@@ -1,1 +1,84 @@
-.page-study-faq{}
+.page-study-faq {
+  color: $default-text;
+
+  .main-container {
+    background: rgba(0, 0, 0, 0.5) url('../images/bg_wall_street.jpg');
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-attachment: scroll;
+    background-size: 100% 100%;
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    & > .row {
+      padding: 80px;
+    }
+  }
+
+  .page-header {
+    border-bottom: 0 none;
+    color: $page-header;
+    font-size: $fs-md;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .region-sidebar-second {
+    margin-top: 50px;
+
+    .block-block {
+      a {
+        @extend .button-rectangle, .btn-white;
+      }
+    }
+  }
+
+
+  .panel {
+    background: transparent;
+    border: 0 none;
+
+    &-heading {
+      background: transparent;
+      border: 0 none;
+      color: $page-header;
+      font-size: $fs-md;
+    }
+
+    &-title{
+      a{
+        display: inline-block;
+        text-decoration: none;
+
+        &:before{
+          content: '-';
+          display: inline-block;
+          font-size: $fs-md;
+          width: 24px;
+          height: 24px;
+          text-align: center;
+          line-height: 0.75;
+          color: $border-color;
+          border: 2px solid $border-color;
+          border-radius: 50%;
+          margin: 5px;
+        }
+      }
+    }
+
+    &-body{
+      p{
+        margin: 0 0 10px 5px;
+        font-size: $fs-md - 2;
+        font-family: "RobotoLight";
+        word-spacing: 2px;
+      }
+    }
+  }
+
+  .breadcrumb {
+    display: none;
+  }
+}

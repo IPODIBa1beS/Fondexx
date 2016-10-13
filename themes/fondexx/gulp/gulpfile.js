@@ -26,7 +26,8 @@ var gulp = require('gulp'),
             'vendorJs': './source/js/vendor/',
             'vendorCss': './source/css/vendor/',
             'js': [
-                './source/blocks/*/*.js'
+                './sass/**/*.js',
+                './bower_components/bootstrap-sass/assets/javascript/bootstrap.js'
             ],
             'fonts': './source/fonts/*.*',
             'fontsFolder': './source/fonts/',
@@ -35,7 +36,8 @@ var gulp = require('gulp'),
             'sass': ['./source/sass/**/*.scss'],
             'img': ['./source/images/*.*'],
             'sassRoot': 'source/sass/',
-            'svgIcons': './source/images/icons/*.svg'
+            'svgIcons': './source/images/icons/*.svg',
+            'pngIcons': './source/images/pngIcons/**/*.png'
         },
         'build': {
             'css': '../css/',

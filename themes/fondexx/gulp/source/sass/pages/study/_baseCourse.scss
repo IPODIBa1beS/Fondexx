@@ -7,6 +7,63 @@
     background-attachment: scroll;
     background-size: 100% 100%;
 
+    .course{
+
+      &_text{
+        font-size: $fs-md - 2;
+        font-family: "RobotoLight";
+        font-weight: 500;
+        letter-spacing: 1px;
+        word-spacing: 1.5px;
+      }
+
+      &_header-text{
+        color: $contacts-icon;
+        font-size: $fs-md;
+        text-transform: uppercase;
+        margin: 50px 0;
+      }
+
+      &_list-header{
+        font-size: $fs-title;
+        font-family: "RobotoRegular";
+        font-weight: 700;
+        margin: 50px 0;
+      }
+
+      &_skills-list{
+        li{
+            display: block;
+            margin-bottom: 10px;
+
+            &:before{
+              content: '';
+              display: inline-block;
+              background: transparent url('../images/pngIcons/listItemStyleIcon.png') no-repeat scroll center;
+              background-size: cover;
+            }
+
+            p{
+              font-family: "RobotoRegular";
+              font-size: $fs-md - 2;
+              letter-spacing: 1px;
+              word-spacing: 1.5px;
+            }
+        }
+      }
+
+      &_btn{
+        @extend .button, .button-sm;
+        margin: 50px 0 0 0;
+      }
+    }
+
+    .pane-title{
+      color: $contacts-icon;
+      font-size: $fs-md;
+      margin: 0 0 25px 0;
+    }
+
 
     .pane-fondexx-fondexx-registration-form{
       @extend %col-12;

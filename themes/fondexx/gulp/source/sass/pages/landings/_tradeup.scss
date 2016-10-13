@@ -1,3 +1,67 @@
 .page-trade-tradeup{
+  @extend .blackInnerPage;
 
+  .main-container{
+    background: $primary-bg;
+
+    &:before{
+      display: none;
+    }
+
+    .header-text{
+      color: $contacts-icon;
+      font-size: $fs-title;
+      text-transform: uppercase;
+      margin: 40px 0;
+    }
+
+    .bottom-header-text{
+      font-size: $fs-title;
+      font-family: "RobotoRegular";
+      font-weight: 700;
+      margin: 10px 0;
+    }
+
+    .pane-custom{
+      .pane-title{
+        display: inline-block;
+        font-size: $fs-md - 2;
+        font-weight: 700;
+        color: #fff;
+      }
+
+      .pane-content{
+        display: inline-block;
+
+        p{
+          display: inline-block;
+          font-size: $fs-md - 2;
+          font-weight: 200;
+          font-family: "RobotoLight";
+          letter-spacing: 1px;
+          word-spacing: 1.5px;
+        }
+
+        .text{
+          font-size: $fs-md - 2;
+          font-family: "RobotoLight";
+          font-weight: 700;
+          letter-spacing: 1px;
+          word-spacing: 1.5px;
+
+          &-lg{
+            font-size: $fs-lg;
+            font-family: "RobotoMedium";
+          }
+        }
+      }
+    }
+  }
+
+  .page-header{
+    border-bottom: 0 none;
+    color: $page-header;
+    font-size: $fs-title;
+    text-transform: none;
+  }
 }

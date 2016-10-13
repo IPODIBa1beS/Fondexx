@@ -7,60 +7,60 @@ module.exports = function(grunt) {
     
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        
-        clean: {
-            //garbagecss: ['./*.css'], // clean the empty styles created while html_include
-            sprite: {
-                src: ['icons-svg/compressed']
-            }
-        },
-        
-        svgmin_icons: {
-            options: {
-                plugins: [
-                    { removeDimensions: true },
-                    { removeTitle: true },
-                    { removeAttrs: { attrs: 'fill' } }
-                ]
-            },
-            base: {
-                expand: true,
-                cwd: 'icons-svg',
-                src: ['*.svg'],
-                dest: 'icons-svg/compressed'
-            }
-        },
-
-        svgstore: {
-            icons: {
-                options: {
-                    prefix : 'icon-',
-                },
-                files: {
-                    'images/svg-icons-sprite.svg': ['icons-svg/compressed/*.svg']
-                },
-            },
-            logos: {
-                files: {
-                    'images/svg-images-sprite.svg': 'img-svg/*.svg'
-                }
-            }
-        },
-
-        
-        less: {
-            development: {
-                options: {
-                    paths: ['less'],
-                    compress: false,
-                    cleancss: true,
-                    dumpLineNumbers: 'comments'
-                },
-                files: {
-                    'css/style.css': 'less/style.less'
-                }
-            }
-        },
+        //
+        //clean: {
+        //    //garbagecss: ['./*.css'], // clean the empty styles created while html_include
+        //    sprite: {
+        //        src: ['icons-svg/compressed']
+        //    }
+        //},
+        //
+        //svgmin_icons: {
+        //    options: {
+        //        plugins: [
+        //            { removeDimensions: true },
+        //            { removeTitle: true },
+        //            { removeAttrs: { attrs: 'fill' } }
+        //        ]
+        //    },
+        //    base: {
+        //        expand: true,
+        //        cwd: 'icons-svg',
+        //        src: ['*.svg'],
+        //        dest: 'icons-svg/compressed'
+        //    }
+        //},
+        //
+        //svgstore: {
+        //    icons: {
+        //        options: {
+        //            prefix : 'icon-',
+        //        },
+        //        files: {
+        //            'images/svg-icons-sprite.svg': ['icons-svg/compressed/*.svg']
+        //        },
+        //    },
+        //    logos: {
+        //        files: {
+        //            'images/svg-images-sprite.svg': 'img-svg/*.svg'
+        //        }
+        //    }
+        //},
+        //
+        //
+        //less: {
+        //    development: {
+        //        options: {
+        //            paths: ['less'],
+        //            compress: false,
+        //            cleancss: true,
+        //            dumpLineNumbers: 'comments'
+        //        },
+        //        files: {
+        //            'css/style.css': 'less/style.less'
+        //        }
+        //    }
+        //},
 
         bake: {
             your_target: {
@@ -199,16 +199,16 @@ module.exports = function(grunt) {
             },
         },
         
-        postcss: {
-            options: {
-              processors: [
-                require('autoprefixer')({browsers: ['last 2 versions', 'ie 10']}),
-              ]
-            },
-            dist: {
-              src: 'css/style.css'
-            }
-        }, 
+        //postcss: {
+        //    options: {
+        //      processors: [
+        //        require('autoprefixer')({browsers: ['last 2 versions', 'ie 10']}),
+        //      ]
+        //    },
+        //    dist: {
+        //      src: 'css/style.css'
+        //    }
+        //},
 
     });
 
@@ -223,6 +223,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-ftp-push');
 
     // register tasks
-    grunt.registerTask('default', ['bake', 'clean', 'svgmin_icons', 'svgstore', 'clean:sprite', 'less', 'postcss', 'ftp_push:your_target', 'watch']);
-    grunt.registerTask('jenkins', ['bake', 'clean', 'svgmin_icons', 'svgstore', 'clean:sprite',  /*'less', */ 'postcss', 'ftp_push:your_target']);
+    grunt.registerTask('default', [/*'clean', 'svgmin_icons', 'svgstore', 'clean:sprite', 'less', 'postcss', */ 'bake', 'ftp_push:your_target', 'watch']);
+  //  grunt.registerTask('jenkins', ['bake', 'clean', 'svgmin_icons', 'svgstore', 'clean:sprite',  /*'less', */ 'postcss', 'ftp_push:your_target']);
 };
