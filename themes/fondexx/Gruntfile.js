@@ -224,5 +224,5 @@ module.exports = function(grunt) {
 
     // register tasks
     grunt.registerTask('default', ['bake', 'clean', 'svgmin_icons', 'svgstore', 'clean:sprite', 'less', 'postcss', 'ftp_push:your_target', 'watch']);
-    grunt.registerTask('jenkins', ['bake', 'clean', 'svgmin_icons', 'svgstore', 'clean:sprite',  'less', 'postcss', 'ftp_push:your_target']);
+    grunt.registerTask('jenkins', ['bake', 'clean', 'svgmin_icons', 'svgstore', 'clean:sprite',  /*'less', */ 'postcss', 'ftp_push:your_target']);
 };

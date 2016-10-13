@@ -1,0 +1,15 @@
+.ion-ios-checkmark-empty{
+  &:before{
+    color: $contacts-icon;
+    font-size: $fs-lg;
+    font-weight: 700;
+  }
+}
+
+.ion-ios-close-empty{
+  &:before{
+    color: $error;
+    font-size: $fs-lg;
+    font-weight: 700;
+  }
+}

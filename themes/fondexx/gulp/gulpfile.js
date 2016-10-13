@@ -17,6 +17,8 @@ var gulp = require('gulp'),
     mainBowerFiles = require('main-bower-files'),
     babel = require('gulp-babel'),
     fs = require('fs'),
+    //gutil = require( 'gulp-util' ),
+    //ftp = require( 'vinyl-ftp'),
     //iconfont = require("gulp-iconfont"),
     //iconfontCss = require('gulp-iconfont-css'),
     dirs = {
@@ -28,9 +30,9 @@ var gulp = require('gulp'),
             ],
             'fonts': './source/fonts/*.*',
             'fontsFolder': './source/fonts/',
+            'ionicIconFont': '../bower_components/Ionicons/fonts/*',
              'html': './source/views/*.html',
             'sass': ['./source/sass/**/*.scss'],
-            'sassFolder': ['./source/sass/', './source/blocks/**/*.scss'],
             'img': ['./source/images/*.*'],
             'sassRoot': 'source/sass/',
             'svgIcons': './source/images/icons/*.svg'
@@ -46,6 +48,9 @@ var gulp = require('gulp'),
 //fonts
 gulp.task('fonts', function() {
     gulp.src(dirs.source.fonts)
+        .pipe(gulp.dest(dirs.build.fonts));
+
+    gulp.src(dirs.source.ionicIconFont)
         .pipe(gulp.dest(dirs.build.fonts));
 });
 
@@ -124,21 +129,35 @@ gulp.task('images', function() {
         .pipe(gulp.dest(dirs.build.img));
 });
 
-//gulp.task('assembleVendorJs', function() {
-//    return gulp.src(mainBowerFiles('**/*.js'))
-//        .pipe(plumber())
-//        .pipe(uglify())
-//        .pipe(gulp.dest(dirs.build.js));
-//});
+//gulp.task( 'deploy', function () {
 //
-//gulp.task('assembleVendorCss', function() {
-//    return gulp.src(mainBowerFiles('**/*.css'))
-//        .pipe(plumber())
-//        .pipe(gulp.dest(dirs.build.css));
-//});
+//    var conn = ftp.create( {
+//        host:     'mywebsite.tld',
+//        user:     'me',
+//        password: 'mypass',
+//        parallel: 10,
+//        log:      gutil.log
+//    } );
+//
+//    var globs = [
+//        '../src/**',
+//        'css/**',
+//        'js/**',
+//        'fonts/**',
+//        'index.html'
+//    ];
+//
+//    // using base = '.' will transfer everything to /public_html correctly
+//    // turn off buffering in gulp.src for best performance
+//
+//    return gulp.src( globs, { base: '.', buffer: false } )
+//        .pipe( conn.newer( '/public_html' ) ) // only upload newer files
+//        .pipe( conn.dest( '/public_html' ) );
+//
+//} );
 
 gulp.task('watch', function() {
-    gulp.watch(dirs.source.sassFolder, ['compileSass']);
+    gulp.watch(dirs.source.sass, ['compileSass']);
     gulp.watch(dirs.source.js, ['assembleJs']);
     gulp.watch(dirs.source.img, ['images']);
 });

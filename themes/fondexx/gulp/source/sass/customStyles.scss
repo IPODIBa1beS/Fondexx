@@ -11,7 +11,19 @@
 
 @import "layouts";
 
-@import "../blocks/**/*.scss";
+@import "blocks/**/*.scss";
+
+@import "templatesInnerPages/innerPageBlackClear";
+
+@import "templatesInnerPages/innerPageWhiteClear";
+
+@import "templatesInnerPages/blackInnerPageWithHeader";
+
+@import "templatesInnerPages/whiteInnerPageWithHeader";
+
+@import "templatesInnerPages/whiteInnerPageWithImage";
+
+@import "pages/**/*.scss";
 
 .alert{
   display: none !important;
