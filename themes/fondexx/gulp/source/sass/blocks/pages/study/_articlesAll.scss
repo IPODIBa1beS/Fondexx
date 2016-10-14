@@ -1,0 +1,19 @@
+.page-study-articles{
+  @extend .blackInnerPageWithHeader;
+
+  header{
+    h2{
+      a{
+        display: inline-block;
+        font-size: $fs-lg;
+        font-family: "RobotoRegular", 'Helvetica', sans-serif;
+        color: $default-text;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  article{
+    margin-top: 10px;
+  }
+}

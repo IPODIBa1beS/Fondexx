@@ -1,11 +1,13 @@
-$(document).ready(function(){
+(function() {
+    $(document).ready(function () {
 
-    $('.close-overlay').on('click', function(){
-        alert('hi');
-        $(".navbar-collapse").removeClass('in');
+        $('.close-overlay').on('click', function () {
+            alert('hi');
+            $(".navbar-collapse").removeClass('in');
+        });
+
+        $('.navbar-nav .dropdown-toggle').on('click', function () {
+            alert('hello');
+        })
     });
-
-    $('.navbar-nav .dropdown-toggle').on('click', function(){
-        alert('hello');
-    })
-});
+})();
