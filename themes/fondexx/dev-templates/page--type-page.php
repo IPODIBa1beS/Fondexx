@@ -137,4 +137,6 @@
   </div>
 </div>
 
+<!--(bake parts/page_footer.php)-->
+
 <!--(bake parts/footer.php)-->

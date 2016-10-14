@@ -185,6 +185,12 @@
   </div>
 </div>
 
+<?php if (!empty($page['page_footer'])): ?>
+  <div class="col-sm-12">
+    <?php print render($page['page_footer']); ?>
+  </div>
+<?php endif; ?>
+
 <footer class="footer">
     <?php if ($logo): ?>
       <a class="logo navbar-btn" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
