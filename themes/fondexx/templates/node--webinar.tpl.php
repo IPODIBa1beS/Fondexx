@@ -81,14 +81,20 @@
  */
 ?>
 
+
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
-  <a href="<?php print $node_url; ?>">
-
   <?php
-    hide($content);
-    print render($content['field_main_image']);
+  hide($content);
   ?>
+
+  <?php print render($title_prefix); ?>
+  <?php if (!$page): ?>
+    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
+  <?php endif; ?>
+  <?php print render($title_suffix); ?>
+
+
 
   <?php if ($display_submitted): ?>
     <div class="submitted">
@@ -96,13 +102,14 @@
     </div>
   <?php endif; ?>
 
-    <h2<?php print $title_attributes; ?>><?php print $title; ?></h2>
 
-    <?php print $node->body['und'][0]['summary']; ?>
+  <?php print render($content['field_start']); ?>
 
-    <span><?php print t('read more'); ?></span>
-  </a>
+  <?php print render($content['field_author']); ?>
 
+  <?php print $node->body['und'][0]['safe_value']; ?>
+
+  <?php print render($content['field_link']); ?>
 
 
 </div>
