@@ -1,0 +1,9 @@
+.node-type-webinar{
+  @extend .whiteInnerPage;
+
+  .field-name-field-link{
+    a{
+      @extend .button, .button-transparent-blue;
+    }
+  }
+}

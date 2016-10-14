@@ -17,13 +17,13 @@
       content: '';
       display: inline-block;
       position: absolute;
-      width: 40px;
+      width: 50px;
       border-bottom: 2px solid $border-color;
-      margin-top: 90px;
+      margin-top: 110px;
     }
 
-    & > .row {
-      padding: 80px;
+    &>.row{
+      padding: 100px;
     }
   }
 
