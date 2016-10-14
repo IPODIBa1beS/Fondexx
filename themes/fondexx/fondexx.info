@@ -50,9 +50,6 @@ scripts[] = 'js/tooltip.js'
 scripts[] = 'js/popover.js'
 
 scripts[] = 'js/fondexx.js'
-scripts[] = 'js/custom.js'
-
-
 
 ; Disable BootstrapCDN so the compiled LESS source files can be used.
 settings[bootstrap_cdn] = ''

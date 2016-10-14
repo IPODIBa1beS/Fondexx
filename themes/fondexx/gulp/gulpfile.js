@@ -25,9 +25,9 @@ var gulp = require('gulp'),
         'source': {
             'vendorJs': './source/js/vendor/',
             'vendorCss': './source/css/vendor/',
-            'js': [
-                './source/sass/blocks/**/*.js'
-            ],
+            //'js': [
+            //    './source/sass/blocks/**/*.js'
+            //],
             'fonts': './source/fonts/*.*',
             'fontsFolder': './source/fonts/',
             'ionicIconFont': '../bower_components/Ionicons/fonts/*',
@@ -107,14 +107,14 @@ gulp.task('compileSass', function() {
         .pipe(gulp.dest(dirs.build.css));
 });
 
-//js
-gulp.task('assembleJs', function() {
-    return gulp.src(dirs.source.js)
-        .pipe(plumber())
-        .pipe(sourcemaps.init())
-        .pipe(concat("custom.js"))
-        .pipe(gulp.dest(dirs.build.js));
-});
+////js
+//gulp.task('assembleJs', function() {
+//    return gulp.src(dirs.source.js)
+//        .pipe(plumber())
+//        .pipe(sourcemaps.init())
+//        .pipe(concat("custom.js"))
+//        .pipe(gulp.dest(dirs.build.js));
+//});
 
 //images
 gulp.task('images', function() {
@@ -163,4 +163,4 @@ gulp.task('watch', function() {
     gulp.watch(dirs.source.img, ['images']);
 });
 
-gulp.task('default', [/*'iconfont', */ 'fonts', 'assembleJs', 'images','compileSass', 'watch']);
+gulp.task('default', [/*'iconfont', */ 'fonts', /*'assembleJs',*/ 'images','compileSass', 'watch']);
