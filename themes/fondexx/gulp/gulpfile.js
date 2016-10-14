@@ -26,8 +26,7 @@ var gulp = require('gulp'),
             'vendorJs': './source/js/vendor/',
             'vendorCss': './source/css/vendor/',
             'js': [
-                './sass/**/*.js',
-                './bower_components/bootstrap-sass/assets/javascript/bootstrap.js'
+                './source/sass/blocks/**/*.js'
             ],
             'fonts': './source/fonts/*.*',
             'fontsFolder': './source/fonts/',

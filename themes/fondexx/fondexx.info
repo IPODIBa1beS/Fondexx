@@ -27,7 +27,6 @@ regions[page_bottom]    = 'Page bottom'
 ;;;;;;;;;;;;;;;;;;;;;
 
 stylesheets[all][] = css/style.css
-stylesheets[all][] = css/customStyles.css
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Scripts
@@ -51,7 +50,7 @@ scripts[] = 'js/tooltip.js'
 scripts[] = 'js/popover.js'
 
 scripts[] = 'js/fondexx.js'
-scripts[] = 'js/index.js'
+scripts[] = 'js/custom.js'
 
 
 
