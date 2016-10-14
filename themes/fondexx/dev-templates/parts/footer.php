@@ -5,9 +5,10 @@
       </a>
     <?php endif; ?>
 
-    <?php if (!empty($primary_nav)): ?>
-      <?php print render($primary_nav); ?>
-    <?php endif; ?>
+    <?php
+      $menu_block = module_invoke('system', 'block_view', 'main-menu');
+      print render($menu_block['content']);
+    ?>
 
     <div class="social">
       ...

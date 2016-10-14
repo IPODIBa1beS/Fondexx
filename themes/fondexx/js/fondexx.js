@@ -64,8 +64,7 @@
             // let's disable Bootstrap dropdown beh. for primary nav. We don't need it at all
             //disableBootstrapMenuDropdown();
             
-            wrapCollapse('#panels-ipe-display-panel-context-page-fondexx-start-page-fondexx-start-panel-context-2b4e6245-be03-4570-83d0-741f48f90afc .panels-flexible-row-3-main-row', '.panel-pane', 'h2', '.pane-content');
-            wrapTabs('#panels-ipe-display-panel-context-page-home-page-home-panel-context-e1182d54-3e51-409b-b6a0-4e0719a62c9c .panels-flexible-row-7-1', '.panel-pane', 'h2', '.pane-content');
+            wrapTabs('#front-panel .panels-flexible-row-7-1', '.panel-pane', 'h2', '.pane-content');
             replaceTablePlusMinus2icons();
         });
 
