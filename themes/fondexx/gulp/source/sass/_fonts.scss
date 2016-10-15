@@ -3,3 +3,6 @@
 @include font("RobotoMedium", "Roboto-Medium-webfont");
 
 @include font("RobotoLight", "Roboto-Light-webfont");
+
+@include font("RobotoLightItalic", "Roboto-Light-webfont", 300, italic);
+

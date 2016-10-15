@@ -10,7 +10,7 @@
   background-color: $primary-color;
   font-weight: 700;
   border-radius: 42px;
-  line-height: 45px;
+  line-height: 3;
   text-transform: uppercase;
   text-decoration: none;
 
@@ -90,7 +90,7 @@
 }
 
 .btn-transparent-rounded{
-  background-color: $primary-bg;
+  background-color: transparent;
   width: 120px;
   height: 30px;
   line-height: 1;

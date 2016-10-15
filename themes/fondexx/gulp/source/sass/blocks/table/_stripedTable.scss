@@ -10,15 +10,33 @@
       }
 
       th{
+        width: 25%;
+        font-family: "RobotoLight", 'Helvetica', 'sans-serif';
+        font-style: italic;
+        font-weight: 700;
+        padding: 15px;
         border: 0 none;
       }
 
       td{
+        width: 25%;
+        @include paragraphText();
         vertical-align: middle;
         border: 0 none;
+        padding: 15px;
+        font-family: "RobotoLight", 'Helvetica', 'sans-serif';
 
         a{
           @extend .button-rectangle, .btn-white, .btn-transparent-rounded;
+        }
+
+        &:nth-child(1){
+          font-family: "RobotoRegular", 'Helvetica', 'sans-serif';
+          font-weight: 700;
+        }
+
+        i:before{
+          font-size: 60px !important;
         }
       }
     }

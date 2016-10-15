@@ -2,7 +2,7 @@
   @extend .blackInnerPageWithHeader;
 
   .pane-1{
-    border: 1px dotted $error;
+    border: 1px dashed $error;
     padding: 50px;
     text-align: center;
     margin-bottom: 25px;
@@ -14,6 +14,10 @@
       margin-bottom: 15px;
     }
 
+    .text-bold{
+      font-weight: 700;
+    }
+
     .pane-content{
       .proposal{
         overflow: hidden;
@@ -22,10 +26,12 @@
           @extend %col-6;
           display: inline-block;
           font-size: $fs-md;
-          font-family: "RobotoRegular", 'Helvetica', sans-serif;
+          font-family: "RobotoLight", 'Helvetica', sans-serif;
+          font-weight: 100;
           letter-spacing: 1.5px;
           word-spacing: 2px;
           vertical-align: baseline;
+
         }
 
         &_rich{
@@ -50,7 +56,8 @@
         display: block;
         color: $border-color;
         font-size: $fs-sm;
-
+        font-family: "RobotoLight", 'Helvetica', 'sans-serif';
+        font-style: italic;
 
         &:before{
           content: '*';
@@ -63,6 +70,8 @@
           font-weight: 700;
           text-decoration: underline;
           color: $border-color;
+          font-family: "RobotoRegular", 'Helvetica', 'sans-serif';
+          font-style: normal;
         }
       }
     }

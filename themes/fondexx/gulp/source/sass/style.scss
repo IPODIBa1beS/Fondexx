@@ -1,5 +1,4 @@
 @import '../../../bower_components/Ionicons/scss/ionicons';
-@import '../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
 
 @import "vendors/media";
 @import "reset";
@@ -16,6 +15,8 @@
 
 @import "blocks/**/*.scss";
 
+@import "mainPage/**/*.scss";
+
 @import "templatesInnerPages/innerPageBlackClear";
 
 @import "templatesInnerPages/innerPageWhiteClear";
@@ -25,6 +26,7 @@
 @import "templatesInnerPages/whiteInnerPageWithHeader";
 
 @import "templatesInnerPages/whiteInnerPageWithImage";
+
 
 @import "pages/**/*.scss";
 
