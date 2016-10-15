@@ -1,41 +1,94 @@
-footer.footer{
+footer.footer {
   padding: 40px 100px;
   margin-top: 0;
+  overflow: hidden;
 
-  .logo{
-    @extend %col-3;
+  .logo {
+    @extend %col-2;
   }
 
   .nav {
-    @extend %col-6;
+    @extend %col-8;
     display: inline-block;
     margin: 0 !important;
     padding: 10px;
     vertical-align: baseline;
 
-    .expanded {
+    li{
       display: inline-block;
-      vertical-align: top;
+      font-size: $fs-md;
 
-      .dropdown-toggle {
+      a{
         color: $default-text;
         text-decoration: none;
         text-transform: uppercase;
         transition: all .3s ease;
 
         &:hover, &:focus {
-          color: darken($default-text, 30%);
+          color: $dark-text;
         }
-      }
 
-      .dropdown-menu {
-        position: absolute;
-        background-color: $primary-bg;
+        &>.caret{
+          display: none;
+        }
       }
     }
   }
 
-  .social{
+  .social-icons {
+    @extend %col-2;
+    text-align: right;
+
+    li {
+      @extend %col-3;
+      a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        transition: all .4s ease;
+        text-align: center;
+
+        &:hover, &:focus{
+          color: $contacts-icon;
+        }
+
+        i:before{
+          font-size: $fs-md;
+          line-height: 2.5;
+          font-size: $fs-md;
+        }
+      }
+    }
+  }
+
+  .container {
+    @extend %col-12;
+    border-top: 2px solid $primary-color;
+    padding: 20px;
+  }
+
+  .footer_description {
+    font-family: 'RobotoLight', 'Helvetica', 'opensans';
+    @include paragraphText();
+    font-size: $fs-sm;
+    font-style: italic;
+    color: $border-color;
+  }
+
+  #block-block-3{
+    @extend %col-9;
+  }
+
+  #block-block-4 {
     @extend %col-3;
+
+    & > p {
+      font-size: $fs-md - 2;
+      word-spacing: 2px;
+      text-align: right;
+      font-weight: 700;
+      font-family: 'RobotoMedium', 'Helvetica', 'opensans';
+      color: $border-color;
+    }
   }
 }
