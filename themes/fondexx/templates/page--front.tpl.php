@@ -185,6 +185,12 @@
   </div>
 </div>
 
+<?php if (!empty($page['page_footer'])): ?>
+  <div class="col-sm-12">
+    <?php print render($page['page_footer']); ?>
+  </div>
+<?php endif; ?>
+
 <footer class="footer">
     <?php if ($logo): ?>
       <a class="logo navbar-btn" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
@@ -192,9 +198,10 @@
       </a>
     <?php endif; ?>
 
-    <?php if (!empty($primary_nav)): ?>
-      <?php print render($primary_nav); ?>
-    <?php endif; ?>
+    <?php
+      $menu_block = module_invoke('system', 'block_view', 'main-menu');
+      print render($menu_block['content']);
+    ?>
 
     <div class="social">
       ...
