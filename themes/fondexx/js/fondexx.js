@@ -55,8 +55,17 @@
                 return $(this).text() === "-";
             }).html("<i class='ion-ios-close-empty'></i>");
         }
-        
-        
+
+        function preventDropdown(){
+            var link = $(this).siblings('.dropdown-menu').find('.first>a').attr('href');
+            location.href = link;
+        }
+
+        function showHeaderDropdownItems(){
+            var listItems = $('.navbar-header .active-trail>.dropdown-menu').children();
+
+            $("#header_links-list").html(listItems);
+        }
         /////////////////////////////////////
         /////////////////////////////////////
         /////////////////////////////////////
@@ -67,6 +76,13 @@
             wrapCollapse('#fondexx-start-landing .panels-flexible-row-3-main-row', '.panel-pane', 'h2', '.pane-content');
             wrapTabs('#front-panel .panels-flexible-row-7-1', '.panel-pane', 'h2', '.pane-content');
             replaceTablePlusMinus2icons();
+            showHeaderDropdownItems();
+
+            $(".dropdown-toggle").on('click', function (e) {
+                e.stopImmediatePropagation();
+
+                preventDropdown();
+            });
         });
 
 

@@ -3,6 +3,7 @@
   background-color: $primary-bg;
   border-color: transparent;
   width: 100%;
+  padding: 0;
   max-width: none !important;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
@@ -11,17 +12,6 @@
     width: 100%;
     margin: 0;
     padding: 0;
-  }
-  .logo {
-    @extend %col-2;
-    display: inline-block;
-    height: 43px;
-    margin: 0 !important;
-
-    //stub!!!
-    img {
-      display: none;
-    }
   }
 
   &-header {
@@ -36,51 +26,77 @@
       display: inline-block;
       padding: 10px;
       border-right: 2px solid $divider;
+
+      .navbar-toggle {
+        display: block;
+        position: relative;
+        z-index: 255;
+        border: 0 none;
+        vertical-align: bottom;
+      }
     }
 
-
-    .navbar-toggle {
-      display: block;
-      position: relative;
-      z-index: 255;
-      border: 0 none;
-      vertical-align: bottom;
-    }
-
-    .button-login {
+    .logo {
       @extend %col-2;
-      float: right;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-weight: 700;
-      line-height: 50px;
-      border-radius: 32px;
-      margin: 10px;
+      display: inline-block;
+      height: 43px;
+      margin: 0 !important;
+
+      //stub!!!
+      img {
+        display: none;
+      }
     }
+
+    .login-btn-wrapper{
+      padding: 10px;
+      @extend %col-2;
+
+      .button-login {
+        float: right;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        line-height: 50px;
+        border-radius: 32px;
+        font-family: "RobotoRegular", 'Helvetica', 'sans-serif';
+      }
+    }
+
 
     .nav {
-      @extend %col-6;
+      @extend %col-7;
       display: inline-block;
       margin: 0 !important;
-      padding: 10px;
       vertical-align: baseline;
+      padding: 15px;
 
-      .expanded {
-
-        .dropdown-toggle {
+      li{
+        display: inline-block;
+        font-size: $fs-md;
+        a{
           color: $default-text;
           text-decoration: none;
           text-transform: uppercase;
           transition: all .3s ease;
+          font-family: "RobotoLight", "Helvetica", "sans-serif";
+          padding: 10px;
+          letter-spacing: 1px;
 
           &:hover, &:focus {
-            color: darken($default-text, 30%);
+            color: $dark-text;
+            background-color: white;
           }
-        }
 
-        .dropdown-menu {
-          position: absolute;
-          background-color: $primary-bg;
+          &.active{
+            background-color: transparent;
+            color: $default-text;
+            font-weight: 700;
+          }
+
+          &>.caret{
+            display: none;
+          }
         }
       }
     }
@@ -99,77 +115,66 @@
     .first {
       display: none;
     }
-
-    .collapse.in .nav {
-      max-width: 960px;
-      margin: 10vh auto 0;
-
-      .expanded {
-        display: inline-block;
-        vertical-align: top;
-
-        & > .dropdown-toggle {
-          display: inline-block;
-          color: $primary-color !important;
-          font-size: $fs-md;
-          line-height: 48px;
-          text-decoration: none;
-
-          &:before {
-            content: " ";
-         //   @extend .icon, .icon-contacts;
-            display: inline-block;
-            width: 48px;
-            height: 48px;
-            margin-right: $col-padding;
-            color: $border-color;
-            font-size: 48px;
-
-          }
-        }
-
-        .dropdown-menu {
-          position: absolute;
-          background-color: $primary-bg;
-        }
-      }
-
-      .close-overlay {
-        font-size: 24px;
-        color: $primary-bg;
-        width: 48px;
-      }
-    }
   }
 }
 
  .header{
 
    &-content{
-     min-height: 60px;
+
+     &:after{
+       content: '';
+       display: block;
+       clear: both;
+     }
    }
 
    &_links{
-     @extend %col-8;
+     @extend %col-offset-1, %col-8;
      display: inline-block;
      padding: 10px;
 
      &-list{
        display: block;
-       list-style-type: none;
+       vertical-align: baseline;
 
        li{
-          display: inline-block;
+         display: inline-block;
+         font-size: $fs-sm;
+
          a{
-           display: inline-block;
+           display: block;
+           color: $default-text;
            text-decoration: none;
+           text-transform: uppercase;
+           transition: all .3s ease;
+           font-family: "RobotoLight", "Helvetica", "sans-serif";
+           padding: 10px;
+           letter-spacing: 1px;
+
+           &:hover, &:focus {
+             color: $dark-text;
+             background-color: white;
+           }
+
+           &.active{
+             background-color: transparent;
+             color: $default-text;
+             font-weight: 700;
+             font-family: "RobotoRegular", "Helvetica", "sans-serif";
+           }
+
+           &>.caret{
+             display: none;
+           }
          }
        }
      }
    }
 
    &_contacts{
-    @extend %col-4;
+    @extend %col-3;
+     max-width: 300px;
      border-left: 2px solid $divider;
      padding: 10px;
 
@@ -187,6 +192,9 @@
        line-height: 25px;
        font-size: $fs-md;
        padding: 5px;
+       font-family: "RobotoRegular", 'Helvetica', 'sans-serif';
+       font-weight: 700;
+       letter-spacing: 1.5px;
 
        &:hover{
          background-color: $border-color;

@@ -23,6 +23,8 @@ footer.footer {
         text-decoration: none;
         text-transform: uppercase;
         transition: all .3s ease;
+        padding: 10px;
+        letter-spacing: 1px;
 
         &:hover, &:focus {
           color: $dark-text;
@@ -41,6 +43,8 @@ footer.footer {
 
     li {
       @extend %col-3;
+      padding: 10px;
+
       a {
         display: block;
         text-decoration: none;

@@ -20,11 +20,15 @@
         <?php if (!empty($primary_nav)): ?>
             <?php print render($primary_nav); ?>
         <?php endif; ?>
-        <a href="#" class="button button-dark-blue button-login"> Create Account / Login</a>
+        <div class="login-btn-wrapper">
+            <a href="#" class="button button-dark-blue button-login"> Create Account / Login</a>
+        </div>
     </div>
     <div class="header_content">
-        <div class="header_links" id="header_links">
+        <div class="header_links">
+        <ul class="header_links-list" id="header_links-list">
 
+        </ul>
         </div>
         <div class="header_contacts">
             <div class="header_contacts-wrapper">

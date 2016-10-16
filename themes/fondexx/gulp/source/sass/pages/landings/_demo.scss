@@ -123,23 +123,31 @@
       //text
       #panels-ipe-paneid-33 {
         @extend %col-6;
+        padding: 50px;
+
         h2 {
           color: $demo-landing-text;
           font-size: $fs-md;
-          font-family: "RobotoRegular";
+          font-family: "RobotoLight", "Helvetica", "opensans";
           font-weight: 700;
           text-transform: uppercase;
+          line-height: 1.2;
+          margin-bottom: 10px;
         }
 
         p {
           color: $demo-landing-text;
           font-size: $fs-md - 2;
+          font-family: "RobotoLight", "Helvetica", "opensans";
+          line-height: 1.5;
+          margin-bottom: 10px;
         }
       }
 
       //form
       #panels-ipe-paneid-34 {
         @extend %col-6;
+        padding: 50px;
 
         .form-control{
           @extend %col-12;

@@ -1,3 +1,96 @@
-.traderhub{
-  
+.page-analytics-traderhub{
+
+  @extend .blackInnerPage;
+
+  .page-header{
+    display: none;
+  }
+
+  .main-container{
+    background-image: none;
+    background: $primary-bg;
+
+    &:before{
+      display: none;
+    }
+
+    &>.row{
+      padding: 0;
+    }
+  }
+
+  #panels-ipe-paneid-1{
+    background-image: url('../images/analytics_ipad.png'), linear-gradient(to right, #e0eafc 0%, #cfdef3 100%);
+    background-position: 85% 50%, left top;
+    background-repeat: no-repeat, repeat;
+    background-attachment: scroll, scroll;
+    background-size: 35% 90%, cover;
+
+    padding: 0 80px;
+    min-height: 550px;
+
+    .pane-title{
+      padding: 100px 0 0 0;
+      font-size: $fs-lg;
+      font-family: "RobotoMedium", "opensans", "sans-serif";
+      font-weight: 200;
+      word-spacing: 3px;
+      letter-spacing: 1.5px;
+      color: $analytics-text;
+    }
+
+    .pane-content{
+      width: 400px;
+    }
+
+    .analytics-text{
+      font-size: $fs-md;
+      font-weight: 500;
+      font-family: "RobotoMedium", "Helvetica", "sans-serif";
+      color: $analytics-text;
+      margin: 50px 0;
+    }
+
+    .analytics-secondary-text{
+      font-size: $fs-md;
+      font-weight: 500;
+      font-family: "RobotoMedium", "Helvetica", "sans-serif";
+      color: #747783;
+
+      &:before{
+        content: '';
+        display: inline-block;
+        border-top: 1px solid $analytics-text;
+        width: 150px;
+        height: 0;
+        margin-right: 10px;
+        padding-top: 4px;
+      }
+    }
+
+    .btn-wrapper{
+
+      &.login{
+        a{
+          @extend .button;
+          height: 40px;
+          margin: 10px 0;
+        }
+      }
+
+      &.test-login{
+        a{
+          color: $border-color;
+        }
+      }
+    }
+
+  }
+
+  #panels-ipe-paneid-3{
+    min-height: 200px;
+    background-image: url('../images/analytics_webinar.jpg') no-repeat, scroll, left top;
+    background-size: cover;
+    padding: 0 80px;
+  }
 }

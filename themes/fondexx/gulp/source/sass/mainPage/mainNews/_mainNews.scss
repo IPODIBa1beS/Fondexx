@@ -1,0 +1,25 @@
+.panels-ipe-paneid-51{
+
+  max-width: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  &:before{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 50px;
+    border-bottom: 2px solid $border-color;
+    margin-top: 90px;
+  }
+
+  .pane-title{
+    color: $page-header;
+    font-size: $fs-md;
+    text-transform: uppercase;
+    font-family: "RobotoLight";
+  }
+
+
+}
