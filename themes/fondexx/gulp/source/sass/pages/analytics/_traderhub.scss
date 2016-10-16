@@ -24,10 +24,10 @@
     background-position: 85% 50%, left top;
     background-repeat: no-repeat, repeat;
     background-attachment: scroll, scroll;
-    background-size: 35% 90%, cover;
+    background-size: 400px 600px, cover;
 
     padding: 0 80px;
-    min-height: 550px;
+    min-height: 650px;
 
     .pane-title{
       padding: 100px 0 0 0;
@@ -87,10 +87,88 @@
 
   }
 
+  #panels-ipe-paneid-2{
+    min-height: 750px;
+    background: url('../images/analytics_steps.jpg') no-repeat, scroll, left top;
+    background-size: cover;
+  }
+
   #panels-ipe-paneid-3{
     min-height: 200px;
-    background-image: url('../images/analytics_webinar.jpg') no-repeat, scroll, left top;
+    background: url('../images/analytics_webinar.jpg') no-repeat, scroll, left top;
+    background-size: cover;
+    padding: 25px 80px;
+    text-align: center;
+
+    .pane-title{
+      margin-top: 0;
+      border-bottom: 0 none;
+      color: $page-header;
+      font-size: $fs-lg;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    h3{
+      font-family: "RobotoLight", "opensans", "sans-serif";
+      font-weight: 400;
+      word-spacing: 2px;
+      color: #f8f8f8;
+      letter-spacing: 1.5px;
+      margin: 15px 0 25px 0;
+    }
+
+    .btn-wrapper{
+      margin-top: 10px;
+
+      &.get-more{
+        a{
+          @extend .button, .button-transparent;
+          border-color: white;
+          color: white;
+          line-height: 40px;
+
+          &:hover, &:focus{
+            color: $dark-text;
+            background: white;
+          }
+        }
+      }
+    }
+  }
+
+  #panels-ipe-paneid-6{
+    min-height: 300px;
+    background: url('../images/bg_main.jpg') no-repeat, scroll, left top;
     background-size: cover;
     padding: 0 80px;
+    text-align: center;
+
+
+  }
+
+  #panels-ipe-paneid-7{
+    padding: 20px 80px;
+    text-align: center;
+
+    .pane-title{
+      margin-top: 0;
+      border-bottom: 0 none;
+      color: $page-header;
+      font-size: $fs-lg;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .pane-content{
+      p{
+        font-family: "RobotoMedium", "opensans", "sans-serif";
+        word-spacing: 2px;
+        color: #f8f8f8;
+        letter-spacing: 1.5px;
+        margin: 15px 0 25px 0;
+        font-weight: 500;
+      }
+    }
   }
 }

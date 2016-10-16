@@ -8,7 +8,7 @@
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 
-  &>.container{
+  & > .container {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -48,7 +48,7 @@
       }
     }
 
-    .login-btn-wrapper{
+    .login-btn-wrapper {
       padding: 10px;
       @extend %col-2;
 
@@ -63,7 +63,6 @@
       }
     }
 
-
     .nav {
       @extend %col-7;
       display: inline-block;
@@ -71,10 +70,10 @@
       vertical-align: baseline;
       padding: 15px;
 
-      li{
+      li {
         display: inline-block;
         font-size: $fs-md;
-        a{
+        a {
           color: $default-text;
           text-decoration: none;
           text-transform: uppercase;
@@ -88,13 +87,13 @@
             background-color: white;
           }
 
-          &.active{
+          &.active {
             background-color: transparent;
             color: $default-text;
             font-weight: 700;
           }
 
-          &>.caret{
+          & > .caret {
             display: none;
           }
         }
@@ -103,14 +102,19 @@
 
   }
 
+  &-collapse {
+    display: none !important;
+  }
+
   &-collapse.in {
+    display: block !important;
     position: fixed;
     z-index: 250;
     top: 0;
     width: 100%;
     height: 100vh;
     border-color: transparent;
-    //  background-color: $overlay-menu;
+    background-color: $overlay-menu;
 
     .first {
       display: none;
@@ -118,125 +122,125 @@
   }
 }
 
- .header{
+.header {
 
-   &-content{
+  &-content {
 
-     &:after{
-       content: '';
-       display: block;
-       clear: both;
-     }
-   }
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
 
-   &_links{
-     @extend %col-offset-1, %col-8;
-     display: inline-block;
-     padding: 10px;
+  &_links {
+    @extend %col-offset-1, %col-8;
+    display: inline-block;
+    padding: 10px;
 
-     &-list{
-       display: block;
-       vertical-align: baseline;
+    &-list {
+      display: block;
+      vertical-align: baseline;
 
-       li{
-         display: inline-block;
-         font-size: $fs-sm;
+      li {
+        display: inline-block;
+        font-size: $fs-sm;
 
-         a{
-           display: block;
-           color: $default-text;
-           text-decoration: none;
-           text-transform: uppercase;
-           transition: all .3s ease;
-           font-family: "RobotoLight", "Helvetica", "sans-serif";
-           padding: 10px;
-           letter-spacing: 1px;
+        a {
+          display: block;
+          color: $default-text;
+          text-decoration: none;
+          text-transform: uppercase;
+          transition: all .3s ease;
+          font-family: "RobotoLight", "Helvetica", "sans-serif";
+          padding: 10px;
+          letter-spacing: 1px;
 
-           &:hover, &:focus {
-             color: $dark-text;
-             background-color: white;
-           }
+          &:hover, &:focus {
+            color: $dark-text;
+            background-color: white;
+          }
 
-           &.active{
-             background-color: transparent;
-             color: $default-text;
-             font-weight: 700;
-             font-family: "RobotoRegular", "Helvetica", "sans-serif";
-           }
+          &.active {
+            background-color: transparent;
+            color: $default-text;
+            font-weight: 700;
+            font-family: "RobotoRegular", "Helvetica", "sans-serif";
+          }
 
-           &>.caret{
-             display: none;
-           }
-         }
-       }
-     }
-   }
+          & > .caret {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 
-   &_contacts{
+  &_contacts {
     @extend %col-3;
-     max-width: 300px;
-     border-left: 2px solid $divider;
-     padding: 10px;
+    max-width: 300px;
+    border-left: 2px solid $divider;
+    padding: 10px;
 
-     &-wrapper{
-       @extend %col-5;
-       text-align: center;
-     }
+    &-wrapper {
+      @extend %col-5;
+      text-align: center;
+    }
 
-     .button{
-       background-color: transparent;
-       border: 2px solid $border-color;
-       color: $border-color;
-       width: 80px;
-       height: 40px;
-       line-height: 25px;
-       font-size: $fs-md;
-       padding: 5px;
-       font-family: "RobotoRegular", 'Helvetica', 'sans-serif';
-       font-weight: 700;
-       letter-spacing: 1.5px;
+    .button {
+      background-color: transparent;
+      border: 2px solid $border-color;
+      color: $border-color;
+      width: 80px;
+      height: 40px;
+      line-height: 25px;
+      font-size: $fs-md;
+      padding: 5px;
+      font-family: "RobotoRegular", 'Helvetica', 'sans-serif';
+      font-weight: 700;
+      letter-spacing: 1.5px;
 
-       &:hover{
-         background-color: $border-color;
-         color: $primary-bg;
-       }
-     }
+      &:hover {
+        background-color: $border-color;
+        color: $primary-bg;
+      }
+    }
 
-     &-list{
-       @extend %col-5;
+    &-list {
+      @extend %col-5;
 
-       li{
-         display: block;
-         width: 100%;
-       }
-     }
+      li {
+        display: block;
+        width: 100%;
+      }
+    }
 
-     &-link{
-       display: inline-block;
-       font-size: $fs-sm;
-       color: $default-text;
-       text-decoration: none;
+    &-link {
+      display: inline-block;
+      font-size: $fs-sm;
+      color: $default-text;
+      text-decoration: none;
 
-       &.skype:before{
-       //  @extend .icon, .icon-skype;
-         display: inline-block;
-         color: $contacts-icon;
-         font-size: $fs-md;
-         width: $fs-md;
-         height: $fs-md;
-       }
+      &.skype:before {
+        //  @extend .icon, .icon-skype;
+        display: inline-block;
+        color: $contacts-icon;
+        font-size: $fs-md;
+        width: $fs-md;
+        height: $fs-md;
+      }
 
-       &.phone:before{
-      //   @extend .icon, .icon-tel;
-         color: $contacts-icon;
-         font-size: $fs-md;
-         width: $fs-md;
-         height: $fs-md;
-       }
+      &.phone:before {
+        //   @extend .icon, .icon-tel;
+        color: $contacts-icon;
+        font-size: $fs-md;
+        width: $fs-md;
+        height: $fs-md;
+      }
 
-       &:hover{
-         color: darken( $default-text, 20%);
-       }
-     }
-   }
- }
+      &:hover {
+        color: darken($default-text, 20%);
+      }
+    }
+  }
+}

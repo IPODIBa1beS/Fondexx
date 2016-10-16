@@ -130,6 +130,20 @@ gulp.task('images', function() {
         .pipe(gulp.dest(dirs.build.img));
 });
 
+//png icons
+gulp.task('pngIcons', function() {
+    return gulp.src(dirs.source.pngIcons)
+        .pipe(plumber())
+        .pipe(gulpif(/[.](png|jpeg|jpg|svg)$/, imagemin({
+            progressive: true,
+            svgoPlugins: [{
+                removeViewBox: false
+            }],
+            use: [pngquant()]
+        })))
+        .pipe(gulp.dest(dirs.build.img+'/pngIcons/'));
+});
+
 //gulp.task( 'deploy', function () {
 //
 //    var conn = ftp.create( {
@@ -160,7 +174,7 @@ gulp.task('images', function() {
 gulp.task('watch', function() {
     gulp.watch(dirs.source.sass, ['compileSass']);
     gulp.watch(dirs.source.js, ['assembleJs']);
-    gulp.watch(dirs.source.img, ['images']);
+    gulp.watch(dirs.source.img, ['images', 'pngIcons']);
 });
 
-gulp.task('default', [/*'iconfont', */ 'fonts', /*'assembleJs',*/ 'images','compileSass', 'watch']);
+gulp.task('default', [/*'iconfont', */ 'fonts', /*'assembleJs',*/ 'images','compileSass', 'watch', 'pngIcons']);
