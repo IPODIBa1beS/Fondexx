@@ -3,6 +3,7 @@
 
   #myid{
     height: 250px !important;
+    background-size: cover;
   }
 
   .main-container{
@@ -68,7 +69,7 @@
       p{
         font-size: $fs-md;
         font-family: "RobotoLight", 'Helvetica', sans-serif;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         line-height: 1.5;
 
         &:first-child{

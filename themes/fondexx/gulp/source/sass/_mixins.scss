@@ -98,7 +98,9 @@
   @font-face {
     font-family: $alias;
     src: url("../fonts/" + $name + ".eot");
-    src: url("../fonts/" + $name + ".eot?#iefix") format("embedded-opentype"), url("../fonts/" + $name + ".woff") format("woff"), url("../fonts/" + $name + ".ttf") format("truetype");
+    //src: url("../fonts/" + $name + ".eot?#iefix") format("embedded-opentype"), url("../fonts/" + $name + ".woff") format("woff"), /url("../fonts/" + $name + ".ttf") format("truetype");
+    src: url("../fonts/" + $name + ".eot?#iefix") format("embedded-opentype"), url("../fonts/" + $name + ".ttf") format("truetype");
+
     font-weight: $fw;
     font-style: $fs;
   }

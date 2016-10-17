@@ -8,18 +8,28 @@
       display: none;
     }
 
+
+    .page-header{
+      color: $contacts-icon;
+      font-size: $fs-title;
+      text-transform: uppercase;
+      margin: 25px 0;
+      font-family: "RobotoLight", "Helvetica", "opensans";
+    }
+
     .header-text{
       color: $contacts-icon;
       font-size: $fs-title;
       text-transform: uppercase;
-      margin: 40px 0;
+      margin: 25px 0;
+      font-family: "RobotoLight", "Helvetica", "opensans";
     }
 
     .bottom-header-text{
       font-size: $fs-title;
-      font-family: "RobotoRegular";
+      font-family: "RobotoBold";
       font-weight: 700;
-      margin: 10px 0;
+      margin: 50px 0 0 0;
     }
 
     .pane-custom{
@@ -44,24 +54,26 @@
 
         .text{
           font-size: $fs-md - 2;
-          font-family: "RobotoLight";
+          font-family: "RobotoBold";
           font-weight: 700;
           letter-spacing: 1px;
           word-spacing: 1.5px;
 
           &-lg{
             font-size: $fs-lg;
-            font-family: "RobotoMedium";
+            font-family: "RobotoBold";
           }
+        }
+
+        .img-wrapper{
+          margin: 20px;
+          width: 100%;
+          min-height: 525px;
+          background: url('../images/tradeup_macbook.png') no-repeat, scroll, left top;
+          background-size: cover;
         }
       }
     }
   }
 
-  .page-header{
-    border-bottom: 0 none;
-    color: $page-header;
-    font-size: $fs-title;
-    text-transform: none;
-  }
 }

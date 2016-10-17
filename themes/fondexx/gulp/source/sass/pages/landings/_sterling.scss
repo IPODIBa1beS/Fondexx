@@ -4,22 +4,35 @@
   .main-container {
     background: $primary-bg;
 
+    &:before{
+      display: none;
+    }
+
+    .page-header {
+      border-bottom: 0 none;
+      color: $page-header;
+      font-size: $fs-title;
+      font-family: "RobotoLight";
+      text-align: center;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
 
     .bottom-header-text {
       font-size: $fs-title;
       font-family: "RobotoRegular";
       font-weight: 700;
-      margin: 10px 0;
+      margin: 50px 0 10px 0;
     }
 
-    #panels-ipe-paneid-46{
-      p{
+    #panels-ipe-paneid-46 {
+      p {
         margin: 0;
       }
     }
 
-    #panels-ipe-paneid-47, #panels-ipe-paneid-49{
-      h2{
+    #panels-ipe-paneid-47, #panels-ipe-paneid-49 {
+      h2 {
         color: $contacts-icon;
         font-size: $fs-title;
         text-transform: uppercase;
@@ -27,18 +40,26 @@
       }
     }
 
-    .advantages-list{
+    .advantages-list {
 
-      &-item{
+      &-item {
         display: block;
         margin-bottom: 15px;
+        color: $secondary-text;
       }
     }
     .pane-custom {
 
-
       .pane-content {
         display: block;
+
+        .img-wrapper {
+          margin: 20px;
+          width: 100%;
+          min-height: 525px;
+          background: url('../images/sterling_macbook.png') no-repeat, scroll, left top;
+          background-size: cover;
+        }
 
         p {
           display: block;
@@ -48,7 +69,7 @@
           letter-spacing: 1px;
           word-spacing: 1.5px;
 
-          a{
+          a {
             color: $contacts-icon;
           }
         }
@@ -56,33 +77,53 @@
         .text {
           font-size: $fs-md - 2;
           font-family: "RobotoLight";
-          letter-spacing: 1px;
-          word-spacing: 1.5px;
-          margin-bottom: 15px;
+          color: $secondary-text;
+          margin-bottom: 20px;
 
           &-bold {
-            font-weight: 700;
+            font-family: "RobotoBold";
+            color: white;
           }
 
-          &-lg{
+          &-lg {
             font-size: $fs-lg;
+          }
+
+        }
+
+        table {
+          @extend .table-striped-custom;
+          tr {
+            &:nth-child(1){
+              &:nth-child(1) {
+                p{
+                  font-family: "RobotoBold";
+                }
+              }
+
+              &:nth-child(2) {
+                p{
+                  font-family: "RobotoBold";
+                }
+              }
+            }
+
+            td {
+              &:nth-child(1) {
+                p{
+                  font-family: "RobotoLight";
+                }
+              }
+
+              &:nth-child(2) {
+                p{
+                  font-family: "RobotoMedium";
+                }
+              }
+            }
           }
         }
       }
     }
-  }
-
-
-
-  .page-header {
-    border-bottom: 0 none;
-    color: $page-header;
-    font-size: $fs-title;
-    text-transform: none;
-  }
-
-  table {
-    @extend .table-striped-custom;
-
   }
 }

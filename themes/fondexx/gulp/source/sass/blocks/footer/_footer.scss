@@ -5,6 +5,21 @@ footer.footer {
 
   .logo {
     @extend %col-2;
+    overflow: hidden;
+    height: 70px;
+    display: inline-block;
+    margin: 0 !important;
+    background: url("../images/pngIcons/fondex_logo.png") no-repeat;
+    background-size:  70%;
+    background-position:  50% 35%;
+    //stub!!!
+    img {
+      display: none;
+    }
+
+    //svg{
+    //  margin-top: -90px;
+    //}
   }
 
   .nav {

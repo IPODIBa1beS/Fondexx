@@ -1,32 +1,44 @@
-.page-trade-accounts{
+.page-trade-accounts {
   @extend .blackInnerPageWithHeader;
 
-  .pane-1{
+  .main-container {
+    &:before {
+      display: none
+    }
+  }
+
+  .page-header {
+    display: none;
+  }
+
+  .pane-1 {
     border: 1px dashed $error;
     padding: 50px;
     text-align: center;
     margin-bottom: 25px;
 
-    .pane-title{
+    .pane-title {
       text-transform: uppercase;
       color: $page-header;
       font-size: $fs-title;
+      font-family: "RobotoLight", 'Helvetica', sans-serif;
       margin-bottom: 15px;
     }
 
-    .text-bold{
+    .text-bold {
       font-weight: 700;
+      font-family: "RobotoBold", 'Helvetica', sans-serif;
     }
 
-    .pane-content{
-      .proposal{
+    .pane-content {
+      .proposal {
         overflow: hidden;
 
-        li{
+        li {
           @extend %col-6;
           display: inline-block;
           font-size: $fs-md;
-          font-family: "RobotoLight", 'Helvetica', sans-serif;
+          font-family: "RobotoThin", 'Helvetica', sans-serif;
           font-weight: 100;
           letter-spacing: 1.5px;
           word-spacing: 2px;
@@ -34,15 +46,15 @@
 
         }
 
-        &_rich{
+        &_rich {
           content: '';
           display: inline-block;
           font-size: $fs-md;
 
         }
 
-        &_experienced{
-          &:before{
+        &_experienced {
+          &:before {
             content: '';
             font-size: $fs-md;
             display: inline-block;
@@ -50,36 +62,38 @@
         }
       }
 
-      .conditions{
+      .conditions {
         margin-top: 25px;
         text-align: left;
         display: block;
         color: $border-color;
         font-size: $fs-sm;
-        font-family: "RobotoLight", 'Helvetica', 'sans-serif';
+        font-family: "RobotoLightItalic", 'Helvetica', 'sans-serif';
         font-style: italic;
+        letter-spacing: 1.5px;
+        word-spacing: 2px;
 
-        &:before{
+        &:before {
           content: '*';
           display: inline-block;
           word-spacing: 2px;
         }
 
-        a{
+        a {
           display: inline-block;
           font-weight: 700;
           text-decoration: underline;
           color: $border-color;
-          font-family: "RobotoRegular", 'Helvetica', 'sans-serif';
+          font-family: "RobotoBold", 'Helvetica', 'sans-serif';
           font-style: normal;
         }
       }
     }
   }
 
-  .pane-2{
+  .pane-2 {
 
-    .pane-title{
+    .pane-title {
       text-transform: uppercase;
       color: $page-header;
       font-size: $fs-title;
@@ -87,10 +101,20 @@
       text-align: center;
     }
 
-    .pane-content{
-        table{
-          @extend .table-striped-custom;
+    .pane-content {
+      table {
+        @extend .table-striped-custom;
+
+        tr:nth-child(2) {
+          width: 25%;
+          font-family: "RobotoBold", 'Helvetica', 'sans-serif';
+          font-style: italic;
+          font-weight: 700;
+          font-size: $fs-md;
+          padding: 15px;
+          border: 0 none;
         }
+      }
     }
   }
 }

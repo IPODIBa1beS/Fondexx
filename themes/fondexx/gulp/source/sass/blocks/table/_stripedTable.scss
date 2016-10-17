@@ -11,9 +11,10 @@
 
       th{
         width: 25%;
-        font-family: "RobotoLight", 'Helvetica', 'sans-serif';
+        font-family: "RobotoBoldItalic", 'Helvetica', 'sans-serif';
         font-style: italic;
         font-weight: 700;
+        font-size: $fs-md;
         padding: 15px;
         border: 0 none;
       }
@@ -24,6 +25,9 @@
         vertical-align: middle;
         border: 0 none;
         padding: 15px;
+        font-size: $fs-md - 2;
+        word-spacing: normal;
+        letter-spacing: normal;
         font-family: "RobotoLight", 'Helvetica', 'sans-serif';
 
         a{
@@ -32,7 +36,7 @@
 
         &:nth-child(1){
           font-family: "RobotoRegular", 'Helvetica', 'sans-serif';
-          font-weight: 700;
+          font-weight: 400;
         }
 
         i:before{

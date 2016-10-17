@@ -38,14 +38,22 @@
 
     .logo {
       @extend %col-2;
+      overflow: hidden;
+      height: 70px;
       display: inline-block;
-      height: 43px;
       margin: 0 !important;
+      background: url("../images/pngIcons/fondex_logo.png") no-repeat;
+      background-size:  70%;
+      background-position:  center;
 
       //stub!!!
       img {
         display: none;
       }
+
+      //svg{
+      //  margin-top: -105px;
+      //}
     }
 
     .login-btn-wrapper {
@@ -102,22 +110,28 @@
 
   }
 
-  &-collapse {
+  &-collapse.collapse {
     display: none !important;
   }
 
-  &-collapse.in {
+  &-collapse.collapse.in {
     display: block !important;
+    height: 100vh !important;
     position: fixed;
     z-index: 250;
     top: 0;
     width: 100%;
-    height: 100vh;
     border-color: transparent;
     background-color: $overlay-menu;
 
     .first {
       display: none;
+    }
+
+    .nav{
+      width: 80%;
+      margin: 10%;
+      height: 80vh;
     }
   }
 }
@@ -137,6 +151,8 @@
     @extend %col-offset-1, %col-8;
     display: inline-block;
     padding: 10px;
+    border-right: 2px solid $divider;
+    min-height: 71px;
 
     &-list {
       display: block;
@@ -179,7 +195,6 @@
   &_contacts {
     @extend %col-3;
     max-width: 300px;
-    border-left: 2px solid $divider;
     padding: 10px;
 
     &-wrapper {
@@ -220,6 +235,7 @@
       font-size: $fs-sm;
       color: $default-text;
       text-decoration: none;
+      font-family: "RobotoLight", "opensans", "sans-serif";
 
       &.skype:before {
         //  @extend .icon, .icon-skype;

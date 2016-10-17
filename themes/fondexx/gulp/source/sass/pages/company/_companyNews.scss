@@ -1,3 +1,47 @@
 .page-company-news{
    @extend .blackInnerPageWithHeader;
+
+   .node-article{
+      margin-top: 10px;
+
+      header{
+         margin: 0;
+      }
+
+      h2{
+         a{
+            text-transform: uppercase;
+            font-family: "RobotoLight", 'Helvetica', sans-serif;
+            font-weight: 400;
+            font-size: $fs-title;
+            color: $secondary-text;
+
+            &:hover, &:focus{
+               color: white;
+            }
+         }
+      }
+
+      p{
+         font-family: "RobotoLight", 'Helvetica', sans-serif;
+         font-size: $fs-md;
+         margin: 5px 0;
+         color: $secondary-text;
+      }
+
+      span{
+         display: inline-block;
+         font-family: "RobotoBold", 'Helvetica', sans-serif;
+         font-size: $fs-md;
+         margin: 10px 0;
+         text-transform: uppercase;
+         color: white;
+      }
+
+      .submitted-by{
+         //  display: inline-block;
+         color: $border-color;
+         display: none;
+      }
+   }
 }

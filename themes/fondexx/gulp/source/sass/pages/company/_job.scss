@@ -1,3 +1,22 @@
 .page-node-107{
   @extend .whiteInnerPageWithHeader;
+
+  h3{
+
+      text-transform: uppercase;
+      font-family: "RobotoLight", 'Helvetica', sans-serif;
+      font-weight: 400;
+      font-size: $fs-title;
+      margin: 10px 0;
+      color: $white-pages-text;
+
+  }
+
+  p{
+    font-family: "RobotoLight", 'Helvetica', sans-serif;
+    font-size: $fs-md;
+    margin: 10px 0;
+    color: $white-pages-text;
+  }
+
 }

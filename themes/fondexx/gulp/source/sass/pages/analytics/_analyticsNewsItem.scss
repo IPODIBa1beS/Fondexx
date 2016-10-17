@@ -2,12 +2,14 @@
   @extend .whiteInnerPageWithImage;
 
   h2 {
-    text-transform: uppercase;
-    font-family: "RobotoLight", 'Helvetica', sans-serif;
-    font-weight: 400;
-    font-size: $fs-title;
-    margin: 10px 0;
-    color: black;
+    a{
+      text-transform: uppercase;
+      font-family: "RobotoLight", 'Helvetica', sans-serif;
+      font-weight: 400;
+      font-size: $fs-title;
+      margin: 10px 0;
+      color: black;
+    }
   }
 
   p {
@@ -17,7 +19,7 @@
     color: black;
   }
 
-  span {
+  .read_more{
     display: inline-block;
     font-family: "RobotoBold", 'Helvetica', sans-serif;
     font-size: $fs-md;
