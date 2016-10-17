@@ -87,7 +87,6 @@
 
   <?php
     hide($content);
-    print render($content['field_main_image']);
   ?>
 
     <div class="submitted">
