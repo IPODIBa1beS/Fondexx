@@ -1,5 +1,5 @@
 .blackInnerPage{
-  color: $default-text;
+  color: $secondary-text;
 
   .main-container{
     background: rgba(0, 0, 0, 0.5) url('../images/bg_main.jpg');
@@ -32,6 +32,7 @@
     color: $page-header;
     font-size: $fs-md;
     text-transform: uppercase;
+    font-family: "RobotoBold", "Helvetica", "opensans";
   }
 
   .region-sidebar-second{
@@ -66,8 +67,6 @@
       p{
         font-size: $fs-md;
         font-family: "RobotoLight", 'Helvetica', sans-serif;
-        letter-spacing: 1.5px;
-        word-spacing: 2px;
         margin-bottom: 15px;
         line-height: 1.5;
 

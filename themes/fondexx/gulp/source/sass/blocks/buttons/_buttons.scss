@@ -54,6 +54,17 @@
       color: $default-text;
     }
   }
+
+  &-transparent-white{
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+
+    &:hover, &:focus{
+      background-color: darken(white, 20%);
+      color: $primary-bg;
+    }
+  }
 }
 
 .button-rectangle{

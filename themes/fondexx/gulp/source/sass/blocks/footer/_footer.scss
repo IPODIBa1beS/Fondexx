@@ -25,6 +25,7 @@ footer.footer {
         transition: all .3s ease;
         padding: 10px;
         letter-spacing: 1px;
+        font-family: "RobotoLight", "Helvetica", "sans-serif";
 
         &:hover, &:focus {
           color: $dark-text;
@@ -72,11 +73,11 @@ footer.footer {
   }
 
   .footer_description {
-    font-family: 'RobotoLight', 'Helvetica', 'opensans';
+    font-family: 'RobotoThinItalic', 'Helvetica', 'opensans';
     @include paragraphText();
     font-size: $fs-sm;
     font-style: italic;
-    color: $border-color;
+    color: $footer-text-color;
   }
 
   #block-block-3{
@@ -89,8 +90,9 @@ footer.footer {
     & > p {
       font-size: $fs-md - 2;
       word-spacing: 2px;
+      letter-spacing: 1px;
       text-align: right;
-      font-weight: 700;
+      font-weight: 500;
       font-family: 'RobotoMedium', 'Helvetica', 'opensans';
       color: $border-color;
     }

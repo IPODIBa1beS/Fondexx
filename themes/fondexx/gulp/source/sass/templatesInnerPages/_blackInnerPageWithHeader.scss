@@ -1,16 +1,16 @@
 .blackInnerPageWithHeader{
-  color: $default-text;
+  color: $secondary-text;
 
   #myid{
     height: 250px !important;
   }
 
   .main-container{
-    background: rgba(0, 0, 0, 0.5) url('../images/bg_main.jpg');
+    background: $primary-bg url('../images/bg_main.jpg');
     background-repeat: no-repeat;
-    background-position: 100% 0;
+    background-position: left bottom;
     background-attachment: scroll;
-    background-size: 100% 175%;
+    background-size: 100%;
     max-width: none;
     width: 100%;
     margin: 0;
@@ -36,7 +36,7 @@
     color: $page-header;
     font-size: $fs-md;
     text-transform: uppercase;
-    font-family: "RobotoLight";
+    font-family: "RobotoBold", "Helvetica", "opensans";
   }
 
   .region-sidebar-second{
@@ -71,8 +71,6 @@
       p{
         font-size: $fs-md;
         font-family: "RobotoLight", 'Helvetica', sans-serif;
-        letter-spacing: 1.5px;
-        word-spacing: 2px;
         margin-bottom: 15px;
 
         line-height: 1.5;

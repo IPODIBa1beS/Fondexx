@@ -1,3 +1,50 @@
-.node-type-study-article{
+.node-type-study-article {
   @extend .whiteInnerPageWithImage;
+
+  .node-study-article {
+    margin-top: 10px;
+
+    header {
+      margin: 0;
+    }
+
+    h2 {
+      a {
+        text-transform: uppercase;
+        font-family: "RobotoLight", 'Helvetica', sans-serif;
+        font-weight: 400;
+        font-size: $fs-title;
+        color: $white-pages-text;
+
+        &:hover, &:focus {
+          color: lighten($white-pages-text, 20%);
+        }
+      }
+    }
+
+    .field-name-body {
+      margin-top: 50px;
+
+      p {
+        font-family: "RobotoLight", 'Helvetica', sans-serif;
+        font-size: $fs-md;
+        margin: 20px 0;
+        color: $white-pages-text;
+      }
+    }
+
+    span {
+      display: inline-block;
+      font-family: "RobotoBold", 'Helvetica', sans-serif;
+      font-size: $fs-md;
+      margin: 10px 0;
+      text-transform: uppercase;
+      color: $white-pages-text;
+    }
+  }
+
+  //TODO REMOVE OR STYLE THIS SPAN
+  .statistics_counter {
+    display: none;
+  }
 }

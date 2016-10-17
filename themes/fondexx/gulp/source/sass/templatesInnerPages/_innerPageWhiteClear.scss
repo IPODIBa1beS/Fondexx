@@ -59,6 +59,7 @@
           font-family: "RobotoLight", 'Helvetica', sans-serif;
           color: $default-text;
           text-transform: uppercase;
+          font-family: "RobotoBold", "Helvetica", "opensans";
         }
       }
     }
@@ -67,8 +68,6 @@
       p {
         font-size: $fs-md;
         font-family: "RobotoLight", 'Helvetica', sans-serif;
-        letter-spacing: 1.5px;
-        word-spacing: 2px;
         margin-bottom: 15px;
         line-height: 1.5;
 

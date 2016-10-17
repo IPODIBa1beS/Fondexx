@@ -1,3 +1,29 @@
-.node-type-analytics{
-    @extend .whiteInnerPageWithImage;
+.node-type-analytics {
+  @extend .whiteInnerPageWithImage;
+
+  h2 {
+    text-transform: uppercase;
+    font-family: "RobotoLight", 'Helvetica', sans-serif;
+    font-weight: 400;
+    font-size: $fs-title;
+    margin: 10px 0;
+    color: black;
+  }
+
+  p {
+    font-family: "RobotoLight", 'Helvetica', sans-serif;
+    font-size: $fs-md;
+    margin: 10px 0;
+    color: black;
+  }
+
+  span {
+    display: inline-block;
+    font-family: "RobotoBold", 'Helvetica', sans-serif;
+    font-size: $fs-md;
+    margin: 10px 0;
+    text-transform: uppercase;
+    color: black;
+  }
+
 }

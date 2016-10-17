@@ -10,25 +10,34 @@
     .course{
 
       &_text{
+        color: $secondary-text;
         font-size: $fs-md - 2;
-        font-family: "RobotoLight";
-        font-weight: 500;
+        font-family: "RobotoLight", "Helvetica", "opensans";
+        font-weight: 400;
         letter-spacing: 1px;
         word-spacing: 1.5px;
+        line-height: 1.25;
+
+        &-bold{
+          font-family: "RobotoBold", "Helvetica", "opensans";
+          font-weight: 700;
+        }
       }
 
       &_header-text{
         color: $contacts-icon;
         font-size: $fs-md;
         text-transform: uppercase;
-        margin: 50px 0;
+        margin: 25px 0;
+        line-height: 1.25;
       }
 
       &_list-header{
         font-size: $fs-title;
-        font-family: "RobotoRegular";
+        font-family: "RobotoBold", "Helvetica", "sans-serif";
         font-weight: 700;
-        margin: 50px 0;
+        margin: 25px 0;
+        line-height: 1.25;
       }
 
       &_skills-list{
@@ -44,7 +53,7 @@
           }
 
           p{
-            font-family: "RobotoRegular";
+            font-family: "RobotoLight", "Helvetica", "sans-serif";
             font-size: $fs-md - 2;
             letter-spacing: 1px;
             word-spacing: 1.5px;
@@ -54,34 +63,58 @@
 
       &_btn{
         @extend .button, .button-sm;
-        margin: 50px 0 0 0;
+        margin: 25px 0 0 0;
       }
+    }
+
+    a{
+      text-decoration: none;
     }
 
     .pane-title{
       color: $contacts-icon;
+      font-family: "RobotoBold", "Helvetica", "sans-serif";
       font-size: $fs-md;
       margin: 0 0 25px 0;
+      line-height: 1.25;
     }
 
-    .pane-fondexx-fondexx-registration-form{
-      @extend %col-12;
+    ol>li>p{
+      color: $secondary-text;
+      font-size: $fs-md - 2;
+      font-family: "RobotoLight", "Helvetica", "opensans";
+      font-weight: 400;
+      letter-spacing: 1px;
+      line-height: 1.25;
+      word-spacing: 1.5px;
+    }
 
-      input{
-     //   @extend %col-3;
-        //margin-right: 30px;
+    form{
+      text-align: center;
+
+      .form-control{
+        display: inline-block;
+        width: 23%;
         background: transparent;
         border: 1px solid $border-color;
+        height: 60px;
         padding: 20px;
-        font-size: $fs-md;
+        font-size: $fs-title;
         color: $border-color;
-        border-radius: 2px;
-        font-family: "RobotoRegular";
+        border-radius: 0;
+        font-family: "RobotoLightItalic";
+
+        margin: 20px 1.5% 20px 0;
+
+        &:last-child{
+          margin-right: 0;
+        }
       }
 
       input[type='submit']{
-        @extend .button-rectangle, .btn-white, .btn-transparent-rounded;
+        @extend .button, .button-transparent-white;
         width: auto !important;
+        line-height: 1;
       }
     }
   }

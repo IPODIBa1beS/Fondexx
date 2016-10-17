@@ -33,6 +33,7 @@
     color: $page-header;
     font-size: $fs-md;
     text-transform: uppercase;
+    font-family: "RobotoBold", "Helvetica", "opensans";
   }
 
   .region-sidebar-second {
@@ -67,8 +68,6 @@
       p {
         font-size: $fs-md;
         font-family: "RobotoLight", 'Helvetica', sans-serif;
-        letter-spacing: 1.5px;
-        word-spacing: 2px;
         margin-bottom: 15px;
         line-height: 1.5;
 
@@ -87,7 +86,7 @@
 
     .submitted-by {
       display: inline-block;
-      color: $primary-bg;
+      color: $white-pages-text;
       font-family: "RobotoLight", 'Helvetica', sans-serif;
       margin: 10px 0;
     }
