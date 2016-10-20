@@ -83,6 +83,10 @@
 
                 preventDropdown();
             });
+
+            $('.close-overlay').on('click', function(e){
+                $('.navbar-collapse').removeClass('in');
+            })
         });
 
 

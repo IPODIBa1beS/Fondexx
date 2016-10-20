@@ -99,6 +99,6 @@
 
     <?php print $node->body['und'][0]['summary']; ?>
 
-    <a href="<?php print $node_url; ?>"><?php print t('read more'); ?></a>
+    <a href="<?php print $node_url; ?>" class="read_more"><?php print t('read more'); ?></a>
 
 </div>

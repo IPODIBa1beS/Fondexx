@@ -38,9 +38,15 @@
 
   .region-sidebar-second {
     margin-top: 50px;
+
+    .contextual-links-wrapper{
+      position: relative;
+    }
+
     .block-block {
       a {
         @extend .button-rectangle;
+        margin-top: 20px;
       }
     }
   }

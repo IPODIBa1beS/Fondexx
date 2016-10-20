@@ -44,7 +44,7 @@
     <!-- Overlay menu -->
     <div class="navbar-collapse collapse">
         <nav role="navigation">
-            <i class="icon icon-close close-overlay"></i>
+            <i class="ion-ios-close-empty close-overlay"></i>
             <?php if (!empty($primary_nav)): ?>
                 <?php print render($primary_nav); ?>
             <?php endif; ?>

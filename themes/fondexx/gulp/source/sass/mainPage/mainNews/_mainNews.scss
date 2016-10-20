@@ -1,25 +1,73 @@
-.panels-ipe-paneid-51{
-
+.pane-views-articles-block-1 {
+  @extend %col-4;
   max-width: none;
-  width: 100%;
   margin: 0;
   padding: 0;
 
-  &:before{
+  &:before {
     content: '';
     display: inline-block;
     position: absolute;
     width: 50px;
     border-bottom: 2px solid $border-color;
-    margin-top: 90px;
+    margin-top: $fs-md /2;
+    left: -60px;
   }
 
-  .pane-title{
+  .pane-title {
     color: $page-header;
     font-size: $fs-md;
     text-transform: uppercase;
-    font-family: "RobotoLight";
+    font-family: "RobotoBold";
   }
 
+  .node-teaser {
+    margin: 20px;
 
+    a{
+      text-decoration: none;
+    }
+
+    .submitted{
+      display: inline-block;
+      font-family: "RobotoLight", 'Helvetica', sans-serif;
+      font-size: $fs-sm;
+      margin: 10px 0;
+      color: $secondary-text;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      font-family: "RobotoLight", 'Helvetica', sans-serif;
+      font-weight: 400;
+      font-size: $fs-title;
+      margin: 10px 0;
+      color: white;
+
+      //a {
+      //  text-transform: uppercase;
+      //  font-family: "RobotoLight", 'Helvetica', sans-serif;
+      //  font-weight: 400;
+      //  font-size: $fs-title;
+      //  margin: 10px 0;
+      //  color: white;
+      //}
+    }
+
+    p {
+      font-family: "RobotoLight", 'Helvetica', sans-serif;
+      font-size: $fs-md;
+      margin: 10px 0;
+      color: white;
+    }
+
+    .read_more, span {
+      display: inline-block;
+      font-family: "RobotoBold", 'Helvetica', sans-serif;
+      font-size: $fs-md;
+      margin: 10px 0;
+      text-transform: uppercase;
+      color: $secondary-text;
+    }
+  }
 }

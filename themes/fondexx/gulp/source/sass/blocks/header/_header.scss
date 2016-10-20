@@ -30,7 +30,6 @@
       .navbar-toggle {
         display: block;
         position: relative;
-        z-index: 255;
         border: 0 none;
         vertical-align: bottom;
       }
@@ -107,6 +106,10 @@
         }
       }
     }
+    // CONTACTS ON MAIN HEADER
+    #last-contacts-block{
+      display: none;
+    }
 
   }
 
@@ -124,6 +127,19 @@
     border-color: transparent;
     background-color: $overlay-menu;
 
+    .close-overlay{
+      position: absolute;
+      top: 20px;
+      left: 15%;
+      cursor: pointer;
+      width: 25px;
+      height: 25px;
+
+      &:before{
+        color: $white-pages-text;
+      }
+    }
+
     .first {
       display: none;
     }
@@ -132,6 +148,65 @@
       width: 80%;
       margin: 10%;
       height: 80vh;
+
+      li{
+        @extend %col-4;
+
+
+        &.first{
+          display: none;
+        }
+
+        &.dropdown{
+
+          &:nth-child(1){
+            &:before{
+              display: inline-block;
+              content: '';
+            }
+          }
+
+          &:nth-child(2){
+
+          }
+
+          &:nth-child(3){
+
+          }
+
+          &:nth-child(4){
+
+          }
+        }
+      }
+
+      .dropdown-toggle{
+        border-bottom: 0 none;
+        color: $page-header;
+        font-size: $fs-title;
+        font-family: "RobotoBold";
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+
+      .caret{
+        display: none;
+      }
+
+      .dropdown-menu{
+        display: block;
+        position: relative;
+        box-shadow: none;
+        border: 0 none;
+
+        .leaf{
+          display: block;
+          width: 100%;
+          font-family: "RobotoRegular";
+          font-weight: 400;
+          color: $white-pages-text;
+        }
+      }
     }
   }
 }
