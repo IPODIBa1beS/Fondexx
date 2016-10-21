@@ -1,7 +1,7 @@
 .page-company-news{
    @extend .blackInnerPageWithHeader;
 
-   .node-article{
+   .view-articles{
       margin-top: 10px;
 
       header{
@@ -29,7 +29,7 @@
          color: $secondary-text;
       }
 
-      span{
+      .read-more{
          display: inline-block;
          font-family: "RobotoBold", 'Helvetica', sans-serif;
          font-size: $fs-md;
@@ -38,10 +38,17 @@
          color: white;
       }
 
-      .submitted-by{
-         //  display: inline-block;
-         color: $border-color;
-         display: none;
+      .submitted{
+         color: $hint-text;
+         font-size: $fs-sm;
+         display: inline-block;
+         margin: 10px 0;
       }
+
+
+   }
+
+   .view-articles{
+       @include pagination();
    }
 }

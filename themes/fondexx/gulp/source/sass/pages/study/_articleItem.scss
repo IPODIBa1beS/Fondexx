@@ -47,4 +47,11 @@
   .statistics_counter {
     display: none;
   }
+
+  .submitted{
+    color: $hint-text;
+    font-size: $fs-sm;
+    display: inline-block;
+    margin: 10px 0;
+  }
 }

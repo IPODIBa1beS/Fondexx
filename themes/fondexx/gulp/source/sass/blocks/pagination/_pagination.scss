@@ -1,0 +1,51 @@
+@mixin pagination(){
+  &>.text-center{
+    background: rgba(200, 200, 200, .4);
+    border-radius: 2px;
+  }
+
+  .pagination{
+    li{
+      display: inline-block;
+      background: transparent;
+
+      &.active{
+
+        span{
+          color: white;
+          border-radius: 50%;
+          border: 1px solid white;
+          background: transparent;
+        }
+      }
+
+      &>a{
+        display: inline-block;
+        color: $white-pages-text;
+        text-decoration: none;
+        background: transparent;
+        border: 0 none;
+        background-image: none !important;
+
+        &:hover, &:focus{
+          color: darken(white, 20%);
+          border-radius: 50%;
+          border: 1px solid darken(white, 20%);
+          background: transparent;
+        }
+
+        &:active{
+          color: darken(white, 20%);
+          border-radius: 50%;
+          border: 1px solid darken(white, 20%);
+          background: transparent;
+        }
+
+        &:before, &:after{
+          background: transparent !important;
+          transition: none;
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,14 @@
 .node-type-analytics {
   @extend .whiteInnerPageWithImage;
 
+  .submitted{
+    color: $hint-text;
+    font-size: $fs-sm;
+    display: inline-block;
+    margin: 10px 0;
+  }
+
+
   h2 {
     a{
       text-transform: uppercase;
@@ -19,7 +27,7 @@
     color: black;
   }
 
-  .read_more{
+  .read-more{
     display: inline-block;
     font-family: "RobotoBold", 'Helvetica', sans-serif;
     font-size: $fs-md;

@@ -29,7 +29,14 @@
       color: $secondary-text;
     }
 
-    span{
+    .submitted{
+      color: $hint-text;
+      font-size: $fs-sm;
+      display: inline-block;
+      margin: 10px 0;
+    }
+
+    .read-more{
       display: inline-block;
       font-family: "RobotoBold", 'Helvetica', sans-serif;
       font-size: $fs-md;
@@ -37,5 +44,9 @@
       text-transform: uppercase;
       color: white;
     }
+  }
+
+  .view-study-articles{
+    @include pagination();
   }
 }
