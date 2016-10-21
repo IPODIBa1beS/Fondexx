@@ -83,6 +83,8 @@
 
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
+  <a href="<?php print $node_url; ?>">
+
   <?php
     hide($content);
     print render($content['field_main_image']);
@@ -93,11 +95,13 @@
     </div>
 
 
-    <h2>
-      <a href="<?php print $node_url; ?>" <?php print $title_attributes; ?>><?php print $title; ?></a></h2>
+    <h2<?php print $title_attributes; ?>><?php print $title; ?></h2>
 
     <?php print $node->body['und'][0]['summary']; ?>
 
-    <a href="<?php print $node_url; ?>" class="read_more"><?php print t('read more'); ?></a>
+    <span><?php print t('read more'); ?></span>
+  </a>
+
+
 
 </div>
