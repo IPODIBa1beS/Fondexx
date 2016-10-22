@@ -1,6 +1,14 @@
 .node-type-article{
   @extend .whiteInnerPageWithHeader;
 
+  #page-header{
+    display: block;
+    background: transparent url('../images/company_news_header.png') no-repeat scroll left center;
+    background-size: cover;
+    width: 100%;
+    min-height: 250px;
+  }
+
   .node-article {
     margin-top: 10px;
 

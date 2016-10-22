@@ -1,11 +1,28 @@
 .page-study-start {
   @extend .blackInnerPage;
+
   .main-container {
     background: rgba(0, 0, 0, 0.5) url('../images/bg_inner_empire_state.jpg');
     background-repeat: no-repeat;
     background-position: 0 100%;
     background-attachment: scroll;
     background-size: 100% 100%;
+
+    #page-header{
+      display: block;
+      background: transparent url('../images/base_course_header.png') no-repeat scroll left center;
+      background-size: cover;
+      width: 100%;
+      min-height: 250px;
+    }
+
+    &>.row:before {
+      display: none
+    }
+
+    .page-header{
+       display: none;
+    }
 
     .course{
 
@@ -125,5 +142,4 @@
       }
     }
   }
-
 }

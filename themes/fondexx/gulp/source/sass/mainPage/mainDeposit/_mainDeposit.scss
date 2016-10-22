@@ -1,0 +1,28 @@
+.page-home {
+  .pane-9{
+    display: block;
+    background-image: url('../images/bg_main.jpg');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: right bottom;
+    background-size: 100% 100%;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      width: 50px;
+      border-bottom: 2px solid $border-color;
+      margin-top: $fs-md /2;
+      left: -60px;
+    }
+
+    .pane-title {
+      color: $page-header;
+      font-size: $fs-md;
+      text-transform: uppercase;
+      font-family: "RobotoBold";
+      text-align: left;
+    }
+  }
+}

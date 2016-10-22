@@ -21,3 +21,12 @@ body {
     display: none;
   }
 }
+
+.progress-disabled{
+  float: left !important;
+
+  &:before, &:after{
+    content: '';
+    background: transparent none !important;
+  }
+}

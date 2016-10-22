@@ -2,13 +2,33 @@
   @extend .blackInnerPageWithHeader;
 
   .main-container {
-    &:before {
+
+    #page-header{
+      display: block;
+      background: transparent url('../images/plans_header.png') no-repeat scroll left center;
+      background-size: cover;
+      width: 100%;
+      min-height: 250px;
+    }
+
+    &>.row:before {
       display: none
     }
   }
 
-  .page-header {
-    display: none;
+  .page-header{
+    position: absolute;
+    top: -200px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-bottom: 0 none;
+    padding: 0;
+    color: white;
+    font-size: $fs-lg;
+    font-family: "RobotoBold", "Arial", "opensans";
+    font-weight: 700;
+    text-transform: uppercase;
   }
 
   .pane-1 {

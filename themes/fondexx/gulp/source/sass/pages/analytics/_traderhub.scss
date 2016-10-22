@@ -20,7 +20,7 @@
     }
   }
 
-  #panels-ipe-paneid-1{
+  #panels-ipe-paneid-1, .pane-1{
     background-image: url('../images/analytics_ipad.png'), linear-gradient(to right, #e0eafc 0%, #cfdef3 100%);
     background-position: 85% 50%, left top;
     background-repeat: no-repeat, repeat;
@@ -89,13 +89,13 @@
 
   }
 
-  #panels-ipe-paneid-2{
+  #panels-ipe-paneid-2, .pane-2{
     min-height: 750px;
     background: url('../images/analytics_steps.jpg') no-repeat, scroll, left top;
     background-size: cover;
   }
 
-  #panels-ipe-paneid-3{
+  #panels-ipe-paneid-3, .pane-3{
     min-height: 200px;
     background: url('../images/analytics_webinar.jpg') no-repeat, scroll, left top;
     background-size: cover;
@@ -140,10 +140,8 @@
     }
   }
 
-  #panels-ipe-paneid-6{
+  #panels-ipe-paneid-6, .pane-fondexx-fondexx-registration-form{
     min-height: 200px;
-    //background: url('../images/bg_main.jpg') no-repeat, scroll, left top;
-    //background-size: cover;
     padding: 20px 80px;
 
     form{
@@ -176,7 +174,7 @@
     }
   }
 
-  #panels-ipe-paneid-7{
+  #panels-ipe-paneid-7, .pane-4{
     padding: 20px 80px 0;
     text-align: center;
 

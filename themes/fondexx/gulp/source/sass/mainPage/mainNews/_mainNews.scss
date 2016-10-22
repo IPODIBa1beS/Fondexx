@@ -22,52 +22,89 @@
   }
 
   .node-teaser {
-    margin: 20px;
+    padding:  0 20px 0 0;
 
-    a{
-      text-decoration: none;
+    h2{
+      a{
+        text-transform: uppercase;
+        font-family: "RobotoLight", 'Helvetica', sans-serif;
+        font-weight: 400;
+        font-size: $fs-title;
+        color: $secondary-text;
+
+        &:hover, &:focus{
+          color: white;
+        }
+      }
     }
 
-    .submitted{
-      display: inline-block;
+    p{
       font-family: "RobotoLight", 'Helvetica', sans-serif;
-      font-size: $fs-sm;
-      margin: 10px 0;
+      font-size: $fs-md;
+      margin: 5px 0;
       color: $secondary-text;
     }
 
-    h2 {
-      text-transform: uppercase;
-      font-family: "RobotoLight", 'Helvetica', sans-serif;
-      font-weight: 400;
-      font-size: $fs-title;
-      margin: 10px 0;
-      color: white;
-
-      //a {
-      //  text-transform: uppercase;
-      //  font-family: "RobotoLight", 'Helvetica', sans-serif;
-      //  font-weight: 400;
-      //  font-size: $fs-title;
-      //  margin: 10px 0;
-      //  color: white;
-      //}
-    }
-
-    p {
-      font-family: "RobotoLight", 'Helvetica', sans-serif;
-      font-size: $fs-md;
-      margin: 10px 0;
-      color: white;
-    }
-
-    .read_more, span {
+    .read-more{
       display: inline-block;
       font-family: "RobotoBold", 'Helvetica', sans-serif;
       font-size: $fs-md;
       margin: 10px 0;
       text-transform: uppercase;
-      color: $secondary-text;
+      color: white;
+    }
+
+    .submitted{
+      color: $hint-text;
+      font-size: $fs-sm;
+      display: inline-block;
+      margin: 10px 0 0;
+    }
+  }
+}
+
+.pane-views-analytics-block-1{
+  @extend %col-8;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+
+  .views-row{
+    @extend %col-6;
+    padding: 20px;
+
+    .submitted{
+      color: $hint-text;
+      font-size: $fs-sm;
+      display: inline-block;
+      margin: 10px 0 0;
+    }
+
+    h2{
+      a{
+        text-transform: uppercase;
+        font-family: "RobotoLight", 'Helvetica', sans-serif;
+        font-weight: 400;
+        font-size: $fs-title;
+        margin: 10px 0;
+        color: white;
+      }
+    }
+
+    p{
+      font-family: "RobotoLight", 'Helvetica', sans-serif;
+      font-size: $fs-md;
+      margin: 10px 0;
+      color: white;
+    }
+
+    .read-more{
+      display: inline-block;
+      font-family: "RobotoBold", 'Helvetica', sans-serif;
+      font-size: $fs-md;
+      margin: 10px 0;
+      text-transform: uppercase;
+      color: white;
     }
   }
 }

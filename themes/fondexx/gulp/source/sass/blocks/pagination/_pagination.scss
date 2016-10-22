@@ -1,4 +1,5 @@
 @mixin pagination(){
+
   &>.text-center{
     background: rgba(200, 200, 200, .4);
     border-radius: 2px;
@@ -42,7 +43,7 @@
         }
 
         &:before, &:after{
-          background: transparent !important;
+          background: transparent none !important;
           transition: none;
         }
       }

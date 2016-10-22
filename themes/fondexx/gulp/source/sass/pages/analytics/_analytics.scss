@@ -1,46 +1,61 @@
 .page-analytics{
   @extend .blackInnerPageWithHeader;
 
-}
+  .main-container{
+    #page-header{
+      display: block;
+      background: transparent url('../images/analytics_header.jpg') no-repeat scroll left center;
+      background-size: cover;
+      width: 100%;
+      min-height: 250px;
+    }
 
-.view-analytics{
-  margin: 20px 0;
-
-  .submitted{
-    color: $hint-text;
-    font-size: $fs-sm;
-    display: inline-block;
-    margin: 10px 0;
   }
 
-  h2{
-    a{
-      text-transform: uppercase;
+  .node-analytics{
+    margin: 20px 0;
+  }
+
+  .view-analytics{
+    margin: 20px 0;
+
+    .submitted{
+      color: $hint-text;
+      font-size: $fs-sm;
+      display: inline-block;
+      margin: 10px 0 0;
+    }
+
+    h2{
+      a{
+        text-transform: uppercase;
+        font-family: "RobotoLight", 'Helvetica', sans-serif;
+        font-weight: 400;
+        font-size: $fs-title;
+        margin: 10px 0;
+        color: white;
+      }
+    }
+
+    p{
       font-family: "RobotoLight", 'Helvetica', sans-serif;
-      font-weight: 400;
-      font-size: $fs-title;
+      font-size: $fs-md;
       margin: 10px 0;
+      color: white;
+    }
+
+    .read-more{
+      display: inline-block;
+      font-family: "RobotoBold", 'Helvetica', sans-serif;
+      font-size: $fs-md;
+      margin: 10px 0;
+      text-transform: uppercase;
       color: white;
     }
   }
 
-  p{
-    font-family: "RobotoLight", 'Helvetica', sans-serif;
-    font-size: $fs-md;
-    margin: 10px 0;
-    color: white;
-  }
-
-  .read-more{
-    display: inline-block;
-    font-family: "RobotoBold", 'Helvetica', sans-serif;
-    font-size: $fs-md;
-    margin: 10px 0;
-    text-transform: uppercase;
-    color: white;
+  .view-analytics{
+    @include pagination();
   }
 }
 
-.view-analytics{
-  @include pagination();
-}

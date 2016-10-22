@@ -1,0 +1,42 @@
+.page-home{
+  .pane-4, .pane-5, .pane-6{
+    @extend %col-4;
+    background: #60687f;
+    padding: 25px;
+    height: 500px;
+    text-align: center;
+
+
+    &:after{
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+      .pane-title{
+        display: none;
+      }
+
+      .pane-content{
+        h2{
+          display: block;
+          color: $border-color;
+          background: #343e5c;
+          padding: 10px;
+        }
+
+        img{
+          width: 100%;
+          height: auto;
+          max-height: 100%;
+        }
+
+        a{
+          @extend .button, .button-transparent-white;
+          margin-top: -100px;
+          position: relative;
+          z-index: 1;
+        }
+      }
+  }
+}

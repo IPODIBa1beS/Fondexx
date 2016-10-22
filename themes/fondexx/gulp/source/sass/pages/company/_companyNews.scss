@@ -1,6 +1,14 @@
 .page-company-news{
    @extend .blackInnerPageWithHeader;
 
+   #page-header{
+      display: block;
+      background: transparent url('../images/company_news_header.png') no-repeat scroll left center;
+      background-size: cover;
+      width: 100%;
+      min-height: 250px;
+   }
+
    .view-articles{
       margin-top: 10px;
 
@@ -42,7 +50,7 @@
          color: $hint-text;
          font-size: $fs-sm;
          display: inline-block;
-         margin: 10px 0;
+         margin: 10px 0 0;
       }
 
 

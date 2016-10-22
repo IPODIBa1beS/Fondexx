@@ -7,6 +7,22 @@
     background-attachment: scroll;
     background-size: 100% 100%;
 
+    #page-header{
+      display: block;
+      background: transparent url('../images/base_course_header.png') no-repeat scroll left center;
+      background-size: cover;
+      width: 100%;
+      min-height: 250px;
+    }
+
+    &>.row:before {
+      display: none
+    }
+
+    .page-header{
+      display: none;
+    }
+
     .course{
 
       &_text{

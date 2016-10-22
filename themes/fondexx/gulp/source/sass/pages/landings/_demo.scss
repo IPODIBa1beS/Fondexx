@@ -2,7 +2,18 @@
   color: $dark-text;
 
   .page-header{
-    display: none;
+    position: absolute;
+    top: -200px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-bottom: 0 none;
+    padding: 0;
+    color: white;
+    font-size: $fs-lg;
+    font-family: "RobotoBold", "Arial", "opensans";
+    font-weight: 700;
+    text-transform: uppercase;
   }
 
   .breadcrumb {
@@ -19,6 +30,15 @@
       width: 100%;
       margin: 0;
       padding: 0;
+
+      &:before{
+        content: '';
+        display: block;
+        background: transparent url('../images/demo_header.png') no-repeat scroll left center;
+        background-size: cover;
+        width: 100%;
+        min-height: 250px;
+      }
 
       & > .row {
         padding: 0;
@@ -88,9 +108,9 @@
       }
 
       .demo_img-wrapper{
-        margin: 20px 0;
+        margin: 50px 0 0;
         width: 100%;
-        min-height: 525px;
+        min-height: 600px;
         background: url('../images/demo_trading.png') no-repeat, scroll, left top;
         background-size: cover;
       }
@@ -101,16 +121,18 @@
         background-image: linear-gradient(120deg, #00c6ff 0%, #0072ff 100%);
         min-height: 400px;
         text-align: center;
-        padding: 60px;
+        padding: 80px;
 
         &-item {
           @extend %col-4;
+          position: relative;
           text-transform: uppercase;
           color: $default-text;
           font-size: $fs-title;
           font-family: "RobotoRegular", "Helvetica", "sans-serif";
           border-right: 1px solid darken(white, 20%);
           min-height: 80px;
+          padding: 20px;
 
           &:nth-child(1){
             &:after{
@@ -119,8 +141,9 @@
               content: '';
               background: url('../images/pngIcons/nyse.png') no-repeat, scroll;
               width: 100%;
-              background-position: center;
+              background-position: bottom;
               height: 150px;
+              position: absolute;
             }
           }
 
@@ -131,8 +154,9 @@
               content: '';
               background: url('../images/pngIcons/nasdaq.png') no-repeat, scroll;
               width: 100%;
-              background-position: center;
+              background-position: bottom;
               height: 150px;
+              position: absolute;
             }
           }
 
@@ -143,8 +167,9 @@
               content: '';
               background: url('../images/pngIcons/american_stock_exchange.png') no-repeat, scroll;
               width: 100%;
-              background-position: center;
+              background-position: bottom;
               height: 150px;
+              position: absolute;
             }
           }
 
@@ -174,13 +199,13 @@
       }
 
       //text
-      #panels-ipe-paneid-33 {
+      .pane-2 {
         @extend %col-6;
         padding: 50px;
       }
 
       //form
-      #panels-ipe-paneid-34 {
+      .pane-fondexx-fondexx-registration-form {
         @extend %col-6;
         padding: 50px;
 
