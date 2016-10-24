@@ -100,15 +100,19 @@
                 <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
             </a>
         <?php endif; ?>
-        
+
         <?php if (!empty($primary_nav)): ?>
             <?php print render($primary_nav); ?>
         <?php endif; ?>
+
         <a href="#" class="button button-dark-blue button-login"> Create Account / Login</a>
     </div>
     <div class="header_content">
         <div class="header_links" id="header_links">
-
+            <!-- add region for block -->
+            <?php if (!empty($page['header_links'])): ?>
+                <?php print render($page['header_links']); ?>
+            <?php endif; ?>
         </div>
         <div class="header_contacts">
             <div class="header_contacts-wrapper">
