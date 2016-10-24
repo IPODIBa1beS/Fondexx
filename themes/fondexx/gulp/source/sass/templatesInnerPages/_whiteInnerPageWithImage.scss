@@ -52,6 +52,13 @@
       }
     }
 
+    #block-block-6{
+      a {
+        @extend .button;
+        margin-top: 20px;
+      }
+    }
+
     .node-analytics{
       margin: 20px 0;
     }

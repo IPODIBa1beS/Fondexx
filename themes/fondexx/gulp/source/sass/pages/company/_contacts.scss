@@ -5,20 +5,36 @@
     .field-name-body {
       h2 {
         text-transform: uppercase;
-        font-family: "RobotoRegular", 'Helvetica', sans-serif;
-        font-weight: 700;
-        margin-bottom: 5px;
+        font-family: "RobotoLight", 'Helvetica', sans-serif;
+        font-weight: 400;
+        font-size: $fs-title;
+        margin: 10px 0;
+        color: $white-pages-text;
       }
 
+
       h3 {
+        text-transform: uppercase;
+        font-family: "RobotoLight", 'Helvetica', sans-serif;
+        font-weight: 400;
         font-size: $fs-md;
-        margin-bottom: 5px;
+        margin: 10px 0;
+        color: $white-pages-text;
       }
 
       p {
-        margin-bottom: 5px;
-        letter-spacing: 1px;
-        word-spacing: 1px;
+        font-family: "RobotoLight", 'Helvetica', sans-serif;
+        font-size: $fs-md;
+        margin: 10px 0;
+        color: $white-pages-text;
+
+        a{
+          display: inline-block;
+          font-family: "RobotoLight", 'Helvetica', sans-serif;
+          font-size: $fs-md;
+          color: $white-pages-text;
+          text-decoration: underline;
+        }
       }
     }
   }

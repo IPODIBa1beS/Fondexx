@@ -42,8 +42,8 @@
       display: inline-block;
       margin: 0 !important;
       background: url("../images/pngIcons/fondex_logo.png") no-repeat;
-      background-size:  70%;
-      background-position:  center;
+      background-size: 70%;
+      background-position: center;
 
       //stub!!!
       img {
@@ -107,7 +107,7 @@
       }
     }
     // CONTACTS ON MAIN HEADER
-    #last-contacts-block{
+    #last-contacts-block {
       display: none;
     }
 
@@ -127,7 +127,7 @@
     border-color: transparent;
     background-color: $overlay-menu;
 
-    .close-overlay{
+    .close-overlay {
       position: absolute;
       top: 20px;
       left: 15%;
@@ -135,7 +135,7 @@
       width: 25px;
       height: 25px;
 
-      &:before{
+      &:before {
         color: $white-pages-text;
       }
     }
@@ -144,43 +144,61 @@
       display: none;
     }
 
-    .nav{
+    .nav {
       width: 80%;
       margin: 10%;
       height: 80vh;
 
-      li{
+      li {
         @extend %col-4;
 
-
-        &.first{
+        &.first {
           display: none;
         }
 
-        &.dropdown{
+        &.dropdown {
 
-          &:nth-child(1){
-            &:before{
+          &:nth-child(1) {
+            &:before {
               display: inline-block;
               content: '';
             }
           }
 
-          &:nth-child(2){
+          &:nth-child(2) {
 
           }
 
-          &:nth-child(3){
+          &:nth-child(3) {
 
           }
 
-          &:nth-child(4){
+          &:nth-child(4) {
 
           }
         }
       }
 
-      .dropdown-toggle{
+      #last-contacts-block{
+       &>a{
+         border-bottom: 0 none;
+         color: $page-header;
+         font-size: $fs-title;
+         font-family: "RobotoBold";
+         font-weight: 500;
+         text-transform: uppercase;
+       }
+
+        p{
+          display: block;
+          width: 100%;
+          font-family: "RobotoRegular";
+          font-weight: 400;
+          color: $white-pages-text;
+        }
+      }
+
+      .dropdown-toggle {
         border-bottom: 0 none;
         color: $page-header;
         font-size: $fs-title;
@@ -189,22 +207,26 @@
         text-transform: uppercase;
       }
 
-      .caret{
+      .caret {
         display: none;
       }
 
-      .dropdown-menu{
+      .dropdown-menu {
         display: block;
         position: relative;
         box-shadow: none;
         border: 0 none;
 
-        .leaf{
+        .leaf {
           display: block;
           width: 100%;
-          font-family: "RobotoRegular";
-          font-weight: 400;
-          color: $white-pages-text;
+          a {
+            display: block;
+            width: 100%;
+            font-family: "RobotoRegular";
+            font-weight: 400;
+            color: $white-pages-text;
+          }
         }
       }
     }

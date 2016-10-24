@@ -1,11 +1,7 @@
 .page-home {
-  .pane-9{
+  .pane-9 {
     display: block;
-    background-image: url('../images/bg_main.jpg');
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: right bottom;
-    background-size: 100% 100%;
+    width: 100%;
 
     &:before {
       content: '';
@@ -17,12 +13,96 @@
       left: -60px;
     }
 
-    .pane-title {
+    h2 {
       color: $page-header;
       font-size: $fs-md;
       text-transform: uppercase;
       font-family: "RobotoBold";
       text-align: left;
+    }
+  }
+
+  .panels-flexible-row-7-1 {
+    background-image: url('../images/bg_main.jpg');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: right bottom;
+    background-size: 100% 100%;
+
+    .nav-tabs{
+      border-bottom: 0 none;
+    }
+
+    .nav-li {
+      @extend %col-4;
+      background: rgba(200, 200, 200, 0.3);
+      text-align: center;
+
+      a {
+        display: inline-block;
+        text-decoration: none;
+        color: $divider;
+
+        &:hover, &:focus {
+          background: transparent;
+          color: $border-color;
+          border: 0 none;
+        }
+      }
+
+      &.active {
+        background: rgba(200, 200, 200, 0.4);
+
+        a {
+          background: transparent;
+          border: 0 none;
+          color: $border-color;
+
+          &:hover, &:focus {
+            background: transparent;
+            color: $border-color;
+            border: 0 none;
+          }
+        }
+      }
+
+    }
+
+    .pane-content {
+      padding: 25px;
+      ul {
+        li {
+          display: block;
+          margin-bottom: 10px;
+          color: $secondary-text;
+          font-size: $fs-md;
+          font-family: "RobotoBold", "Helvetica", "opensans";
+          font-weight: 700;
+          line-height: 1.25;
+
+          &:before {
+            content: '';
+            display: inline-block;
+            background: transparent url('../images/pngIcons/listItemStyleIcon.png') no-repeat scroll center;
+            background-size: cover;
+            width: 20px;
+            height: 10px;
+            margin: 5px 5px 0 0;
+            position: absolute;
+            left: -20px;
+            line-height: 30px;
+          }
+        }
+      }
+
+      p {
+        text-align: center;
+        .btn {
+          @extend .button;
+          margin: 10px;
+          border: 0 none;
+        }
+      }
     }
   }
 }

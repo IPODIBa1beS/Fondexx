@@ -19,4 +19,61 @@
     color: $white-pages-text;
   }
 
+  p>a{
+    font-family: "RobotoLight", 'Helvetica', sans-serif;
+    font-size: $fs-title;
+    color: $white-pages-text;
+    text-decoration: underline;
+  }
+
+  .field-content{
+    a{
+      display: inline-block;
+      font-family: "RobotoLight", 'Helvetica', sans-serif;
+      font-size: $fs-title;
+      margin: 10px 0;
+      color: $white-pages-text;
+    }
+  }
+
+  .btn{
+    @extend .button-rectangle;
+    width: auto;
+    line-height: 2;
+  }
+
+  .node-webform{
+    @extend %col-12;
+      padding: 50px;
+
+    h2 {
+      text-transform: uppercase;
+      font-family: "RobotoLight", 'Helvetica', sans-serif;
+      font-weight: 400;
+      font-size: $fs-title;
+      margin: 10px 0;
+      color: $white-pages-text;
+    }
+
+      .form-control{
+        @extend %col-12;
+        background: $demo-input-bg;
+        border: 1px solid $border-color;
+        height: 60px;
+        padding: 20px;
+        font-size: $fs-title;
+        color: $border-color;
+        border-radius: 0;
+        font-family: "RobotoLightItalic", "Helvetica", "sans-serif";
+        margin: 15px 0;
+      }
+
+      input[type='submit'], .webform-submi{
+        @extend .button, .button-transparent-blue;
+        //width: auto !important;
+        line-height: 1;
+        font-family: "RobotoBold", "Helvetica", "sans-serif";
+      }
+
+  }
 }
