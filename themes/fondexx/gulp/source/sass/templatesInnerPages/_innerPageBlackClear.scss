@@ -50,6 +50,13 @@
       }
     }
 
+    #block-block-6{
+      p>a{
+        @extend .button-rectangle, .button-rectangle-blue;
+      }
+    }
+
+
     .node-analytics{
       margin: 20px 0;
     }

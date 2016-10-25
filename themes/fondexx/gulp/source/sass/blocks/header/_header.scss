@@ -12,6 +12,7 @@
     width: 100%;
     margin: 0;
     padding: 0;
+    border-bottom: 2px solid $divider;
   }
 
   &-header {
@@ -234,7 +235,6 @@
 }
 
 .header {
-
   &-content {
 
     &:after {

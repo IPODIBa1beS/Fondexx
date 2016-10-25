@@ -53,9 +53,8 @@
     }
 
     #block-block-6{
-      a {
-        @extend .button;
-        margin-top: 20px;
+      p>a{
+        @extend .button-rectangle, .button-rectangle-blue;
       }
     }
 

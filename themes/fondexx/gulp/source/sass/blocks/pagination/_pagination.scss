@@ -1,14 +1,23 @@
 @mixin pagination(){
 
   &>.text-center{
-    background: rgba(200, 200, 200, .4);
+    background: rgba(71, 68, 74, .4);
     border-radius: 2px;
   }
 
   .pagination{
+    margin: 0;
     li{
       display: inline-block;
       background: transparent;
+
+      &.next, &.pager-last{
+        border-left: 2px solid #383639;
+      }
+
+      &.prev, &.pager-first{
+        border-right: 2px solid #383639;
+      }
 
       &.active{
 
@@ -17,10 +26,12 @@
           border-radius: 50%;
           border: 1px solid white;
           background: transparent;
+          margin: 20px 5px;
         }
       }
 
       &>a{
+        margin: 20px 5px;
         display: inline-block;
         color: $white-pages-text;
         text-decoration: none;

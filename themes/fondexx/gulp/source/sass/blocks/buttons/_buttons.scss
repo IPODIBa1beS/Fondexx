@@ -106,5 +106,16 @@
   height: 30px;
   line-height: 1;
   border-radius: 15px;
+}
 
+.button-rectangle-blue{
+  border: 2px solid $primary-color;
+  background-color: $primary-color;
+  color: $default-text;
+
+  &:hover, &:focus{
+    background-color: transparent;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+  }
 }
