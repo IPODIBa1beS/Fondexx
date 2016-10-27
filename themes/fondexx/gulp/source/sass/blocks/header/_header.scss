@@ -59,12 +59,12 @@
 
       .button-login {
         float: right;
-
         text-decoration: none;
         text-transform: uppercase;
         width: auto;
         min-width: 150px;
         height: 30px;
+        line-height: 2.5;
         padding: 0 15px;
         font-weight: 700;
         font-size: $fs-sm;

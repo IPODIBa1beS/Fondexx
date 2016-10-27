@@ -1,0 +1,73 @@
+@font-face 
+	font-family: "svgfont"
+	src: url('../fonts/svgfont.eot')
+	src: url('../fonts/svgfont.eot?#iefix') format('eot'), url('../fonts/svgfont.woff') format('woff'), url('../fonts/svgfont.ttf') format('truetype')
+	font-weight: normal
+	font-style: normal
+
+%icon
+	font-family: "svgfont"
+	font-style: normal
+	font-weight: normal
+	text-rendering: auto
+	speak: none
+	line-height: 1
+	vertical-align: middle
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+.icon, [class^="icon-"], [class*=" icon-"]
+	@extend %icon
+	display: inline-block
+
+
+$icon-analytics: "\E001"
+$icon-close: "\E002"
+$icon-company: "\E003"
+$icon-contacts: "\E004"
+$icon-partners: "\E005"
+$icon-premium-badge: "\E006"
+$icon-premium: "\E007"
+$icon-skype: "\E008"
+$icon-standard-badge: "\E009"
+$icon-standard: "\E00A"
+$icon-start-badge: "\E00B"
+$icon-start: "\E00C"
+$icon-tel: "\E00D"
+$icon-trading: "\E00E"
+$icon-training: "\E00F"
+
+
+
+.icon-analytics:before
+	content: $icon-analytics
+.icon-close:before
+	content: $icon-close
+.icon-company:before
+	content: $icon-company
+.icon-contacts:before
+	content: $icon-contacts
+.icon-partners:before
+	content: $icon-partners
+.icon-premium-badge:before
+	content: $icon-premium-badge
+.icon-premium:before
+	content: $icon-premium
+.icon-skype:before
+	content: $icon-skype
+.icon-standard-badge:before
+	content: $icon-standard-badge
+.icon-standard:before
+	content: $icon-standard
+.icon-start-badge:before
+	content: $icon-start-badge
+.icon-start:before
+	content: $icon-start
+.icon-tel:before
+	content: $icon-tel
+.icon-trading:before
+	content: $icon-trading
+.icon-training:before
+	content: $icon-training
+
+
