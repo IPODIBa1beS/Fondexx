@@ -1,0 +1,151 @@
+.navbar{
+
+  &-collapse.collapse {
+    display: none !important;
+  }
+
+  &-collapse.collapsing {
+    //transition-duration: 0s !important;
+    //overflow: hidden !important;
+    //height: 0 !important;
+    display: none;
+  }
+
+  &-collapse.collapse.in {
+    display: block !important;
+    height: 100vh !important;
+    position: fixed;
+    z-index: 250;
+    top: 0;
+    width: 100%;
+    border-color: transparent;
+    background-color: $overlay-menu;
+
+    .close-overlay {
+      position: absolute;
+      top: 20px;
+      left: 15%;
+      cursor: pointer;
+
+      &:hover, &:focus{
+        animation: spin .6s ease 0s 1;
+      }
+
+      &:before {
+        color: $white-pages-text;
+        font-size: 35px;
+      }
+    }
+
+    .first {
+      display: none;
+    }
+
+    .nav {
+      width: 80%;
+      margin: 5% 10%;
+      height: 90vh;
+
+      &>li {
+        float: none;
+        display: inline-block;
+        width: 32%;
+        margin: 20px 0;
+        vertical-align: top;
+
+        &.first {
+          display: none;
+        }
+
+        &.dropdown {
+
+          &:nth-child(1) {
+            &:before {
+              display: inline-block;
+              content: '';
+            }
+          }
+
+          &:nth-child(2) {
+
+          }
+
+          &:nth-child(3) {
+
+          }
+
+          &:nth-child(4) {
+
+          }
+        }
+      }
+
+      #last-contacts-block{
+        &>a{
+          border-bottom: 0 none;
+          color: $page-header;
+          font-size: $fs-title;
+          font-family: "RobotoBold";
+          font-weight: 500;
+          text-transform: uppercase;
+          margin: 10px 0 20px 0;
+        }
+
+        &>.menu-attach-block-wrapper.orientation-horizontal .block{
+          background: transparent;
+          position: relative;
+          top: auto;
+          width: 100%;
+          z-index: auto;
+          padding: 0;
+
+          p{
+            display: block;
+            width: 100%;
+            font-family: "RobotoRegular";
+            font-weight: 400;
+            color: $white-pages-text;
+            padding: 10px 0;
+          }
+        }
+      }
+
+      .dropdown-toggle {
+        border-bottom: 0 none;
+        color: $page-header;
+        font-size: $fs-title;
+        font-family: "RobotoBold";
+        font-weight: 500;
+        text-transform: uppercase;
+        margin: 10px 0 20px 0;
+      }
+
+      .caret {
+        display: none;
+      }
+
+      .dropdown-menu {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        border: 0 none;
+        background: transparent;
+
+        .leaf {
+          display: block;
+          width: 100%;
+          a {
+            display: block;
+            width: 100%;
+            font-family: "RobotoRegular", 'Helvetica Neue', 'sans-serif';
+            font-weight: 400;
+            color: $white-pages-text;
+            padding: 10px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes spin { 100% { transform:rotate(360deg); } }

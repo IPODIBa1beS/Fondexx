@@ -50,28 +50,30 @@
       img {
         display: none;
       }
-
-      //svg{
-      //  margin-top: -105px;
-      //}
     }
 
     .login-btn-wrapper {
-      padding: 10px;
+      padding: 15px;
       @extend %col-2;
+      min-width: 150px;
 
       .button-login {
         float: right;
+
         text-decoration: none;
         text-transform: uppercase;
+        width: auto;
+        min-width: 150px;
+        height: 30px;
+        padding: 0 15px;
         font-weight: 700;
-        line-height: 50px;
+        font-size: $fs-sm;
         border-radius: 32px;
         font-family: "RobotoBold", 'Helvetica', 'sans-serif';
       }
     }
 
-    .nav {
+    &>.nav {
       @extend %col-7;
       display: inline-block;
       margin: 0 !important;
@@ -81,7 +83,12 @@
       li {
         display: inline-block;
         font-size: $fs-md;
-        a {
+
+        &.first{
+          display: none;
+        }
+
+        .dropdown-toggle {
           color: $default-text;
           text-decoration: none;
           text-transform: uppercase;
@@ -98,7 +105,7 @@
           &.active {
             background-color: transparent;
             color: $default-text;
-            font-weight: 700;
+            font-weight: 900;
           }
 
           & > .caret {
@@ -111,249 +118,10 @@
     #last-contacts-block {
       display: none;
     }
-
-  }
-
-  &-collapse.collapse {
-    display: none !important;
-  }
-
-  &-collapse.collapse.in {
-    display: block !important;
-    height: 100vh !important;
-    position: fixed;
-    z-index: 250;
-    top: 0;
-    width: 100%;
-    border-color: transparent;
-    background-color: $overlay-menu;
-
-    .close-overlay {
-      position: absolute;
-      top: 20px;
-      left: 15%;
-      cursor: pointer;
-      width: 25px;
-      height: 25px;
-
-      &:before {
-        color: $white-pages-text;
-      }
-    }
-
-    .first {
-      display: none;
-    }
-
-    .nav {
-      width: 80%;
-      margin: 10%;
-      height: 80vh;
-
-      li {
-        @extend %col-4;
-
-        &.first {
-          display: none;
-        }
-
-        &.dropdown {
-
-          &:nth-child(1) {
-            &:before {
-              display: inline-block;
-              content: '';
-            }
-          }
-
-          &:nth-child(2) {
-
-          }
-
-          &:nth-child(3) {
-
-          }
-
-          &:nth-child(4) {
-
-          }
-        }
-      }
-
-      #last-contacts-block{
-       &>a{
-         border-bottom: 0 none;
-         color: $page-header;
-         font-size: $fs-title;
-         font-family: "RobotoBold";
-         font-weight: 500;
-         text-transform: uppercase;
-       }
-
-        p{
-          display: block;
-          width: 100%;
-          font-family: "RobotoRegular";
-          font-weight: 400;
-          color: $white-pages-text;
-        }
-      }
-
-      .dropdown-toggle {
-        border-bottom: 0 none;
-        color: $page-header;
-        font-size: $fs-title;
-        font-family: "RobotoBold";
-        font-weight: 500;
-        text-transform: uppercase;
-      }
-
-      .caret {
-        display: none;
-      }
-
-      .dropdown-menu {
-        display: block;
-        position: relative;
-        box-shadow: none;
-        border: 0 none;
-
-        .leaf {
-          display: block;
-          width: 100%;
-          a {
-            display: block;
-            width: 100%;
-            font-family: "RobotoRegular";
-            font-weight: 400;
-            color: $white-pages-text;
-          }
-        }
-      }
-    }
   }
 }
 
-.header {
-  &-content {
-
-    &:after {
-      content: '';
-      display: block;
-      clear: both;
-    }
-  }
-
-  &_links {
-    @extend %col-offset-1, %col-8;
-    display: inline-block;
-    padding: 10px;
-    border-right: 2px solid $divider;
-    min-height: 71px;
-
-    &-list {
-      display: block;
-      vertical-align: baseline;
-
-      li {
-        display: inline-block;
-        font-size: $fs-sm;
-
-        a {
-          display: block;
-          color: $default-text;
-          text-decoration: none;
-          text-transform: uppercase;
-          transition: all .3s ease;
-          font-family: "RobotoLight", "Helvetica", "sans-serif";
-          padding: 10px;
-          letter-spacing: 1px;
-
-          &:hover, &:focus {
-            color: $dark-text;
-            background-color: white;
-          }
-
-          &.active {
-            background-color: transparent;
-            color: $default-text;
-            font-weight: 700;
-            font-family: "RobotoBold", "Helvetica", "sans-serif";
-          }
-
-          & > .caret {
-            display: none;
-          }
-        }
-      }
-    }
-  }
-
-  &_contacts {
-    @extend %col-3;
-    max-width: 300px;
-    padding: 10px;
-
-    &-wrapper {
-      @extend %col-5;
-      text-align: center;
-    }
-
-    .button {
-      background-color: transparent;
-      border: 2px solid $border-color;
-      color: $border-color;
-      width: 80px;
-      height: 40px;
-      line-height: 25px;
-      font-size: $fs-md;
-      padding: 5px;
-      font-family: "RobotoMedium", 'Helvetica', 'sans-serif';
-      font-weight: 700;
-      letter-spacing: 1.5px;
-
-      &:hover {
-        background-color: $border-color;
-        color: $primary-bg;
-      }
-    }
-
-    &-list {
-      @extend %col-5;
-
-      li {
-        display: block;
-        width: 100%;
-      }
-    }
-
-    &-link {
-      display: inline-block;
-      font-size: $fs-sm;
-      color: $default-text;
-      text-decoration: none;
-      font-family: "RobotoLight", "opensans", "sans-serif";
-
-      &.skype:before {
-        //  @extend .icon, .icon-skype;
-        display: inline-block;
-        color: $contacts-icon;
-        font-size: $fs-md;
-        width: $fs-md;
-        height: $fs-md;
-      }
-
-      &.phone:before {
-        //   @extend .icon, .icon-tel;
-        color: $contacts-icon;
-        font-size: $fs-md;
-        width: $fs-md;
-        height: $fs-md;
-      }
-
-      &:hover {
-        color: darken($default-text, 20%);
-      }
-    }
-  }
+//Reset bootstrap styles
+.nav>li>a{
+  padding: 0;
 }

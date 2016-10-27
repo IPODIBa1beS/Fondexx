@@ -45,6 +45,8 @@
   }
 
   .region-sidebar-second{
+    margin-top: 50px;
+
     .block-block{
       .contextual-links-wrapper{
         position: relative;
@@ -88,10 +90,11 @@
       }
 
       p{
-        font-family: "RobotoLight", 'Helvetica', sans-serif;
-        font-size: $fs-md;
-        margin: 10px 0;
-        color: white;
+        //font-family: "RobotoLight", 'Helvetica', sans-serif;
+        //font-size: $fs-md;
+        //margin: 10px 0;
+        //color: white;
+        display: none;
       }
 
       .read-more{

@@ -29,13 +29,14 @@ footer.footer {
     padding: 10px;
     vertical-align: baseline;
 
-    .last.leaf{
-      display: none;
-    }
 
     li{
       display: inline-block;
       font-size: $fs-md;
+
+      &.first, &.last{
+        display: none;
+      }
 
       a{
         color: $default-text;

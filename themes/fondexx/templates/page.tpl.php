@@ -102,7 +102,8 @@
     </div>
     <div class="header_content">
         <div class="header_links" id="header_links">
-            <ul class="header_links-list" id="header_links-list"></ul>
+            <ul class="header_links-list"></ul>
+
             <!-- add region for block -->
             <?php if (!empty($page['header_links'])): ?>
                 <?php print render($page['header_links']); ?>

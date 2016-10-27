@@ -39,8 +39,6 @@
   }
 
   .region-sidebar-second {
-    margin-top: 50px;
-
     .contextual-links-wrapper{
       position: relative;
     }
@@ -84,10 +82,11 @@
       }
 
       p{
-        font-family: "RobotoLight", 'Helvetica', sans-serif;
-        font-size: $fs-md;
-        margin: 10px 0;
-        color: $white-pages-text;
+        //font-family: "RobotoLight", 'Helvetica', sans-serif;
+        //font-size: $fs-md;
+        //margin: 10px 0;
+        //color: $white-pages-text;
+        display: none;
       }
 
       .read-more{

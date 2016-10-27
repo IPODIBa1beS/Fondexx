@@ -1,0 +1,123 @@
+.header {
+  &-content {
+
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+
+  &_links {
+    @extend %col-offset-1, %col-8;
+    display: inline-block;
+    padding: 10px;
+    border-right: 2px solid $divider;
+    min-height: 71px;
+
+    &-list, .menu.nav {
+      display: block;
+      vertical-align: baseline;
+
+      li {
+        display: inline-block;
+        font-size: $fs-sm;
+
+        a {
+          display: block;
+          color: $default-text;
+          text-decoration: none;
+          text-transform: uppercase;
+          transition: all .3s ease;
+          font-family: "RobotoLight", "Helvetica", "sans-serif";
+          padding: 10px;
+          letter-spacing: 1px;
+
+          &:hover, &:focus {
+            color: $dark-text;
+            background-color: white;
+          }
+
+          &.active {
+            background-color: transparent;
+            color: $default-text;
+            font-weight: 700;
+            font-family: "RobotoBold", "Helvetica", "sans-serif";
+          }
+
+          & > .caret {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &_contacts {
+    @extend %col-3;
+    max-width: 300px;
+    padding: 10px;
+
+    &-wrapper {
+      @extend %col-5;
+      text-align: center;
+    }
+
+    .button {
+      background-color: transparent;
+      border: 2px solid $border-color;
+      color: $border-color;
+      width: 75px;
+      height: 30px;
+      line-height: 15px;
+      font-size: $fs-sm+2;
+      padding: 5px;
+      font-family: "RobotoMedium", 'Helvetica', 'sans-serif';
+      font-weight: 700;
+      letter-spacing: 1.5px;
+
+      &:hover {
+        background-color: $border-color;
+        color: $primary-bg;
+      }
+    }
+
+    &-list {
+      @extend %col-5;
+
+      li {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    &-link {
+      display: inline-block;
+      font-size: $fs-sm;
+      color: $default-text;
+      text-decoration: none;
+      font-family: "RobotoLight", "opensans", "sans-serif";
+
+      &.skype:before {
+        //  @extend .icon, .icon-skype;
+        display: inline-block;
+        color: $contacts-icon;
+        font-size: $fs-md;
+        width: $fs-md;
+        height: $fs-md;
+      }
+
+      &.phone:before {
+        //   @extend .icon, .icon-tel;
+        color: $contacts-icon;
+        font-size: $fs-md;
+        width: $fs-md;
+        height: $fs-md;
+      }
+
+      &:hover {
+        color: darken($default-text, 20%);
+      }
+    }
+  }
+}

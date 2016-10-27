@@ -55,31 +55,31 @@ gulp.task('fonts', function() {
         .pipe(gulp.dest(dirs.build.fonts));
 });
 
-//// icon font
-//var fontname = 'svgfont';
-//
-//gulp.task('iconfont', function () {
-//    return gulp.src([dirs.source.svgIcons])
-//        .pipe(plumber())
-//        .pipe(iconfontCss({
-//            fontName: fontname
-//            , path: './source/helpers/_svgfont.sass'
-//            , targetPath: '../../' + dirs.source.sassRoot + '_svgfont.sass'
-//            , fontPath: '../fonts/'
-//            , cssClass: 'icon'
-//        }))
-//        .pipe(plumber())
-//        .pipe(iconfont({
-//            fontName: fontname
-//            , prependUnicode: true
-//            , formats: ['ttf', 'eot', 'woff']
-//            , normalize: true
-//            , fontHeight: 1001
-//            , fontStyle: 'normal'
-//            , fontWeight: 'normal'
-//        }))
-//        .pipe(gulp.dest(dirs.source.fontsFolder));
-//});
+// icon font
+var fontname = 'svgfont';
+
+gulp.task('iconfont', function () {
+    return gulp.src([dirs.source.svgIcons])
+        .pipe(plumber())
+        .pipe(iconfontCss({
+            fontName: fontname
+            , path: './source/helpers/_svgfont.sass'
+            , targetPath: '../../' + dirs.source.sassRoot + '_svgfont.sass'
+            , fontPath: '../fonts/'
+            , cssClass: 'icon'
+        }))
+        .pipe(plumber())
+        .pipe(iconfont({
+            fontName: fontname
+            , prependUnicode: true
+            , formats: ['ttf', 'eot', 'woff']
+            , normalize: true
+            , fontHeight: 1001
+            , fontStyle: 'normal'
+            , fontWeight: 'normal'
+        }))
+        .pipe(gulp.dest(dirs.source.fontsFolder));
+});
 
 //sass
 gulp.task('compileSass', function() {

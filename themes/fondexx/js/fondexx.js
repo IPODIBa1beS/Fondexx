@@ -63,8 +63,7 @@
 
         function showHeaderDropdownItems(){
             var listItems = $('.navbar-header .active-trail>.dropdown-menu').children();
-
-            $("#header_links-list").html(listItems);
+            $(".header_links-list").html(listItems);
         }
         /////////////////////////////////////
         /////////////////////////////////////
