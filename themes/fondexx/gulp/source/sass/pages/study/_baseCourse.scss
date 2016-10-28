@@ -1,6 +1,10 @@
 .page-study-start {
   @extend .blackInnerPage;
 
+  .navbar>.container {
+    border-bottom: 0 none;
+  }
+
   .main-container {
     background: rgba(0, 0, 0, 0.5) url('../images/bg_inner_empire_state.jpg');
     background-repeat: no-repeat;
@@ -18,10 +22,6 @@
 
     &>.row:before {
       display: none
-    }
-
-    .navbar>.container {
-      border-bottom: 0 none;
     }
 
     .page-header{
@@ -46,24 +46,25 @@
       &_text{
         color: $secondary-text;
         font-size: $fs-md - 2;
-        font-family: "RobotoLight", "Helvetica", "opensans";
+        font-family: "RobotoLight", "Helvetica", "sans-serif";
         font-weight: 400;
         letter-spacing: 1px;
         word-spacing: 1.5px;
         line-height: 1.25;
 
         &-bold{
-          font-family: "RobotoBold", "Helvetica", "opensans";
+          font-family: "RobotoBold", "Helvetica", "sans-serif";
           font-weight: 700;
         }
       }
 
       &_header-text{
         color: $contacts-icon;
-        font-size: $fs-md;
+        font-size: $fs-title;
         text-transform: uppercase;
         margin: 25px 0;
         line-height: 1.25;
+        font-family: "RobotoLight", "Helvetica", "sans-serif";
       }
 
       &_list-header{
@@ -110,7 +111,17 @@
 
     a{
       text-decoration: none;
+      display: inline-block;
+
+      &:before{
+        margin-left: -65px;
+      }
+
+      h2{
+        display: inline-block;
+      }
     }
+
 
     .pane-title{
       color: $contacts-icon;

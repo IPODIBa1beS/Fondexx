@@ -1,57 +1,63 @@
-.pane-views-slider-block-1{
-  .carousel-inner{
+.page-home {
+  .page-header {
+     display: none;
+   }
 
-    .item{
-      .views-field-title{
+  .pane-views-slider-block-1 {
+    .carousel-inner {
 
-        display: inline-block;
-        position: absolute;
-        left: 15%;
-        top: 15%;
+      .item {
+        .views-field-title {
 
-          .field-content{
+          display: inline-block;
+          position: absolute;
+          left: 15%;
+          top: 15%;
+
+          .field-content {
             display: inline-block;
             font-size: $fs-title;
             color: $primary-color;
             font-weight: 700;
           }
-      }
+        }
 
-      .views-field-body{
-        display: inline-block;
-        position: absolute;
-        left: 15%;
-        top: 25%;
-
-        .field-content{
+        .views-field-body {
           display: inline-block;
-          font-size: $fs-md;
-          color: $dark-text;
+          position: absolute;
+          left: 15%;
+          top: 25%;
 
-          .btn{
-            @extend .button;
-            border: 0 none;
-            margin-top: 25px;
+          .field-content {
+            display: inline-block;
+            font-size: $fs-md;
+            color: $dark-text;
+
+            .btn {
+              @extend .button;
+              border: 0 none;
+              margin-top: 25px;
+            }
+          }
+        }
+
+        .views-field-field-slider-image {
+          .img-responsive {
+            width: 100%;
           }
         }
       }
-
-      .views-field-field-slider-image{
-          .img-responsive{
-            width: 100%;
-          }
-      }
     }
-  }
 
-  .carousel-control{
-    .icon-prev, .icon-next{
-      &:before{
-        border: 2px solid $default-text;
-        border-radius: 50%;
-        display: inline-block;
-        width: 30px;
+    .carousel-control {
+      .icon-prev, .icon-next {
+        &:before {
+          border: 2px solid $default-text;
+          border-radius: 50%;
+          display: inline-block;
+          width: 30px;
 
+        }
       }
     }
   }

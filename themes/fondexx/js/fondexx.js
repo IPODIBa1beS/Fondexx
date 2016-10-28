@@ -6,8 +6,8 @@
         }*/
         
         function wrapCollapse(container, child, header, content) {
-            var $conatainer = $(container),
-                $child = $conatainer.find(child);
+            var $container = $(container),
+                $child = $container.find(child);
             
             $child.each(function( index ) {
                 var $this = $(this);
@@ -81,6 +81,7 @@
             //disableBootstrapMenuDropdown();
             
             wrapCollapse('#fondexx-start-landing .panels-flexible-row-3-main-row', '.panel-pane', 'h2', '.pane-content');
+            wrapCollapse('.panels-flexible-5 .panels-flexible-row-5-main-row', '.panel-pane', 'h2', '.pane-content');
             wrapTabs('#front-panel .panels-flexible-row-7-1', '.panel-pane', 'h2', '.pane-content');
             replaceTablePlusMinus2icons();
             showHeaderDropdownItems();
