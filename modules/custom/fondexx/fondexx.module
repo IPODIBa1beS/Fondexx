@@ -46,10 +46,12 @@ function _fondexx_registration_form_block() {
     }
             
             $output = '<form action="/user/register" method="post" enctype="text/plain" id="fondexx-login-form">';
- $output =  $output . '<input type="text" placeholder="' .t('Name') .'" size="100" id="name" title="name" class="form-control"/>';
+ $output =  $output . '<input type="text" placeholder="' .t('Name') . '" size="100" id="name" title="name" class="form-control"/>';
  $output =  $output . '<input type="text" placeholder="' .t('Sirname') .'" size="100" id="sirname" title="sirname" class="form-control"/>';
  $output =  $output . '<input type="email" placeholder="' .t('Email') .'" size="100" id="email" title="email"  class="form-control"/>';
  $output =  $output . '<input type="tel" placeholder="' .t('Phone') .'" size="100" id="phone" title="phone"  class="form-control"/>';
+ $output =  $output . '<div class="checkbox"><label><input type="checkbox">Я ознакомлен(а) со всеми регламентирующими документами</label></div>';
+ $output =  $output . '<div class="req-docs"><ul><li><a href="/sites/default/files/docs/pdf1.pdf">Doc icon</a></li><li><a href="/sites/default/files/docs/pdf2.pdf">Doc icon </a></li></ul></div>';
  $output =  $output . '<input type="submit" value="'. t($bntText) .'"id="submit" class="btn btn-success" />';
  $output =  $output . '</form>';
  

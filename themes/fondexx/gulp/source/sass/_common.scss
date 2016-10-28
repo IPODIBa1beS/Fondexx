@@ -30,3 +30,11 @@ body {
     background: transparent none !important;
   }
 }
+
+form {
+  .form-control {
+    &.error {
+      border: red 2px solid;
+    }
+  }
+}
