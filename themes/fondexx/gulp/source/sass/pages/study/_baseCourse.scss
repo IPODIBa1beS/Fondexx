@@ -1,6 +1,10 @@
 .page-study-start {
   @extend .blackInnerPage;
 
+  .navbar>.container {
+    border-bottom: 0 none;
+  }
+
   .main-container {
     background: rgba(0, 0, 0, 0.5) url('../images/bg_inner_empire_state.jpg');
     background-repeat: no-repeat;
@@ -18,10 +22,6 @@
 
     &>.row:before {
       display: none
-    }
-
-    .navbar>.container {
-      border-bottom: 0 none;
     }
 
     .page-header{
@@ -110,7 +110,17 @@
 
     a{
       text-decoration: none;
+      display: inline-block;
+
+      &:before{
+        margin-left: -65px;
+      }
+
+      h2{
+        display: inline-block;
+      }
     }
+
 
     .pane-title{
       color: $contacts-icon;

@@ -24,6 +24,22 @@
       font-family: "RobotoBold";
       text-align: left;
     }
+
+    .pane-content{
+      h2{
+        &:after{
+          content: '';
+          display: inline-block;
+          font-size: $fs-md;
+          background: transparent url('../images/pngIcons/tradeUp.png') no-repeat scroll 75% bottom;
+          background-size: 50% 50%;
+          width: 108px;
+          height: 90px;
+          margin-right: 10px;
+          vertical-align: bottom;
+        }
+      }
+    }
   }
 
   .pane-8 {
@@ -37,13 +53,28 @@
       position: relative;
       border-bottom: 0 none;
       margin-top: 0;
+    }
 
+    .pane-content{
+      h2{
+        &:after{
+          content: '';
+          display: inline-block;
+          font-size: $fs-md;
+          background: transparent url('../images/pngIcons/sterling.png') no-repeat scroll 75% bottom;
+          background-size: 50% 50%;
+          width: 108px;
+          height: 90px;
+          margin-right: 10px;
+          vertical-align: bottom;
+        }
+      }
     }
   }
 
   .pane-7, .pane-8 {
     .pane-content {
-      background: rgba(200, 200, 200, 0.4);
+      background: rgba(73, 71, 77, 0.6);
       padding: 25px;
       margin: 50px 100px;
       text-align: left;

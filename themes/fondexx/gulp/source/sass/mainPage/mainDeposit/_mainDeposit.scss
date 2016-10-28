@@ -31,6 +31,35 @@
 
     .nav-tabs{
       border-bottom: 0 none;
+
+      li{
+        &:first-child{
+          &:before{
+            margin-right: 10px;
+            color: $icon-color;
+            font-size: 30px;
+            margin-left: -30px;
+          }
+        }
+
+        &:nth-of-type(1){
+          &:before{
+            @extend .icon, .icon-start;
+          }
+        }
+
+        &:nth-of-type(2){
+          &:before{
+            @extend .icon, .icon-standard;
+          }
+        }
+
+        &:nth-of-type(3){
+          &:before{
+            @extend .icon, .icon-premium;
+          }
+        }
+      }
     }
 
     .nav-li {
