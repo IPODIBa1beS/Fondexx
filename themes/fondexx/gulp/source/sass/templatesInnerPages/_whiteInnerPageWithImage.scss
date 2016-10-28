@@ -128,6 +128,8 @@
     }
 
     .field-name-body {
+      overflow: hidden;
+
       p {
         font-size: $fs-md;
         font-family: "RobotoLight", 'Helvetica', sans-serif;
@@ -155,6 +157,9 @@
     }
 
     .flippy {
+      display: block;
+      width: 100%;
+
       .prev, .next {
         a {
           display: inline-block;
