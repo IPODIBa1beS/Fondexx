@@ -10,10 +10,9 @@
   }
 
   .node-article {
-    margin-top: 10px;
-
     header {
       margin: 0;
+      display: none;
     }
 
     h2 {
@@ -31,13 +30,15 @@
     }
 
     .field-name-body {
-      margin-top: 50px;
 
       p {
         font-family: "RobotoLight", 'Helvetica', sans-serif;
         font-size: $fs-md;
-        margin: 20px 0;
         color: $white-pages-text;
+
+        &:first-child{
+          margin-top: 0;
+        }
       }
     }
 
@@ -61,5 +62,10 @@
     font-size: $fs-sm;
     display: inline-block;
     margin: 10px 0;
+  }
+
+  .region-content ul.flippy{
+    text-align: left;
+    padding: 0;
   }
 }

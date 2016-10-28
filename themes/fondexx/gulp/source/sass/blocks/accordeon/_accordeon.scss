@@ -1,0 +1,25 @@
+a[data-toggle-collapse]{
+  display: inline-block;
+  text-decoration: none;
+  transition: all .3s;
+
+
+  &:before{
+    content: '';
+    display: inline-block;
+    font-size: $fs-md;
+    width: 55px;
+    height: 55px;
+    margin-right: 10px;
+    vertical-align: middle;
+    background: transparent url('../images/pngIcons/collapse_open.png') no-repeat scroll 75% center;
+    background-size: 50%;
+  }
+
+  &.is-open{
+    &:before{
+      background: transparent url('../images/pngIcons/collapse_close.png') no-repeat scroll 75% center !important;
+      background-size: 50% !important;
+    }
+  }
+}

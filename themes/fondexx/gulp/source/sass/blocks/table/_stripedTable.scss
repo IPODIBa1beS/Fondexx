@@ -32,6 +32,7 @@
 
         a{
           @extend .button-rectangle, .btn-white, .btn-transparent-rounded;
+          line-height: 1.25;
         }
 
         &:nth-child(1){

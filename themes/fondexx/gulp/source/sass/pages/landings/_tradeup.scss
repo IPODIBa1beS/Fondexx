@@ -4,17 +4,36 @@
   .main-container{
     background: $primary-bg;
 
-    &:before{
+    &>.row:before {
       display: none;
     }
 
+    &>.row{
+      padding-top: 10px;
+    }
+
+    .region-sidebar-second {
+      margin-top: 35px;
+    }
 
     .page-header{
       color: $contacts-icon;
-      font-size: $fs-title;
+      font-size: $fs-lg;
       text-transform: uppercase;
-      margin: 25px 0;
+      margin: 0;
       font-family: "RobotoLight", "Helvetica", "opensans";
+
+      &:before{
+        content: '';
+        display: inline-block;
+        font-size: $fs-md;
+        background: transparent url('../images/pngIcons/tradeUp.png') no-repeat scroll 75% bottom;
+        background-size: 50% 50%;
+        width: 108px;
+        height: 90px;
+        margin-right: 10px;
+        vertical-align: bottom;
+      }
     }
 
     .header-text{

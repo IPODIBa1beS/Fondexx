@@ -6,6 +6,10 @@
     background-size: cover;
   }
 
+  .navbar>.container {
+      border-bottom: 0 none;
+    }
+
   .main-container{
     background: $primary-bg url('../images/bg_main.jpg');
     background-repeat: no-repeat;
@@ -45,7 +49,7 @@
   }
 
   .region-sidebar-second{
-    margin-top: 50px;
+    margin-top: 20px;
 
     .block-block{
       .contextual-links-wrapper{
@@ -55,12 +59,14 @@
       a{
         @extend .button-rectangle, .btn-white;
         margin-top: 20px;
+        width: 100%;
       }
     }
 
     #block-block-6{
       p>a{
         @extend .button-rectangle, .button-rectangle-blue;
+        width: 100%;
       }
     }
 

@@ -47,12 +47,14 @@
       a {
         @extend .button-rectangle;
         margin-top: 20px;
+        width: 100%;
       }
     }
 
     #block-block-6{
       p>a{
         @extend .button-rectangle, .button-rectangle-blue;
+        width: 100%;
       }
     }
 

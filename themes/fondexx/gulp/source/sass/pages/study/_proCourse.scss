@@ -1,5 +1,9 @@
 .page-study-pro{
   @extend .blackInnerPage;
+  .navbar>.container {
+    border-bottom: 0 none;
+  }
+
   .main-container {
     background: rgba(0, 0, 0, 0.5) url('../images/bg_inner_empire_state.jpg');
     background-repeat: no-repeat;
@@ -20,7 +24,20 @@
     }
 
     .page-header{
-      display: none;
+      display: block;
+      position: absolute;
+      color: white;
+      text-align: right;
+      right: 15%;
+      top: -200px;
+      width: 100%;
+      font-size: $fs-lg;
+    }
+
+    .region-sidebar-second{
+      #block-block-1{
+        margin-top: 0;
+      }
     }
 
     .course{

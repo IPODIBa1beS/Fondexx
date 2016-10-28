@@ -1,6 +1,10 @@
 .page-trade-demo{
   color: $dark-text;
 
+  .navbar>.container {
+    border-bottom: 0 none;
+  }
+
   .page-header{
     position: absolute;
     top: -200px;
@@ -161,7 +165,6 @@
 
           &:nth-child(3){
             &:after{
-              margin-top: 20px;
               display: block;
               content: '';
               background: url('../images/pngIcons/american_stock_exchange.png') no-repeat, scroll;

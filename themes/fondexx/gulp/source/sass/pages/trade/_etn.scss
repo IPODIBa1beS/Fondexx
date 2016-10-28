@@ -1,3 +1,16 @@
 .page-node-101{
   @extend .whiteInnerPageWithHeader;
+
+  ul{
+    list-style-type: disc;
+    list-style-position: inside;
+
+    li{
+      p>a{
+        display: inline-block;
+        color: $white-pages-text;
+        text-decoration: underline;
+      }
+    }
+  }
 }

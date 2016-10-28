@@ -4,18 +4,38 @@
   .main-container {
     background: $primary-bg;
 
-    &:before{
+    &>.row{
+      padding-top: 10px;
+    }
+
+    &>.row:before {
       display: none;
+    }
+
+    .region-sidebar-second {
+      margin-top: 35px;
     }
 
     .page-header {
       border-bottom: 0 none;
+      margin: 0;
       color: $page-header;
-      font-size: $fs-title;
+      font-size: $fs-lg;
       font-family: "RobotoLight";
-      text-align: center;
-      font-weight: 400;
+      text-align: left;
       text-transform: uppercase;
+
+      &:before{
+        content: '';
+        display: inline-block;
+        font-size: $fs-md;
+        background: transparent url('../images/pngIcons/sterling.png') no-repeat scroll 75% bottom;
+        background-size: 50% 50%;
+        width: 108px;
+        height: 90px;
+        margin-right: 10px;
+        vertical-align: bottom;
+      }
     }
 
     .bottom-header-text {
@@ -66,8 +86,8 @@
           font-size: $fs-md - 2;
           font-weight: 200;
           font-family: "RobotoLight";
-          word-spacing: 1.5px;
-          letter-spacing: 1.5px;
+          //word-spacing: 1.5px;
+          //letter-spacing: 1.5px;
 
           a {
             color: $contacts-icon;

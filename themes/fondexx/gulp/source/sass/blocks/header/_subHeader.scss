@@ -13,7 +13,7 @@
     display: inline-block;
     padding: 10px;
     border-right: 2px solid $divider;
-    min-height: 71px;
+    min-height: 80px;
 
     &-list, .menu.nav {
       display: block;
@@ -67,10 +67,10 @@
       background-color: transparent;
       border: 2px solid $border-color;
       color: $border-color;
-      width: 75px;
-      height: 30px;
-      line-height: 15px;
-      font-size: $fs-sm+2;
+      width: 75px !important;;
+      height: 30px !important;
+      line-height: 15px !important;;
+      font-size: $fs-sm+2 !important;
       padding: 5px;
       font-family: "RobotoMedium", 'Helvetica', 'sans-serif';
       font-weight: 700;
@@ -97,22 +97,21 @@
       color: $default-text;
       text-decoration: none;
       font-family: "RobotoLight", "opensans", "sans-serif";
+      margin: 2.5px;
 
       &.skype:before {
-        //  @extend .icon, .icon-skype;
+        @extend .icon, .icon-skype;
         display: inline-block;
         color: $contacts-icon;
-        font-size: $fs-md;
-        width: $fs-md;
-        height: $fs-md;
+        font-size: $fs-sm;
+        margin-right: 5px;
       }
 
       &.phone:before {
-        //   @extend .icon, .icon-tel;
+        @extend .icon, .icon-tel;
         color: $contacts-icon;
-        font-size: $fs-md;
-        width: $fs-md;
-        height: $fs-md;
+        font-size: $fs-sm;
+        margin-right: 5px;
       }
 
       &:hover {

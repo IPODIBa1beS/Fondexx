@@ -6,6 +6,10 @@
     background-size: cover;
   }
 
+  .navbar>.container {
+    border-bottom: 0 none;
+  }
+
   .main-container{
     background: rgba(255, 255, 255, 1) url('../images/bg_white_main.jpg');
     background-repeat: no-repeat;
@@ -54,12 +58,14 @@
       a{
         @extend .button-rectangle;
         margin-top: 20px;
+        width: 100%;
       }
     }
 
     #block-block-6{
       p>a{
         @extend .button-rectangle, .button-rectangle-blue;
+        width: 100%;
       }
     }
 
@@ -128,7 +134,7 @@
       p{
         font-size: $fs-md;
         font-family: "RobotoLight", 'Helvetica', sans-serif;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         line-height: 1.5;
 
         &:first-child{

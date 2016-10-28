@@ -1,7 +1,7 @@
 @mixin pagination(){
 
   &>.text-center{
-    background: rgba(71, 68, 74, .4);
+    background: rgba(73, 71, 77, 0.6);
     border-radius: 2px;
   }
 
@@ -27,17 +27,19 @@
           border: 1px solid white;
           background: transparent;
           margin: 20px 5px;
+          font-family: "RobotoMedium", "RobotoBold", "sans-serif";
         }
       }
 
       &>a{
         margin: 20px 5px;
         display: inline-block;
-        color: $white-pages-text;
+        color: $icon-color;
         text-decoration: none;
         background: transparent;
         border: 0 none;
         background-image: none !important;
+        font-family: "RobotoMedium", "RobotoBold", "sans-serif";
 
         &:hover, &:focus{
           color: darken(white, 20%);
@@ -61,3 +63,6 @@
     }
   }
 }
+
+// fix image on ajax pagination
+.ajax-progress-throbber { display: none}

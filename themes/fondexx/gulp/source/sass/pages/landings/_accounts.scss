@@ -5,19 +5,25 @@
 
     #page-header{
       display: block;
-      background: transparent url('../images/plans_h.png') no-repeat scroll left center;
+      background: transparent url('../images/plans_header.png') no-repeat scroll left center;
       background-size: cover;
       width: 100%;
       min-height: 255px;
     }
 
     &>.row:before {
-      display: none
+      display: none;
     }
   }
 
   .page-header {
-    display: none;
+    display: block;
+    position: absolute;
+    color: white;
+    text-align: center;
+    top: -230px;
+    width: 100%;
+    font-size: $fs-lg;
   }
 
   .pane-1 {
@@ -53,20 +59,32 @@
           word-spacing: 2px;
           vertical-align: baseline;
 
-        }
+          &.proposal_rich {
+            &:before{
+              content: '';
+              display: inline-block;
+              font-size: $fs-md;
+              background: transparent url('../images/pngIcons/accounts/proposal_rich.png') no-repeat scroll 75% center;
+              background-size: 50% 50%;
+              width: 108px;
+              height: 90px;
+              margin-right: 10px;
+              vertical-align: middle;
+            }
+          }
 
-        &_rich {
-          content: '';
-          display: inline-block;
-          font-size: $fs-md;
-
-        }
-
-        &_experienced {
-          &:before {
-            content: '';
-            font-size: $fs-md;
-            display: inline-block;
+          &.proposal_experienced {
+            &:before {
+              content: '';
+              display: inline-block;
+              font-size: $fs-md;
+              background: transparent url('../images/pngIcons/accounts/proposal_experienced.png') no-repeat scroll 75% center;
+              background-size: 50% 50%;
+              width: 92px;
+              height: 90px;
+              margin-right: 10px;
+              vertical-align: middle;
+            }
           }
         }
       }
@@ -113,6 +131,33 @@
     .pane-content {
       table {
         @extend .table-striped-custom;
+
+        th{
+          &:before{
+            margin-right: 10px;
+            color: $icon-color;
+            font-size: 30px;
+            margin-left: -30px;
+          }
+
+          &:nth-of-type(2){
+            &:before{
+              @extend .icon, .icon-start;
+            }
+          }
+
+          &:nth-of-type(3){
+            &:before{
+              @extend .icon, .icon-standard;
+            }
+          }
+
+          &:nth-of-type(4){
+            &:before{
+              @extend .icon, .icon-premium;
+            }
+          }
+        }
 
         tr:nth-child(2) {
           width: 25%;

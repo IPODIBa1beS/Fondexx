@@ -1,6 +1,10 @@
 .whiteInnerPageWithImage {
   color: $dark-text;
 
+  .navbar>.container {
+    border-bottom: 0 none;
+  }
+
   .main-container {
 
     background: rgba(255, 255, 255, 1) url('../images/bg_white_main.jpg');
@@ -47,12 +51,14 @@
       a {
         @extend .button-rectangle;
         margin-top: 20px;
+        width: 100%;
       }
     }
 
     #block-block-6{
       p>a{
         @extend .button-rectangle, .button-rectangle-blue;
+        width: 100%;
       }
     }
 
@@ -145,7 +151,7 @@
       display: inline-block;
       color: $white-pages-text;
       font-family: "RobotoLight", 'Helvetica', sans-serif;
-      margin: 10px 0;
+      margin: 20px 0 0;
     }
 
     .flippy {

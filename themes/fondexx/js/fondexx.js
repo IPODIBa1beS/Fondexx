@@ -65,6 +65,14 @@
             var listItems = $('.navbar-header .active-trail>.dropdown-menu').children();
             $(".header_links-list").html(listItems);
         }
+
+        function insertHeaderItemsForType(menuOrder){
+            var dropdowns = $('.navbar-header .dropdown>.dropdown-menu');
+            var dropdownsTitle = $('.navbar-header .dropdown>.dropdown-toggle');
+            $(dropdownsTitle[menuOrder]).addClass('active active-trail');
+            var listItems = $(dropdowns[menuOrder]).children();
+            $(".header_links-list").html(listItems);
+        }
         /////////////////////////////////////
         /////////////////////////////////////
         /////////////////////////////////////
@@ -85,7 +93,28 @@
 
             $('.close-overlay').on('click', function(e){
                 $('.navbar-collapse').removeClass('in');
-            })
+            });
+
+            var body = $("body");
+            if(body.hasClass('page-node-96') || body.hasClass('node-type-article')){
+                insertHeaderItemsForType(0);
+            }
+
+            if(body.hasClass('page-node-99') || body.hasClass('page-node-100') || body.hasClass('page-node-101') || body.hasClass('page-node-102')){
+                insertHeaderItemsForType(1);
+            }
+
+            if(body.hasClass('node-type-analytics')){
+                insertHeaderItemsForType(3);
+            }
+
+            if(body.hasClass('page-study-faq') || body.hasClass('page-study-start') || body.hasClass('page-study-pro')){
+
+                $("a[data-toggle=collapse]").on('click', function (e) {
+
+                    $(this).toggleClass('is-open');
+                });
+            }
         });
 
 

@@ -1,39 +1,37 @@
 .node-type-analytics {
   @extend .whiteInnerPageWithImage;
 
-  .submitted{
-    color: $hint-text;
-    font-size: $fs-sm;
-    display: inline-block;
-    margin: 10px 0;
-  }
+  .node-type-analytics{
+    article{
+      .submitted-by{
+        color: $hint-text;
+        font-size: $fs-sm;
+        display: inline-block;
+        margin: 20px 0 0;
+      }
 
+      h2 {
+        a{
+          text-transform: uppercase;
+          font-family: "RobotoLight", 'Helvetica', sans-serif;
+          font-weight: 400;
+          font-size: $fs-title;
+          margin: 10px 0;
+          color: black;
+        }
+      }
 
-  h2 {
-    a{
-      text-transform: uppercase;
-      font-family: "RobotoLight", 'Helvetica', sans-serif;
-      font-weight: 400;
-      font-size: $fs-title;
-      margin: 10px 0;
-      color: black;
+      p {
+        font-family: "RobotoLight", 'Helvetica', sans-serif;
+        font-size: $fs-md;
+        margin: 10px 0;
+        color: black;
+      }
     }
   }
 
-  p {
-    font-family: "RobotoLight", 'Helvetica', sans-serif;
-    font-size: $fs-md;
-    margin: 10px 0;
-    color: black;
+  .region-content ul.flippy{
+    text-align: left;
+    padding: 0;
   }
-
-  .read-more{
-    display: inline-block;
-    font-family: "RobotoBold", 'Helvetica', sans-serif;
-    font-size: $fs-md;
-    margin: 10px 0;
-    text-transform: uppercase;
-    color: black;
-  }
-
 }

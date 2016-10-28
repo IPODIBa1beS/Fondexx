@@ -1,33 +1,33 @@
-.page-node-107{
+.page-node-107 {
   @extend .whiteInnerPageWithHeader;
 
-  h3{
+  h3 {
 
-      text-transform: uppercase;
-      font-family: "RobotoLight", 'Helvetica', sans-serif;
-      font-weight: 400;
-      font-size: $fs-title;
-      margin: 10px 0;
-      color: $white-pages-text;
+    text-transform: uppercase;
+    font-family: "RobotoLight", 'Helvetica', sans-serif;
+    font-weight: 400;
+    font-size: $fs-title;
+    margin: 10px 0;
+    color: $white-pages-text;
 
   }
 
-  p{
+  p {
     font-family: "RobotoLight", 'Helvetica', sans-serif;
     font-size: $fs-md;
     margin: 10px 0;
     color: $white-pages-text;
   }
 
-  p>a{
+  p > a {
     font-family: "RobotoLight", 'Helvetica', sans-serif;
-    font-size: $fs-title;
+    font-size: $fs-md;
     color: $white-pages-text;
     text-decoration: underline;
   }
 
-  .field-content{
-    a{
+  .field-content {
+    a {
       display: inline-block;
       font-family: "RobotoLight", 'Helvetica', sans-serif;
       font-size: $fs-title;
@@ -36,15 +36,17 @@
     }
   }
 
-  .btn{
+  .btn {
     @extend .button-rectangle;
     width: auto;
+    height: auto;
     line-height: 2;
+    font-size: $fs-md !important;
   }
 
-  .node-webform{
+  .node-webform {
     @extend %col-12;
-      padding: 50px;
+    padding: 50px;
 
     h2 {
       text-transform: uppercase;
@@ -55,25 +57,24 @@
       color: $white-pages-text;
     }
 
-      .form-control{
-        @extend %col-12;
-        background: $demo-input-bg;
-        border: 1px solid $border-color;
-        height: 60px;
-        padding: 20px;
-        font-size: $fs-title;
-        color: $border-color;
-        border-radius: 0;
-        font-family: "RobotoLightItalic", "Helvetica", "sans-serif";
-        margin: 15px 0;
-      }
+    .form-control{
+      @extend %col-12;
+      background: $demo-input-bg;
+      border: 1px solid $border-color;
+      height: 60px;
+      padding: 20px;
+      font-size: $fs-title;
+      color: $border-color;
+      border-radius: 0;
+      font-family: "RobotoLightItalic", "Helvetica", "sans-serif";
+      margin: 15px 0;
+    }
 
-      input[type='submit'], .webform-submi{
-        @extend .button, .button-transparent-blue;
-        //width: auto !important;
-        line-height: 1;
-        font-family: "RobotoBold", "Helvetica", "sans-serif";
-      }
-
+    input[type='submit'], .webform-submit{
+      @extend .button, .button-transparent-blue;
+      //width: auto !important;
+      line-height: 1;
+      font-family: "RobotoBold", "Helvetica", "sans-serif";
+    }
   }
 }
