@@ -30,15 +30,13 @@ function fondexx_block_view($delta = '') {
 
 function fondexx_form_alter(&$form, &$form_state, $form_id) {
     if ($form['#id'] == 'webform-client-form-177') {
-        dsm($form, drupal_get_title());
         $form['submitted']['otkuda_prishel']['#default_value'] = drupal_get_title();
-
         if (request_path() == 'study/start') {
             $form['actions']['submit']['#value']  = t('Undergo free');
         } else if (request_path() == 'trade/demo') {
             $form['actions']['submit']['#value']  = t('Create demo account');
         } else {
-            $form['actions']['submit']['#value'] = t('Get access');
+            $form['actions']['submit']['#value'] = t('Register');
         }
     }
 }
