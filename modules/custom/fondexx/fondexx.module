@@ -5,9 +5,6 @@
 */
 function fondexx_block_info() {
   $blocks = array();
-  $blocks['Fondexx registration form'] = array(
-    'info' => t('Fondexx registration form'),
-  );
   $blocks['Fondexx market leaders'] = array(
     'info' => t('Fondexx market leaders'),
   );
@@ -22,10 +19,6 @@ function fondexx_block_view($delta = '') {
   $block = array();
 
   switch ($delta) {
-    case 'Fondexx registration form':
-      $block['subject'] = '';
-      $block['content'] = _fondexx_registration_form_block();
-      break;
     case 'Fondexx market leaders':
       $block['subject'] = '';
       $block['content'] = _fondexx_market_leaders_form_block();
@@ -35,27 +28,19 @@ function fondexx_block_view($delta = '') {
   return $block;
 }
 
-function _fondexx_registration_form_block() {
-    if (request_path() == 'study/start') {
-        $bntText = 'Undergo free';
-    } else if (request_path() == 'trade/demo') {
-        $bntText = 'Create demo account';
-    } else
-    {
-        $bntText = 'Get access';
+function fondexx_form_alter(&$form, &$form_state, $form_id) {
+    if ($form['#id'] == 'webform-client-form-177') {
+        dsm($form, drupal_get_title());
+        $form['submitted']['otkuda_prishel']['#default_value'] = drupal_get_title();
+
+        if (request_path() == 'study/start') {
+            $form['actions']['submit']['#value']  = t('Undergo free');
+        } else if (request_path() == 'trade/demo') {
+            $form['actions']['submit']['#value']  = t('Create demo account');
+        } else {
+            $form['actions']['submit']['#value'] = t('Get access');
+        }
     }
-            
-            $output = '<form action="/user/register" method="post" enctype="text/plain" id="fondexx-login-form">';
- $output =  $output . '<input type="text" placeholder="' .t('Name') . '" size="100" id="name" title="name" class="form-control"/>';
- $output =  $output . '<input type="text" placeholder="' .t('Sirname') .'" size="100" id="sirname" title="sirname" class="form-control"/>';
- $output =  $output . '<input type="email" placeholder="' .t('Email') .'" size="100" id="email" title="email"  class="form-control"/>';
- $output =  $output . '<input type="tel" placeholder="' .t('Phone') .'" size="100" id="phone" title="phone"  class="form-control"/>';
- $output =  $output . '<div class="checkbox"><label><input type="checkbox">Я ознакомлен(а) со всеми регламентирующими документами</label></div>';
- $output =  $output . '<div class="req-docs"><ul><li><a href="/sites/default/files/docs/pdf1.pdf">Doc icon</a></li><li><a href="/sites/default/files/docs/pdf2.pdf">Doc icon </a></li></ul></div>';
- $output =  $output . '<input type="submit" value="'. t($bntText) .'"id="submit" class="btn btn-success" />';
- $output =  $output . '</form>';
- 
-    return $output;
 }
 
 function _fondexx_market_leaders_form_block() {
