@@ -7,16 +7,21 @@
     .carousel-inner {
 
       .item {
-        .views-field-title {
+        padding: 75px 175px 100px;
+        overflow: hidden;
+        height: 450px;
 
-          display: inline-block;
-          position: absolute;
-          left: 15%;
-          top: 15%;
+        .views-field-title {
+          display: block;
+          width: 100%;
+          position: relative;
+          z-index: 5;
+          overflow: hidden;
 
           .field-content {
-            display: inline-block;
-            font-size: $fs-title;
+            @extend %col-7;
+            display: block;
+            font-size: $fs-lg;
             color: $primary-color;
             font-family: "RobotoBold";
             font-weight: 700;
@@ -25,24 +30,61 @@
 
         .views-field-body {
           display: inline-block;
-          position: absolute;
-          left: 15%;
-          top: 25%;
+          //position: absolute;
+          //left: 15%;
+          //top: 25%;
+          position: relative;
+          z-index: 5;
+          @extend %col-6;
 
           .field-content {
             display: inline-block;
             font-size: $fs-md;
             color: $dark-text;
 
-            .btn {
+            ul{
+              li{
+                display: block;
+                margin: 20px 0;
+
+                &:before {
+                  content: '';
+                  display: inline-block;
+                  background: transparent url('../images/pngIcons/listItemStyleIcon.png') no-repeat scroll center;
+                  background-size: 100%;
+                  width: 20px;
+                  height: 20px;
+                  margin-right: 5px;
+                  position: absolute;
+                  line-height: 30px;
+
+                }
+
+                p{
+                  display: inline-block;
+                  padding: 0 0 0 40px;
+                  font-family: "RobotoMedium";
+                }
+              }
+            }
+
+            a {
               @extend .button;
               border: 0 none;
               margin-top: 25px;
+              font-size: $fs-md;
             }
           }
         }
 
         .views-field-field-slider-image {
+          position: absolute;
+          z-index: -1;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+
           .img-responsive {
             width: 100%;
           }
@@ -52,12 +94,17 @@
 
     .carousel-control {
       .icon-prev, .icon-next {
+        height: auto;
+        width: auto;
+
         &:before {
-          border: 2px solid $default-text;
+          border: 2px solid #e4eaef;
           border-radius: 50%;
           display: inline-block;
-          width: 30px;
-          line-height: 1.5;
+          width: 40px;
+          padding: 8px;
+          font-size: 24px;
+          line-height: 0.8;
         }
       }
     }

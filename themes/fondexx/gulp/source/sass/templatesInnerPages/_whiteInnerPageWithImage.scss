@@ -9,9 +9,9 @@
 
     background: rgba(255, 255, 255, 1) url('../images/bg_white_main.jpg');
     background-repeat: no-repeat;
-    background-position: 100% 0;
+    background-position: center bottom;
     background-attachment: scroll;
-    background-size: 100% 175%;
+    background-size: 100%;
     max-width: none;
     width: 100%;
     margin: 0;
@@ -113,6 +113,8 @@
   }
 
   article {
+    overflow: auto;
+
     header{
       margin-bottom: 10px;
 

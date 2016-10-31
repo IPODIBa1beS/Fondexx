@@ -11,9 +11,19 @@
     width: 100%;
     padding: 0;
     margin: 0 auto;
+    background-color:  $dark-bg;
+    background-image: url('../images/bg_main.jpg');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: bottom center;
+    background-size: 100%;
 
     .row>section{
       padding: 0;
     }
+  }
+
+  .panels-flexible-region-7-center{
+    width: 100%;
   }
 }

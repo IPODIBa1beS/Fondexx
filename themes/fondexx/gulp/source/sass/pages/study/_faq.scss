@@ -2,11 +2,11 @@
   color: $default-text;
 
   .main-container {
-    background: rgba(0, 0, 0, 0.5) url('../images/bg_wall_street.jpg');
+    background: $dark-bg url('../images/bg_wall_street.jpg');
     background-repeat: no-repeat;
-    background-position: 100% 0;
+    background-position: bottom center;
     background-attachment: scroll;
-    background-size: 100% 100%;
+    background-size: 100%;
     max-width: none;
     width: 100%;
     margin: 0;
@@ -67,10 +67,6 @@
       }
 
       p{
-        //font-family: "RobotoLight", 'Helvetica', sans-serif;
-        //font-size: $fs-md;
-        //margin: 10px 0;
-        //color: white;
         display: none;
       }
 

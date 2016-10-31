@@ -1,36 +1,36 @@
-.page-analytics-traderhub{
+.page-analytics-traderhub {
 
   @extend .blackInnerPage;
 
-  .page-header{
+  .page-header {
     display: none;
   }
 
-  .main-container{
+  .main-container {
     background-image: url('../images/bg_main.jpg');
     background-position: right bottom;
     background-size: 100% 25%;
 
-    &:before{
+    &:before {
       display: none;
     }
 
-    &>.row{
+    & > .row {
       padding: 0;
     }
   }
 
-  #panels-ipe-paneid-1, .pane-1{
+  #panels-ipe-paneid-1, .pane-1 {
     background-image: url('../images/analytics_ipad.png'), linear-gradient(to right, #e0eafc 0%, #cfdef3 100%);
     background-position: 85% 50%, left top;
     background-repeat: no-repeat, repeat;
     background-attachment: scroll, scroll;
-    background-size: 400px 600px, cover;
+    background-size: 350px 550px, cover;
 
     padding: 0 80px;
-    min-height: 650px;
+    min-height: 600px;
 
-    .pane-title{
+    .pane-title {
       padding: 100px 0 0 0;
       font-size: $fs-lg;
       font-family: "RobotoLight", "opensans", "sans-serif";
@@ -40,11 +40,11 @@
       color: $analytics-text;
     }
 
-    .pane-content{
+    .pane-content {
       width: 400px;
     }
 
-    .analytics-text{
+    .analytics-text {
       font-size: $fs-md;
       font-weight: 500;
       font-family: "RobotoMedium", "Helvetica", "sans-serif";
@@ -52,13 +52,13 @@
       margin: 50px 0;
     }
 
-    .analytics-secondary-text{
+    .analytics-secondary-text {
       font-size: $fs-md;
       font-weight: 500;
       font-family: "RobotoMedium", "Helvetica", "sans-serif";
       color: #747783;
 
-      &:before{
+      &:before {
         content: '';
         display: inline-block;
         border-top: 1px solid $analytics-text;
@@ -69,40 +69,40 @@
       }
     }
 
-    .btn-wrapper{
+    .btn-wrapper {
 
-      &.login{
-        a{
+      &.login {
+        a {
           @extend .button;
           height: 40px;
           margin: 10px 0;
         }
       }
 
-      &.test-login{
-        a{
+      &.test-login {
+        a {
           font-family: "RobotoRegular", "Helvetica", "sans-serif";
-          color: $border-color;
+          color: #747783;
         }
       }
     }
 
   }
 
-  #panels-ipe-paneid-2, .pane-2{
+  #panels-ipe-paneid-2, .pane-2 {
     min-height: 750px;
     background: url('../images/analytics_steps.jpg') no-repeat, scroll, left top;
     background-size: cover;
   }
 
-  #panels-ipe-paneid-3, .pane-3{
+  #panels-ipe-paneid-3, .pane-3 {
     min-height: 200px;
     background: url('../images/analytics_webinar.jpg') no-repeat, scroll, left top;
     background-size: cover;
     padding: 25px 80px;
     text-align: center;
 
-    .pane-title{
+    .pane-title {
       margin-top: 0;
       border-bottom: 0 none;
       color: $page-header;
@@ -112,7 +112,7 @@
       font-family: "RobotoLight", "opensans", "sans-serif";
     }
 
-    h3{
+    h3 {
       font-family: "RobotoRegular", "opensans", "sans-serif";
       font-weight: 400;
       word-spacing: 2px;
@@ -121,17 +121,17 @@
       margin: 15px 0 25px 0;
     }
 
-    .btn-wrapper{
+    .btn-wrapper {
       margin-top: 10px;
 
-      &.get-more{
-        a{
+      &.get-more {
+        a {
           @extend .button, .button-transparent;
           border-color: white;
           color: white;
           line-height: 40px;
 
-          &:hover, &:focus{
+          &:hover, &:focus {
             color: $dark-text;
             background: white;
           }
@@ -140,37 +140,99 @@
     }
   }
 
-  #panels-ipe-paneid-6, .pane-fondexx-fondexx-registration-form{
+  .pane-webform-client-block-177 {
     min-height: 200px;
     padding: 20px 80px;
+    text-align: center;
 
-    form{
+    .pane-title {
+      display: none;
+    }
+
+    .pane-title {
+      display: none;
+    }
+
+    .webform-component {
+      display: inline-block;
+      width: 23%;
+
+      .form-required {
+        display: none;
+      }
+
+      margin: 20px 1.5% 20px 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .form-control {
+      display: inline-block;
+      width: 95%;
+      background: transparent;
+      border: 1px solid $border-color;
+      height: 60px;
+      padding: 20px;
+      font-size: $fs-title;
+      color: $border-color;
+      border-radius: 0;
+      font-family: "RobotoLightItalic";
+    }
+
+    .control-label {
+      margin-top: 5px;
+      font-family: "RobotoLightItalic", "Helvetica", "sans-serif";
+    }
+
+    .webform-component.webform-component--files {
+      @extend %col-4;
+      margin: 5px 0;
       text-align: center;
 
-      .form-control{
-        display: inline-block;
-        width: 23%;
-        background: transparent;
-        border: 1px solid $border-color;
-        height: 60px;
-        padding: 20px;
-        font-size: $fs-title;
-        color: $border-color;
-        border-radius: 0;
-        font-family: "RobotoLightItalic";
+      .req-docs {
 
-        margin: 20px 1.5% 20px 0;
+        li {
+          display: inline-block;
+        }
+        a {
+          color: transparent;
+          width: 35px;
+          display: inline-block;
 
-        &:last-child{
-          margin-right: 0;
+          &:before {
+            content: "";
+            display: inline-block;
+            background: transparent url('../images/pngIcons/downloadDocument.png') no-repeat scroll center;
+            font-size: 24px;
+            height: 33px;
+            width: 24px;
+          }
         }
       }
+    }
 
-      input[type='submit']{
-        @extend .button, .button-transparent-white;
-        width: auto !important;
-        line-height: 1;
-      }
+    .webform-component.webform-component-checkboxes {
+      @extend %col-8;
+      margin: 5px 0 !important;
+      text-align: center;
+    }
+
+    .webform-component--otkuda-prishel {
+      display: none;
+    }
+
+    .form-actions {
+      overflow: hidden;
+      position: relative;
+      display: block;
+      width: 100%;
+    }
+
+    input[type='submit'], .webform-submit {
+      @extend .button, .button-transparent-white;
+      line-height: 1;
     }
   }
 

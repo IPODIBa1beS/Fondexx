@@ -3,39 +3,39 @@
   .pane-7 {
     @extend %col-6;
     max-width: none;
-    margin: 0;
-    padding: 0;
     text-align: center;
-
-    &:before {
-      content: '';
-      display: inline-block;
-      position: absolute;
-      width: 50px;
-      border-bottom: 2px solid $border-color;
-      margin-top: $fs-md /2;
-      left: -60px;
-    }
-
     .pane-title {
       color: $page-header;
       font-size: $fs-md;
       text-transform: uppercase;
       font-family: "RobotoBold";
       text-align: left;
+      padding: 20px 0 0 80px;
+
+      &:before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 40px;
+        border-bottom: 2px solid $border-color;
+        margin-top: $fs-md /2 +2;
+        left: 0;
+      }
     }
 
     .pane-content{
+      margin: 35px 100px 50px;
+
       h2{
         &:after{
           content: '';
           display: inline-block;
           font-size: $fs-md;
           background: transparent url('../images/pngIcons/tradeUp.png') no-repeat scroll 75% bottom;
-          background-size: 50% 50%;
-          width: 108px;
+          background-size: 50%;
+          width: 101px;
           height: 90px;
-          margin-right: 10px;
+          margin-left: 5px;
           vertical-align: bottom;
         }
       }
@@ -56,16 +56,17 @@
     }
 
     .pane-content{
+      margin: 50px 100px;
       h2{
         &:after{
           content: '';
           display: inline-block;
           font-size: $fs-md;
           background: transparent url('../images/pngIcons/sterling.png') no-repeat scroll 75% bottom;
-          background-size: 50% 50%;
+          background-size: 50%;
           width: 108px;
           height: 90px;
-          margin-right: 10px;
+          margin-left: 5px;
           vertical-align: bottom;
         }
       }
@@ -73,34 +74,61 @@
   }
 
   .pane-7, .pane-8 {
+    min-height: 900px;
+
     .pane-content {
       background: rgba(73, 71, 77, 0.6);
-      padding: 25px;
-      margin: 50px 100px;
-      text-align: left;
+      padding: 0 40px 20px;
+      text-align: center;
+      border-radius: 5px;
 
       h2 {
         text-transform: uppercase;
         font-family: "RobotoLight", 'Helvetica', sans-serif;
         font-weight: 700;
-        font-size: $fs-title;
+        font-size: $fs-lg;
         color: $secondary-text;
-        margin: 20px 0;
+        margin: 0 0 20px;
+        text-align: left;
       }
 
-      ol, ul{
-        list-style-type: decimal;
-        margin: 0 20px;
+      ul{
+        list-style-type: none;
+        margin: 0;
+        text-align: left;
 
         li{
-          padding: 10px;
-          display:list-item;
+          padding: 10px 0;
+          display: inline-block;
           font-family: "RobotoLightItalic", 'Helvetica', sans-serif;
           font-size: $fs-md;
           color: $secondary-text;
+
+          &:before {
+            content: '';
+            display: inline-block;
+            background: transparent url('../images/pngIcons/listItemStyleIcon.png') no-repeat scroll center;
+            background-size: 100%;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            position: absolute;
+            line-height: 30px;
+
+          }
+
+          p{
+            display: inline-block;
+            padding: 0 0 0 40px;
+          }
         }
       }
 
+      p>img{
+        max-width: 100%;
+        height: auto;
+      }
+      
       p>a.btn{
         @extend .button, .button-transparent-white;
         margin: 20px 0;

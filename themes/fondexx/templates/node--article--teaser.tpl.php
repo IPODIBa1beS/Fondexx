@@ -87,7 +87,6 @@
   <?php
     hide($content);
   ?>
-teaser
     <div class="submitted">
       <?php print format_date($node->created, 'custom', 'd.m.Y'); ?>
     </div>

@@ -2,23 +2,23 @@
   @extend %col-4;
   max-width: none;
   margin: 0;
-  padding: 0;
-
-  &:before {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    width: 50px;
-    border-bottom: 2px solid $border-color;
-    margin-top: $fs-md /2;
-    left: -60px;
-  }
+  padding: 20px 20px 20px 80px;
 
   .pane-title {
     color: $page-header;
     font-size: $fs-md;
     text-transform: uppercase;
     font-family: "RobotoBold";
+
+    &:before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      width: 40px;
+      border-bottom: 2px solid $border-color;
+      margin-top: $fs-md /2 +2;
+      left: 0;
+    }
   }
 
   .node-teaser {
@@ -31,6 +31,7 @@
         font-weight: 400;
         font-size: $fs-title;
         color: $secondary-text;
+        margin: 5px 0 15px;
 
         &:hover, &:focus{
           color: white;
@@ -41,7 +42,7 @@
     p{
       font-family: "RobotoLight", 'Helvetica', sans-serif;
       font-size: $fs-md;
-      margin: 5px 0;
+      margin: 15px 0;
       color: $secondary-text;
     }
 
@@ -58,7 +59,7 @@
       color: $hint-text;
       font-size: $fs-sm;
       display: inline-block;
-      margin: 10px 0 0;
+      margin: 15px 0;
     }
   }
 }
@@ -67,7 +68,7 @@
   @extend %col-8;
   max-width: none;
   margin: 0;
-  padding: 0;
+  padding: 0 80px 0 0;
 
   .views-row{
     @extend %col-6;
@@ -77,7 +78,7 @@
       color: $hint-text;
       font-size: $fs-sm;
       display: inline-block;
-      margin: 10px 0 0;
+      margin: 15px 0;
     }
 
     h2{
@@ -86,7 +87,7 @@
         font-family: "RobotoLight", 'Helvetica', sans-serif;
         font-weight: 400;
         font-size: $fs-title;
-        margin: 10px 0;
+        margin: 5px 0 15px;
         color: white;
       }
     }
@@ -94,7 +95,7 @@
     p{
       font-family: "RobotoLight", 'Helvetica', sans-serif;
       font-size: $fs-md;
-      margin: 10px 0;
+      margin: 15px 0;
       color: white;
     }
 
@@ -102,7 +103,7 @@
       display: inline-block;
       font-family: "RobotoBold", 'Helvetica', sans-serif;
       font-size: $fs-md;
-      margin: 10px 0;
+      margin: 15px 0;
       text-transform: uppercase;
       color: white;
     }

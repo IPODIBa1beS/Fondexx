@@ -3,5 +3,32 @@
 
   table{
     @extend .table-striped-custom;
+
+
+    tr{
+      &:nth-child(odd){
+        background: transparent;
+
+        a{
+          @extend .button-rectangle, .btn-black, .btn-transparent-rounded;
+          line-height: 1.25;
+          width: auto;
+        }
+      }
+
+      &:nth-child(even){
+        background: $table-white-stripe;
+
+
+      }
+
+      th{
+        padding: 5px;
+      }
+
+      td{
+        padding: 5px;
+      }
+    }
   }
 }

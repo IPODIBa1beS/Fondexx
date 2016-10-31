@@ -277,6 +277,8 @@
 
       .webform-component--otkuda-prishel{
         @extend %col-12;
+        display: none;
+
         .form-control{
           margin-top: 0;
         }

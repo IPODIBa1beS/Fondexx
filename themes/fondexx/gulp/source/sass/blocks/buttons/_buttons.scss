@@ -100,6 +100,16 @@
   }
 }
 
+.btn-black{
+  color: $primary-bg;
+  border: 2px solid $primary-bg;
+
+  &:hover, &:focus{
+    background-color: $primary-bg;
+    color: white;
+  }
+}
+
 .btn-transparent-rounded{
   background-color: transparent;
   width: 120px;

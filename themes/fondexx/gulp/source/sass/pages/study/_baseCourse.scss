@@ -6,11 +6,11 @@
   }
 
   .main-container {
-    background: rgba(0, 0, 0, 0.5) url('../images/bg_inner_empire_state.jpg');
+    background: $dark-bg url('../images/bg_inner_empire_state.jpg');
     background-repeat: no-repeat;
-    background-position: 0 100%;
+    background-position: bottom center;
     background-attachment: scroll;
-    background-size: 100% 100%;
+    background-size: 100%;
 
     #page-header{
       display: block;
@@ -48,9 +48,9 @@
         font-size: $fs-md - 2;
         font-family: "RobotoLight", "Helvetica", "sans-serif";
         font-weight: 400;
-        letter-spacing: 1px;
-        word-spacing: 1.5px;
-        line-height: 1.25;
+        letter-spacing: 1.25px;
+        word-spacing: 2px;
+        line-height: 1.5;
 
         &-bold{
           font-family: "RobotoBold", "Helvetica", "sans-serif";
@@ -141,20 +141,26 @@
       word-spacing: 1.5px;
     }
 
+    .pane-webform-client-block-177{
+      .pane-title{
+        display: none;
+      }
+    }
+
     form{
       text-align: center;
 
-      .form-control{
+      .pane-title{
+        display: none;
+      }
+
+      .webform-component{
         display: inline-block;
         width: 23%;
-        background: transparent;
-        border: 1px solid $border-color;
-        height: 60px;
-        padding: 20px;
-        font-size: $fs-title;
-        color: $border-color;
-        border-radius: 0;
-        font-family: "RobotoLightItalic";
+
+        .form-required {
+          display: none;
+        }
 
         margin: 20px 1.5% 20px 0;
 
@@ -163,9 +169,70 @@
         }
       }
 
-      input[type='submit']{
+      .form-control{
+        display: inline-block;
+        width: 95%;
+        background: transparent;
+        border: 1px solid $border-color;
+        height: 60px;
+        padding: 20px;
+        font-size: $fs-title;
+        color: $border-color;
+        border-radius: 0;
+        font-family: "RobotoLightItalic";
+      }
+
+      .control-label {
+        margin-top: 5px;
+        font-family: "RobotoLightItalic", "Helvetica", "sans-serif";
+      }
+
+      .webform-component.webform-component--files {
+        @extend %col-4;
+        margin: 5px 0;
+        text-align: center;
+
+        .req-docs {
+
+          li{
+            display: inline-block;
+          }
+          a {
+            color: transparent;
+            width: 35px;
+            display: inline-block;
+
+            &:before {
+              content: "";
+              display: inline-block;
+              background: transparent url('../images/pngIcons/downloadDocument.png') no-repeat scroll center;
+              font-size: 24px;
+              height: 33px;
+              width: 24px;
+            }
+          }
+        }
+      }
+
+      .webform-component.webform-component-checkboxes{
+        @extend %col-8;
+        margin: 5px 0 !important;
+        text-align: center;
+      }
+
+      .webform-component--otkuda-prishel{
+        display: none;
+      }
+
+      .form-actions{
+        overflow: hidden;
+        position: relative;
+        display: block;
+        width: 100%;
+      }
+
+      input[type='submit'], .webform-submit{
         @extend .button, .button-transparent-white;
-        width: auto !important;
         line-height: 1;
       }
     }

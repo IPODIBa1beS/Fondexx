@@ -2,15 +2,17 @@
   .pane-9 {
     display: block;
     width: 100%;
+    padding: 0 80px;
+    overflow: hidden;
 
     &:before {
       content: '';
       display: inline-block;
       position: absolute;
-      width: 50px;
+      width: 40px;
       border-bottom: 2px solid $border-color;
-      margin-top: $fs-md /2;
-      left: -60px;
+      margin-top: $fs-md /2 +2;
+      left: 0;
     }
 
     h2 {
@@ -23,41 +25,34 @@
   }
 
   .panels-flexible-row-7-1 {
-    background-image: url('../images/bg_main.jpg');
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: right bottom;
-    background-size: 100% 100%;
-
-    .nav-tabs{
+    padding: 20px 80px;
+    .nav-tabs {
       border-bottom: 0 none;
 
-      li{
-        &:first-child{
-          &:before{
-            color: $icon-color;
-            font-size: 30px;
-          }
+      li {
+        a:before {
+          color: $icon-color;
+          font-size: 30px;
         }
 
-        &:nth-of-type(1){
-          &:before{
+        &:nth-of-type(1) {
+          a:before {
             @extend .icon, .icon-start;
             display: block;
             font-size: 45px;
           }
         }
 
-        &:nth-of-type(2){
-          &:before{
+        &:nth-of-type(2) {
+          a:before {
             @extend .icon, .icon-standard;
             display: block;
             font-size: 45px;
           }
         }
 
-        &:nth-of-type(3){
-          &:before{
+        &:nth-of-type(3) {
+          a:before {
             @extend .icon, .icon-premium;
             display: block;
             font-size: 45px;
@@ -68,7 +63,7 @@
 
     .nav-li {
       @extend %col-4;
-      background: rgba(200, 200, 200, 0.3);
+      background: rgba(75, 74, 81, 0.5);
       text-align: center;
 
       a {
@@ -77,16 +72,24 @@
         text-align: center;
         text-decoration: none;
         color: $divider;
+        padding: 10px;
 
         &:hover, &:focus {
           background: transparent;
           color: $border-color;
           border: 0 none;
         }
+
+        h2 {
+          font-size: $fs-md;
+          color: $divider;
+          font-family: "RobotBold", "RobotoMedium", "sans-serif";
+          text-transform: uppercase;
+        }
       }
 
       &.active {
-        background: rgba(73, 71, 77, 0.6);
+        background: rgba(86, 83, 95, 0.5);
 
         a {
           background: transparent;
@@ -105,15 +108,18 @@
 
     .pane-content {
       padding: 25px;
+
       ul {
         li {
           display: block;
           margin-bottom: 10px;
           color: $secondary-text;
           font-size: $fs-md;
-          font-family: "RobotoBold", "Helvetica", "opensans";
+          font-family: "RobotoLight", "Helvetica", "opensans";
           font-weight: 700;
-          line-height: 1.25;
+          line-height: 1.5;
+          letter-spacing: 1.5px;
+          word-spacing: 1.75px;
 
           &:before {
             content: '';
@@ -137,6 +143,23 @@
           margin: 10px;
           border: 0 none;
         }
+      }
+
+      p > svg{
+        width: 150px;
+        
+        path, g {
+          fill: white;
+        }
+      }
+      .tab_price {
+        font-size: 30px;
+        font-family: "RobotoBold", "Helvetica", "opensans";
+        font-weight: 700;
+        line-height: 1.5;
+        letter-spacing: 1.5px;
+        word-spacing: 1.75px;
+        color: $contacts-icon;
       }
     }
   }

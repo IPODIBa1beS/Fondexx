@@ -5,9 +5,6 @@
   }
 
   &-collapse.collapsing {
-    //transition-duration: 0s !important;
-    //overflow: hidden !important;
-    //height: 0 !important;
     display: none;
   }
 
@@ -26,6 +23,11 @@
       top: 125px;
       left: 5%;
       cursor: pointer;
+
+      @media screen and (max-height: 800px) {
+        top: 65px;
+        left: 5%;
+      }
 
       &:hover, &:focus {
         animation: spin .6s ease 0s 1;
@@ -54,12 +56,20 @@
       overflow: auto;
       max-width: 1200px;
 
+      @media screen and (max-height: 800px) {
+        margin: 40px auto;
+      }
+
       & > li {
         float: none;
         display: inline-block;
         width: 32%;
         margin: 20px 0;
         vertical-align: top;
+
+        @media screen and (max-height: 800px) {
+          margin: 5px 0;
+        }
 
         &.first {
           display: none;
@@ -68,7 +78,11 @@
         &:before {
           font-size: 120px;
           color: $icon-color;
-          display: inline-block
+          display: inline-block;
+
+          @media screen and (max-height: 800px) {
+            font-size: 90px;
+          }
         }
 
         &:nth-of-type(2) {
@@ -101,6 +115,10 @@
             font-size: 120px;
             color: $icon-color;
             display: inline-block;
+
+            @media screen and (max-height: 800px) {
+              font-size: 90px;
+            }
           }
 
           & > a {
@@ -172,6 +190,10 @@
               font-weight: 400;
               color: $white-pages-text;
               padding: 10px 0;
+
+              @media screen and (max-height: 800px) {
+                padding: 5px 0;
+              }
             }
           }
         }

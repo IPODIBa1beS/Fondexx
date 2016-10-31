@@ -1,11 +1,21 @@
 .page-home{
+  .pane-4{
+    padding: 20px 40px 20px 80px;
+  }
+
+  .pane-5{
+    padding: 20px 60px;
+  }
+
+  .pane-6{
+    padding: 20px 80px 20px 40px;
+  }
+
   .pane-4, .pane-5, .pane-6{
     @extend %col-4;
     background: #60687f;
-    padding: 25px;
-    height: 500px;
+    min-height: 550px;
     text-align: center;
-
 
     &:after{
       content: "";
@@ -23,6 +33,8 @@
           color: $border-color;
           background: #343e5c;
           padding: 10px;
+          position: relative;
+          overflow: hidden;
         }
 
         img{
@@ -33,9 +45,8 @@
 
         a{
           @extend .button, .button-transparent-white;
-          margin-top: -100px;
           position: relative;
-          z-index: 1;
+          line-height: 3.5;
         }
       }
   }
