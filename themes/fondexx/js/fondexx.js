@@ -105,6 +105,10 @@
                 insertHeaderItemsForType(1);
             }
 
+            if(body.hasClass('node-type-study-article')){
+                insertHeaderItemsForType(2);
+            }
+
             if(body.hasClass('node-type-analytics')){
                 insertHeaderItemsForType(3);
             }

@@ -1,39 +1,54 @@
 .node-type-analytics {
   @extend .whiteInnerPageWithImage;
 
-  .node-type-analytics{
-    article{
-      .submitted-by{
-        color: $hint-text;
-        font-size: $fs-sm;
-        display: inline-block;
-        margin: 20px 0 0;
-      }
+  .node-analytics {
 
-      h2 {
-        a{
-          text-transform: uppercase;
-          font-family: "RobotoLight", 'Helvetica', sans-serif;
-          font-weight: 400;
-          font-size: $fs-title;
-          margin: 10px 0;
-          color: black;
-        }
-      }
+    .submitted {
+      color: $hint-text;
+      font-size: $fs-sm;
+      display: inline-block;
+      margin: 10px 0 0;
+    }
 
-      p {
+    h2 {
+      a {
+        text-transform: uppercase;
         font-family: "RobotoLight", 'Helvetica', sans-serif;
-        font-size: $fs-md;
+        font-weight: 400;
+        font-size: $fs-title;
         margin: 10px 0;
-        color: black;
+        color: $white-pages-text;
       }
     }
-  }
 
-  .region-content ul.flippy{
-    text-align: left;
-    padding: 0;
+    p {
+      font-family: "RobotoLight", 'Helvetica', sans-serif;
+      font-size: $fs-md;
+      margin: 10px 0;
+      color: $white-pages-text;
+    }
 
+    ul.flippy {
+      text-align: left;
+      padding: 0;
+      margin-left: -10px;
+      display: block;
 
+      li{
+        padding: 10px 10px 10px 0;
+      }
+
+      .prev, .next{
+        a{
+          display: inline-block;
+          font-family: "RobotoLight", 'Helvetica', sans-serif;
+          font-size: $fs-sm;
+          margin: 10px 0;
+          padding: 10px 10px 10px 0;
+          text-transform: uppercase;
+          color: $white-pages-text;
+        }
+      }
+    }
   }
 }

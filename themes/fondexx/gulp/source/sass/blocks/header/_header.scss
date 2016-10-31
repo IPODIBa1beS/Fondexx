@@ -54,7 +54,7 @@
 
     .login-btn-wrapper {
       padding: 15px;
-      @extend %col-2;
+      @extend %col-4;
       min-width: 150px;
 
       .button-login {
@@ -71,10 +71,14 @@
         border-radius: 32px;
         font-family: "RobotoBold", 'Helvetica', 'sans-serif';
       }
+
+      a{
+        margin-right: 10px;
+      }
     }
 
     &>.nav {
-      @extend %col-7;
+      @extend %col-5;
       display: inline-block;
       margin: 0 !important;
       vertical-align: baseline;

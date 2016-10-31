@@ -1,11 +1,11 @@
-.page-trade-demo{
+.page-trade-demo {
   color: $dark-text;
 
-  .navbar>.container {
+  .navbar > .container {
     border-bottom: 0 none;
   }
 
-  .page-header{
+  .page-header {
     position: absolute;
     top: -200px;
     display: block;
@@ -24,213 +24,270 @@
     display: none;
   }
 
-    #myid{
-      height: 250px;
-    }
+  #myid {
+    height: 250px;
+  }
 
-    .main-container {
-      background: white;
-      max-width: none;
+  .main-container {
+    background: white;
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    &:before {
+      content: '';
+      display: block;
+      background: transparent url('../images/demo_header.png') no-repeat scroll left center;
+      background-size: cover;
       width: 100%;
-      margin: 0;
-      padding: 0;
-
-      &:before{
-        content: '';
-        display: block;
-        background: transparent url('../images/demo_header.png') no-repeat scroll left center;
-        background-size: cover;
-        width: 100%;
-        min-height: 250px;
-      }
-
-      & > .row {
-        padding: 0;
-      }
-
-
-      #panels-ipe-paneid-31{
-        .carousel-inner{
-
-          .item{
-            .views-field-title{
-              @extend %col-4;
-              display: inline-block;
-              position: absolute;
-              right: 10%;
-              top: 15%;
-
-              .field-content{
-                display: inline-block;
-                font-size: $fs-lg;
-                font-family: "RobotoLight", "Helvetica Neue Light", "sans-serif";
-                color: $error;
-                text-transform: uppercase;
-              }
-            }
-
-            .views-field-body{
-              @extend %col-4;
-              display: inline-block;
-              position: absolute;
-              right: 10%;
-              top: 60%;
-
-              .field-content{
-                display: inline-block;
-                font-size: $fs-sm;
-                color: $white-pages-text;
-                font-family: "RobotoLight", "Helvetica Neue Light", "sans-serif";
-
-                .btn{
-                  @extend .button;
-                  border: 0 none;
-                  margin-top: 25px;
-                }
-              }
-            }
-
-            .views-field-field-slider-image{
-              .img-responsive{
-                width: 100%;
-              }
-            }
-          }
-        }
-
-        .carousel-control{
-          .icon-prev, .icon-next{
-            &:before{
-              border: 2px solid $default-text;
-              border-radius: 50%;
-              display: inline-block;
-              width: 30px;
-
-            }
-          }
-        }
-      }
-
-      .demo_img-wrapper{
-        margin: 50px 0 0;
-        width: 100%;
-        min-height: 600px;
-        background: url('../images/demo_trading.png') no-repeat, scroll, left top;
-        background-size: cover;
-      }
-
-      .demo-stocks_list {
-        display: block;
-        background-color: #61c2ff;
-        background-image: linear-gradient(120deg, #00c6ff 0%, #0072ff 100%);
-        min-height: 400px;
-        text-align: center;
-        padding: 80px;
-
-        &-item {
-          @extend %col-4;
-          position: relative;
-          text-transform: uppercase;
-          color: $default-text;
-          font-size: $fs-title;
-          font-family: "RobotoRegular", "Helvetica", "sans-serif";
-          border-right: 1px solid darken(white, 20%);
-          min-height: 80px;
-          padding: 20px;
-
-          &:nth-child(1){
-            &:after{
-              margin-top: 20px;
-              display: block;
-              content: '';
-              background: url('../images/pngIcons/nyse.png') no-repeat, scroll;
-              width: 100%;
-              background-position: bottom;
-              height: 150px;
-              position: absolute;
-            }
-          }
-
-          &:nth-child(2){
-            &:after{
-              display: block;
-              content: '';
-              background: url('../images/pngIcons/nasdaq.png') no-repeat, scroll;
-              width: 100%;
-              background-position: bottom;
-              height: 150px;
-              position: absolute;
-            }
-          }
-
-          &:nth-child(3){
-            &:after{
-              display: block;
-              content: '';
-              background: url('../images/pngIcons/american_stock_exchange.png') no-repeat, scroll;
-              width: 100%;
-              background-position: bottom;
-              height: 150px;
-              position: absolute;
-            }
-          }
-
-          &:last-child {
-            border: 0 none;
-          }
-        }
-      }
-      .demo {
-
-        &_text {
-          color: $demo-landing-text;
-          font-family: "RobotoRegular", "Helvetica", "opensans";
-          font-size: $fs-md - 2;
-          margin: 10px 0;
-        }
-
-        &_header-text {
-          color: $demo-landing-text;
-          font-size: $fs-md;
-          font-family: "RobotoBold", "Arial", "opensans";
-          font-weight: 700;
-          text-transform: uppercase;
-          line-height: 1.5;
-          margin: 10px 0;
-        }
-      }
-
-      //text
-      .pane-2 {
-        @extend %col-6;
-        padding: 50px;
-      }
-
-      //form
-      .pane-fondexx-fondexx-registration-form {
-        @extend %col-6;
-        padding: 50px;
-
-        .form-control{
-          @extend %col-12;
-          background: $demo-input-bg;
-          border: 1px solid $border-color;
-          height: 60px;
-          padding: 20px;
-          font-size: $fs-title;
-          color: $border-color;
-          border-radius: 0;
-          font-family: "RobotoLightItalic", "Helvetica", "sans-serif";
-          margin: 15px 0;
-        }
-
-        input[type='submit']{
-          @extend .button, .button-transparent-blue;
-          //width: auto !important;
-          line-height: 1;
-          font-family: "RobotoBold", "Helvetica", "sans-serif";
-        }
-      }
-
+      min-height: 250px;
     }
+
+    & > .row {
+      padding: 0;
+    }
+
+    .col-sm-12 {
+      padding: 0;
+    }
+
+    #panels-ipe-paneid-31 {
+      .carousel-inner {
+
+        .item {
+          .views-field-title {
+            @extend %col-4;
+            display: inline-block;
+            position: absolute;
+            right: 10%;
+            top: 15%;
+
+            .field-content {
+              display: inline-block;
+              font-size: $fs-lg;
+              font-family: "RobotoLight", "Helvetica Neue Light", "sans-serif";
+              color: $error;
+              text-transform: uppercase;
+            }
+          }
+
+          .views-field-body {
+            @extend %col-4;
+            display: inline-block;
+            position: absolute;
+            right: 10%;
+            top: 60%;
+
+            .field-content {
+              display: inline-block;
+              font-size: $fs-sm;
+              color: $white-pages-text;
+              font-family: "RobotoLight", "Helvetica Neue Light", "sans-serif";
+
+              .btn {
+                @extend .button;
+                border: 0 none;
+                margin-top: 25px;
+              }
+            }
+          }
+
+          .views-field-field-slider-image {
+            .img-responsive {
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .carousel-control {
+        .icon-prev, .icon-next {
+          &:before {
+            border: 2px solid $default-text;
+            border-radius: 50%;
+            display: inline-block;
+            width: 30px;
+
+          }
+        }
+      }
+    }
+
+    .demo_img-wrapper {
+      margin: 50px 0 0;
+      width: 100%;
+      min-height: 550px;
+      background: url('../images/demo_trading.png') no-repeat, scroll, left top;
+      background-size: cover;
+    }
+
+    .demo-stocks_list {
+      display: block;
+      background-color: #61c2ff;
+      background-image: linear-gradient(120deg, #00c6ff 0%, #0072ff 100%);
+      min-height: 400px;
+      text-align: center;
+      padding: 80px;
+
+      &-item {
+        @extend %col-4;
+        position: relative;
+        text-transform: uppercase;
+        color: $default-text;
+        font-size: $fs-title;
+        font-family: "RobotoRegular", "Helvetica", "sans-serif";
+        border-right: 1px solid darken(white, 20%);
+        min-height: 80px;
+        padding: 20px;
+
+        &:nth-child(1) {
+          &:after {
+            margin-top: 20px;
+            display: block;
+            content: '';
+            background: url('../images/pngIcons/nyse.png') no-repeat, scroll;
+            width: 100%;
+            background-position: bottom;
+            height: 150px;
+            position: absolute;
+          }
+        }
+
+        &:nth-child(2) {
+          &:after {
+            display: block;
+            content: '';
+            background: url('../images/pngIcons/nasdaq.png') no-repeat, scroll;
+            width: 100%;
+            background-position: bottom;
+            height: 150px;
+            position: absolute;
+          }
+        }
+
+        &:nth-child(3) {
+          &:after {
+            display: block;
+            content: '';
+            background: url('../images/pngIcons/american_stock_exchange.png') no-repeat, scroll;
+            width: 100%;
+            background-position: bottom;
+            height: 150px;
+            position: absolute;
+          }
+        }
+
+        &:last-child {
+          border: 0 none;
+        }
+      }
+    }
+    .demo {
+
+      &_text {
+        color: $demo-landing-text;
+        font-family: "RobotoRegular", "Helvetica", "opensans";
+        font-size: $fs-md - 2;
+        margin: 10px 0;
+      }
+
+      &_header-text {
+        color: $demo-landing-text;
+        font-size: $fs-md;
+        font-family: "RobotoBold", "Arial", "opensans";
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 1.5;
+        margin: 10px 0;
+      }
+    }
+
+    //text
+    .pane-2 {
+      @extend %col-6;
+      padding: 50px;
+    }
+
+    //form
+    .pane-webform-client-block-177 {
+      @extend %col-6;
+      padding: 50px;
+
+      .pane-title {
+        display: none;
+      }
+
+      .webform-component{
+        overflow: hidden;
+        @extend %col-12;
+      }
+
+      .form-required {
+        display: none;
+      }
+
+      .form-control {
+        @extend %col-12;
+        background: $demo-input-bg;
+        border: 1px solid $border-color;
+        height: 60px;
+        padding: 20px;
+        font-size: $fs-title;
+        color: $border-color;
+        border-radius: 0;
+        font-family: "RobotoLightItalic", "Helvetica", "sans-serif";
+        margin: 15px 0;
+      }
+
+      .control-label {
+        margin-top: 5px;
+        font-family: "RobotoLightItalic", "Helvetica", "sans-serif";
+      }
+
+      .webform-component.webform-component--files {
+        @extend %col-6;
+        margin-top: 5px;
+
+        .req-docs {
+
+          li{
+            display: inline-block;
+          }
+          a {
+            color: transparent;
+            width: 35px;
+            display: inline-block;
+
+            &:before {
+              content: "";
+              display: inline-block;
+              background: transparent url('../images/pngIcons/downloadDocument.png') no-repeat scroll center;
+              font-size: 24px;
+              height: 33px;
+              width: 24px;
+            }
+          }
+        }
+      }
+
+      .webform-component.webform-component-checkboxes{
+        @extend %col-6;
+      }
+
+      .webform-component--otkuda-prishel{
+        @extend %col-12;
+        .form-control{
+          margin-top: 0;
+        }
+      }
+
+      input[type='submit'], .webform-submit {
+        @extend .button, .button-transparent-blue;
+        //width: auto !important;
+        line-height: 1;
+        font-family: "RobotoBold", "Helvetica", "sans-serif";
+      }
+    }
+  }
 }

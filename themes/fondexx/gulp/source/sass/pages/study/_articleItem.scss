@@ -2,10 +2,11 @@
   @extend .whiteInnerPageWithImage;
 
   .node-study-article {
-    margin-top: 10px;
-
-    header {
-      margin: 0;
+    .submitted {
+      color: $hint-text;
+      font-size: $fs-sm;
+      display: inline-block;
+      margin: 10px 0 0;
     }
 
     h2 {
@@ -14,59 +15,38 @@
         font-family: "RobotoLight", 'Helvetica', sans-serif;
         font-weight: 400;
         font-size: $fs-title;
-        color: $white-pages-text;
-
-        &:hover, &:focus {
-          color: lighten($white-pages-text, 20%);
-        }
-      }
-    }
-
-    .field-name-body {
-      margin-top: 50px;
-
-      p {
-        font-family: "RobotoLight", 'Helvetica', sans-serif;
-        font-size: $fs-md;
-        margin: 20px 0;
+        margin: 10px 0;
         color: $white-pages-text;
       }
     }
 
-    span {
-      display: inline-block;
-      font-family: "RobotoBold", 'Helvetica', sans-serif;
+    p {
+      font-family: "RobotoLight", 'Helvetica', sans-serif;
       font-size: $fs-md;
       margin: 10px 0;
-      text-transform: uppercase;
       color: $white-pages-text;
     }
-  }
 
-  //TODO REMOVE OR STYLE THIS SPAN
-  .statistics_counter {
-    display: none;
-  }
+    ul.flippy {
+      text-align: left;
+      padding: 0;
+      margin-left: -10px;
+      display: block;
 
-  .submitted{
-    color: $hint-text;
-    font-size: $fs-sm;
-    display: inline-block;
-    margin: 10px 0;
-  }
+      li{
+        padding: 10px 10px 10px 0;
+      }
 
-  .region-content ul.flippy{
-    text-align: left;
-    padding: 0;
-
-    .prev, .next{
-      a{
-        display: inline-block;
-        font-family: "RobotoLight", 'Helvetica', sans-serif;
-        font-size: $fs-md;
-        margin: 10px 0;
-        text-transform: uppercase;
-        color: $white-pages-text;
+      .prev, .next{
+        a{
+          display: inline-block;
+          font-family: "RobotoLight", 'Helvetica', sans-serif;
+          font-size: $fs-sm;
+          margin: 10px 0;
+          padding: 10px 10px 10px 0;
+          text-transform: uppercase;
+          color: $white-pages-text;
+        }
       }
     }
   }
