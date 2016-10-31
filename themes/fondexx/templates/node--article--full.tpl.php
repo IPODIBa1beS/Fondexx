@@ -81,12 +81,19 @@
  */
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+<<<<<<< HEAD:themes/fondexx/templates/node--analytics.tpl.php
 
+
+=======
+full
+>>>>>>> origin/aturik/newtemplates-and-more:themes/fondexx/templates/node--article--full.tpl.php
   <?php print $user_picture; ?>
 
   <?php print render($title_prefix); ?>
   <?php if (!$page): ?>
-    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
+    <h2<?php print $title_attributes; ?>>
+      <a href="<?php print $node_url; ?>"><?php print $title; ?></a>
+    </h2>
   <?php endif; ?>
   <?php print render($title_suffix); ?>
 

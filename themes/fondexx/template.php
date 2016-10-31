@@ -56,7 +56,8 @@ function fondexx_preprocess_page(&$vars) {
   }
 }
 
-function fondexx_pager_link($variables) {
+function fondexx_pager_link($variables)
+{
     $text = $variables['text'];
     $page_new = $variables['page_new'];
     $element = $variables['element'];
@@ -89,8 +90,7 @@ function fondexx_pager_link($variables) {
         }
         if (isset($titles[$text])) {
             $attributes['title'] = $titles[$text];
-        }
-        elseif (is_numeric($text)) {
+        } elseif (is_numeric($text)) {
             $attributes['title'] = t('Go to page @number', array('@number' => $text));
         }
     }
@@ -102,4 +102,17 @@ function fondexx_pager_link($variables) {
     // @see http://drupal.org/node/1410574
     $attributes['href'] = url($_GET['q'], array('query' => $query));
     return '<a' . drupal_attributes($attributes) . '><span>' . check_plain($text) . '</span></a>';
+}
+
+function fondexx_preprocess_node(&$vars) {
+  if($vars['view_mode'] == 'teaser') {
+    $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->type . '__teaser';  // node--[type|nodeid]--teaser.tpl.php
+    $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->nid . '__teaser';
+  }
+
+    if($vars['view_mode'] == 'full') {
+        $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->type . '__full';  // node--[type|nodeid]--full.tpl.php
+        $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->nid . '__full';
+    }
+
 }
