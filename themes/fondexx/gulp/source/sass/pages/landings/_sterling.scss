@@ -30,10 +30,10 @@
         display: inline-block;
         font-size: $fs-md;
         background: transparent url('../images/pngIcons/sterling.png') no-repeat scroll 75% bottom;
-        background-size: 50% 50%;
+        background-size: 50%;
         width: 108px;
         height: 90px;
-        margin-right: 10px;
+        margin-right: 5px;
         vertical-align: bottom;
       }
     }
@@ -47,13 +47,14 @@
 
     .pane-2 {
       margin: 20px 0;
+      padding-left: 100px;
 
       &:before {
         content: '';
         display: inline-block;
         font-size: $fs-md;
         background: transparent url('../images/pngIcons/downloadIcon.png') no-repeat scroll 75% center;
-        background-size: 50% 50%;
+        background-size: 50%;
         width: 108px;
         height: 90px;
         margin-right: 10px;
@@ -80,6 +81,8 @@
     }
 
     .pane-3, .pane-5{
+      padding-left: 100px;
+
       .pane-title {
         color: $contacts-icon;
         font-family: "RobotoLight";
@@ -89,6 +92,13 @@
       }
     }
 
+    .pane-5{
+      padding-left: 0;
+
+      .pane-title{
+        padding-left: 100px;
+      }
+    }
 
     .advantages_list {
 
@@ -104,7 +114,8 @@
           width: 20px;
           height: 10px;
           margin: 5px 15px 0 0;
-          position: relative;
+          position: absolute;
+          left: 70px;
           line-height: 30px;
         }
 
@@ -117,8 +128,15 @@
       }
     }
 
-    .pane-4{
+    .pane-custom.pane-4{
       margin-top: 25px;
+      padding-left: 100px;
+
+      .pane-content{
+        .text{
+          padding-left: 0;
+        }
+      }
     }
 
     .pane-custom {
@@ -127,11 +145,10 @@
         display: block;
 
         .img-wrapper {
-          margin: 20px;
           width: 100%;
           min-height: 525px;
           background: url('../images/sterling_macbook.png') no-repeat, scroll, left top;
-          background-size: cover;
+          background-size: 100%;
         }
 
         p {
@@ -152,6 +169,7 @@
           font-family: "RobotoMedium";
           color: $secondary-text;
           margin-bottom: 20px;
+          padding-left: 100px;
 
           &-bold {
             font-family: "RobotoBold";
@@ -184,6 +202,7 @@
 
             td {
               &:nth-child(1) {
+                padding-left: 100px;
                 p{
                   font-family: "RobotoLight";
                 }

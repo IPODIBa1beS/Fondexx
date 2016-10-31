@@ -28,15 +28,16 @@
         display: inline-block;
         font-size: $fs-md;
         background: transparent url('../images/pngIcons/tradeUp.png') no-repeat scroll 75% bottom;
-        background-size: 50% 50%;
-        width: 108px;
+        background-size: 50%;
+        width: 101px;
         height: 90px;
-        margin-right: 10px;
+        margin-right: 5px;
         vertical-align: bottom;
       }
     }
 
     .pane-1 > .pane-content {
+      padding-left: 95px;
       margin-top: 25px;
       p {
         font-weight: 700;
@@ -59,6 +60,8 @@
     }
 
     .pane-2, .pane-3, .pane-4, .pane-5, .pane-6, .pane-7, .pane-8, .pane-9 {
+      padding-left: 95px;
+
       &:before{
         content: '';
         display: inline-block;
@@ -67,7 +70,8 @@
         width: 20px;
         height: 10px;
         margin: 5px 15px 0 0;
-        position: relative;
+        position: absolute;
+        left: 60px;
         line-height: 30px;
       }
 
@@ -121,6 +125,7 @@
           font-weight: 700;
           letter-spacing: 1px;
           word-spacing: 1.5px;
+          padding-left: 95px;
 
           &-bold {
             font-family: "RobotoBold";
@@ -150,11 +155,10 @@
         }
 
         .img-wrapper {
-          margin: 20px;
           width: 100%;
           min-height: 525px;
           background: url('../images/tradeup_macbook.png') no-repeat, scroll, left top;
-          background-size: cover;
+          background-size: 100%;
         }
       }
     }
