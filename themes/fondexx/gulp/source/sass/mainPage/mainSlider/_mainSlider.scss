@@ -25,6 +25,18 @@
             color: $primary-color;
             font-family: "RobotoBold";
             font-weight: 700;
+
+            p:before{
+              content: '';
+              display: inline-block;
+              background: transparent url('../images/pngIcons/listItemStyleIcon.png') no-repeat scroll center;
+              background-size: cover;
+              width: 20px;
+              height: 10px;
+              margin: 5px 15px 0 0;
+              position: relative;
+              line-height: 30px;
+            }
           }
         }
 
