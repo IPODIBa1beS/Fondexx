@@ -39,9 +39,20 @@ function fondexx_form_alter(&$form, &$form_state, $form_id) {
             $form['actions']['submit']['#value'] = t('Register');
         }
     }
+
+    if ($form['#id'] == 'webform-client-form-180') {
+        $form['submitted']['otkuda_prishel']['#default_value'] = drupal_get_title();
+        if (request_path() == 'analytics/traderhub') {
+            $form['#submit'][] = '_traderhub_submit_handler';
+        }
+    }
 }
 
 function _fondexx_market_leaders_form_block() {
     $output = "<h2>Market leaders goes here! (soon)</h2>- TODO -";
     return $output;
+}
+
+function _traderhub_submit_handler(&$form, &$form_state) {
+    $form_state['redirect'] = '/analytics/traderhub/thankyou3';
 }
