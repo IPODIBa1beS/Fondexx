@@ -176,4 +176,4 @@ gulp.task('watch', function() {
     gulp.watch(dirs.source.img, ['images', 'pngIcons']);
 });
 
-gulp.task('default', [/*'iconfont', */'fonts', /*'assembleJs',*/ 'images','compileSass', 'watch', 'pngIcons']);
+gulp.task('default', ['iconfont', 'fonts', /*'assembleJs',*/ 'images','compileSass', 'watch', 'pngIcons']);

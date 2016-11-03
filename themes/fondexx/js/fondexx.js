@@ -112,6 +112,7 @@
 
             });
         }
+
         /////////////////////////////////////
         /////////////////////////////////////
         /////////////////////////////////////
@@ -134,6 +135,18 @@
 
             $('.close-overlay').on('click', function(e){
                 $('.navbar-collapse').removeClass('in');
+            });
+
+            $('#login').on('click', function(){
+                $('#register_block').addClass('overlay');
+            });
+
+            $('#register').on('click', function(){
+                $('#register_block').addClass('overlay');
+            });
+
+            $('.close-overlay-popup').on('click', function(e){
+                $('#register_block').removeClass('overlay');
             });
 
             var body = $("body");

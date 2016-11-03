@@ -107,8 +107,10 @@
         }
 
         a {
-          display: inline-block;
+          display: block;
           font-weight: 700;
+          width: auto;
+          line-height: 2.5;
           text-decoration: underline;
           color: $border-color;
           font-family: "RobotoBold", 'Helvetica', 'sans-serif';

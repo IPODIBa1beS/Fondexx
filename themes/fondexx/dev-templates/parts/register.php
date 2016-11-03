@@ -2,6 +2,7 @@
     <!-- Tab panes -->
     <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="register">
+            <i class="ion-ios-close-empty close-overlay-popup"></i>
             <h2>Открыть счет</h2>
             <?php
                 $register_block = module_invoke('webform', 'block_view', 'client-block-177');
@@ -9,6 +10,7 @@
             ?>
         </div>
         <div role="tabpanel" class="tab-pane" id="login">
+            <i class="ion-ios-close-empty close-overlay-popup"></i>
             <h2>Вход</h2>
             <form>
                 <div class="form-group">

@@ -55,7 +55,7 @@
 
   &_contacts {
     @extend %col-3;
-    max-width: 300px;
+    max-width: 360px;
     padding: 10px;
 
     &-wrapper {
@@ -83,7 +83,7 @@
     }
 
     &-list {
-      @extend %col-5;
+      @extend %col-6;
 
       li {
         display: block;

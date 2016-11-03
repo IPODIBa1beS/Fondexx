@@ -105,8 +105,8 @@
             <?php print render($primary_nav); ?>
         <?php endif; ?>
         <div class="login-btn-wrapper">
-            <a href="#register" aria-controls="register" role="tab" data-toggle="tab" class="button button-dark-blue button-login">Открыть счет</a>
-            <a href="#login" aria-controls="login" role="tab" data-toggle="tab" class="button button-dark-blue button-login">Вход</a>
+            <a href="#register" id="register" aria-controls="register" role="tab" data-toggle="tab" class="button button-dark-blue button-login">Открыть счет</a>
+            <a href="#login" id="login" aria-controls="login" role="tab" data-toggle="tab" class="button button-dark-blue button-login">Вход</a>
         </div>
     </div>
     <div class="header_content">
@@ -120,11 +120,11 @@
         </div>
         <div class="header_contacts">
             <div class="header_contacts-wrapper">
-            <a href="#" class="button btn">faq</a>
+            <a href="/study/faq" class="button btn">faq</a>
             </div>
             <ul class="header_contacts-list">
-                <li><a href="#" class="header_contacts-link phone">(044)-222-22-22</a></li>
-                <li><a href="#" class="header_contacts-link phone">(044)-222-22-22</a></li>
+                <li><a href="#" class="header_contacts-link phone">+38 (044)-200-55-21</a></li>
+                <li><a href="#" class="header_contacts-link phone">+38 (044)-200-55-21</a></li>
                 <li><a href="#" class="header_contacts-link skype">fondexx</a></li>
             </ul>
         </div>
@@ -152,6 +152,7 @@
             <!-- Tab panes -->
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane active" id="register">
+                    <i class="ion-ios-close-empty close-overlay-popup"></i>
                     <h2>Открыть счет</h2>
                     <?php
                         $register_block = module_invoke('webform', 'block_view', 'client-block-177');
@@ -159,6 +160,7 @@
                     ?>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="login">
+                    <i class="ion-ios-close-empty close-overlay-popup"></i>
                     <h2>Вход</h2>
                     <form>
                         <div class="form-group">
@@ -256,7 +258,7 @@
     ?>
 
     <ul class="social-icons">
-          <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+          <li><a href="#"><i class="icon icon-vk"></i></a></li>
         <li><a href="#"><i class="ion-social-facebook"></i></a></li>
 <!--        <li><a href="#"><i class="ion-social-googleplus"></i></a></li>-->
     </ul>

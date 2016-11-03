@@ -1,0 +1,129 @@
+.navbar {
+
+  .header-popup{
+    display: none;
+    opacity: 0;
+  }
+
+  .header-popup.overlay{
+    display: block !important;
+    height: 100vh !important;
+    position: fixed;
+    z-index: 250;
+    top: 0;
+    width: 100%;
+    border-color: transparent;
+    background-color: $overlay-menu;
+    transition: all 0.4s;
+    opacity: 1;
+
+    .close-overlay-popup {
+      position: absolute;
+      top: 125px;
+      left: 5%;
+      cursor: pointer;
+
+      @media screen and (max-height: 800px) {
+        top: 65px;
+        left: 5%;
+      }
+
+      &:hover, &:focus {
+        animation: spin .6s ease 0s 1;
+      }
+
+      &:before {
+        color: $white-pages-text;
+        font-size: 35px;
+      }
+    }
+
+    .tab-pane{
+      padding: 65px 100px;
+      overflow: hidden;
+      background: #f1f2f7;
+
+      h2{
+        color: $primary-color;
+      }
+
+      form {
+        @extend %col-6;
+        padding: 150px;
+
+        .webform-component{
+          overflow: hidden;
+          @extend %col-12;
+        }
+
+        .form-required {
+          display: none;
+        }
+
+        .form-control {
+          @extend %col-12;
+          background: $demo-input-bg;
+          border: 1px solid $border-color;
+          height: 60px;
+          padding: 20px;
+          font-size: $fs-title;
+          color: $border-color;
+          border-radius: 0;
+          font-family: "RobotoLightItalic", "Helvetica", "sans-serif";
+          margin: 15px 0;
+        }
+
+        .control-label {
+          margin-top: 5px;
+          font-family: "RobotoLightItalic", "Helvetica", "sans-serif";
+          color: $white-pages-text;
+        }
+
+        .webform-component.webform-component--files {
+          @extend %col-6;
+          margin-top: 5px;
+
+          .req-docs {
+
+            li{
+              display: inline-block;
+            }
+            a {
+              color: transparent;
+              width: 35px;
+              display: inline-block;
+
+              &:before {
+                content: "";
+                display: inline-block;
+                background: transparent url('../images/pngIcons/downloadDocument.png') no-repeat scroll center;
+                font-size: 24px;
+                height: 33px;
+                width: 24px;
+              }
+            }
+          }
+        }
+
+        .webform-component.webform-component-checkboxes{
+          @extend %col-6;
+        }
+
+        .webform-component--otkuda-prishel{
+          @extend %col-12;
+          display: none;
+
+          .form-control{
+            margin-top: 0;
+          }
+        }
+
+        input[type='submit'], .webform-submit {
+          @extend .button, .button-transparent-blue;
+          line-height: 1;
+          font-family: "RobotoBold", "Helvetica", "sans-serif";
+        }
+      }
+    }
+  }
+}
