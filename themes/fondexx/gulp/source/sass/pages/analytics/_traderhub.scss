@@ -96,7 +96,7 @@
 
   #panels-ipe-paneid-3, .pane-3 {
     min-height: 200px;
-    background: url('../images/analytics_webinar.jpg') no-repeat, scroll, left top;
+    background: url('../images/base_course_header.png') no-repeat, scroll, left top;
     background-size: cover;
     padding: 25px 80px;
     text-align: center;
@@ -130,23 +130,49 @@
           color: white;
           line-height: 40px;
 
+          img{
+            width: 40px;
+            height: 40px;
+          }
+
+          svg{
+            width: 32px;
+            height: 32px;
+            margin-top: 6px;
+
+            .arrow{
+              fill:#fff;
+            }
+
+            .arrow-bg{
+              fill: transparent;
+            }
+
+            .arrow-border{
+              fill:#fff;
+            }
+          }
+
           &:hover, &:focus {
             color: $dark-text;
             background: white;
+
+            svg{
+              .arrow, .arrow-border{
+                fill: $white-pages-text;
+              }
+
+            }
           }
         }
       }
     }
   }
 
-  .pane-webform-client-block-177 {
+  .pane-webform-client-block-180 {
     min-height: 200px;
     padding: 20px 80px;
     text-align: center;
-
-    .pane-title {
-      display: none;
-    }
 
     .pane-title {
       display: none;
@@ -256,6 +282,7 @@
         color: #f8f8f8;
         letter-spacing: 1.5px;
         margin: 15px 0 15px 0;
+        font-size: $fs-md;
         font-weight: 500;
       }
     }

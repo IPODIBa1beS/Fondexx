@@ -115,10 +115,10 @@
     }
 
     .demo_img-wrapper {
-      margin: 50px 0 0;
+      margin: -25px 0 0;
       width: 100%;
-      min-height: 550px;
-      background: url('../images/demo_trading.png') no-repeat, scroll, left top;
+      height: 600px;
+      background: url('../images/demo_trading.jpg') no-repeat, scroll, left top;
       background-size: cover;
     }
 
@@ -245,8 +245,13 @@
         font-family: "RobotoLightItalic", "Helvetica", "sans-serif";
       }
 
+      .webform-component--ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami{
+        @extend %col-8;
+      }
+
+
       .webform-component.webform-component--files {
-        @extend %col-6;
+        @extend %col-reverse-4;
         margin-top: 5px;
 
         .req-docs {
@@ -271,10 +276,6 @@
         }
       }
 
-      .webform-component.webform-component-checkboxes{
-        @extend %col-6;
-      }
-
       .webform-component--otkuda-prishel{
         @extend %col-12;
         display: none;
@@ -282,6 +283,10 @@
         .form-control{
           margin-top: 0;
         }
+      }
+
+      .form-actions{
+        @extend %col-12;
       }
 
       input[type='submit'], .webform-submit {

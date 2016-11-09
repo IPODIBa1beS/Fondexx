@@ -78,6 +78,7 @@
             /*
              * Replace all SVG images with inline SVG
              */
+
             jQuery('img.svg').each(function(){
                 var $img = jQuery(this);
                 var imgID = $img.attr('id');
@@ -137,11 +138,25 @@
                 $('.navbar-collapse').removeClass('in');
             });
 
-            $('#login').on('click', function(){
+            $('#login').on('click', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                $('#register_block').addClass('overlay');
+            });
+
+            $('.show-signup').on('click', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
                 $('#register_block').addClass('overlay');
             });
 
             $('#register').on('click', function(){
+                $('#register_block').addClass('overlay');
+            });
+
+            $("#open_demo_account, #open_real_account").on('click', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
                 $('#register_block').addClass('overlay');
             });
 
@@ -173,6 +188,21 @@
                     $(this).toggleClass('is-open');
                 });
             }
+
+            $(function () {
+                $.scrollIt({
+                    upKey: 38,             // key code to navigate to the next section
+                    downKey: 40,           // key code to navigate to the previous section
+                    easing: 'easeInBounce',      // the easing function for animation
+                    scrollTime: 1000,       // how long (in ms) the animation takes
+                    activeClass: 'active', // class given to the active nav element
+                    onPageChange: null,    // function(pageIndex) that is called when page is changed
+                    topOffset: -60           // offste (in px) for fixed top navigation
+                });
+            });
+
+
+            $('#webform-client-form-177').attr('data-scroll-index', '1');
         });
     });
 }(jQuery));

@@ -1,6 +1,11 @@
 .page-node-107 {
   @extend .whiteInnerPageWithHeader;
 
+  ul{
+    list-style-position: outside;
+    list-style-type: disc;
+  }
+
   h3 {
 
     text-transform: uppercase;
@@ -68,6 +73,23 @@
       border-radius: 0;
       font-family: "RobotoLightItalic", "Helvetica", "sans-serif";
       margin: 15px 0;
+
+      //&.form-file{
+      //  @extend %col-2;
+      //}
+    }
+
+    .form-required{
+      display: none;
+    }
+
+    .webform-component--otklik-na-vakansiyu{
+      @extend %col-12;
+      display: none;
+
+      .form-control{
+        margin-top: 0;
+      }
     }
 
     input[type='submit'], .webform-submit{

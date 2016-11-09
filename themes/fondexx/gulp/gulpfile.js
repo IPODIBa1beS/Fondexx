@@ -18,8 +18,8 @@ var gulp = require('gulp'),
     fs = require('fs'),
     //gutil = require( 'gulp-util' ),
     //ftp = require( 'vinyl-ftp'),
-    iconfont = require("gulp-iconfont"),
-    iconfontCss = require('gulp-iconfont-css'),
+    //iconfont = require("gulp-iconfont"),
+    //iconfontCss = require('gulp-iconfont-css'),
     dirs = {
         'source': {
             'vendorJs': './source/js/vendor/',
@@ -176,4 +176,4 @@ gulp.task('watch', function() {
     gulp.watch(dirs.source.img, ['images', 'pngIcons']);
 });
 
-gulp.task('default', ['iconfont', 'fonts', /*'assembleJs',*/ 'images','compileSass', 'watch', 'pngIcons']);
+gulp.task('default', [/*'iconfont', */'fonts', /*'assembleJs',*/ 'images','compileSass', 'watch', 'pngIcons']);

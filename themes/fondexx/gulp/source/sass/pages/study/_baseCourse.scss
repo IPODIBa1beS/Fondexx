@@ -148,7 +148,7 @@
     }
 
     form{
-      text-align: center;
+      text-align: left;
 
       .pane-title{
         display: none;
@@ -157,12 +157,12 @@
       .webform-component{
         display: inline-block;
         width: 23%;
+        margin: 20px 1.5% 20px 0;
 
         .form-required {
           display: none;
         }
 
-        margin: 20px 1.5% 20px 0;
 
         &:last-child{
           margin-right: 0;
@@ -214,10 +214,23 @@
         }
       }
 
-      .webform-component.webform-component-checkboxes{
-        @extend %col-8;
+      .webform-component.webform-component--ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami{
+        @extend %col-12;
         margin: 5px 0 !important;
-        text-align: center;
+        text-align: left;
+      }
+
+      .webform-component.webform-component--files{
+        @extend %col-4;
+        margin: 5px 0 !important;
+
+        text-align: left;
+
+        a{
+          &:before{
+            margin-left: 0;
+          }
+        }
       }
 
       .webform-component--otkuda-prishel{
@@ -229,6 +242,7 @@
         position: relative;
         display: block;
         width: 100%;
+        text-align: center;
       }
 
       input[type='submit'], .webform-submit{

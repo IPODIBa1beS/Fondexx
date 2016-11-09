@@ -1,0 +1,124 @@
+.page-node-181, .page-node-182, .page-node-183, .page-node-184{
+  @extend .whiteInnerPage;
+
+  #myid{
+    display: none;
+  }
+
+  .main-container{
+    background: transparent url('../images/thankyou_bg.jpg');
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-attachment: scroll;
+    background-size: cover;
+    height: 100vh;
+
+    &>.row{
+      padding: 10vh 0 0 0;
+      position: relative;
+      overflow: hidden;
+
+      &:before{
+        display: none;
+      }
+
+      .page-header{
+        display: none;
+      }
+
+      p{
+        display: inline-block;
+      }
+
+      div:nth-child(1) > p:nth-child(1), .thankyou-text{
+        display: inline-block;
+        background: transparent url('../images/thankyou_text.png');
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-attachment: scroll;
+        background-size: cover;
+        height: 100px;
+        width: 650px;
+        vertical-align: middle;
+      }
+
+      div:nth-child(1)> p:nth-child(2),.arrow{
+        display: inline-block;
+        background: transparent url('../images/arrow_icon.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: scroll;
+        background-size: cover;
+        height: 12px;
+        width: 200px;
+        vertical-align: middle;
+        margin: 0 20px;
+      }
+
+      .main-btn{
+        display: inline-block;
+        min-width: 150px;
+        min-height: 30px;
+        cursor: pointer;
+        transition: all .4s ease;
+        color: #60687f;
+        border: 2px solid #60687f;
+        font-size: 16px;
+        text-align: center;
+        background-color: transparent;
+        font-weight: 700;
+        line-height: 2;
+        border-radius: 42px;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+
+      .main-btn:hover, .main-btn:focus{
+        background-color: #60687f;
+        color: white;
+      }
+
+
+      div:nth-child(2), .main-success{
+        padding: 25px 0 0 60px;
+      }
+
+     .main-success::before{
+        content: '';
+        display: inline-block;
+        background: transparent url('../images/check_icon.png') no-repeat scroll center;
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        margin: 5px 15px 0 0;
+        position: absolute;
+        left: 60px;
+        line-height: 30px;
+      }
+
+      h1{
+        margin: 0;
+      }
+
+      p{
+        margin: 5px 0;
+      }
+    }
+  }
+
+  .text{
+    color: #2b2c30;
+    margin: 10px 0;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    font-family: "RobotoBold", "opensans", "sans-serif";
+  }
+
+  .text.title-text{
+    font-family: "RobotoBold", "opensans", "sans-serif";
+  }
+
+  .text.regular-text{
+    font-family: "RobotoRegular", "opensans", "sans-serif";
+  }
+}

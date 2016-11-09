@@ -186,7 +186,7 @@ module.exports = function(grunt) {
 
             ftppush: {
                 files: [
-                    "js/**",
+                    "js/**/*.js",
                     "css/**",
                     "fonts/**",
                     "images/**",

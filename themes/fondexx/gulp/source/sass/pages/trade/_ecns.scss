@@ -13,4 +13,8 @@
       }
     }
   }
+
+  table{
+    @extend .table-striped-custom;
+  }
 }

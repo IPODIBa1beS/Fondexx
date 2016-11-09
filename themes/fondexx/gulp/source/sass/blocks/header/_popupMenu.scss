@@ -7,7 +7,7 @@
 
   .header-popup.overlay{
     display: block !important;
-    height: 100vh !important;
+    min-height: 100vh !important;
     position: fixed;
     z-index: 250;
     top: 0;
@@ -19,12 +19,12 @@
 
     .close-overlay-popup {
       position: absolute;
-      top: 125px;
+      top: 100px;
       left: 5%;
       cursor: pointer;
 
       @media screen and (max-height: 800px) {
-        top: 65px;
+        top: 75px;
         left: 5%;
       }
 
@@ -39,21 +39,34 @@
     }
 
     .tab-pane{
-      padding: 65px 100px;
+      padding: 150px 100px 25px;
       overflow: hidden;
       background: #f1f2f7;
 
-      h2{
-        color: $primary-color;
+
+      @media screen and (max-height: 800px) {
+        padding: 75px 100px 25px;
       }
 
+      h2{
+        color: $primary-color;
+        font-family: "RobotoBold", "Helvetica", "sans-serif";
+        padding-bottom: 40px;
+
+
+        @media screen and (max-height: 800px) {
+          padding-bottom: 20px;
+        }
+      }
+
+
       form {
-        @extend %col-6;
-        padding: 150px;
+        @extend %col-12;
+        color: #fff;
 
         .webform-component{
           overflow: hidden;
-          @extend %col-12;
+          @extend %col-8;
         }
 
         .form-required {
@@ -61,7 +74,7 @@
         }
 
         .form-control {
-          @extend %col-12;
+          @extend %col-8;
           background: $demo-input-bg;
           border: 1px solid $border-color;
           height: 60px;
@@ -71,6 +84,10 @@
           border-radius: 0;
           font-family: "RobotoLightItalic", "Helvetica", "sans-serif";
           margin: 15px 0;
+
+          @media screen and (max-height: 800px) {
+            margin: 5px 0;
+          }
         }
 
         .control-label {
@@ -82,6 +99,10 @@
         .webform-component.webform-component--files {
           @extend %col-6;
           margin-top: 5px;
+
+          @media screen and (max-height: 800px) {
+            margin-bottom: 5px;
+          }
 
           .req-docs {
 
@@ -110,7 +131,7 @@
         }
 
         .webform-component--otkuda-prishel{
-          @extend %col-12;
+          @extend %col-8;
           display: none;
 
           .form-control{
@@ -118,6 +139,9 @@
           }
         }
 
+        .form-actions{
+          @extend %col-8;
+        }
         input[type='submit'], .webform-submit {
           @extend .button, .button-transparent-blue;
           line-height: 1;
