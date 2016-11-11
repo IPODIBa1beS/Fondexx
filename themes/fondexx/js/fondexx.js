@@ -86,6 +86,42 @@
             replaceTablePlusMinus2icons();
             showHeaderDropdownItems();
 
+            /////////////////////////
+            ///4 CRM code
+            var config1 = {
+                fields: {
+                    "Name": ".pane-webform-client-block-177 #edit-submitted-imya", // Имя посетителя, заполнившего форму
+                    "UsrSurname": ".pane-webform-client-block-177 #edit-submitted-familiya",
+                    "Email": ".pane-webform-client-block-177 #edit-submitted-e-mail", // Email посетителя
+                    "MobilePhone": ".pane-webform-client-block-177 #edit-submitted-telefon", // Телефон посетителя
+                },
+                landingId: "62ff6948-1e98-4bdd-b84c-6666c121bf94",
+                serviceUrl: "https://fondexx.bpmonline.com/0/ServiceModel/GeneratedWebFormService.svc/SaveWebFormLeadData",
+                redirectUrl: "http://pc.fondexx.com/"
+            };
+
+            var config2 = {
+                fields: {
+                    "Name": "#register_block #edit-submitted-imya", // Имя посетителя, заполнившего форму
+                    "UsrSurname": "#register_block #edit-submitted-familiya",
+                    "Email": "#register_block #edit-submitted-e-mail", // Email посетителя
+                    "MobilePhone": "#register_block #edit-submitted-telefon", // Телефон посетителя
+                },
+                landingId: "62ff6948-1e98-4bdd-b84c-6666c121bf94",
+                serviceUrl: "https://fondexx.bpmonline.com/0/ServiceModel/GeneratedWebFormService.svc/SaveWebFormLeadData",
+                redirectUrl: "http://pc.fondexx.com/"
+            };
+
+            $( ".pane-webform-client-block-177 #webform-client-form-177 .form-submit" ).click(function(event) {
+                landing.createLeadFromLanding(config1);
+            });
+
+            $( "#register_block #webform-client-form-177 .form-submit" ).click(function(event) {
+                landing.createLeadFromLanding(config2);
+            });
+            ///////////////////
+            ///END 4 crm code block
+
             $(".dropdown-toggle").on('click', function (e) {
                 e.stopImmediatePropagation();
 
