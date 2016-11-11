@@ -31,7 +31,7 @@ function fondexx_block_view($delta = '') {
 function fondexx_form_alter(&$form, &$form_state, $form_id) {
     if ($form['#id'] == 'webform-client-form-177') {
         $form['submitted']['otkuda_prishel']['#default_value'] = drupal_get_title();
-        if (request_path() == 'study/start') {
+        if (request_path() == 'study/initial_point') {
             $form['actions']['submit']['#value']  = t('Undergo free');
         } else if (request_path() == 'trade/demo') {
             $form['actions']['submit']['#value']  = t('Create demo account');
