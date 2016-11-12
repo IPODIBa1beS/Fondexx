@@ -39,6 +39,10 @@
 
   .region-sidebar-second {
 
+    @include max-screen($mdpi){
+      display: none;
+    }
+
     .block-block {
       .contextual-links-wrapper{
         position: relative;

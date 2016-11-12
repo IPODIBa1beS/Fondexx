@@ -21,12 +21,16 @@
     border-bottom: 2px solid $divider;
 
     .toggle-btn-wrapper {
-      @extend %col-1;
+      @extend %col-1, %col-md-4, %col-sm-4;
       text-align: center;
       height: 100%;
       display: inline-block;
       padding: 10px;
       border-right: 2px solid $divider;
+
+      @include max-screen($max-tablet){
+        border-right: 0 none;
+      }
 
       .navbar-toggle {
         display: block;
@@ -37,7 +41,7 @@
     }
 
     .logo {
-      @extend %col-2;
+      @extend %col-2, %col-md-4, %col-sm-4;
       overflow: hidden;
       height: 70px;
       display: inline-block;
@@ -54,8 +58,12 @@
 
     .login-btn-wrapper {
       padding: 15px;
-      @extend %col-4;
+      @extend %col-4, %col-md-12, %col-sm-12;
       min-width: 150px;
+
+      @include max-screen($max-mobile){
+          text-align: center;
+      }
 
       .button-login {
         float: right;
@@ -74,6 +82,11 @@
 
       a{
         margin-right: 10px;
+
+        @include max-screen($max-mobile){
+          min-width: 135px;
+          float: none;
+        }
       }
     }
 
@@ -83,6 +96,10 @@
       margin: 0 !important;
       vertical-align: baseline;
       padding: 15px;
+
+      @include max-screen($max-mobile){
+        display: none;
+      }
 
       li {
         display: inline-block;

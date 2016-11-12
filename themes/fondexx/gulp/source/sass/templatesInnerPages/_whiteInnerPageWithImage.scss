@@ -43,6 +43,11 @@
   }
 
   .region-sidebar-second {
+
+    @include max-screen($mdpi){
+      display: none;
+    }
+
     .contextual-links-wrapper{
       position: relative;
     }

@@ -8,33 +8,33 @@ body {
   color: $default-text;
 }
 
-*{
+* {
   transition: all 0.3s;
 }
 
-p, h1, h2, span{
+p, h1, h2, span {
   letter-spacing: 1.25px;
   word-spacing: 2px;
 }
 
-p{
+p {
   line-height: 1.5;
 }
 
-.page-home{
-  &-header{
+.page-home {
+  &-header {
     display: none;
   }
 
-  .alert{
+  .alert {
     display: none;
   }
 }
 
-.progress-disabled{
+.progress-disabled {
   float: left !important;
 
-  &:before, &:after{
+  &:before, &:after {
     content: '';
     background: transparent none !important;
   }
@@ -48,23 +48,30 @@ form {
   }
 }
 
-.row{
+.row {
   margin: 0;
 
-  .col-sm-12{
+  .col-sm-12 {
     padding: 0;
   }
 }
+
 //temp styles.Delete when needed
 
-.pane-fondexx-fondexx-market-leaders{
+.pane-fondexx-fondexx-market-leaders {
   display: none;
 }
 
-div.text-summary-wrapper.text-summary-wrapper-processed{
-  display: block !important;
+.page-node-add-analytics {
 
-  label{
-    display: block !important;
+  .node-analytics-form.field-name-body.field-widget-text-textarea-with-summary > .body-add-more-wrapper > .text-format-wrapper {
+
+    div.text-summary-wrapper.text-summary-wrapper-processed {
+      display: block !important;
+
+      label {
+        display: block !important;
+      }
+    }
   }
 }

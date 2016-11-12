@@ -15,6 +15,10 @@
     border-right: 2px solid $divider;
     min-height: 80px;
 
+    @include max-screen($max-mobile){
+      display: none;
+    }
+
     &-list, .menu.nav {
       display: block;
       vertical-align: baseline;
@@ -54,13 +58,17 @@
   }
 
   &_contacts {
-    @extend %col-3;
+    @extend %col-3, %col-md-12, %col-sm-12;
     max-width: 360px;
     padding: 10px;
 
     &-wrapper {
       @extend %col-5;
       text-align: center;
+
+      @include max-screen($max-tablet){
+        display: none;
+      }
     }
 
     .button {
@@ -83,7 +91,11 @@
     }
 
     &-list {
-      @extend %col-6;
+      @extend %col-6, %col-md-12, %col-sm-12;
+
+      @include max-screen($max-tablet){
+        text-align: center;
+      }
 
       li {
         display: block;

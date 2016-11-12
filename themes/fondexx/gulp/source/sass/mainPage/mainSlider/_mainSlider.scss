@@ -4,6 +4,11 @@
    }
 
   .pane-views-slider-block-1 {
+
+    @include max-screen($max-mobile){
+      display: none;
+    }
+
     .carousel-inner {
 
       .item {

@@ -5,6 +5,10 @@
     padding: 0 80px;
     overflow: hidden;
 
+    @include max-screen($max-mobile){
+      padding: 20px 0 0 40px;
+    }
+
     &:before {
       content: '';
       display: inline-block;
@@ -13,6 +17,10 @@
       border-bottom: 2px solid $border-color;
       margin-top: $fs-md /2 +2;
       left: 0;
+
+      @include max-screen($max-mobile){
+        width: 20px;
+      }
     }
 
     h2 {
@@ -26,36 +34,47 @@
 
   .panels-flexible-row-7-1 {
     padding: 20px 80px;
+
+    @include max-screen($max-mobile){
+      padding: 20px;
+    }
+
     .nav-tabs {
       border-bottom: 0 none;
 
       li {
+        @include max-screen($max-mobile){
+          @extend %col-md-4, %col-sm-4;
+        }
+
         a:before {
           color: $icon-color;
-          font-size: 30px;
+          font-size: 45px;
+          display: block;
+
+          @include max-screen($max-mobile){
+            font-size: 40px;
+          }
         }
 
         &:nth-of-type(1) {
           a:before {
             @extend .icon, .icon-start;
-            display: block;
-            font-size: 45px;
+
           }
         }
 
         &:nth-of-type(2) {
           a:before {
             @extend .icon, .icon-standard;
-            display: block;
-            font-size: 45px;
+
           }
         }
 
         &:nth-of-type(3) {
           a:before {
             @extend .icon, .icon-premium;
-            display: block;
-            font-size: 45px;
+
           }
         }
       }
@@ -74,6 +93,10 @@
         color: $divider;
         padding: 10px;
 
+        @include max-screen($max-mobile){
+          padding: 10px 0;
+        }
+
         &:hover, &:focus {
           background: transparent;
           color: $border-color;
@@ -85,6 +108,10 @@
           color: $divider;
           font-family: "RobotBold", "RobotoMedium", "sans-serif";
           text-transform: uppercase;
+
+          @include max-screen($max-mobile){
+            font-size: $fs-sm;
+          }
         }
       }
 
@@ -147,6 +174,10 @@
 
       p > svg{
         width: 150px;
+
+        @include max-screen($max-mobile){
+          display: none;
+        }
         
         path, g {
           fill: white;
@@ -160,6 +191,12 @@
         letter-spacing: 1.5px;
         word-spacing: 1.75px;
         color: $contacts-icon;
+      }
+
+      p>img{
+        @include max-screen($max-mobile){
+          display: none;
+        }
       }
     }
   }

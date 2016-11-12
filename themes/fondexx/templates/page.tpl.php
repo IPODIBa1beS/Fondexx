@@ -115,8 +115,8 @@
             <a href="/study/faq" class="button btn">faq</a>
             </div>
             <ul class="header_contacts-list">
-                <li><a href="#" class="header_contacts-link phone">+38 (044)-200-55-21</a></li>
-                <li><a href="#" class="header_contacts-link phone">+38 (044)-200-55-21</a></li>
+                <li><a href="/company/contacts" class="header_contacts-link phone">+38 (044)-200-55-21</a></li>
+                <li><a href="/company/contacts" class="header_contacts-link phone">+38 (044)-200-55-21</a></li>
                 <li><a href="#" class="header_contacts-link skype">live:fondexx_1</a></li>
             </ul>
         </div>

@@ -3,6 +3,10 @@ footer.footer {
   margin-top: 0;
   overflow: hidden;
 
+  @include max-screen($max-tablet){
+    padding: 20px;
+  }
+
   .logo {
     @extend %col-2;
     overflow: hidden;
