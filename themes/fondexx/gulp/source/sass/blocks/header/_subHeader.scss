@@ -58,7 +58,7 @@
   }
 
   &_contacts {
-    @extend %col-3, %col-md-12, %col-sm-12;
+    @extend %col-3, %col-md-4;
     max-width: 360px;
     padding: 10px;
 

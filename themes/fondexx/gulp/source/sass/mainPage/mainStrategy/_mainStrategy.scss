@@ -2,7 +2,7 @@
   .pane-4{
     padding: 20px 40px 20px 80px;
 
-    @include max-screen($max-mobile){
+    @include max-screen($max-tablet){
       padding: 20px;
     }
   }
@@ -10,7 +10,7 @@
   .pane-5{
     padding: 20px 60px;
 
-    @include max-screen($max-mobile){
+    @include max-screen($max-tablet){
       padding: 20px;
     }
   }
@@ -18,7 +18,7 @@
   .pane-6{
     padding: 20px 80px 20px 40px;
 
-    @include max-screen($max-mobile){
+    @include max-screen($max-tablet){
       padding: 20px;
     }
   }

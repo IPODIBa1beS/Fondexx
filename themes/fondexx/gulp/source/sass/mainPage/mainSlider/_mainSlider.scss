@@ -5,7 +5,7 @@
 
   .pane-views-slider-block-1 {
 
-    @include max-screen($max-mobile){
+    @include max-screen($max-tablet){
       display: none;
     }
 

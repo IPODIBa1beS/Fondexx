@@ -23,7 +23,7 @@
       margin-top: $fs-md /2 +2;
       left: 0;
 
-      @include max-screen($max-tablet){
+      @include max-screen($max-mobile){
         width: 20px;
       }
     }
@@ -80,9 +80,14 @@
 
   @include max-screen($max-mobile){
     padding: 0 20px 20px 40px;
+  }
+
+  @include max-screen($max-tablet){
+    padding: 0 20px 20px 80px;
     overflow: hidden;
     float: none;
   }
+
 
   .views-row{
     @extend %col-6;

@@ -69,7 +69,7 @@
       height: 60px;
       padding: 20px;
       font-size: $fs-title;
-      color: $border-color;
+      color: darken($border-color, 20%);
       border-radius: 0;
       font-family: "RobotoLightItalic", "Helvetica", "sans-serif";
       margin: 15px 0;

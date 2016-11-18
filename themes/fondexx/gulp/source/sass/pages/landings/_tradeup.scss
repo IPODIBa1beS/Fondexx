@@ -55,11 +55,58 @@
       }
     }
 
-    .pane-2:before {
-      display: none !important;
+    .pane-2 {
+      padding-left: 95px;
+      margin: 20px 0;
+
+      &:before {
+        content: '';
+        display: inline-block;
+        font-size: $fs-md;
+        background: transparent url('../images/pngIcons/downloadIcon.png') no-repeat scroll 75% center;
+        background-size: 50%;
+        width: 108px;
+        height: 90px;
+        margin-right: 10px;
+        vertical-align: middle;
+        margin-left: -118px;
+        margin-top: -90px;
+        transform: rotate(270deg);
+      }
+
+      .pane-content {
+        display: inline-block !important;
+        vertical-align: middle;
+
+        a {
+          color: $contacts-icon;
+        }
+
+        h2 {
+          color: $contacts-icon;
+          font-family: "RobotoLight";
+          font-size: $fs-lg;
+          text-transform: uppercase;
+          margin: 40px 0;
+        }
+
+        p {
+          margin: 0;
+          line-height: 1.5;
+
+          &:first-child {
+            font-family: "RobotoBold";
+            font-size: $fs-title;
+          }
+
+          font-family: "RobotoLight";
+          font-size: $fs-md;
+          vertical-align: middle;
+        }
+      }
     }
 
-    .pane-2, .pane-3, .pane-4, .pane-5, .pane-6, .pane-7, .pane-8, .pane-9 {
+    .pane-3, .pane-4, .pane-5, .pane-6, .pane-7, .pane-8, .pane-9 {
       padding-left: 95px;
       margin-bottom: 20px;
 

@@ -8,7 +8,7 @@ footer.footer {
   }
 
   .logo {
-    @extend %col-2;
+    @extend %col-2, %col-md-12, %col-sm-12;
     overflow: hidden;
     height: 70px;
     display: inline-block;
@@ -21,13 +21,20 @@ footer.footer {
       display: none;
     }
 
+    @include max-screen($max-tablet){
+      height: 90px;
+    }
+
+    @include max-screen($max-mobile){
+      display: none;
+    }
     //svg{
     //  margin-top: -90px;
     //}
   }
 
   .nav {
-    @extend %col-8;
+    @extend %col-8, %col-md-8, %col-sm-12;
     display: inline-block;
     margin: 0 !important;
     padding: 10px;
@@ -63,7 +70,7 @@ footer.footer {
   }
 
   .social-icons {
-    @extend %col-2;
+    @extend %col-2, %col-md-4, %col-sm-12;
     text-align: right;
 
     li {

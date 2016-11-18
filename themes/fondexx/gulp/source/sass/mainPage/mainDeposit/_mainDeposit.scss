@@ -194,7 +194,7 @@
       }
 
       p>img{
-        @include max-screen($max-mobile){
+        @include max-screen($max-tablet){
           display: none;
         }
       }
