@@ -130,12 +130,13 @@
 
             /////////////////////////
             ///4 CRM code
+
             var config1 = {
                 fields: {
-                    "Name": ".pane-webform-client-block-177 #edit-submitted-imya", // Имя посетителя, заполнившего форму
-                    "UsrSurname": ".pane-webform-client-block-177 #edit-submitted-familiya",
-                    "Email": ".pane-webform-client-block-177 #edit-submitted-e-mail", // Email посетителя
-                    "MobilePhone": ".pane-webform-client-block-177 #edit-submitted-telefon", // Телефон посетителя
+                    "Name": ".page-trade-demo .pane-webform-client-block-177 #edit-submitted-imya", // Имя посетителя, заполнившего форму
+                    "UsrSurname": ".page-trade-demo .pane-webform-client-block-177 #edit-submitted-familiya",
+                    "Email": ".page-trade-demo .pane-webform-client-block-177 #edit-submitted-e-mail", // Email посетителя
+                    "MobilePhone": ".page-trade-demo .pane-webform-client-block-177 #edit-submitted-telefon", // Телефон посетителя
                 },
                 landingId: "62ff6948-1e98-4bdd-b84c-6666c121bf94",
                 serviceUrl: "https://fondexx.bpmonline.com/0/ServiceModel/GeneratedWebFormService.svc/SaveWebFormLeadData",
@@ -154,13 +155,84 @@
                 redirectUrl: "http://pc.fondexx.com/"
             };
 
-            $( ".pane-webform-client-block-177 #webform-client-form-177 .form-submit" ).click(function(event) {
+            var config3 = {
+                fields: {
+                    "Name": ".page-study-initial-point #block-system-main #edit-submitted-imya", // Имя посетителя, заполнившего форму
+                    "UsrSurname": ".page-study-initial-point #block-system-main #edit-submitted-familiya", // Email посетителя
+                    "Email": ".page-study-initial-point #block-system-main #edit-submitted-e-mail", // Почтовый индекс посетителя
+                    "MobilePhone": ".page-study-initial-point #block-system-main #edit-submitted-telefon", // Телефон посетителя
+                },
+                landingId: "8e05cb22-cbd3-4b0e-b5bb-8145640a2704",
+                serviceUrl: "https://fondexx.bpmonline.com/0/ServiceModel/GeneratedWebFormService.svc/SaveWebFormLeadData",
+                redirectUrl: "http://pc.fondexx.com/ "
+            };
+
+            var config4 = {
+                fields: {
+                    "Name": ".page-study-pro #block-system-main #edit-submitted-imya", // Имя посетителя, заполнившего форму
+                    "UsrSurname": ".page-study-pro #block-system-main #edit-submitted-familiya", // Email посетителя
+                    "Email": ".page-study-pro #block-system-main #edit-submitted-e-mail", // Почтовый индекс посетителя
+                    "MobilePhone": ".page-study-pro #block-system-main #edit-submitted-telefon", // Телефон посетителя
+                },
+                landingId: "37b0f213-6187-4fa0-98ca-7d34407c6526",
+                serviceUrl: "https://fondexx.bpmonline.com/0/ServiceModel/GeneratedWebFormService.svc/SaveWebFormLeadData",
+                redirectUrl: "http://fondexx.com/study/pro/thankyou1 "
+            };
+
+            var config5 = {
+                fields: {
+                    "Name": ".page-analytics-traderhub #block-system-main #edit-submitted-imya", // Имя посетителя, заполнившего форму
+                    "UsrSurname": ".page-analytics-traderhub #block-system-main #edit-submitted-familiya", // Email посетителя
+                    "Email": ".page-analytics-traderhub #block-system-main #edit-submitted-e-mail", // Почтовый индекс посетителя
+                    "MobilePhone": ".page-analytics-traderhub #block-system-main #edit-submitted-telefon", // Телефон посетителя
+                },
+                landingId: "e61f656d-66c9-4eca-be60-c529946d80c7",
+                serviceUrl: "https://fondexx.bpmonline.com/0/ServiceModel/GeneratedWebFormService.svc/SaveWebFormLeadData",
+                redirectUrl: " http://fondexx.com/analytics/traderhub/thankyou3 "
+            };
+
+            var config6 = {
+                fields: {
+                    "Name": ".page-node-107 #block-system-main #edit-submitted-fio", // Имя посетителя, заполнившего форму
+                    "UsrSurname": ".page-node-107 #block-system-main #edit-submitted-fio", // Email посетителя
+                    "Email": ".page-node-107 #block-system-main #edit-submitted-email", // Почтовый индекс посетителя
+                    "MobilePhone": ".page-node-107 #block-system-main #edit-submitted-phone", // Телефон посетителя
+                },
+                landingId: "8b14fd9d-0466-44cc-992d-ea5a64ecd432",
+                serviceUrl: "https://fondexx.bpmonline.com/0/ServiceModel/GeneratedWebFormService.svc/SaveWebFormLeadData",
+                redirectUrl: "http://fondexx.com/company/job/thankyou4"
+            };
+
+            ///Page trade-demo
+            $( ".page-trade-demo .pane-webform-client-block-177 #webform-client-form-177 .form-submit" ).click(function(event) {
                 landing.createLeadFromLanding(config1);
             });
 
+            //block from header
             $( "#register_block #webform-client-form-177 .form-submit" ).click(function(event) {
                 landing.createLeadFromLanding(config2);
             });
+
+            //nyse init point
+            $( ".page-study-initial-point #block-system-main .form-submit" ).click(function(event) {
+                landing.createLeadFromLanding(config3);
+            });
+
+            //study pro
+            $( ".page-study-pro #block-system-main .form-submit" ).click(function(event) {
+                landing.createLeadFromLanding(config4);
+            });
+
+            //idea trade hub
+            $( ".page-analytics-traderhub #block-system-main .form-submit" ).click(function(event) {
+                landing.createLeadFromLanding(config5);
+            });
+
+            //vacancy
+            $( ".page-node-107 #block-system-main .form-submit" ).click(function(event) {
+                landing.createLeadFromLanding(config6);
+            });
+
             ///////////////////
             ///END 4 crm code block
 
