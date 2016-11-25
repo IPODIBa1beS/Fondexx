@@ -205,32 +205,74 @@
 
             ///Page trade-demo
             $( ".page-trade-demo .pane-webform-client-block-177 #webform-client-form-177 .form-submit" ).click(function(event) {
-                landing.createLeadFromLanding(config1);
+               if (
+                   $('.page-trade-demo .pane-webform-client-block-177 #edit-submitted-imya').val().length > 3 &&
+                   $('.page-trade-demo .pane-webform-client-block-177 #edit-submitted-familiya').val().length > 3 &&
+                   $(' .page-trade-demo .pane-webform-client-block-177 #edit-submitted-e-mail').val().length > 3 &&
+                   $('.page-trade-demo .pane-webform-client-block-177 #edit-submitted-telefon').val().length > 3
+               ) {
+                   landing.createLeadFromLanding(config1);
+               }
+
             });
 
             //block from header
             $( "#register_block #webform-client-form-177 .form-submit" ).click(function(event) {
-                landing.createLeadFromLanding(config2);
+                if (
+                    $('#register_block #edit-submitted-imya').val().length > 3 &&
+                    $('#register_block #edit-submitted-familiya').val().length > 3 &&
+                    $('#register_block #edit-submitted-e-mail').val().length > 3 &&
+                    $('#register_block #edit-submitted-telefon').val().length > 3
+                ) {
+                    landing.createLeadFromLanding(config2);
+                }
             });
 
             //nyse init point
             $( ".page-study-initial-point #block-system-main .form-submit" ).click(function(event) {
-                landing.createLeadFromLanding(config3);
+                if (
+                    $('.page-study-initial-point #block-system-main #edit-submitted-imya').val().length > 3 &&
+                    $('.page-study-initial-point #block-system-main #edit-submitted-familiya').val().length > 3 &&
+                    $('.page-study-initial-point #block-system-main #edit-submitted-e-mail').val().length > 3 &&
+                    $('.page-study-initial-point #block-system-main #edit-submitted-telefon').val().length > 3
+                ) {
+                    landing.createLeadFromLanding(config3);
+                }
             });
 
             //study pro
             $( ".page-study-pro #block-system-main .form-submit" ).click(function(event) {
-                landing.createLeadFromLanding(config4);
+                if (
+                    $('.page-study-pro #block-system-main #edit-submitted-imya').val().length > 3 &&
+                    $('.page-study-pro #block-system-main #edit-submitted-familiya').val().length > 3 &&
+                    $(' .page-study-pro #block-system-main #edit-submitted-e-mail').val().length > 3 &&
+                    $('.page-study-pro #block-system-main #edit-submitted-telefon').val().length > 3
+                ) {
+                    landing.createLeadFromLanding(config4);
+                }
             });
 
             //idea trade hub
             $( ".page-analytics-traderhub #block-system-main .form-submit" ).click(function(event) {
-                landing.createLeadFromLanding(config5);
+                if (
+                    $('.page-analytics-traderhub #block-system-main #edit-submitted-imya').val().length > 3 &&
+                    $('.page-analytics-traderhub #block-system-main #edit-submitted-familiya').val().length > 3 &&
+                    $(' .page-analytics-traderhub #block-system-main #edit-submitted-e-mail').val().length > 3 &&
+                    $('.page-analytics-traderhub #block-system-main #edit-submitted-telefon').val().length > 3
+                ) {
+                    landing.createLeadFromLanding(config5);
+                }
             });
 
             //vacancy
             $( ".page-node-107 #block-system-main .form-submit" ).click(function(event) {
-                landing.createLeadFromLanding(config6);
+                if (
+                    $('.page-node-107 #block-system-main #edit-submitted-fio').val().length > 3 &&
+                    $('.page-node-107 #block-system-main #edit-submitted-email').val().length > 3 &&
+                    $('.page-node-107 #block-system-main #edit-submitted-phone').val().length > 3
+                ) {
+                    landing.createLeadFromLanding(config6);
+                }
             });
 
             ///////////////////
