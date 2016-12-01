@@ -209,7 +209,8 @@
                    $('.page-trade-demo .pane-webform-client-block-177 #edit-submitted-imya').val().length > 3 &&
                    $('.page-trade-demo .pane-webform-client-block-177 #edit-submitted-familiya').val().length > 3 &&
                    $(' .page-trade-demo .pane-webform-client-block-177 #edit-submitted-e-mail').val().length > 3 &&
-                   $('.page-trade-demo .pane-webform-client-block-177 #edit-submitted-telefon').val().length > 3
+                   $('.page-trade-demo .pane-webform-client-block-177 #edit-submitted-telefon').val().length > 3 &&
+                   $('.page-trade-demo .pane-webform-client-block-177 #edit-submitted-ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami-1').prop('checked')
                ) {
                    landing.createLeadFromLanding(config1);
                }
@@ -222,9 +223,11 @@
                     $('#register_block #edit-submitted-imya').val().length > 3 &&
                     $('#register_block #edit-submitted-familiya').val().length > 3 &&
                     $('#register_block #edit-submitted-e-mail').val().length > 3 &&
-                    $('#register_block #edit-submitted-telefon').val().length > 3
+                    $('#register_block #edit-submitted-telefon').val().length > 3 &&
+                    $('#register_block #edit-submitted-ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami-1').prop('checked')
                 ) {
                     landing.createLeadFromLanding(config2);
+
                 }
             });
 
@@ -234,7 +237,9 @@
                     $('.page-study-initial-point #block-system-main #edit-submitted-imya').val().length > 3 &&
                     $('.page-study-initial-point #block-system-main #edit-submitted-familiya').val().length > 3 &&
                     $('.page-study-initial-point #block-system-main #edit-submitted-e-mail').val().length > 3 &&
-                    $('.page-study-initial-point #block-system-main #edit-submitted-telefon').val().length > 3
+                    $('.page-study-initial-point #block-system-main #edit-submitted-telefon').val().length > 3 &&
+                    $('.page-study-initial-point #block-system-main #edit-submitted-ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami-1').prop('checked')
+
                 ) {
                     landing.createLeadFromLanding(config3);
                 }
@@ -246,7 +251,8 @@
                     $('.page-study-pro #block-system-main #edit-submitted-imya').val().length > 3 &&
                     $('.page-study-pro #block-system-main #edit-submitted-familiya').val().length > 3 &&
                     $(' .page-study-pro #block-system-main #edit-submitted-e-mail').val().length > 3 &&
-                    $('.page-study-pro #block-system-main #edit-submitted-telefon').val().length > 3
+                    $('.page-study-pro #block-system-main #edit-submitted-telefon').val().length > 3 &&
+                    $('.page-study-pro #block-system-main #edit-submitted-ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami-1').prop('checked')
                 ) {
                     landing.createLeadFromLanding(config4);
                 }
@@ -258,7 +264,8 @@
                     $('.page-analytics-traderhub #block-system-main #edit-submitted-imya').val().length > 3 &&
                     $('.page-analytics-traderhub #block-system-main #edit-submitted-familiya').val().length > 3 &&
                     $(' .page-analytics-traderhub #block-system-main #edit-submitted-e-mail').val().length > 3 &&
-                    $('.page-analytics-traderhub #block-system-main #edit-submitted-telefon').val().length > 3
+                    $('.page-analytics-traderhub #block-system-main #edit-submitted-telefon').val().length > 3 &&
+                    $('.page-analytics-traderhub #block-system-main #edit-submitted-ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami-1').prop('checked')
                 ) {
                     landing.createLeadFromLanding(config5);
                 }
