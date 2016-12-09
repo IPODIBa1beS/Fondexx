@@ -114,6 +114,32 @@
             });
         }
 
+        function validateEmail(email) {
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        }
+
+        function validateTel(tel) {
+            var re = /^((8|0|((\+|00)\d{1,2}))[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
+            return re.test(tel);
+        }
+
+        function disableSubmit (selector) {
+            $(selector).prop('disabled', true);
+            $(selector).css({
+                "opacity": "0.2",
+                "cursor": "default"
+            });
+        }
+
+        function enableSubmit (selector) {
+            $(selector).prop('disabled', false);
+            $(selector).css({
+                "opacity": "1",
+                "cursor": "pointer"
+            });
+        }
+
         /////////////////////////////////////
         /////////////////////////////////////
         /////////////////////////////////////
@@ -127,6 +153,13 @@
             replaceTablePlusMinus2icons();
             showHeaderDropdownItems();
             imgToSVG();
+
+            disableSubmit(".page-trade-demo .pane-webform-client-block-177 #webform-client-form-177 .form-submit");
+            disableSubmit("#register_block #webform-client-form-177 .form-submit");
+            disableSubmit(".page-study-initial-point #block-system-main .form-submit");
+            disableSubmit(".page-study-pro #block-system-main .form-submit");
+            disableSubmit(".page-analytics-traderhub #block-system-main .form-submit");
+            disableSubmit(".page-node-107 #block-system-main .form-submit");
 
             /////////////////////////
             ///4 CRM code
@@ -205,80 +238,115 @@
 
             ///Page trade-demo
             $( ".page-trade-demo .pane-webform-client-block-177 #webform-client-form-177 .form-submit" ).click(function(event) {
-               if (
-                   $('.page-trade-demo .pane-webform-client-block-177 #edit-submitted-imya').val().length > 3 &&
-                   $('.page-trade-demo .pane-webform-client-block-177 #edit-submitted-familiya').val().length > 3 &&
-                   $(' .page-trade-demo .pane-webform-client-block-177 #edit-submitted-e-mail').val().length > 3 &&
-                   $('.page-trade-demo .pane-webform-client-block-177 #edit-submitted-telefon').val().length > 3 &&
-                   $('.page-trade-demo .pane-webform-client-block-177 #edit-submitted-ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami-1').prop('checked')
-               ) {
-                   landing.createLeadFromLanding(config1);
-               }
-
+                landing.createLeadFromLanding(config1);
             });
 
-            //block from header
-            $( "#register_block #webform-client-form-177 .form-submit" ).click(function(event) {
+            $( ".page-trade-demo .pane-webform-client-block-177 #webform-client-form-177 input").on("change paste keyup", function() {
                 if (
-                    $('#register_block #edit-submitted-imya').val().length > 3 &&
-                    $('#register_block #edit-submitted-familiya').val().length > 3 &&
-                    $('#register_block #edit-submitted-e-mail').val().length > 3 &&
-                    $('#register_block #edit-submitted-telefon').val().length > 3 &&
-                    $('#register_block #edit-submitted-ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami-1').prop('checked')
+                    $('.page-trade-demo .pane-webform-client-block-177 #edit-submitted-imya').val().length > 3 &&
+                    $('.page-trade-demo .pane-webform-client-block-177 #edit-submitted-familiya').val().length > 3 &&
+                    $(' .page-trade-demo .pane-webform-client-block-177 #edit-submitted-e-mail').val().length > 3 && validateEmail($(' .page-trade-demo .pane-webform-client-block-177 #edit-submitted-e-mail').val()) &&
+                    $('.page-trade-demo .pane-webform-client-block-177 #edit-submitted-telefon').val().length > 3 && validateTel($('.page-trade-demo .pane-webform-client-block-177 #edit-submitted-telefon').val()) &&
+                    $('.page-trade-demo .pane-webform-client-block-177 #edit-submitted-ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami-1').prop('checked')
                 ) {
-                    landing.createLeadFromLanding(config2);
-
+                    enableSubmit(".page-trade-demo .pane-webform-client-block-177 #webform-client-form-177 .form-submit");
+                } else {
+                    disableSubmit(".page-trade-demo .pane-webform-client-block-177 #webform-client-form-177 .form-submit");
                 }
             });
 
+
+            //block from header
+            $( "#register_block #webform-client-form-177 .form-submit" ).click(function(event) {
+                landing.createLeadFromLanding(config2);
+            });
+
+            $( "#register_block #webform-client-form-177 input").on("change paste keyup", function() {
+                if (
+                    $('#register_block #edit-submitted-imya').val().length > 3 &&
+                    $('#register_block #edit-submitted-familiya').val().length > 3 &&
+                    $('#register_block #edit-submitted-e-mail').val().length > 3 && validateEmail($('#register_block #edit-submitted-e-mail').val()) &&
+                    $('#register_block #edit-submitted-telefon').val().length > 3 && validateTel($('#register_block #edit-submitted-telefon').val()) &&
+                    $('#register_block #edit-submitted-ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami-1').prop('checked')
+                ) {
+                    enableSubmit("#register_block #webform-client-form-177 .form-submit");
+                } else {
+                    disableSubmit("#register_block #webform-client-form-177 .form-submit");
+                }
+            });
+
+
             //nyse init point
             $( ".page-study-initial-point #block-system-main .form-submit" ).click(function(event) {
+                landing.createLeadFromLanding(config3);
+            });
+
+            $( ".page-study-initial-point #block-system-main .webform-client-form-177 input").on("change paste keyup", function() {
                 if (
                     $('.page-study-initial-point #block-system-main #edit-submitted-imya').val().length > 3 &&
                     $('.page-study-initial-point #block-system-main #edit-submitted-familiya').val().length > 3 &&
-                    $('.page-study-initial-point #block-system-main #edit-submitted-e-mail').val().length > 3 &&
-                    $('.page-study-initial-point #block-system-main #edit-submitted-telefon').val().length > 3 &&
+                    $('.page-study-initial-point #block-system-main #edit-submitted-e-mail').val().length > 3 && validateEmail($('.page-study-initial-point #block-system-main #edit-submitted-e-mail').val()) &&
+                    $('.page-study-initial-point #block-system-main #edit-submitted-telefon').val().length > 3 && validateTel($('.page-study-initial-point #block-system-main #edit-submitted-telefon').val()) &&
                     $('.page-study-initial-point #block-system-main #edit-submitted-ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami-1').prop('checked')
-
                 ) {
-                    landing.createLeadFromLanding(config3);
+                    enableSubmit(".page-study-initial-point #block-system-main .form-submit");
+                } else {
+                    disableSubmit(".page-study-initial-point #block-system-main .form-submit");
                 }
             });
 
             //study pro
             $( ".page-study-pro #block-system-main .form-submit" ).click(function(event) {
+                landing.createLeadFromLanding(config4);
+            });
+
+            $( ".page-study-pro #block-system-main .webform-client-form-180 input").on("change paste keyup", function() {
                 if (
                     $('.page-study-pro #block-system-main #edit-submitted-imya').val().length > 3 &&
                     $('.page-study-pro #block-system-main #edit-submitted-familiya').val().length > 3 &&
-                    $(' .page-study-pro #block-system-main #edit-submitted-e-mail').val().length > 3 &&
-                    $('.page-study-pro #block-system-main #edit-submitted-telefon').val().length > 3 &&
+                    $(' .page-study-pro #block-system-main #edit-submitted-e-mail').val().length > 3 && validateEmail($(' .page-study-pro #block-system-main #edit-submitted-e-mail').val()) &&
+                    $('.page-study-pro #block-system-main #edit-submitted-telefon').val().length > 3 && validateTel($('.page-study-pro #block-system-main #edit-submitted-telefon').val()) &&
                     $('.page-study-pro #block-system-main #edit-submitted-ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami-1').prop('checked')
                 ) {
-                    landing.createLeadFromLanding(config4);
+                    enableSubmit(".page-study-pro #block-system-main .form-submit");
+                } else {
+                    disableSubmit(".page-study-pro #block-system-main .form-submit");
                 }
             });
 
             //idea trade hub
             $( ".page-analytics-traderhub #block-system-main .form-submit" ).click(function(event) {
+                landing.createLeadFromLanding(config5);
+            });
+
+            $( ".page-analytics-traderhub #block-system-main .webform-client-form-180 input").on("change paste keyup", function() {
                 if (
                     $('.page-analytics-traderhub #block-system-main #edit-submitted-imya').val().length > 3 &&
                     $('.page-analytics-traderhub #block-system-main #edit-submitted-familiya').val().length > 3 &&
-                    $(' .page-analytics-traderhub #block-system-main #edit-submitted-e-mail').val().length > 3 &&
-                    $('.page-analytics-traderhub #block-system-main #edit-submitted-telefon').val().length > 3 &&
+                    $(' .page-analytics-traderhub #block-system-main #edit-submitted-e-mail').val().length > 3 && validateEmail($(' .page-analytics-traderhub #block-system-main #edit-submitted-e-mail').val()) &&
+                    $('.page-analytics-traderhub #block-system-main #edit-submitted-telefon').val().length > 3 && validateTel($('.page-analytics-traderhub #block-system-main #edit-submitted-telefon').val()) &&
                     $('.page-analytics-traderhub #block-system-main #edit-submitted-ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami-1').prop('checked')
                 ) {
-                    landing.createLeadFromLanding(config5);
+                    enableSubmit(".page-analytics-traderhub #block-system-main .form-submit");
+                } else {
+                    disableSubmit(".page-analytics-traderhub #block-system-main .form-submit");
                 }
             });
 
             //vacancy
             $( ".page-node-107 #block-system-main .form-submit" ).click(function(event) {
+                landing.createLeadFromLanding(config6);
+            });
+
+            $( ".page-node-107 #block-system-main .webform-client-form-107 input").on("change paste keyup", function() {
                 if (
                     $('.page-node-107 #block-system-main #edit-submitted-fio').val().length > 3 &&
-                    $('.page-node-107 #block-system-main #edit-submitted-email').val().length > 3 &&
-                    $('.page-node-107 #block-system-main #edit-submitted-phone').val().length > 3
+                    $('.page-node-107 #block-system-main #edit-submitted-email').val().length > 3 && validateEmail($('.page-node-107 #block-system-main #edit-submitted-email').val()) &&
+                    $('.page-node-107 #block-system-main #edit-submitted-phone').val().length > 3 && validateTel($('.page-node-107 #block-system-main #edit-submitted-phone').val())
                 ) {
-                    landing.createLeadFromLanding(config6);
+                    enableSubmit(".page-node-107 #block-system-main .form-submit");
+                } else {
+                    disableSubmit(".page-node-107 #block-system-main .form-submit");
                 }
             });
 
