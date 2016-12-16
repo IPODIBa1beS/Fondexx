@@ -426,7 +426,6 @@
                 });
             });
 
-
             $('#webform-client-form-177').attr('data-scroll-index', '1');
         });
     });
