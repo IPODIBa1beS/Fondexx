@@ -47,6 +47,8 @@
     height: auto;
     line-height: 2;
     font-size: $fs-md !important;
+    opacity: 1 !important;
+    cursor: default;
   }
 
   .node-webform {
@@ -66,8 +68,8 @@
       @extend %col-12;
       background: $demo-input-bg;
       border: 1px solid $border-color;
-      height: 60px;
-      padding: 20px;
+      min-height: 60px;
+      padding: 10px;
       font-size: $fs-title;
       color: darken($border-color, 20%);
       border-radius: 0;

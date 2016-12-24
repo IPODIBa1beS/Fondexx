@@ -114,16 +114,54 @@
             });
         }
 
-        function validateEmail(email) {
+        function validateEmail(emailId) {
+            var emailValue = $(emailId).val();
             var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            return re.test(email);
+            if(emailValue.length !== 0 && re.test(emailValue)) {
+                $(emailId).css('border', '1px solid #bdc2d4');
+                return true;
+            } else {
+                $(emailId).css('border', '1px solid red');
+                return false;
+            }
         }
 
-        function validateTel(tel) {
+        function validateTel(telId) {
+            var telValue = $(telId).val().trim();
             var re = /^((8|0|((\+|00)\d{1,2}))[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
-            return re.test(tel);
+            if(re.test(telValue) ){
+                $(telId).css('border', '1px solid #bdc2d4');
+                return true;
+            } else {
+                $(telId).css('border', '1px solid red');
+                return false;
+            }
+
         }
 
+        function validateNotEmpty(id){
+            var value = $(id).val();
+            if( value.length !== 0){
+                $(id).css('border', '1px solid #bdc2d4');
+                return true;
+            } else {
+                $(id).css('border', '1px solid red');
+                return false
+            }
+        }
+
+        function validateCheckbox(checkboxId, labelId){
+            var checked = $(checkboxId).is(':checked');
+            console.log('checked '+checked);
+            if(checked){
+                $(labelId).css('border', '0 none');
+
+                return true;
+            } else {
+                $(labelId).css('border', '1px solid red');
+                return false;
+            }
+        }
         function disableSubmit (selector) {
             $(selector).prop('disabled', true);
             $(selector).css({
@@ -154,12 +192,14 @@
             showHeaderDropdownItems();
             imgToSVG();
 
-            disableSubmit(".page-trade-demo .pane-webform-client-block-177 #webform-client-form-177 .form-submit");
-            disableSubmit("#register_block #webform-client-form-177 .form-submit");
-            disableSubmit(".page-study-initial-point #block-system-main .form-submit");
-            disableSubmit(".page-study-pro #block-system-main .form-submit");
-            disableSubmit(".page-analytics-traderhub #block-system-main .form-submit");
-            disableSubmit(".page-node-107 #block-system-main .form-submit");
+            //
+            //disableSubmit(".page-trade-demo .pane-webform-client-block-177 #webform-client-form-177 .form-submit");
+            //disableSubmit("#register_block #webform-client-form-177 .form-submit");
+            //disableSubmit(".page-study-initial-point #block-system-main .form-submit");
+            //disableSubmit(".page-study-pro #block-system-main .form-submit");
+            //disableSubmit(".page-analytics-traderhub #block-system-main .form-submit");
+            //disableSubmit(".page-node-107 #block-system-main .form-submit");
+
 
             /////////////////////////
             ///4 CRM code
@@ -237,116 +277,77 @@
             };
 
             ///Page trade-demo
-            $( ".page-trade-demo .pane-webform-client-block-177 #webform-client-form-177 .form-submit" ).click(function(event) {
-                landing.createLeadFromLanding(config1);
-            });
+            $( ".page-trade-demo .pane-webform-client-block-177 #webform-client-form-177 .form-submit").on("click", function() {
+                var name = validateNotEmpty('.page-trade-demo .pane-webform-client-block-177 #edit-submitted-imya');
+                var lastName = validateNotEmpty('.page-trade-demo .pane-webform-client-block-177 #edit-submitted-familiya')
+                var email = validateEmail(' .page-trade-demo .pane-webform-client-block-177 #edit-submitted-e-mail');
+                var tel = validateTel('.page-trade-demo .pane-webform-client-block-177 #edit-submitted-telefon');
+                var checkbox = validateCheckbox('.page-trade-demo .pane-webform-client-block-177 #edit-submitted-ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami-1', '.page-trade-demo .pane-webform-client-block-177 .webform-component--ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami')
 
-            $( ".page-trade-demo .pane-webform-client-block-177 #webform-client-form-177 input").on("change paste keyup", function() {
-                if (
-                    $('.page-trade-demo .pane-webform-client-block-177 #edit-submitted-imya').val().length > 3 &&
-                    $('.page-trade-demo .pane-webform-client-block-177 #edit-submitted-familiya').val().length > 3 &&
-                    $(' .page-trade-demo .pane-webform-client-block-177 #edit-submitted-e-mail').val().length > 3 && validateEmail($(' .page-trade-demo .pane-webform-client-block-177 #edit-submitted-e-mail').val()) &&
-                    $('.page-trade-demo .pane-webform-client-block-177 #edit-submitted-telefon').val().length > 3 && validateTel($('.page-trade-demo .pane-webform-client-block-177 #edit-submitted-telefon').val()) &&
-                    $('.page-trade-demo .pane-webform-client-block-177 #edit-submitted-ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami-1').prop('checked')
-                ) {
-                    enableSubmit(".page-trade-demo .pane-webform-client-block-177 #webform-client-form-177 .form-submit");
-                } else {
-                    disableSubmit(".page-trade-demo .pane-webform-client-block-177 #webform-client-form-177 .form-submit");
+                if (name && lastName && email && tel && checkbox) {
+                  landing.createLeadFromLanding(config1);
                 }
             });
 
 
-            //block from header
-            $( "#register_block #webform-client-form-177 .form-submit" ).click(function(event) {
-                landing.createLeadFromLanding(config2);
-            });
-
-            $( "#register_block #webform-client-form-177 input").on("change paste keyup", function() {
-                if (
-                    $('#register_block #edit-submitted-imya').val().length > 3 &&
-                    $('#register_block #edit-submitted-familiya').val().length > 3 &&
-                    $('#register_block #edit-submitted-e-mail').val().length > 3 && validateEmail($('#register_block #edit-submitted-e-mail').val()) &&
-                    $('#register_block #edit-submitted-telefon').val().length > 3 && validateTel($('#register_block #edit-submitted-telefon').val()) &&
-                    $('#register_block #edit-submitted-ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami-1').prop('checked')
-                ) {
-                    enableSubmit("#register_block #webform-client-form-177 .form-submit");
-                } else {
-                    disableSubmit("#register_block #webform-client-form-177 .form-submit");
+            $( "#register_block #webform-client-form-177 .form-submit").on("click", function() {
+                var name = validateNotEmpty('#register_block #edit-submitted-imya');
+                var lastName = validateNotEmpty('#register_block #edit-submitted-familiya');
+                var email = validateEmail('#register_block #edit-submitted-e-mail');
+                var tel = validateTel('#register_block #edit-submitted-telefon');
+                var checkbox =   validateCheckbox('#register_block #edit-submitted-ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami-1','#register_block .webform-component--ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami');
+                if ( name && lastName && email && tel && checkbox) {
+                 landing.createLeadFromLanding(config2);
                 }
             });
 
 
             //nyse init point
-            $( ".page-study-initial-point #block-system-main .form-submit" ).click(function(event) {
-                landing.createLeadFromLanding(config3);
-            });
-
-            $( ".page-study-initial-point #block-system-main .webform-client-form-177 input").on("change paste keyup", function() {
-                if (
-                    $('.page-study-initial-point #block-system-main #edit-submitted-imya').val().length > 3 &&
-                    $('.page-study-initial-point #block-system-main #edit-submitted-familiya').val().length > 3 &&
-                    $('.page-study-initial-point #block-system-main #edit-submitted-e-mail').val().length > 3 && validateEmail($('.page-study-initial-point #block-system-main #edit-submitted-e-mail').val()) &&
-                    $('.page-study-initial-point #block-system-main #edit-submitted-telefon').val().length > 3 && validateTel($('.page-study-initial-point #block-system-main #edit-submitted-telefon').val()) &&
-                    $('.page-study-initial-point #block-system-main #edit-submitted-ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami-1').prop('checked')
-                ) {
-                    enableSubmit(".page-study-initial-point #block-system-main .form-submit");
-                } else {
-                    disableSubmit(".page-study-initial-point #block-system-main .form-submit");
+            $( ".page-study-initial-point #block-system-main .form-submit").on("click", function() {
+                var name = validateNotEmpty('.page-study-initial-point #block-system-main #edit-submitted-imya');
+                var lastName = validateNotEmpty('.page-study-initial-point #block-system-main #edit-submitted-familiya');
+                var email = validateEmail('.page-study-initial-point #block-system-main #edit-submitted-e-mail');
+                var tel = validateTel('.page-study-initial-point #block-system-main #edit-submitted-telefon');
+                var checkbox =   validateCheckbox('.page-study-initial-point #block-system-main #edit-submitted-ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami-1','.page-study-initial-point #block-system-main .webform-component--ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami');
+                if ( name && lastName && email && tel && checkbox) {
+                 landing.createLeadFromLanding(config3);
                 }
             });
 
-            //study pro
-            $( ".page-study-pro #block-system-main .form-submit" ).click(function(event) {
-                landing.createLeadFromLanding(config4);
-            });
-
+            //study-pro
             $( ".page-study-pro #block-system-main .webform-client-form-180 input").on("change paste keyup", function() {
+
                 if (
-                    $('.page-study-pro #block-system-main #edit-submitted-imya').val().length > 3 &&
-                    $('.page-study-pro #block-system-main #edit-submitted-familiya').val().length > 3 &&
-                    $(' .page-study-pro #block-system-main #edit-submitted-e-mail').val().length > 3 && validateEmail($(' .page-study-pro #block-system-main #edit-submitted-e-mail').val()) &&
-                    $('.page-study-pro #block-system-main #edit-submitted-telefon').val().length > 3 && validateTel($('.page-study-pro #block-system-main #edit-submitted-telefon').val()) &&
-                    $('.page-study-pro #block-system-main #edit-submitted-ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami-1').prop('checked')
+                    validateNotEmpty('.page-study-pro #block-system-main #edit-submitted-imya') &&
+                    validateNotEmpty('.page-study-pro #block-system-main #edit-submitted-familiya') &&
+                    validateEmail('.page-study-pro #block-system-main #edit-submitted-e-mail') &&
+                    validateTel('.page-study-pro #block-system-main #edit-submitted-telefon') &&
+                    validateCheckbox('.page-study-pro #block-system-main #edit-submitted-ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami-1', '.page-study-pro #block-system-main label[for="#edit-submitted-ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami-1"]')
                 ) {
-                    enableSubmit(".page-study-pro #block-system-main .form-submit");
-                } else {
-                    disableSubmit(".page-study-pro #block-system-main .form-submit");
+                    landing.createLeadFromLanding(config4);
                 }
             });
 
             //idea trade hub
-            $( ".page-analytics-traderhub #block-system-main .form-submit" ).click(function(event) {
-                landing.createLeadFromLanding(config5);
-            });
+            $( ".page-analytics-traderhub #block-system-main .form-submit").on("click", function() {
+                var name = validateNotEmpty('.page-analytics-traderhub #block-system-main #edit-submitted-imya');
+                var lastName = validateNotEmpty('.page-analytics-traderhub #block-system-main #edit-submitted-familiya');
+                var email = validateEmail('.page-analytics-traderhub #block-system-main #edit-submitted-e-mail');
+                var tel = validateTel('.page-analytics-traderhub #block-system-main #edit-submitted-telefon');
+                var checkbox =  validateCheckbox('.page-analytics-traderhub #block-system-main #edit-submitted-ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami-1', '.page-analytics-traderhub #block-system-main .webform-component--ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami');
 
-            $( ".page-analytics-traderhub #block-system-main .webform-client-form-180 input").on("change paste keyup", function() {
-                if (
-                    $('.page-analytics-traderhub #block-system-main #edit-submitted-imya').val().length > 3 &&
-                    $('.page-analytics-traderhub #block-system-main #edit-submitted-familiya').val().length > 3 &&
-                    $(' .page-analytics-traderhub #block-system-main #edit-submitted-e-mail').val().length > 3 && validateEmail($(' .page-analytics-traderhub #block-system-main #edit-submitted-e-mail').val()) &&
-                    $('.page-analytics-traderhub #block-system-main #edit-submitted-telefon').val().length > 3 && validateTel($('.page-analytics-traderhub #block-system-main #edit-submitted-telefon').val()) &&
-                    $('.page-analytics-traderhub #block-system-main #edit-submitted-ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami-1').prop('checked')
-                ) {
-                    enableSubmit(".page-analytics-traderhub #block-system-main .form-submit");
-                } else {
-                    disableSubmit(".page-analytics-traderhub #block-system-main .form-submit");
+                if (name && lastName && email && tel && checkbox) {
+                  landing.createLeadFromLanding(config5);
                 }
             });
 
             //vacancy
-            $( ".page-node-107 #block-system-main .form-submit" ).click(function(event) {
-                landing.createLeadFromLanding(config6);
-            });
-
-            $( ".page-node-107 #block-system-main .webform-client-form-107 input").on("change paste keyup", function() {
-                if (
-                    $('.page-node-107 #block-system-main #edit-submitted-fio').val().length > 3 &&
-                    $('.page-node-107 #block-system-main #edit-submitted-email').val().length > 3 && validateEmail($('.page-node-107 #block-system-main #edit-submitted-email').val()) &&
-                    $('.page-node-107 #block-system-main #edit-submitted-phone').val().length > 3 && validateTel($('.page-node-107 #block-system-main #edit-submitted-phone').val())
-                ) {
-                    enableSubmit(".page-node-107 #block-system-main .form-submit");
-                } else {
-                    disableSubmit(".page-node-107 #block-system-main .form-submit");
+            $( ".page-node-107 #block-system-main .form-submit").on("click", function() {
+               var name = validateNotEmpty('.page-node-107 #block-system-main #edit-submitted-fio');
+               var email = validateEmail('.page-node-107 #block-system-main #edit-submitted-email');
+               var tel = validateTel('.page-node-107 #block-system-main #edit-submitted-phone');
+                if ( name && email && tel) {
+                    landing.createLeadFromLanding(config6);
                 }
             });
 
@@ -426,7 +427,10 @@
                 });
             });
 
-            $('#webform-client-form-177').attr('data-scroll-index', '1');
+            setTimeout(function(){
+                $('.panels-flexible-row-3-1').attr('data-scroll-index', '1');
+                $('.pane-webform-client-block-180').attr('data-scroll-index', '1');
+            }, 300);
         });
     });
 }(jQuery));

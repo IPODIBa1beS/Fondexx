@@ -7,6 +7,10 @@
 
     li{
 
+      p{
+        display: inline;
+      }
+
       p>a{
         display: inline-block;
         color: $white-pages-text;

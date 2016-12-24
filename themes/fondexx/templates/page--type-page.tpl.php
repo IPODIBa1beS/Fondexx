@@ -258,8 +258,8 @@
     ?>
 
     <ul class="social-icons">
-          <li><a href="#"><i class="icon icon-vk"></i></a></li>
-        <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+          <li><a href="https://vk.com/fondexx" target="_blank"><i class="icon icon-vk"></i></a></li>
+        <li><a href="https://www.facebook.com/fondexx" target="_blank"><i class="ion-social-facebook"></i></a></li>
 <!--        <li><a href="#"><i class="ion-social-googleplus"></i></a></li>-->
     </ul>
 

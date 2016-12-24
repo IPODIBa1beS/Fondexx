@@ -55,6 +55,6 @@
      @extend .table-striped-custom;
    }
 
-    .field-name-body p img { width: 100%; height:auto;}
+    .field-name-body p img { width: 100% !important; height:auto !important;}
   }
 }

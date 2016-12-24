@@ -2,7 +2,7 @@
   display: inline-block;
   width: 200px;
   height: 50px;
-  cursor: pointer;
+  cursor: pointer !important;
   transition: all .4s ease;
   color: $default-text;
   font-size: $fs-sm;
@@ -13,6 +13,7 @@
   line-height: 3;
   text-transform: uppercase;
   text-decoration: none;
+  opacity: 1 !important;
 
   &:hover, &:focus{
     background-color: lighten($primary-color, 20%);
@@ -45,13 +46,13 @@
   }
 
   &-transparent-blue{
-    background-color: transparent;
-    border: 2px solid $primary-color;
-    color: $primary-color;
+    background-color: transparent !important;
+    border: 2px solid $primary-color !important;
+    color: $primary-color !important;
 
     &:hover, &:focus{
-      background-color: $primary-color;
-      color: $default-text;
+      background-color: $primary-color !important;
+      color: $default-text !important;
     }
   }
 
