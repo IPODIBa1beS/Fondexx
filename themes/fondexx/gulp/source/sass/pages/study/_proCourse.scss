@@ -24,6 +24,16 @@
       display: none
     }
 
+    @include max-screen($max-tablet){
+      &>.row>.col-sm-9{
+        width: 100% !important;
+      }
+
+      &>.row{
+        padding: 25px 45px !important;
+      }
+    }
+
     .page-header{
       display: block;
       position: absolute;
@@ -33,6 +43,15 @@
       top: -200px;
       width: 100%;
       font-size: $fs-lg;
+
+      @include max-screen($max-tablet){
+        right: 25%;
+      }
+
+      @include max-screen($max-mobile){
+        right: 0;
+        text-align: center;
+      }
     }
 
     .region-sidebar-second{
@@ -160,12 +179,16 @@
       .webform-component{
         display: inline-block;
         width: 23%;
+        margin: 20px 1.5% 20px 0;
+
+        @include max-screen($max-mobile){
+          width: 100%;
+          margin: 20px 0;
+        }
 
         .form-required {
           display: none;
         }
-
-        margin: 20px 1.5% 20px 0;
 
         &:last-child{
           margin-right: 0;

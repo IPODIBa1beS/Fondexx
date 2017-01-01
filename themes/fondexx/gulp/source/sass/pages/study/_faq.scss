@@ -12,13 +12,28 @@
     margin: 0;
     padding: 0;
 
+   @include max-screen($max-tablet){
+      &>.row>.col-sm-9{
+        width: 100% !important;
+      }
+    }
+
     & > .row {
       padding: 20px 80px;
+
+      @include max-screen($max-tablet) {
+        padding: 25px 45px;
+      }
     }
   }
 
   .region-sidebar-second{
     margin-top: 20px;
+
+    @include max-screen($max-tablet) {
+      display: none;
+    }
+
     .block-block{
       .contextual-links-wrapper{
         position: relative;
@@ -120,6 +135,11 @@
           vertical-align: middle;
           background: transparent url('../images/pngIcons/collapse_open.png') no-repeat scroll 75% center;
           background-size: 50%;
+
+
+          @include max-screen($max-tablet){
+            margin-left: -70px;
+          }
         }
 
         &.is-open{

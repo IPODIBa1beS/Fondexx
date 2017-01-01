@@ -16,7 +16,7 @@
     }
 
     & > .row {
-      padding: 0;
+      padding: 0 !important;
     }
   }
 
@@ -29,6 +29,17 @@
     padding: 0 80px;
     min-height: 600px;
 
+
+    @include max-screen($max-tablet){
+      background-image: linear-gradient(to right, #e0eafc 0%, #cfdef3 100%);
+      background-position: left top;
+      background-repeat: repeat;
+      background-attachment: scroll;
+      background-size: cover;
+      padding: 0;
+      min-height: 600px;
+    }
+
     .pane-title {
       padding: 100px 0 0 0;
       font-size: $fs-lg;
@@ -37,10 +48,25 @@
       word-spacing: 3px;
       letter-spacing: 1.5px;
       color: $analytics-text;
+
+      @include max-screen($max-tablet){
+        margin-left: 25%;
+      }
     }
 
     .pane-content {
       width: 400px;
+
+      @include max-screen($max-tablet){
+        margin-left: 25%;
+      }
+
+      @include max-screen($max-mobile){
+        margin-left: 0;
+        width: 100%;
+        padding: 0 20px;
+        text-align: center;
+      }
     }
 
     .analytics-text {
@@ -92,6 +118,10 @@
     min-height: 750px;
     background: url('../images/analytics_steps.jpg') no-repeat, scroll, left top;
     background-size: cover;
+
+    @include max-screen($max-tablet){
+      display: none;
+    }
   }
 
   #panels-ipe-paneid-3, .pane-3 {
@@ -182,6 +212,10 @@
       display: inline-block;
       width: 23%;
 
+      @include max-screen($max-mobile){
+        width: 100%;
+      }
+
       .form-required {
         display: none;
       }
@@ -212,7 +246,7 @@
     }
 
     .webform-component.webform-component--files {
-      @extend %col-4;
+      @extend %col-4, %col-md-4,%col-sm-12;
       margin: 5px 0;
       text-align: center;
 

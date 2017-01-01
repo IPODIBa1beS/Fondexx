@@ -13,6 +13,16 @@
     margin: 0;
     padding: 0;
     border-bottom: 2px solid $divider;
+
+    .navbar-header{
+      @include max-screen($tablet){
+        margin: 0 !important;
+      }
+
+      @include max-screen($max-mobile){
+        margin: 0 !important;
+      }
+    }
   }
 
   &-header {
@@ -21,7 +31,7 @@
     border-bottom: 2px solid $divider;
 
     .toggle-btn-wrapper {
-      @extend %col-1, %col-md-2, %col-sm-4;
+      @extend %col-1, %col-md-2, %col-sm-3;
       text-align: center;
       height: 100%;
       display: inline-block;
@@ -30,6 +40,7 @@
 
       @include max-screen($max-tablet){
         border-right: 0 none;
+        float: left;
       }
 
       .navbar-toggle {
@@ -41,7 +52,7 @@
     }
 
     .logo {
-      @extend %col-2, %col-md-4, %col-sm-4;
+      @extend %col-2, %col-md-4, %col-sm-6;
       overflow: hidden;
       height: 70px;
       display: inline-block;
@@ -78,6 +89,7 @@
         font-size: $fs-sm;
         border-radius: 32px;
         font-family: "RobotoBold", 'Helvetica', 'sans-serif';
+        margin-left: 5px;
 
         &+& {
           margin-left: 10px;
@@ -86,6 +98,7 @@
         @include max-screen($max-mobile){
           min-width: 135px;
           float: none;
+          margin-left: 0;
         }
       }
     }

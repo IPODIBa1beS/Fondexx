@@ -21,8 +21,19 @@
     }
 
     &>.row:before {
-      display: none
+      display: none;
     }
+
+    @include max-screen($max-tablet){
+      &>.row>.col-sm-9{
+        width: 100% !important;
+      }
+
+      &>.row{
+        padding: 25px 45px !important;
+      }
+    }
+
 
     .page-header{
       display: block;
@@ -91,6 +102,10 @@
               position: absolute;
               left: -30px;
               line-height: 30px;
+
+              @include max-screen($max-tablet){
+                left: -10px;
+              }
             }
 
             p{
@@ -158,6 +173,11 @@
         display: inline-block;
         width: 23%;
         margin: 20px 1.5% 20px 0;
+
+        @include max-screen($max-mobile){
+          width: 100%;
+          margin: 20px 0;
+        }
 
         .form-required {
           display: none;

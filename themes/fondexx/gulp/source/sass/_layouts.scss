@@ -55,7 +55,7 @@ input[type="submit"] {
 
 @include grid($column-name: "col", $columns-padding: $col-padding);
 
-@include max-screen($tablet) {
+@include max-screen($max-tablet) {
   %block {
     width: auto;
     float: none;
@@ -77,12 +77,12 @@ input[type="submit"] {
 }
 
 
-@include max-screen($tablet) {
+@include max-screen($max-tablet) {
   @include grid($column-name: "col-md", $columns-padding: 15px);
 }
 
 
-@include max-screen($mobile) {
+@include max-screen($max-mobile) {
   %block {
     width: auto;
     float: none;
@@ -108,7 +108,7 @@ input[type="submit"] {
 }
 
 
-@include max-screen($mobile) {
+@include max-screen($max-mobile) {
   @include grid($column-name: "col-sm", $columns-padding: 10px);
 }
 

@@ -12,9 +12,20 @@
     margin: 0;
     padding: 0;
 
+    @include max-screen($max-tablet){
+      &>.row>.col-sm-9{
+        width: 100% !important;
+      }
+    }
+
     &>.row{
       padding: 40px 100px;
       position: relative;
+
+      @include max-screen($tablet){
+        padding: 25px 15px;
+        width: 100%;
+      }
 
       &:before{
         content: '';
@@ -24,6 +35,10 @@
         border-bottom: 2px solid $border-color;
         top: 90px;
         left: 0;
+
+        @include max-screen($tablet){
+          display: none;
+        }
       }
     }
   }

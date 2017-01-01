@@ -11,6 +11,7 @@
     }
 
     .row{
+
       .page-header{
         margin-bottom: 20px;
       }
@@ -20,6 +21,14 @@
 
   .node-analytics{
     margin: 20px 20px 20px 0;
+
+    @include max-screen($max-tablet){
+      margin: 20px 0;
+
+      & img{
+        margin: 0 auto;
+      }
+    }
   }
 
   .view-analytics{

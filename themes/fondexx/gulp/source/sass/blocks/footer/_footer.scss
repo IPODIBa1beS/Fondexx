@@ -8,7 +8,7 @@ footer.footer {
   }
 
   .logo {
-    @extend %col-2, %col-md-12, %col-sm-12;
+    @extend %col-2, %col-md-3, %col-sm-12;
     overflow: hidden;
     height: 70px;
     display: inline-block;
@@ -34,7 +34,7 @@ footer.footer {
   }
 
   .nav {
-    @extend %col-8, %col-md-8, %col-sm-12;
+    @extend %col-8, %col-md-7, %col-sm-12;
     display: inline-block;
     margin: 0 !important;
     padding: 10px;
@@ -70,11 +70,11 @@ footer.footer {
   }
 
   .social-icons {
-    @extend %col-2, %col-md-4, %col-sm-12;
+    @extend %col-2, %col-md-2, %col-sm-12;
     text-align: right;
 
     li {
-      @extend %col-3;
+      @extend %col-3, %col-md-6, %col-sm-6;
       padding: 10px;
 
       a {

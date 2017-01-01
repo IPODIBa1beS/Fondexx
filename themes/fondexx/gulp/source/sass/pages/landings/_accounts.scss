@@ -50,7 +50,7 @@
         overflow: hidden;
 
         li {
-          @extend %col-6;
+          @extend %col-6, %col-md-6, %col-sm-6;
           display: inline-block;
           font-size: $fs-md;
           font-family: "RobotoThin", 'Helvetica', sans-serif;
@@ -58,6 +58,11 @@
           letter-spacing: 1.5px;
           word-spacing: 2px;
           vertical-align: baseline;
+
+          @include max-screen($tablet){
+            font-size: 12px;
+            padding: 0;
+          }
 
           &.proposal_rich {
             &:before{

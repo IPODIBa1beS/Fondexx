@@ -3,6 +3,7 @@
   .header-popup{
     display: none;
     opacity: 0;
+    margin-left: -1px;
   }
 
   .header-popup.overlay{
@@ -24,8 +25,13 @@
       cursor: pointer;
 
       @media screen and (max-height: 800px) {
-        top: 75px;
+        top: 25px;
         left: 5%;
+      }
+
+      @include max-screen($max-mobile){
+        top: 25px;
+        left: 25px;
       }
 
       &:hover, &:focus {
@@ -38,6 +44,11 @@
       }
     }
 
+    .tab-content{
+      max-height: 100vh;
+      overflow: scroll;
+    }
+
     .tab-pane{
       padding: 150px 100px 25px;
       overflow: hidden;
@@ -46,6 +57,10 @@
 
       @media screen and (max-height: 800px) {
         padding: 75px 100px 25px;
+      }
+
+      @include max-screen($max-mobile){
+        padding: 75px 60px;
       }
 
       h2{
@@ -74,7 +89,7 @@
         }
 
         .form-control {
-          @extend %col-8;
+          @extend %col-8, %col-md-8, %col-sm-12;
           background: $demo-input-bg;
           border: 1px solid $border-color;
           height: 60px;
