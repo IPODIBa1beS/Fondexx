@@ -1,5 +1,9 @@
 .header {
-  &-content {
+  &_content {
+    @include max-screen($max-mobile){
+      overflow: hidden;
+      padding-top: 130px;
+    }
 
     &:after {
       content: '';
@@ -61,6 +65,10 @@
     @extend %col-3, %col-md-4, %col-sm-12;
     max-width: 360px;
     padding: 10px;
+
+    @include max-screen($max-mobile){
+      max-width: none;
+    }
 
     &-wrapper {
       @extend %col-5, %col-md-12, %col-sm-12;

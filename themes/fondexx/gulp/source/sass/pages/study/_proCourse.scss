@@ -136,10 +136,28 @@
 
       &:before{
         margin-left: -65px;
+        @include max-screen($max-tablet){
+          display: none;
+        }
       }
 
       h2{
         display: inline-block;
+
+        @include max-screen($max-tablet){
+          &:before{
+            content: '';
+            display: inline-block;
+            font-size: $fs-md;
+            width: 52px;
+            height: 20px;
+            margin-right: 10px;
+            vertical-align: middle;
+            background: transparent url('../images/pngIcons/collapse_open.png') no-repeat scroll 75% center;
+            background-size: 40%;
+            margin-left: -65px;
+          }
+        }
       }
     }
 

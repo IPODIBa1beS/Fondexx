@@ -140,12 +140,23 @@
           @include max-screen($max-tablet){
             margin-left: -70px;
           }
+
+          @include max-screen($max-mobile){
+            width: 52px;
+            height: 20px;
+            background-size: 40%;
+          }
         }
 
         &.is-open{
           &:before{
             background: transparent url('../images/pngIcons/collapse_close.png') no-repeat scroll 75% center !important;
             background-size: 50% !important;
+
+            @include max-screen($max-mobile){
+              background: transparent url('../images/pngIcons/collapse_close.png') no-repeat scroll 75% center !important;
+              background-size: 40% !important;
+            }
           }
         }
       }
@@ -157,6 +168,14 @@
         font-size: $fs-md - 2;
         font-family: "RobotoLight", "RobotoLightItalic", "sans-serif";
         line-height: 1.25;
+
+        a{
+          color: $page-header;
+        }
+
+        @include max-screen($max-tablet) {
+          margin: 0 0 10px 0;
+        }
       }
     }
   }

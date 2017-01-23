@@ -126,6 +126,10 @@ footer.footer {
       font-weight: 500;
       font-family: 'RobotoMedium', 'Helvetica', 'opensans';
       color: $border-color;
+
+      @include max-screen($max-mobile){
+        text-align: left;
+      }
     }
   }
 }

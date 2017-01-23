@@ -61,6 +61,58 @@
         }
       }
     }
+
+    .next {
+      a {
+        span {
+          display: none;
+        }
+
+        &:before {
+          display: inline-block;
+          content: '>'
+        }
+      }
+    }
+
+    .pager-last {
+      a {
+        span {
+          display: none;
+        }
+
+        &:before {
+          display: inline-block;
+          content: '>>'
+        }
+      }
+    }
+
+    .prev {
+      a {
+        span {
+          display: none;
+        }
+
+        &:before {
+          display: inline-block;
+          content: '<'
+        }
+      }
+    }
+
+    .pager-first {
+       a {
+         span {
+           display: none;
+         }
+
+         &:before {
+           display: inline-block;
+           content: '<<'
+         }
+       }
+    }
   }
 }
 

@@ -21,6 +21,9 @@
 
       @include max-screen($max-mobile){
         margin: 0 !important;
+        position: fixed;
+        z-index: 150;
+        background: $dark-bg;
       }
     }
   }
