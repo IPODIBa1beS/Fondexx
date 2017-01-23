@@ -315,7 +315,7 @@
             });
 
             //study-pro
-            $( ".page-study-pro #block-system-main .webform-client-form-180 input").on("change paste keyup", function() {
+            $( ".page-study-pro #block-system-main .webform-client-form-180 .form-submit").on("click", function() {
 
                 if (
                     validateNotEmpty('.page-study-pro #block-system-main #edit-submitted-imya') &&

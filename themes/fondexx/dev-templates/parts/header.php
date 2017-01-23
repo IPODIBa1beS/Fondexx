@@ -21,8 +21,8 @@
             <?php print render($primary_nav); ?>
         <?php endif; ?>
         <div class="login-btn-wrapper">
-            <a href="#register" id="register" aria-controls="register" role="tab" data-toggle="tab" class="button button-dark-blue button-login">Открыть счет</a>
-            <a href="#login" id="login" aria-controls="login" role="tab" data-toggle="tab" class="button button-dark-blue button-login">Вход</a>
+            <a href="/registration" id="register" aria-controls="register" role="tab" data-toggle="tab" class="button button-dark-blue button-login">Открыть счет</a>
+            <a href="http://pc.fondexx.com/" id="login" aria-controls="login" role="tab" data-toggle="tab" class="button button-dark-blue button-login">Вход</a>
         </div>
     </div>
     <div class="header_content">
