@@ -72,6 +72,7 @@
  *
  * @ingroup templates
  */
+$img_url = null;
 ?>
 
 <?php if ( !empty($node) ) {
@@ -186,7 +187,9 @@
   </div>
 </header>
 
-<div id="myid" style="background-image: url('/sites/default/files/<?php print $img_url;?>'); height: 100px;"></div>
+<?php if ($img_url): ?>
+    <div id="myid" style="background-image: url('/sites/default/files/<?php print $img_url;?>'); height: 100px;"></div>
+<?php endif; ?>
 
 <div class="main-container <?php print $container_class; ?>">
 
