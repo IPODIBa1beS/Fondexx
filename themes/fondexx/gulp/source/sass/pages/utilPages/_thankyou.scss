@@ -1,8 +1,16 @@
-.page-node-181, .page-node-182, .page-node-183, .page-node-184{
+.page-node-181, .page-node-182, .page-node-183, .page-node-184, .page-node-293, .page-node-294, .page-node-295 {
   @extend .whiteInnerPage;
 
   #myid{
     display: none;
+  }
+
+  .region-sidebar-second{
+    display: none;
+  }
+
+  .col-sm-9{
+    width: 100%;
   }
 
   .main-container{
@@ -11,7 +19,8 @@
     background-position: left top;
     background-attachment: scroll;
     background-size: cover;
-    height: 100vh;
+    height: 80vh;
+    min-height: 500px;
 
     &>.row{
       padding: 10vh 0 0 0;
@@ -120,5 +129,9 @@
 
   .text.regular-text{
     font-family: "RobotoRegular", "opensans", "sans-serif";
+  }
+
+  .field-type-text-with-summary{
+    min-height: 50vh;
   }
 }

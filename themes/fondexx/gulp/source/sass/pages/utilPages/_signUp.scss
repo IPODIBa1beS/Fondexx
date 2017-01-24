@@ -1,0 +1,136 @@
+.page-node-292, .page-node-177 {
+  #myid{
+    display: none;
+  }
+
+  .main-container {
+    background-color: #f1f2f7;
+    padding: 0 0 25px 0;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+
+    .page-header{
+      color: $white-pages-text;
+    }
+
+    .col-sm-9{
+      width: 100%;
+    }
+  }
+
+  .breadcrumb {
+    display: none;
+  }
+
+  .pane-webform-client-block-177 > .pane-title {
+    display: none;
+  }
+
+  &>.row{
+    padding: 10vh 0 0 0;
+    position: relative;
+    overflow: hidden;
+
+    &:before{
+      display: none;
+    }
+
+    .page-header{
+      display: none;
+    }
+  }
+
+  .region-sidebar-second{
+    display: none;
+  }
+
+  form {
+    @extend %col-offset-3, %col-6;
+    color: #fff;
+
+    .webform-component{
+      overflow: hidden;
+      @extend %col-12;
+    }
+
+    .form-required {
+      display: none;
+    }
+
+    .form-control {
+      @extend %col-12, %col-md-12, %col-sm-12;
+      background: $demo-input-bg;
+      border: 1px solid $border-color;
+      height: 60px;
+      padding: 20px;
+      font-size: $fs-title;
+      color: $border-color;
+      border-radius: 0;
+      font-family: "RobotoLightItalic", "Helvetica", "sans-serif";
+      margin: 15px 0;
+
+      @media screen and (max-height: 800px) {
+        margin: 5px 0;
+      }
+    }
+
+    .control-label {
+      margin-top: 5px;
+      font-family: "RobotoLightItalic", "Helvetica", "sans-serif";
+      color: $white-pages-text;
+    }
+
+    .webform-component.webform-component--files {
+      @extend %col-6;
+      margin-top: 5px;
+
+      @media screen and (max-height: 800px) {
+        margin-bottom: 5px;
+      }
+
+      .req-docs {
+
+        li{
+          display: inline-block;
+        }
+        a {
+          color: transparent;
+          width: 35px;
+          display: inline-block;
+
+          &:before {
+            content: "";
+            display: inline-block;
+            background: transparent url('../images/pngIcons/downloadDocument.png') no-repeat scroll center;
+            font-size: 24px;
+            height: 33px;
+            width: 24px;
+          }
+        }
+      }
+    }
+
+    .webform-component.webform-component-checkboxes{
+      @extend %col-6;
+    }
+
+    .webform-component--otkuda-prishel{
+      @extend %col-6;
+      display: none;
+
+      .form-control{
+        margin-top: 0;
+      }
+    }
+
+    .form-actions{
+      @extend %col-12;
+    }
+    input[type='submit'], .webform-submit {
+      @extend .button, .button-transparent-blue;
+      line-height: 1;
+      font-family: "RobotoBold", "Helvetica", "sans-serif";
+    }
+  }
+}
