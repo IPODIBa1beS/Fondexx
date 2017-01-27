@@ -37,9 +37,11 @@
         color: $icon-color;
         text-decoration: none;
         background: transparent;
-        border: 0 none;
+        // border: 0 none;
         background-image: none !important;
         font-family: "RobotoMedium", "RobotoBold", "sans-serif";
+        border: 1px solid transparent;
+        border-radius: 50%;
 
         &:hover, &:focus{
           color: darken(white, 20%);
@@ -103,6 +105,8 @@
 
     .pager-first {
        a {
+         padding: 8px 12px;
+
          span {
            display: none;
          }
@@ -112,6 +116,10 @@
            content: '<<'
          }
        }
+    }
+
+    .pager-ellipsis.disabled {
+      display: none;
     }
   }
 }

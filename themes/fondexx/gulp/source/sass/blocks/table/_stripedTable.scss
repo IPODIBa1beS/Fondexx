@@ -33,9 +33,9 @@
         a{
           @extend .button-rectangle, .btn-white, .btn-transparent-rounded;
           line-height: 1.25;
-          width: auto;
-          height: auto;
-          padding: 5px;
+          width: auto !important;
+          height: auto !important;
+          padding: 10px;
           display: inline-block;
         }
 
