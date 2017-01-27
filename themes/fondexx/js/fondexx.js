@@ -213,19 +213,20 @@
                 },
                 landingId: "62ff6948-1e98-4bdd-b84c-6666c121bf94",
                 serviceUrl: "https://fondexx.bpmonline.com/0/ServiceModel/GeneratedWebFormService.svc/SaveWebFormLeadData",
-                redirectUrl: "http://pc.fondexx.com/"
+                redirectUrl: "http://fondexx.com/trade/demo/thankyou6"
             };
 
+            //#register_block => moved to .node-292
             var config2 = {
                 fields: {
-                    "Name": "#register_block #edit-submitted-imya", // Имя посетителя, заполнившего форму
-                    "UsrSurname": "#register_block #edit-submitted-familiya",
-                    "Email": "#register_block #edit-submitted-e-mail", // Email посетителя
-                    "MobilePhone": "#register_block #edit-submitted-telefon", // Телефон посетителя
+                    "Name": ".page-node-292 #edit-submitted-imya", // Имя посетителя, заполнившего форму
+                    "UsrSurname": ".page-node-292 #edit-submitted-familiya",
+                    "Email": ".page-node-292 #edit-submitted-e-mail", // Email посетителя
+                    "MobilePhone": ".page-node-292 #edit-submitted-telefon", // Телефон посетителя
                 },
-                landingId: "62ff6948-1e98-4bdd-b84c-6666c121bf94",
+                landingId: "3163a831-9896-4eec-b1cd-f07a87bc1582",
                 serviceUrl: "https://fondexx.bpmonline.com/0/ServiceModel/GeneratedWebFormService.svc/SaveWebFormLeadData",
-                redirectUrl: "http://pc.fondexx.com/"
+                redirectUrl: "http://fondexx.com/registration/thankyou5"
             };
 
             var config3 = {
@@ -237,7 +238,7 @@
                 },
                 landingId: "8e05cb22-cbd3-4b0e-b5bb-8145640a2704",
                 serviceUrl: "https://fondexx.bpmonline.com/0/ServiceModel/GeneratedWebFormService.svc/SaveWebFormLeadData",
-                redirectUrl: "http://pc.fondexx.com/ "
+                redirectUrl: "http://fondexx.com/study/initial_point/thankyou7 "
             };
 
             var config4 = {
@@ -290,12 +291,12 @@
             });
 
 
-            $( "#register_block #webform-client-form-177 .form-submit").on("click", function() {
-                var name = validateNotEmpty('#register_block #edit-submitted-imya');
-                var lastName = validateNotEmpty('#register_block #edit-submitted-familiya');
-                var email = validateEmail('#register_block #edit-submitted-e-mail');
-                var tel = validateTel('#register_block #edit-submitted-telefon');
-                var checkbox =   validateCheckbox('#register_block #edit-submitted-ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami-1','#register_block .webform-component--ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami');
+            $( ".page-node-292 #webform-client-form-177 .form-submit").on("click", function() {
+                var name = validateNotEmpty('.page-node-292 #edit-submitted-imya');
+                var lastName = validateNotEmpty('.page-node-292 #edit-submitted-familiya');
+                var email = validateEmail('.page-node-292 #edit-submitted-e-mail');
+                var tel = validateTel('.page-node-292 #edit-submitted-telefon');
+                var checkbox =   validateCheckbox('.page-node-292 #edit-submitted-ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami-1','.page-node-292 .webform-component--ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami');
                 if ( name && lastName && email && tel && checkbox) {
                  landing.createLeadFromLanding(config2);
                 }
