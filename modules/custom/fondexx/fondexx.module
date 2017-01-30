@@ -40,8 +40,29 @@ function fondexx_form_alter(&$form, &$form_state, $form_id) {
         }
     }
 
+    if ($form['#id'] == 'webform-client-form-177') {
+        $form['submitted']['otkuda_prishel']['#default_value'] = drupal_get_title();
+
+        if (request_path() == 'trade/demo') {
+            $form['#submit'][] = '_tradedemo_submit_handler';
+        }
+
+        if (request_path() == 'registration') {
+            $form['#submit'][] = '_registration_submit_handler';
+        }
+    }
+    ////////
     if ($form['#id'] == 'webform-client-form-180') {
         $form['submitted']['otkuda_prishel']['#default_value'] = drupal_get_title();
+
+        if (request_path() == 'study/initial_point') {
+            $form['#submit'][] = '_initialpoint_submit_handler';
+        }
+
+        if (request_path() == 'study/pro') {
+            $form['#submit'][] = '_studypro_submit_handler';
+        }
+        
         if (request_path() == 'analytics/traderhub') {
             $form['#submit'][] = '_traderhub_submit_handler';
         }
@@ -51,6 +72,23 @@ function fondexx_form_alter(&$form, &$form_state, $form_id) {
 function _fondexx_market_leaders_form_block() {
     $output = "<h2>Market leaders goes here! (soon)</h2>- TODO -";
     return $output;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+function _tradedemo_submit_handler(&$form, &$form_state) {
+    $form_state['redirect'] = '/trade/demo/thankyou6';
+}
+
+function _registration_submit_handler(&$form, &$form_state) {
+    $form_state['redirect'] = '/trade/demo/thankyou5';
+}
+//
+function _initialpoint_submit_handler(&$form, &$form_state) {
+    $form_state['redirect'] = '/study/initial_point/thankyou7';
+}
+
+function _studypro_submit_handler(&$form, &$form_state) {
+    $form_state['redirect'] = '/study/pro/thankyou';
 }
 
 function _traderhub_submit_handler(&$form, &$form_state) {

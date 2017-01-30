@@ -62,10 +62,6 @@
             <?php endif; ?>
         </nav>
     </div>
-
-    <div id="register_block" class="header-popup">
-        <!--(bake register.php)-->
-    </div>
     
   </div>
 </header>
