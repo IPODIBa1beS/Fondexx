@@ -238,7 +238,7 @@
                 },
                 landingId: "8e05cb22-cbd3-4b0e-b5bb-8145640a2704",
                 serviceUrl: "https://fondexx.bpmonline.com/0/ServiceModel/GeneratedWebFormService.svc/SaveWebFormLeadData",
-                redirectUrl: "http://fondexx.com/study/initial_point/thankyou7 "
+                redirectUrl: "http://fondexx.com/study/initial_point/thankyou7"
             };
 
             var config4 = {
@@ -250,7 +250,7 @@
                 },
                 landingId: "37b0f213-6187-4fa0-98ca-7d34407c6526",
                 serviceUrl: "https://fondexx.bpmonline.com/0/ServiceModel/GeneratedWebFormService.svc/SaveWebFormLeadData",
-                redirectUrl: "http://fondexx.com/study/pro/thankyou1 "
+                redirectUrl: "http://fondexx.com/study/pro/thankyou1"
             };
 
             var config5 = {
@@ -310,6 +310,7 @@
                 var email = validateEmail('.page-study-initial-point #block-system-main #edit-submitted-e-mail');
                 var tel = validateTel('.page-study-initial-point #block-system-main #edit-submitted-telefon');
                 var checkbox =   validateCheckbox('.page-study-initial-point #block-system-main #edit-submitted-ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami-1','.page-study-initial-point #block-system-main .webform-component--ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami');
+
                 if ( name && lastName && email && tel && checkbox) {
                  landing.createLeadFromLanding(config3);
                 }
