@@ -29,11 +29,14 @@ function fondexx_block_view($delta = '') {
 }
 
 function fondexx_form_alter(&$form, &$form_state, $form_id) {
+    $r = request_path();
+    $t = drupal_get_title();
+
     if ($form['#id'] == 'webform-client-form-177') {
-        $form['submitted']['otkuda_prishel']['#default_value'] = drupal_get_title();
-        if (request_path() == 'study/initial_point') {
+        $form['submitted']['otkuda_prishel']['#default_value'] = $t;
+        if ($r == 'study/initial_point') {
             $form['actions']['submit']['#value']  = t('Undergo free');
-        } else if (request_path() == 'trade/demo') {
+        } else if ($r == 'trade/demo') {
             $form['actions']['submit']['#value']  = t('Create demo account');
         } else {
             $form['actions']['submit']['#value'] = t('Register');
@@ -41,29 +44,29 @@ function fondexx_form_alter(&$form, &$form_state, $form_id) {
     }
 
     if ($form['#id'] == 'webform-client-form-177') {
-        $form['submitted']['otkuda_prishel']['#default_value'] = drupal_get_title();
+        $form['submitted']['otkuda_prishel']['#default_value'] = $t;
 
-        if (request_path() == 'trade/demo') {
+        if ($r == 'trade/demo') {
             $form['#submit'][] = '_tradedemo_submit_handler';
         }
 
-        if (request_path() == 'registration') {
+        if ($r == 'registration') {
             $form['#submit'][] = '_registration_submit_handler';
         }
     }
     ////////
     if ($form['#id'] == 'webform-client-form-180') {
-        $form['submitted']['otkuda_prishel']['#default_value'] = drupal_get_title();
+        $form['submitted']['otkuda_prishel']['#default_value'] = $t;
 
-        if (request_path() == 'study/initial_point') {
+        if ($r == 'study/initial_point') {
             $form['#submit'][] = '_initialpoint_submit_handler';
         }
 
-        if (request_path() == 'study/pro') {
+        if ($r == 'study/pro') {
             $form['#submit'][] = '_studypro_submit_handler';
         }
         
-        if (request_path() == 'analytics/traderhub') {
+        if ($r == 'analytics/traderhub') {
             $form['#submit'][] = '_traderhub_submit_handler';
         }
     }
@@ -80,7 +83,7 @@ function _tradedemo_submit_handler(&$form, &$form_state) {
 }
 
 function _registration_submit_handler(&$form, &$form_state) {
-    $form_state['redirect'] = '/trade/demo/thankyou5';
+    $form_state['redirect'] = '/registration/thankyou5';
 }
 //
 function _initialpoint_submit_handler(&$form, &$form_state) {
@@ -88,9 +91,61 @@ function _initialpoint_submit_handler(&$form, &$form_state) {
 }
 
 function _studypro_submit_handler(&$form, &$form_state) {
-    $form_state['redirect'] = '/study/pro/thankyou';
+    $form_state['redirect'] = '/study/pro/thankyou1';
 }
 
 function _traderhub_submit_handler(&$form, &$form_state) {
     $form_state['redirect'] = '/analytics/traderhub/thankyou3';
+}
+
+function fondexx_panels_pre_render($panels_display, $renderer) {
+    $r = request_path();
+    $pa = explode('/', $r);
+
+    // maybe its thankyoupage or fake 404 page
+    if (_check_fake_pages($pa)) {
+        return drupal_not_found();
+    }
+}
+
+function _check_fake_pages($pa) {
+    $fake = false;
+
+    //our panels path:
+
+    //analytics/traderhub       =>  /analytics/traderhub/thankyou3
+    //study/initial_point       =>  /study/initial_point/thankyou7
+    //study/pro                 => /study/pro/thankyou1
+    //trade/accounts
+    //home
+    //trade/demo                =>  /trade/demo/thankyou6
+    //trade/tradeup
+
+    $l = count($pa);
+
+    if ($l > 1 && $pa[0] == 'home') {
+        $fake = true;
+    }
+
+    if ($l > 2 ) {
+        $fake = true;
+
+        if ($pa[0] == 'trade' && $pa[1] == 'demo' && $pa[2] == 'thankyou6') {
+            $fake = false;
+        }
+
+        if ($pa[0] == 'study' && $pa[1] == 'pro' && $pa[2] == 'thankyou1') {
+            $fake = false;
+        }
+
+        if ($pa[0] == 'study' && $pa[1] == 'initial_point' && $pa[2] == 'thankyou7') {
+            $fake = false;
+        }
+
+        if ($pa[0] == 'analytics' && $pa[1] == 'traderhub' && $pa[2] == 'thankyou3') {
+            $fake = false;
+        }
+    }
+
+    return $fake;
 }
