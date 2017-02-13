@@ -11,6 +11,9 @@
 
   .col-sm-9{
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .main-container{
@@ -74,6 +77,10 @@
         vertical-align: middle;
         margin: 0 20px;
 
+        @include max-screen($tablet) {
+          display: none;
+        }
+
         @include max-screen($max-mobile){
           display: none;
         }
@@ -108,10 +115,10 @@
 
 
       .main-success{
-        padding: 25px 0 0 120px;
+        padding: 25px 0 0;
 
         @include max-screen($max-mobile){
-          padding: 25px 0 0 0;
+          padding: 25px 0 0;
         }
       }
 
@@ -124,7 +131,6 @@
         height: 50px;
         margin: 5px 15px 0 0;
         position: absolute;
-        left: 60px;
         line-height: 30px;
 
        @include max-screen($max-mobile){
@@ -152,10 +158,12 @@
 
   .text.title-text{
     font-family: "RobotoBold", "opensans", "sans-serif";
+    margin-left: 65px !important;
   }
 
   .text.regular-text{
     font-family: "RobotoRegular", "opensans", "sans-serif";
+    margin-left: 65px !important;
   }
 
   .field-type-text-with-summary{

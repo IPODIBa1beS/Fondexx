@@ -115,9 +115,9 @@
   }
 
   #panels-ipe-paneid-2, .pane-2 {
-    min-height: 750px;
-    background: url('../images/analytics_steps.jpg') no-repeat, scroll, left top;
-    background-size: 100% 100%;
+    min-height: 100vh;
+    background: url('../images/analytics_steps.jpg') no-repeat, scroll, center;
+    background-size: cover;
 
     @include max-screen($max-tablet){
       display: none;
