@@ -121,6 +121,10 @@
       background: url('../images/demo_trading.jpg') no-repeat, scroll, left top;
       background-size: cover;
 
+      @include min-screen(1600px) {
+        height: 900px;
+      }
+
       @include max-screen($tablet){
         min-height: 350px;
         height: auto;
