@@ -232,3 +232,8 @@ bower_components/
 /themes/fondexx/gulp/node_modules/
 /themes/fondexx/node_modules/
 /themes/fondexx/.ftpauth
+
+themes/fondexx/templates/page--front.tpl.php
+themes/fondexx/templates/page.tpl.php
+themes/fondexx/templates/page--type-page.tpl.php
+themes/fondexx/templates/page--type-webform.tpl.php
