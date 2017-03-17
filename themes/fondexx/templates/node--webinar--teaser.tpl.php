@@ -105,6 +105,8 @@
 
   <?php print render($content['field_start']); ?>
 
+  <?php print render($content['field_author_foto']); ?>
+
   <?php print render($content['field_author']); ?>
 
   <?php print $node->body['und'][0]['safe_value']; ?>
