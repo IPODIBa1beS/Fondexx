@@ -1,9 +1,123 @@
 .node-type-webinar{
   @extend .whiteInnerPage;
 
+  .main-container {
+    &>.row:before {
+      display: none;
+    }
+
+    .row {
+      .page-header {
+        color: #000000;
+        font-size: 36px;
+      }
+    }
+  }
+
+  .node-webinar {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+
+  .webinar_author {
+    width: 15%;
+    padding: 15px 5px;
+
+    @include max-screen($max-mobile) {
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    .field-name-field-author {
+      margin-top: 5px;
+      display: inline-block;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+
+      @include max-screen($max-mobile) {
+        transform: rotate(0deg);
+        writing-mode: initial;
+      }
+    }
+  }
+
+  .webinar_body {
+    width: 85%;
+    padding: 10px 0 0 20px;
+
+    @include max-screen($max-mobile) {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+
+  .field-type-field-countdown {
+    width: 100%;
+
+    @include max-screen($max-mobile) {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .countdownHolder {
+      width: 230px;
+      border: 1px solid #606783;
+      color: #606783;
+      border-radius: 10px;
+      padding: 10px;
+
+      .countDays, .countHours, .countMinutes {
+        .position {
+          letter-spacing: 0.5px;
+          &:last-child {
+            .digit {
+              text-align: left;
+            }
+          }
+          .digit {
+            box-shadow: none;
+            background: transparent;
+            text-align: right;
+            color: #606783;
+          }
+        }
+      }
+
+      .countDiv {
+        width: 10px;
+        &:before, &:after {
+          background-color: #606783;
+        }
+      }
+      .countDiv2, .countSeconds {
+        display: none;
+      }
+    }
+  }
+
   .field-name-field-link{
+    margin: 25px 0 0;
+
+    @include max-screen($max-mobile) {
+      text-align: center;
+      display: block;
+      width: 100%;
+    }
+
     a{
-      @extend .button, .button-transparent-blue;
+      @extend .btn-transparent-rounded;
+      display: inline-block;
+      color: #00e2ff;
+      border: 2px solid #00e2ff;
+      padding: 5px 10px;
+      width: auto;
+
+      &:hover, &:focus {
+        text-decoration: none;
+        color: darken(#00e2ff, 20);
+        border: 2px solid darken(#00e2ff, 20);
+      }
     }
   }
 }

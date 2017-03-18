@@ -102,16 +102,29 @@
     </div>
   <?php endif; ?>
 
+<<<<<<< HEAD
 
   <?php print render($content['field_start']); ?>
 
+=======
+  <div class="webinar_author">
+>>>>>>> vratyshnyi/webinar
 
   <?php print render($content['field_author_foto']); ?>
 
   <?php print render($content['field_author']); ?>
 
+<<<<<<< HEAD
   <?php print $node->body['und'][0]['safe_value']; ?>
 
+=======
+  </div>
+
+  <?php print $node->body['und'][0]['safe_value']; ?>
+
+  <?php print render($content['field_start']); ?>
+
+>>>>>>> vratyshnyi/webinar
   <?php print render($content['field_link']); ?>
 
 </div>
