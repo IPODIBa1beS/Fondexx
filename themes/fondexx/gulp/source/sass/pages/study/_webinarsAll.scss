@@ -24,6 +24,11 @@
             padding: 0 0 0 20px;
             line-height: 1;
 
+            @include max-screen($max-mobile) {
+              width: 100%;
+              padding: 0;
+            }
+
             a {
               font-family: "RobotoLight", 'Helvetica', sans-serif;
               font-weight: 600;
@@ -42,10 +47,20 @@
             color: #197687;
             text-align: right;
             padding: 10px 5px 0;
+
+            @include max-screen($max-mobile) {
+              width: 100%;
+              padding: 10px 0 0;
+            }
           }
 
           .webinar_countdown {
             width: 35%;
+
+            @include max-screen($max-mobile) {
+              width: 100%;
+              margin-top: 10px;
+            }
 
             .countdownHolder {
               width: 230px;
@@ -86,10 +101,19 @@
           .webinar_body {
             width: 85%;
             padding: 10px 0 0 20px;
+
+            @include max-screen($max-mobile) {
+              width: 100%;
+              margin-top: 10px;
+            }
           }
 
           .webinar_buttons {
             margin: 25px 0 0;
+
+            @include max-screen($max-mobile) {
+              text-align: center;
+            }
 
             .webinar_signUp-link {
               margin-right: 10px;
@@ -119,6 +143,10 @@
               display: inline-block;
               width: auto;
 
+              @include max-screen($max-mobile) {
+                margin: 10px auto;
+              }
+
               &:hover, &:focus {
                 text-decoration: none;
                 color: darken(#fff, 20);
@@ -131,11 +159,21 @@
             width: 15%;
             padding: 15px 5px;
 
+            @include max-screen($max-mobile) {
+              width: 50%;
+              margin: 0 auto;
+            }
+
             &-label {
               margin-top: 5px;
               display: inline-block;
               writing-mode: vertical-rl;
               transform: rotate(180deg);
+
+              @include max-screen($max-mobile) {
+                transform: rotate(0deg);
+                writing-mode: initial;
+              }
             }
 
             &-name {
@@ -143,6 +181,11 @@
               display: inline-block;
               writing-mode: vertical-rl;
               transform: rotate(180deg);
+
+              @include max-screen($max-mobile) {
+                transform: rotate(0deg);
+                writing-mode: initial;
+              }
             }
 
             &-photo {
