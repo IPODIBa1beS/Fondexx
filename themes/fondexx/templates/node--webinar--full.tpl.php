@@ -109,11 +109,13 @@
   <?php print render($content['field_author']); ?>
 
   </div>
+  <div class="webinar_body">
 
   <?php print $node->body['und'][0]['safe_value']; ?>
 
   <?php print render($content['field_start']); ?>
 
   <?php print render($content['field_link']); ?>
+  </div>
 
 </div>
