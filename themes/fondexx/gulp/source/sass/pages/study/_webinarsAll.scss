@@ -5,9 +5,18 @@
     &>.row:before {
       display: none;
     }
+
+    .page-header {
+      font-size: 32px;
+      font-weight: 400;
+      font-family: "Roboto-Thin", "RobotoLight", "RobotoThin";
+    }
   }
 
   .view-webinars {
+    .views-header {
+      margin: 20px 0;
+    }
 
     .views-row {
       margin: 0 0 30px;
