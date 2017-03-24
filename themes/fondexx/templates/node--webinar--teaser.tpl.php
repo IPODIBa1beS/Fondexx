@@ -84,9 +84,7 @@
 
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
-  <?php
-  hide($content);
-  ?>
+  <?php hide($content); ?>
 
   <?php print render($title_prefix); ?>
   <?php if (!$page): ?>
@@ -94,24 +92,16 @@
   <?php endif; ?>
   <?php print render($title_suffix); ?>
 
-
-
   <?php if ($display_submitted): ?>
     <div class="submitted">
       <?php print $submitted; ?>
     </div>
   <?php endif; ?>
 
-
   <?php print render($content['field_start']); ?>
-
-  <?php print render($content['field_author_foto']); ?>
-
   <?php print render($content['field_author']); ?>
-
+  <?php print render($content['field_author_foto']); ?>
   <?php print $node->body['und'][0]['safe_value']; ?>
-
   <?php print render($content['field_link']); ?>
-
 
 </div>
