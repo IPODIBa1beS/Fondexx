@@ -1,0 +1,227 @@
+.page-trade-lightspeed {
+  @extend .blackInnerPage;
+
+  .main-container {
+    background: $primary-bg;
+
+    &>.row{
+      padding-top: 10px;
+
+      @include max-screen($max-tablet){
+        .col-sm-9{
+          width: 100%;
+        }
+      }
+    }
+
+    &>.row:before {
+      display: none;
+    }
+
+    .region-sidebar-second {
+      margin-top: 35px;
+    }
+
+    .page-header {
+      border-bottom: 0 none;
+      margin: 0;
+      color: $page-header;
+      font-size: $fs-lg;
+      font-family: "RobotoLight";
+      text-align: left;
+      text-transform: uppercase;
+    }
+
+    .bottom-header-text {
+      font-size: $fs-title;
+      font-family: "RobotoRegular";
+      font-weight: 700;
+      margin: 50px 0 10px 0;
+    }
+
+    .pane-2 {
+      margin: 20px 0;
+      padding-left: 100px;
+
+      @include max-screen($max-mobile){
+        padding-left: 10px;
+      }
+
+      &:before {
+        content: '';
+        display: inline-block;
+        font-size: $fs-md;
+        background: transparent url('../images/pngIcons/downloadIcon.png') no-repeat scroll 75% center;
+        background-size: 50%;
+        width: 108px;
+        height: 90px;
+        margin-right: 10px;
+        vertical-align: middle;
+        margin-left: -118px;
+        transform: rotate(270deg);
+
+        @include max-screen($max-mobile){
+          display: none;
+        }
+      }
+
+      .pane-content {
+        display: inline-block !important;
+        vertical-align: middle;
+        p {
+          margin: 0;
+          line-height: 1.5;
+
+          &:first-child {
+            font-family: "RobotoBold";
+            font-size: $fs-title;
+          }
+
+          font-family: "RobotoLight";
+          font-size: $fs-md;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    .pane-3, .pane-5{
+      padding-left: 100px;
+
+      @include max-screen($max-mobile){
+        padding-left: 10px;
+      }
+
+      .pane-title {
+        color: $contacts-icon;
+        font-family: "RobotoLight";
+        font-size: $fs-lg;
+        text-transform: uppercase;
+        margin: 40px 0;
+      }
+    }
+
+    .pane-5{
+      padding-left: 0;
+
+      .pane-title{
+        padding-left: 100px;
+
+        @include max-screen($max-mobile){
+          padding-left: 0;
+        }
+      }
+    }
+
+    .advantages_list {
+
+      &-item {
+        display: block;
+        margin-bottom: 20px;
+
+
+        &:before{
+          content: '';
+          display: inline-block;
+          background: transparent url('../images/pngIcons/listItemStyleIcon.png') no-repeat scroll center;
+          background-size: cover;
+          width: 20px;
+          height: 10px;
+          margin: 10px 15px 0 0;
+          position: absolute;
+          left: 70px;
+          line-height: 30px;
+
+          @include max-screen($max-mobile){
+            left: -5px;
+          }
+        }
+
+        p{
+          display: inline !important;
+          font-family: "RobotoLight", "Helvetica", "sans-serif";
+          font-size: $fs-md;
+          color: $default-text;
+          line-height: 2;
+          letter-spacing: 1.5px;
+          word-spacing: 2px;
+        }
+      }
+    }
+
+    .pane-custom.pane-4{
+      margin-top: 25px;
+      padding-left: 100px;
+
+      @include max-screen($max-mobile){
+        padding-left: 10px;
+      }
+
+      .pane-content{
+        .text{
+          padding-left: 0;
+        }
+      }
+    }
+
+    .pane-custom {
+
+      .pane-content {
+        display: block;
+
+        .img-wrapper {
+          width: 100%;
+          height: 525px;
+          background: url('../images/lightspeed_pc.png') no-repeat, scroll, center;
+          background-size: contain;
+          background-position: 50%;
+
+          @include max-screen($max-mobile){
+            height: auto;
+            min-height: 215px;
+          }
+        }
+
+        p {
+          display: block;
+          font-size: $fs-md - 2;
+          font-weight: 200;
+          margin-bottom: 15px;
+          font-family: "RobotoLight";
+
+          a {
+            color: $contacts-icon;
+          }
+        }
+
+        .text {
+          font-size: $fs-md;
+          font-family: "RobotoMedium";
+          color: $secondary-text;
+          margin-bottom: 20px;
+          padding-left: 100px;
+          line-height: 2;
+          letter-spacing: 1.5px;
+
+          @include max-screen($max-mobile){
+            padding-left: 10px;
+          }
+
+          &-regular {
+            margin-bottom: 20px;
+          }
+
+          &-bold {
+            font-family: "RobotoBold";
+            color: white;
+            font-size: $fs-title;
+          }
+
+          &-lg {
+            font-size: $fs-lg;
+          }
+
+        }
+      }
+    }
+  }
+}

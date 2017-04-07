@@ -1,0 +1,306 @@
+.page-trade-investing {
+  @extend .blackInnerPage;
+
+  .navbar>.container {
+    border-bottom: 0 none;
+  }
+
+  .main-container {
+    background: $dark-bg url('../images/bg_inner_empire_state.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-attachment: scroll;
+    background-size: 100%;
+
+    #page-header{
+      display: block;
+      background: transparent url('../images/company_news_header.png') no-repeat scroll left center;
+      background-size: cover;
+      width: 100%;
+      min-height: 250px;
+    }
+
+    &>.row:before {
+      display: none;
+    }
+
+    @include max-screen($max-tablet){
+      &>.row>.col-sm-9{
+        width: 100% !important;
+      }
+
+      &>.row{
+        padding: 25px 45px !important;
+      }
+    }
+
+
+    .page-header{
+      display: block;
+      position: absolute;
+      color: $contacts-icon;
+      text-align: right;
+      right: 0;
+      top: -175px;
+      width: 100%;
+      font-size: $fs-lg;
+
+      @include max-screen($max-mobile){
+        right: 0;
+        font-size: 22px;
+        word-break: break-word;
+        text-align: center;
+      }
+    }
+
+    .region-sidebar-second{
+      #block-block-1{
+        margin-top: 0;
+      }
+    }
+
+    .investing {
+
+      &-regular {
+        display: inline-block;
+        color: $secondary-text;
+        font-size: $fs-md - 2;
+        font-family: "RobotoLight", "Helvetica", "sans-serif";
+        font-weight: 400;
+        letter-spacing: 1.25px;
+        word-spacing: 2px;
+        line-height: 1.5;
+
+        &-bold {
+          font-family: "RobotoBold", "Helvetica", "sans-serif";
+          font-weight: 700;
+        }
+      }
+
+      &-header {
+        display: inline-block;
+        color: $contacts-icon;
+        font-size: $fs-title;
+        text-transform: uppercase;
+        margin: 25px 0;
+        line-height: 1.25;
+        word-break: keep-all;
+        font-family: "RobotoLight", "Helvetica", "sans-serif";
+      }
+
+      &-list-header {
+        font-size: $fs-title;
+        font-family: "RobotoBold", "Helvetica", "sans-serif";
+        font-weight: 700;
+        margin: 25px 0;
+        line-height: 1.25;
+      }
+
+      &_advantages-list{
+        li{
+          display: block;
+          margin-bottom: 10px;
+
+          &:before{
+            content: '';
+            display: inline-block;
+            background: transparent url('../images/pngIcons/listItemStyleIcon.png') no-repeat scroll center;
+            background-size: cover;
+            width: 20px;
+            height: 10px;
+            margin: 5px 5px 0 0;
+            position: absolute;
+            left: -30px;
+            line-height: 30px;
+
+            @include max-screen($max-tablet){
+              left: -10px;
+            }
+          }
+
+          p{
+            display: inline-block;
+            font-family: "RobotoLight", "Helvetica", "sans-serif";
+            font-size: $fs-md - 2;
+            letter-spacing: 1px;
+            word-spacing: 1.5px;
+          }
+        }
+      }
+
+      &_btn{
+        @extend .button, .button-sm;
+        margin: 25px 0 0 0;
+      }
+    }
+
+    a{
+      text-decoration: none;
+      display: inline-block;
+
+      &:before{
+        margin-left: -65px;
+        @include max-screen($max-tablet){
+          display: none;
+        }
+      }
+
+      h2{
+        display: inline-block;
+
+        @include max-screen($max-tablet){
+          &:before{
+            content: '';
+            display: inline-block;
+            font-size: $fs-md;
+            width: 52px;
+            height: 20px;
+            margin-right: 10px;
+            vertical-align: middle;
+            background: transparent url('../images/pngIcons/collapse_open.png') no-repeat scroll 75% center;
+            background-size: 40%;
+            margin-left: -65px;
+          }
+        }
+      }
+    }
+
+
+    .pane-title{
+      color: $contacts-icon;
+      font-family: "RobotoBold", "Helvetica", "sans-serif";
+      font-size: $fs-md;
+      margin: 0 0 25px 0;
+      line-height: 1.25;
+    }
+
+    ol>li>p{
+      color: $secondary-text;
+      font-size: $fs-md - 2;
+      font-family: "RobotoLight", "Helvetica", "opensans";
+      font-weight: 400;
+      letter-spacing: 1px;
+      line-height: 1.25;
+      word-spacing: 1.5px;
+    }
+
+    .pane-webform-client-block-177{
+      .pane-title{
+        display: none;
+      }
+    }
+
+    form{
+      text-align: left;
+
+      .pane-title{
+        display: none;
+      }
+
+      .webform-component{
+        display: inline-block;
+        width: 23%;
+        margin: 20px 1.5% 20px 0;
+
+        @include max-screen($max-mobile){
+          width: 100%;
+          margin: 20px 0;
+        }
+
+        .form-required {
+          display: none;
+        }
+
+
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+
+      .form-control{
+        display: inline-block;
+        width: 95%;
+        background: transparent;
+        border: 1px solid $border-color;
+        height: 60px;
+        padding: 20px;
+        font-size: $fs-title;
+        color: $border-color;
+        border-radius: 0;
+        font-family: "RobotoLightItalic";
+      }
+
+      .control-label {
+        margin-top: 5px;
+        font-family: "RobotoLightItalic", "Helvetica", "sans-serif";
+      }
+
+      .webform-component.webform-component--files {
+        @extend %col-4;
+        margin: 5px 0;
+        text-align: center;
+
+        .req-docs {
+
+          li{
+            display: inline-block;
+          }
+          a {
+            color: transparent;
+            width: 35px;
+            display: inline-block;
+
+            &:before {
+              content: "";
+              display: inline-block;
+              background: transparent url('../images/pngIcons/downloadDocument.png') no-repeat scroll center;
+              font-size: 24px;
+              height: 33px;
+              width: 24px;
+            }
+          }
+        }
+      }
+
+      .webform-component.webform-component--ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami{
+        @extend %col-12;
+        margin: 5px 0 !important;
+        text-align: left;
+      }
+
+      .webform-component.webform-component--files{
+        @extend %col-4;
+        margin: 5px 0 !important;
+
+        text-align: left;
+
+        a{
+          &:before{
+            margin-left: 0;
+          }
+        }
+      }
+
+      .webform-component--otkuda-prishel{
+        display: none;
+      }
+
+      .form-actions{
+        overflow: hidden;
+        position: relative;
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+
+      input[type='submit'], .webform-submit{
+        @extend .button, .button-transparent-white;
+        line-height: 1;
+      }
+    },
+
+  .collapse.in > .pane-content > p {
+    word-break: break-all;
+  }
+  }
+}
