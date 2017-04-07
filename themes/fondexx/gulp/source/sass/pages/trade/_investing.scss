@@ -47,7 +47,9 @@
 
       @include max-screen($max-mobile){
         right: 0;
-        font-size: $fs-lg - 4px;
+        font-size: 22px;
+        word-break: break-word;
+        text-align: center;
       }
     }
 
@@ -57,9 +59,10 @@
       }
     }
 
-    .investing{
+    .investing {
 
-      &-regular{
+      &-regular {
+        display: inline-block;
         color: $secondary-text;
         font-size: $fs-md - 2;
         font-family: "RobotoLight", "Helvetica", "sans-serif";
@@ -68,22 +71,24 @@
         word-spacing: 2px;
         line-height: 1.5;
 
-        &-bold{
+        &-bold {
           font-family: "RobotoBold", "Helvetica", "sans-serif";
           font-weight: 700;
         }
       }
 
-      &-header{
+      &-header {
+        display: inline-block;
         color: $contacts-icon;
         font-size: $fs-title;
         text-transform: uppercase;
         margin: 25px 0;
         line-height: 1.25;
+        word-break: keep-all;
         font-family: "RobotoLight", "Helvetica", "sans-serif";
       }
 
-      &-list-header{
+      &-list-header {
         font-size: $fs-title;
         font-family: "RobotoBold", "Helvetica", "sans-serif";
         font-weight: 700;

@@ -187,6 +187,7 @@
 
             wrapCollapse('#fondexx-start-landing .panels-flexible-row-3-main-row', '.panel-pane', 'h2', '.pane-content');
             wrapCollapse('.panels-flexible-5 .panels-flexible-row-5-main-row', '.panel-pane', 'h2', '.pane-content');
+            wrapCollapse('.panels-flexible-14 .panels-flexible-row-14-main-row', '.panel-pane', 'h2', '.pane-content');
             wrapTabs('#front-panel .panels-flexible-row-7-1', '.panel-pane', 'h2', '.pane-content');
             replaceTablePlusMinus2icons();
             showHeaderDropdownItems();
