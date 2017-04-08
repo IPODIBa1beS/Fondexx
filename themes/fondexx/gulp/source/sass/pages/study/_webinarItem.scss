@@ -2,6 +2,7 @@
   @extend .whiteInnerPage;
 
   .main-container {
+    background: rgba(255, 255, 255, 1);
     &>.row:before {
       display: none;
     }
@@ -38,6 +39,10 @@
   .webinar_body {
     width: 85%;
     padding: 10px 0 0 20px;
+
+    ul, ol {
+      list-style-type: disc;
+    }
 
     @include max-screen($max-mobile) {
       width: 100%;

@@ -90,7 +90,7 @@
 
   <?php print render($title_prefix); ?>
   <?php if (!$page): ?>
-    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
+<!--    <h2--><?php //print $title_attributes; ?><!--><a href="--><?php //print $node_url; ?><!--">--><?php //print $title; ?><!--</a></h2>-->
   <?php endif; ?>
   <?php print render($title_suffix); ?>
 
@@ -100,9 +100,9 @@
     </div>
   <?php endif; ?>
 
-  <?php print render($content['field_start']); ?>
 
   <div class="webinar_author">
+    <?php print render($content['field_start']); ?>
     <?php print render($content['field_author_foto']); ?>
     <?php print render($content['field_author']); ?>
   </div>
