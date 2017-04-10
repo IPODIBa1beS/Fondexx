@@ -63,6 +63,18 @@
         @include max-screen($max-mobile){
           display: none;
         }
+        &:before {
+        content: '';
+        display: inline-block;
+        font-size: $fs-md;
+        background: transparent url('../images/pngIcons/tradeUp.png') no-repeat scroll 75% bottom;
+        background-size: 50%;
+        width: 101px;
+        height: 90px;
+        margin-right: 5px;
+        vertical-align: bottom;
+      }
+    }
       }
 
       .pane-content {
