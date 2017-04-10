@@ -2,6 +2,7 @@
   @extend .whiteInnerPage;
 
   .main-container {
+    background: #ffffff none;
     &>.row:before {
       display: none;
     }
@@ -33,6 +34,10 @@
       margin-top: 5px;
       display: inline-block;
     }
+  }
+
+  .webinar_date {
+    color: #00e2ff;
   }
 
   .webinar_body {

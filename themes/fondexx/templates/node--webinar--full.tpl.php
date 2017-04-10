@@ -102,9 +102,9 @@ $date =  date('d-m-Y H:i:s', $node->field_start['und']['0']['countdown_timer']);
   <?php endif; ?>
 
   <?php print render($content['field_start']); ?> <!-- счетчик -->
-  <?php print $date; ?> <!-- просто дата и время -->
 
   <div class="webinar_author">
+    <p class="webinar_date"><?php print $date; ?> <!-- просто дата и время --></p>
     <?php print render($content['field_author_foto']); ?>
     <?php print render($content['field_author']); ?>
   </div>
