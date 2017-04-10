@@ -79,6 +79,7 @@
  *
  * @ingroup themeable
  */
+$date =  date('d-m-Y H:i:s', $node->field_start['und']['0']['countdown_timer']);
 ?>
 
 
@@ -100,7 +101,8 @@
     </div>
   <?php endif; ?>
 
-  <?php print render($content['field_start']); ?>
+  <?php print render($content['field_start']); ?> <!-- счетчик -->
+  <?php print $date; ?> <!-- просто дата и время -->
 
   <div class="webinar_author">
     <?php print render($content['field_author_foto']); ?>
