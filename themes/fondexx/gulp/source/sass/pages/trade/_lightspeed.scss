@@ -30,6 +30,18 @@
       font-family: "RobotoLight";
       text-align: left;
       text-transform: uppercase;
+
+      &:before{
+        content: '';
+        display: inline-block;
+        font-size: $fs-md;
+        background: transparent url('../images/pngIcons/lightspeed.png') no-repeat scroll 75% bottom;
+        background-size: 50%;
+        width: 108px;
+        height: 90px;
+        margin-right: 5px;
+        vertical-align: bottom;
+      }
     }
 
     .bottom-header-text {
