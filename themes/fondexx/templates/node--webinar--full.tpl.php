@@ -89,19 +89,11 @@ $date =  date('d-m-Y H:i:s', $node->field_start['und']['0']['countdown_timer']);
   hide($content);
   ?>
 
-  <?php print render($title_prefix); ?>
-  <?php if (!$page): ?>
-    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
-  <?php endif; ?>
-  <?php print render($title_suffix); ?>
-
   <?php if ($display_submitted): ?>
     <div class="submitted">
       <?php print $submitted; ?>
     </div>
   <?php endif; ?>
-
-  <?php print render($content['field_start']); ?> <!-- счетчик -->
 
   <div class="webinar_author">
     <p class="webinar_date"><?php print $date; ?> <!-- просто дата и время --></p>
@@ -110,7 +102,15 @@ $date =  date('d-m-Y H:i:s', $node->field_start['und']['0']['countdown_timer']);
   </div>
 
   <div class="webinar_body">
+    <div class="webinar_title">
+      <?php print render($title_prefix); ?>
+    <?php if (!$page): ?>
+      <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
+    <?php endif; ?>
+    <?php print render($title_suffix); ?>
+    </div>
     <?php print $node->body['und'][0]['safe_value']; ?>
+    <?php print render($content['field_start']); ?> <!-- счетчик -->
     <?php print render($content['field_link']); ?>
   </div>
 

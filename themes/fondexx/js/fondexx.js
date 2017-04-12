@@ -434,6 +434,7 @@
                 $('.panels-flexible-row-3-1').attr('data-scroll-index', '1');
                 $('.pane-webform-client-block-180').attr('data-scroll-index', '1');
                 $('#webform-client-block-180').attr('data-scroll-index', '1');
+                $('.pane-webform-client-block-414').attr('data-scroll-index', '1');
             }, 300);
         });
     });

@@ -39,17 +39,25 @@
       display: block;
       position: absolute;
       color: $contacts-icon;
-      text-align: right;
-      right: 0;
+      text-align: center;
+      right: -10%;
       top: -175px;
       width: 100%;
       font-size: $fs-lg;
+
+      @include max-screen($max-tablet) {
+        text-align: center;
+        right: auto;
+        left: auto;
+        width: 100%;
+      }
 
       @include max-screen($max-mobile){
         right: 0;
         font-size: 22px;
         word-break: break-word;
         text-align: center;
+        width: 100%;
       }
     }
 

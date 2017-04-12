@@ -11,6 +11,8 @@
       .page-header {
         color: #000000;
         font-size: 36px;
+
+        display: none;
       }
     }
   }
@@ -34,15 +36,25 @@
       margin-top: 5px;
       display: inline-block;
     }
-  }
 
-  .webinar_date {
-    color: #00e2ff;
+    .webinar_date {
+      color: #00e2ff;
+      text-align: right;
+    }
+
   }
 
   .webinar_body {
     width: 85%;
     padding: 10px 0 0 20px;
+
+    &>p {
+      &:nth-of-type(1) {
+        color: #000;
+        font-weight: 600;
+        font-size: 36px;
+      }
+    }
 
     @include max-screen($max-mobile) {
       width: 100%;
