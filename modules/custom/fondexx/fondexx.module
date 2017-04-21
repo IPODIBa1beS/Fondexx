@@ -70,6 +70,11 @@ function fondexx_form_alter(&$form, &$form_state, $form_id) {
             $form['#submit'][] = '_traderhub_submit_handler';
         }
     }
+
+    if ($form['#id'] == 'webform-client-form-436') {
+        $form['submitted']['otkuda_prishel']['#default_value'] = $t;
+        $form_state['redirect'] = '/study/webinar/register/thankyou';
+    }
 }
 
 function _fondexx_market_leaders_form_block() {

@@ -111,7 +111,6 @@ $date =  date('d-m-Y H:i:s', $node->field_start['und']['0']['countdown_timer']);
     </div>
     <?php print $node->body['und'][0]['safe_value']; ?>
     <?php print render($content['field_start']); ?> <!-- счетчик -->
-    <?php print render($content['field_link']); ?>
   </div>
 
 </div>

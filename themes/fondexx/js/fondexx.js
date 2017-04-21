@@ -281,7 +281,7 @@
             ///Page trade-demo
             $( ".page-trade-demo .pane-webform-client-block-177 #webform-client-form-177 .form-submit").on("click", function() {
                 var name = validateNotEmpty('.page-trade-demo .pane-webform-client-block-177 #edit-submitted-imya');
-                var lastName = validateNotEmpty('.page-trade-demo .pane-webform-client-block-177 #edit-submitted-familiya')
+                var lastName = validateNotEmpty('.page-trade-demo .pane-webform-client-block-177 #edit-submitted-familiya');
                 var email = validateEmail(' .page-trade-demo .pane-webform-client-block-177 #edit-submitted-e-mail');
                 var tel = validateTel('.page-trade-demo .pane-webform-client-block-177 #edit-submitted-telefon');
                 var checkbox = validateCheckbox('.page-trade-demo .pane-webform-client-block-177 #edit-submitted-ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami-1', '.page-trade-demo .pane-webform-client-block-177 .webform-component--ya-oznakomlena-so-vsemi-reglamentiruyushchimi-dokumentami')
